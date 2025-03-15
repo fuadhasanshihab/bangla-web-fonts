@@ -1,0 +1,85 @@
+---
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+import SquareLines from "../components/square-lines.astro";
+const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={metaDescription}>
+
+{metaKeyword ? (
+  <meta name="keywords" content={`Bangla Web Font, ${metaKeyword} Web Font, ${metaKeyword} Font CDN`} />
+) : (
+  <meta name="keywords" content="Bangla Web Fonts, Free Bangla Fonts, Bangla Fonts CDN" />
+)}
+
+
+    <link rel="canonical" href={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
+    <meta name="theme-color" content="#ffffff">
+
+<meta name="google-site-verification" content="8w5E8Hs9xki0okFY2j_2aXhpFL1PQTEgT7cgtiw0eKc" />
+
+<meta property="og:title" content={title}>
+<meta property="og:description" content={metaDescription}>
+<!--
+<meta property="og:image" content="https://example.com/image.jpg">
+-->
+<meta property="og:url" content={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bangla Web Fonts">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="bn_BD">
+
+
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={metaDescription}>
+<meta name="twitter:url" content={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
+<!--
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://example.com/image.jpg">
+<meta name="twitter:site" content="@YourTwitterHandle">
+<meta name="twitter:creator" content="@AuthorTwitterHandle">
+-->
+
+    <link rel="manifest" href="/manifest.json">
+    <script is:inline>
+      if (typeof Storage !== 'undefined') {
+        if (
+          localStorage.getItem('dark_mode') &&
+          localStorage.getItem('dark_mode') == 'true'
+        ) {
+          document.documentElement.classList.add('dark')
+        }
+      }
+    </script>
+    <style>
+      .prose img {
+        border-radius: 20px;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <script src="../assets/css/main.css"></script>
+    <Fragment set:html={import.meta.env.HEADER_INJECT} />
+    {extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
+  
+  </head>
+  <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
+    <SquareLines />
+    <Header />
+    <slot />
+    <Footer />
+    <script src="../assets/js/main.js"></script>
+    <script is:inline>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('/sw.js')
+  }
+    </script>
+    <Fragment set:html={import.meta.env.FOOTER_INJECT} />
+  </body>
+</html>

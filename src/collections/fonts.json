@@ -1,0 +1,112 @@
+[
+  {
+    "FontName": "Solaiman Lipi",
+    "TotalStyles": "4",
+    "FontFamily": "'Solaiman Lipi', serif",
+    "FontPath": "solaiman-lipi",
+    "FontWeights": [300, 400, 600, 700],
+    "FontTesterWeights": [300, 400, 600, 700],
+    "FontDesigner": "Solaiman Karim",
+    "FontDesignerURL": "https://ekushey.org/designer/solaiman-karim/"
+  },
+  {
+    "FontName": "Kalpurush",
+    "TotalStyles": "2",
+    "FontFamily": "Kalpurush, serif",
+    "FontPath": "kalpurush",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Md. Tanbin Islam Siyam",
+    "FontDesignerURL": "https://github.com/potasiyam"
+  },
+  {
+    "FontName": "Siyam Rupali",
+    "TotalStyles": "2",
+    "FontFamily": "'Siyam Rupali', sans-serif",
+    "FontPath": "siyam-rupali",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Md. Tanbin Islam Siyam",
+    "FontDesignerURL": "https://github.com/potasiyam"
+  },
+  {
+    "FontName": "Hind Siliguri",
+    "TotalStyles": "5",
+    "FontFamily": "'Hind Siliguri', sans-serif",
+    "FontPath": "hind-siliguri",
+    "FontWeights": [300, 400, 500, 600, 700],
+    "FontTesterWeights": [300, 400, 500, 600, 700],
+    "FontDesigner": "Indian Type Foundry",
+    "FontDesignerURL": "https://www.indiantypefoundry.com/"
+  },
+  {
+    "FontName": "Baloo Da 2",
+    "TotalStyles": "5",
+    "FontFamily": "'Baloo Da 2', sans-serif",
+    "FontPath": "baloo-da-2",
+    "FontWeights": [400, 500, 600, 700, 800],
+    "FontTesterWeights": [400, 500, 600, 700, 800],
+    "FontDesigner": "Ek Type",
+    "FontDesignerURL": "https://ektype.in/"
+  },
+  {
+    "FontName": "Lohit Bengali",
+    "TotalStyles": "2",
+    "FontFamily": "'Lohit Bengali', sans-serif",
+    "FontPath": "lohit-bengali",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Lohit Fonts Project",
+    "FontDesignerURL": "https://pagure.io/lohit"
+  },
+  {
+    "FontName": "Tiro Bangla",
+    "TotalStyles": "2",
+    "FontFamily": "'Tiro Bangla', serif",
+    "FontPath": "tiro-bangla",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Tiro Typeworks",
+    "FontDesignerURL": "https://www.tiro.com/"
+  },
+  {
+    "FontName": "Noto Serif Bengali",
+    "TotalStyles": "9",
+    "FontFamily": "'Noto Serif Bengali', serif",
+    "FontPath": "noto-serif-bengali",
+    "FontWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    "FontTesterWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    "FontDesigner": "Google",
+    "FontDesignerURL": "https://fonts.google.com/"
+  },
+  {
+    "FontName": "Mina",
+    "TotalStyles": "2",
+    "FontFamily": "'Mina', sans-serif",
+    "FontPath": "mina",
+    "FontWeights": [400, 700],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Suman Bhandary, Natanael Gama, Mooniak",
+    "FontDesignerURL": "https://github.com/suman51284"
+  },
+  {
+    "FontName": "Ekushey Lal Sabuj",
+    "TotalStyles": "2",
+    "FontFamily": "'Ekushey Lal Sabuj', sans-serif",
+    "FontPath": "ekushey-lal-sabuj",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Proshika Computer Systems",
+    "FontDesignerURL": "https://ekushey.org/designer/poshkha/"
+  },
+  {
+    "FontName": "Adorsho Lipi",
+    "TotalStyles": "2",
+    "FontFamily": "'Adorsho Lipi', sans-serif",
+    "FontPath": "adorsho-lipi",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "cgimagine",
+    "FontDesignerURL": "#"
+  }
+]

@@ -1,0 +1,105 @@
+---
+import fonts from '../../collections/fonts.json';
+
+import Layout from "../../layouts/main.astro";
+import PageHeading from "../../components/page-heading.astro";
+import CodeBox from "../../components/codebox.astro";
+import PreviewInput from "../../components/preview-input.astro";
+import BanglaGylphs from "../../components/bangla-gylphs.astro";
+
+export async function getStaticPaths() {
+  return fonts.map(font => ({
+    params: { font: font.FontPath },
+    props: font,
+  }));
+}
+
+const { FontName, TotalStyles, FontFamily, FontWeights, FontTesterWeights, FontDesigner, FontPath, FontDesignerURL } = Astro.props;
+
+// Function to get weight names
+const getWeightName = (weight) => {
+  const weightNames = {
+    100: 'Thin',
+    200: 'Extra Light',
+    300: 'Light',
+    400: 'Regular',
+    500: 'Medium',
+    600: 'Semi Bold',
+    700: 'Bold',
+    800: 'Extra Bold',
+    900: 'Black'
+  };
+  return weightNames[weight] || `Unknown (${weight})`;
+};
+
+const PageTitle = `${FontName} Web Font - Bangla Web Fonts CDN`;
+const MetaDescription = `${FontName} is a bangla web font, optimized for smooth rendering and fast web delivery. Easily integrate ${FontName} web font into your website with Bangla Web Fonts.`;
+const FontCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.css`;
+const FontMinifiedCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.min.css`;
+---
+
+<Layout title={PageTitle} extraStyleUrl={FontMinifiedCSS} metaDescription={MetaDescription} metaKeyword={FontName}>
+
+<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
+<div id="preview"/>
+<div class="relative z-20 w-full mx-auto lg:mx-0">
+  <h2 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h2>
+  <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-500 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Designed by <a href={FontDesignerURL} class="text-black dark:text-white" target="_blank">{FontDesigner}</a></p>
+</div>
+
+
+<PreviewInput/>
+
+{FontTesterWeights.map(weight => (
+        <div class="mt-6">
+          <p class="mb-2 leading-6 text-neutral-600 dark:text-neutral-400 sm:leading-7 lg:leading-8">{getWeightName(weight)} {weight}</p>
+          <p class="fhs-font-preview leading-tight" style={`font-family: ${FontFamily}; font-weight: ${weight}; font-size: 32px;`}>
+            আমার সোনার বাংলা
+          </p>
+        </div>
+      ))}
+
+
+<div class="mt-10">
+<p>To embed this font into a webpage, copy this code and paste into the head of your HTML document.</p>
+<CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
+</div>
+
+<div class="mt-10">
+or @import in CSS
+<CodeBox id="IMPORTcodebox" code={`@import url('${FontCSS}');`} />
+</div>
+
+<div class="mt-10">
+Use the following CSS rule to specify this family
+<CodeBox id="FAMILYcodebox" code={`font-family: ${FontFamily};`} />
+</div>
+
+
+<div class="mt-10 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-lg">
+  <h3 class="font-bold text-lg">💡 Performance Tip</h3>
+  <p class="text-sm mt-1">
+    You can use the <span class="font-mono bg-blue-100 dark:bg-blue-700 px-1 py-0.5 rounded">.min.css</span> version for better performance and faster loading times.
+  </p>
+  <div class="bg-white dark:bg-gray-800 p-2 mt-3 rounded border border-blue-300 dark:border-gray-600 text-sm">
+    <span class="text-gray-500 dark:text-gray-400">Standard CSS:</span>  
+    <p class="text-blue-600 dark:text-blue-300 break-words whitespace-normal">{FontCSS}</p>
+    
+    <span class="text-gray-500 dark:text-gray-400 mt-2 block">Minified CSS:</span>  
+    <p class="text-blue-600 dark:text-blue-300 break-words whitespace-normal">{FontMinifiedCSS}</p>
+  </div>
+</div>
+
+
+
+<div class="mt-10">
+  <h3 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Gylphs</h3>
+  <p class="mt-3 text-base leading-6 text-neutral-600 dark:text-neutral-400 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Only a subset of all the glyphs are shown here. Download the font to view the full set or try it out in the <a href="#preview">type tester</a>.</p>
+  <BanglaGylphs fontFamily={FontFamily}/>
+</div>
+
+</section>
+
+<script src="../../assets/js/font.js"></script>
+</Layout>
+  

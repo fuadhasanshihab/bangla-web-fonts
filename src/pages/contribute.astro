@@ -1,0 +1,86 @@
+---
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="Contribute">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Contribute"
+      description="Follow these steps to contribute a Bangla web font."
+    />
+
+
+        <!-- Step 1: Fork -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Step 1: Fork the Repository</h2>
+            <p class="text-base text-neutral-600 dark:text-neutral-400">Click the button below to fork the repository.</p>
+            <a href="https://github.com/fuadhasanshihab/banglawebfonts/fork" 
+               class="inline-flex w-auto px-4 py-2 mt-4 text-xs font-semibold duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900">
+                Fork the Repository
+            </a>
+        </section>
+
+        <!-- Step 2: Upload Fonts -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Step 2: Upload Font Files</h2>
+            <p class="text-base text-neutral-600 dark:text-neutral-400">Navigate to <code class="text-blue-500">public/</code> and upload your font files. Example structure:</p>
+
+            <div class="mt-4 p-4 rounded-xl border border-gray-300">
+                <p class="font-mono text-gray-900">📁 public/</p>
+                <div class="ml-4">
+                    <p class="font-mono text-gray-800">📁 solaimanlipi/</p>
+                    <div class="ml-6 text-gray-700">
+                        <p>📄 font.css</p>
+                        <p>📄 SolaimanLipi-Regular.woff2</p>
+                        <p>📄 SolaimanLipi-Bold.woff2</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mt-3">
+                Upload files via GitHub by clicking <strong>Add file &gt; Upload files</strong>, then commit your changes.
+            </p>
+        </section>
+
+        <!-- Step 3: Update JSON -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Step 3: Update fonts.json</h2>
+            <p class="text-base text-neutral-600 dark:text-neutral-400">Edit <code class="text-blue-500">src/collections/fonts.json</code> and add font details:</p>
+
+            <pre class="p-4 rounded-xl border border-gray-300 text-sm overflow-auto mt-3">
+&#123;
+    "FontName": "Solaiman Lipi",
+    "TotalStyles": "4",
+    "FontFamily": "'Solaiman Lipi', serif",
+    "FontPath": "solaimanlipi",
+    "FontWeights": [300, 400, 600, 700],
+    "FontDesigner": "Solaiman Karim",
+    "FontDesignerURL": "https://ekushey.org/designer/solaiman-karim/"
+&#125;</pre>
+
+            <div class="mt-4 bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded-xl">
+                <p class="text-yellow-800 font-medium">
+                    ⚠️ Important: The <code class="text-yellow-600">FontPath</code> value must match the folder name 
+                    where you stored the font files. Example: If your folder is <code>public/solaimanlipi/</code>, 
+                    set <code>"FontPath": "solaimanlipi"</code>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Step 4: Submit PR -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Step 4: Submit a Pull Request</h2>
+            <p class="text-base text-neutral-600 dark:text-neutral-400">
+                - Go to the <strong>Pull Requests</strong> tab in your forked repository.  
+                - Click <strong>New Pull Request</strong>, select your forked branch, and submit it.
+            </p>
+
+            <a href="https://github.com/fuadhasanshihab/banglawebfonts/pulls"
+               class="inline-flex w-auto px-4 py-2 mt-4 text-xs font-semibold duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900">
+                Submit a Pull Request
+            </a>
+        </section>
+    
+  </section>
+</Layout>
