@@ -27,9 +27,7 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
 
 <meta property="og:title" content={title}>
 <meta property="og:description" content={metaDescription}>
-<!--
-<meta property="og:image" content="https://example.com/image.jpg">
--->
+<meta property="og:image" content="https://banglawebfonts.pages.dev/assets/images/bangla-web-fonts-1200x630.jpg">
 <meta property="og:url" content={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bangla Web Fonts">
@@ -40,23 +38,12 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
 <meta name="twitter:title" content={title}>
 <meta name="twitter:description" content={metaDescription}>
 <meta name="twitter:url" content={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
-<!--
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://example.com/image.jpg">
-<meta name="twitter:site" content="@YourTwitterHandle">
-<meta name="twitter:creator" content="@AuthorTwitterHandle">
--->
+<meta name="twitter:image" content="https://banglawebfonts.pages.dev/assets/images/bangla-web-fonts-1200x630.jpg">
 
-    <link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/manifest.json">
     <script is:inline>
-      if (typeof Storage !== 'undefined') {
-        if (
-          localStorage.getItem('dark_mode') &&
-          localStorage.getItem('dark_mode') == 'true'
-        ) {
-          document.documentElement.classList.add('dark')
-        }
-      }
+if(typeof Storage!=="undefined"&&localStorage.getItem("dark_mode")==="true")document.documentElement.classList.add("dark");
     </script>
     <style>
       .prose img {
@@ -76,9 +63,7 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
     <Footer />
     <script src="../assets/js/main.js"></script>
     <script is:inline>
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('/sw.js')
-  }
+  if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('/sw.js')}
     </script>
     <Fragment set:html={import.meta.env.FOOTER_INJECT} />
   </body>
