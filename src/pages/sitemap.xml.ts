@@ -1,4 +1,4 @@
-import fonts from '../../collections/fonts.json';
+import fonts from '../collections/fonts.json';
 
 export function GET() {
   const siteUrl = "https://banglawebfonts.pages.dev";
