@@ -1,20 +1,26 @@
-function copy(id, button) {
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    const originalText = button.innerText;
-    button.innerText = "Copied!";
-    button.disabled = true;
-    button.classList.add("opacity-50", "cursor-not-allowed");
+document.addEventListener("DOMContentLoaded", () => {
+  function copy(id, button) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.innerText;
+      button.innerText = "Copied!";
+      button.disabled = true;
+      button.classList.add("opacity-50", "cursor-not-allowed");
 
-    setTimeout(() => {
-      button.innerText = originalText;
-      button.disabled = false;
-      button.classList.remove("opacity-50", "cursor-not-allowed");
-    }, 3000);
-  }).catch(err => {
-    console.error("Error copying text: ", err);
-  });
-}
+      setTimeout(() => {
+        button.innerText = originalText;
+        button.disabled = false;
+        button.classList.remove("opacity-50", "cursor-not-allowed");
+      }, 3000);
+    }).catch(err => {
+      console.error("Error copying text: ", err);
+    });
+  }
+
+  // Making the function accessible globally
+  window.copy = copy;
+});
+
 
 
 if (document.querySelector("#previewText")) {
