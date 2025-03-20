@@ -54,11 +54,11 @@ import Layout from "../layouts/main.astro";
             <h2 class="text-2xl font-semibold mb-3">3. Using an English Font with a Bangla Font</h2>
             <p>If you want to use an English font alongside a Bangla font, place the English font before the Bangla font in the <code>font-family</code> property.</p>
             <p class="mt-3">Example: Using "Playfair Display" for English and "Solaiman Lipi" for Bangla:</p>
-            <pre class="border border-gray-300 p-4 rounded-xl mt-3 overflow-auto text-sm scrollbar-hide"><code>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"&gt;
+            <pre class="border border-gray-300 p-4 rounded-xl mt-3 overflow-auto text-sm scrollbar-hide"><code>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap" rel="stylesheet"&gt;
 &lt;link href="https://banglawebfonts.pages.dev/css/solaiman-lipi.css" rel="stylesheet"&gt;</code></pre>
-            <pre class="border border-gray-300 p-4 rounded-xl mt-3 overflow-auto text-sm scrollbar-hide"><code>body {
+            <pre class="border border-gray-300 p-4 rounded-xl mt-3 overflow-auto text-sm scrollbar-hide"><code>body &#123;
     font-family: 'Playfair Display', 'Solaiman Lipi', serif;
-}</code></pre>
+&#125;</code></pre>
         </section>
 
         <!-- Full Example -->
@@ -70,12 +70,12 @@ import Layout from "../layouts/main.astro";
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;Bangla Web Font Example&lt;/title&gt;
-    &lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap" rel="stylesheet"&gt;
     &lt;link href="https://banglawebfonts.pages.dev/css/solaiman-lipi.css" rel="stylesheet"&gt;
     &lt;style&gt;
-        body {
+        body &#123;
             font-family: 'Playfair Display', 'Solaiman Lipi', serif;
-        }
+        &#125;
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -85,7 +85,6 @@ import Layout from "../layouts/main.astro";
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         </section>
-
 
   </div>
 </Layout>
