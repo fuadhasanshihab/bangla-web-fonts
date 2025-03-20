@@ -62,20 +62,18 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 </div>
 
 <div class="mt-10">
-or @import in CSS
+<p>or @import in CSS</p>
 <CodeBox id="IMPORTcodebox" code={`@import url('${FontCSS}');`} />
 </div>
 
 <div class="mt-10">
-Use the following CSS rule to specify this family
+<p>Use the following CSS rule to specify this family</p>
 <CodeBox id="FAMILYcodebox" code={`font-family: ${FontFamily};`} />
 </div>
 
 <div class="mt-10 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-lg">
   <h3 class="font-bold text-lg">💡 Performance Tip</h3>
-  <p class="text-sm mt-1">
-    You can use the <span class="font-mono bg-blue-100 dark:bg-blue-700 px-1 py-0.5 rounded">.min.css</span> version for better performance and faster loading times.
-  </p>
+  <p class="text-sm mt-1">You can use the <span class="font-mono bg-blue-100 dark:bg-blue-700 px-1 py-0.5 rounded">.min.css</span> version for better performance and faster loading times.</p>
   <div class="bg-white dark:bg-gray-900 p-2 mt-3 rounded border border-blue-300 dark:border-gray-600 text-sm">
     <span class="text-gray-500 dark:text-gray-400">Standard CSS:</span>  
     <p class="text-blue-600 dark:text-blue-300 break-words whitespace-normal">{FontCSS}</p>
