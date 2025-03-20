@@ -30,8 +30,23 @@ const getWeightName = (weight) => {
   return weightNames[weight] || `Unknown (${weight})`;
 };
 
+const getLowercaseWeightName = (weight) => {
+  const weightNames = {
+    100: 'thin',
+    200: 'extra-light',
+    300: 'light',
+    400: 'regular',
+    500: 'medium',
+    600: 'semi-bold',
+    700: 'bold',
+    800: 'extra-bold',
+    900: 'black'
+  };
+  return weightNames[weight] || `unknown-${weight}`;
+};
+
 const FontPreloads = FontWeights.map(weight => {
-  const weightName = getWeightName(weight);
+  const weightName = getLowercaseWeightName(weight);
   return `<link rel="preload" as="font" type="font/woff2" href="/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
 
