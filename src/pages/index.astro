@@ -5,7 +5,7 @@ import fonts from "../collections/fonts.json";
 
 const preloadedFonts = fonts.slice(0, 6);
 
-const fontPreloads = preloadedFonts
+const FontPreloads = preloadedFonts
   .map(
     (font) =>
       `<link rel="preload" as="font" type="font/woff2" href="/fonts/${font.FontPath}/${font.FontPath}-regular.woff2" crossorigin="anonymous" />`
