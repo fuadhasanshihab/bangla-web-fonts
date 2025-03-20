@@ -8,7 +8,7 @@
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
-.gylph-container li {
+.dark .gylph-container li {
   border: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 .gylph-container li:hover {
