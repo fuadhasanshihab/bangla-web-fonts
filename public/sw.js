@@ -1,18 +1,28 @@
-// This is the "Offline copy of pages" service worker
+const CACHE_NAME = self.location.pathname;
+const CACHE_ASSETS = [];
 
-const CACHE = "banglawebfonts-pwa-offline";
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
+self.addEventListener("install", (event) => {
+  self.skipWaiting();
+  caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHE_ASSETS));
 });
 
-workbox.routing.registerRoute(
-  new RegExp('/*'),
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: CACHE
-  })
-);
+self.addEventListener("fetch", (event) => {
+  const request = event.request;
+  if (request.method !== "GET") return;
+
+  function cacheResponse(response) {
+    if (isCacheable(response)) {
+      return caches.open(CACHE_NAME).then((cache) => cache.put(request, response.clone())).then(() => response);
+    }
+    return response;
+  }
+
+  function getCachedResponse() {
+    return caches.open(CACHE_NAME).then((cache) => cache.match(request.url));
+  }
+
+  function isCacheable(response) {
+    return response.type === "basic" && response.ok && !response.headers.has("Content-Disposition");
+  }
+ event.respondWith(fetch(request).then(cacheResponse).catch(getCachedResponse));
+});
