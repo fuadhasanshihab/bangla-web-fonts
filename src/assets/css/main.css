@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 .visible-animation {
-  visibility: hidden;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s forwards;
@@ -12,14 +11,12 @@
 
 @keyframes fadeInUp {
   from {
-    visibility: hidden;
     opacity: 0;
     transform: translateY(20px);
   }
   to {
-    visibility: visible;
     opacity: 1;
-    transform: translateY(10px);
+    transform: translateY(0);
   }
 }
 
