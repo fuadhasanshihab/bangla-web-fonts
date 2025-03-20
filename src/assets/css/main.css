@@ -16,14 +16,14 @@
 }
 
 #darkToggle:hover #sun {
-  transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 2px, 0);
 }
 
 #darkToggle:hover #moon {
-  transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 2px, 0);
 }
 
-html.dark #darkToggle:hover .horizon {
+html.dark #darkToggle:hover .horizonX {
   border-color: #718096 !important;
 }
 
