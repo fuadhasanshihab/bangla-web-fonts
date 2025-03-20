@@ -18,6 +18,7 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
   <meta name="keywords" content="Bangla Web Fonts, Free Bangla Fonts, Bangla Fonts CDN" />
 )}
 <meta name="theme-color" content="#ffffff">
+{extraStyleUrl && <link rel="preload" href={extraStyleUrl} as="style"><link rel="stylesheet" href={extraStyleUrl}>}
 <meta name="google-site-verification" content="8w5E8Hs9xki0okFY2j_2aXhpFL1PQTEgT7cgtiw0eKc" />
 <meta property="og:title" content={title}>
 <meta property="og:description" content={metaDescription}>
@@ -39,7 +40,6 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
-    {extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
     <SquareLines />
