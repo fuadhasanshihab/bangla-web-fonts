@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.gylph-container li {
+  text-align: center;
+  padding: 20px 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.gylph-container li:hover {
+  border:-1px inset;
+  background-color:#000000;
+  color:#ffffff;
+}
+.dark .gylph-container li:hover {
+  border:-1px inset;
+  background-color:#ffffff;
+  color:#000000;
+}
 
 .prose img {
   border-radius: 30px;
@@ -16,15 +32,15 @@
 }
 
 #darkToggle:hover #sun {
-  transform: translate3d(0, 2px, 0);
+  transform: translate3d(0, 1px, 0);
 }
 
 #darkToggle:hover #moon {
-  transform: translate3d(0, 2px, 0);
+  transform: translate3d(0, 1px, 0);
 }
 
-html.dark #darkToggle:hover .horizonX {
-  border-color: #718096 !important;
+html.dark #darkToggle:hover .horizon {
+  border-color: transparent!important;
 }
 
 html.dark {
