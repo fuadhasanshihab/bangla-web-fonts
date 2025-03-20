@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.visible-animation {
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
