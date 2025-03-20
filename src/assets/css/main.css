@@ -2,20 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Hide in IE/Edge */
+  scrollbar-width: none;  /* Hide in Firefox */
+}
+
 .gylph-container li {
   text-align: center;
   padding: 20px 20px;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
+
 .dark .gylph-container li {
   border: 0.5px solid rgba(255, 255, 255, 0.1);
 }
+
 .gylph-container li:hover {
   border:-1px inset;
   background-color:#000000;
   color:#ffffff;
 }
+
 .dark .gylph-container li:hover {
   border:-1px inset;
   background-color:#ffffff;
