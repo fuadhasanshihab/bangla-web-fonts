@@ -8,6 +8,9 @@
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
+.gylph-container li {
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
 .gylph-container li:hover {
   border:-1px inset;
   background-color:#000000;
@@ -32,14 +35,14 @@
 }
 
 #darkToggle:hover #sun {
-  transform: translate3d(0, 1px, 0);
+  transform: translate3d(0, 2px, 0);
 }
 
 #darkToggle:hover #moon {
-  transform: translate3d(0, 1px, 0);
+  transform: translate3d(0, 2px, 0);
 }
 
-html.dark #darkToggle:hover .horizon {
+#darkToggle:hover .horizon {
   border-color: transparent!important;
 }
 
@@ -57,7 +60,7 @@ html.dark {
 
 @keyframes setting {
   0% {
-    transform: translate3d(0, 3px, 0)
+    transform: translate3d(0, 10px, 0)
   }
 
   40% {
@@ -72,7 +75,7 @@ html.dark {
 @keyframes rising {
   0% {
     opacity: 0;
-    transform: translate3d(0, 3px, 0)
+    transform: translate3d(0, 10px, 0)
   }
 
   40% {
