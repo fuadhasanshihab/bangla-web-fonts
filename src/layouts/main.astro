@@ -36,10 +36,7 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
 <link rel="manifest" href="/manifest.json">
     <script is:inline> if(typeof Storage!=="undefined"&&localStorage.getItem("dark_mode")==="true")document.documentElement.classList.add("dark"); </script>
     <style>.prose img {border-radius: 20px;}</style>
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
-    <script src="../assets/css/main.css"></script>
-    <Fragment set:html={import.meta.env.HEADER_INJECT} />
-    {extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" /><script src="../assets/css/main.css"></script><Fragment set:html={import.meta.env.HEADER_INJECT} />{extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
     <SquareLines />
