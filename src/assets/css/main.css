@@ -5,18 +5,21 @@
 .visible-animation {
   visibility: hidden;
   opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: 0.5s;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
   from {
     visibility: hidden;
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     visibility: visible;
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
