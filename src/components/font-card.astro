@@ -1,7 +1,7 @@
 ---
 const { FontName, TotalStyles, FontPath, FontFamily } = Astro.props;
 const newPath = `/${FontPath}`;
-const isSmall = FontFamily.includes("Ekushey");  
+const isNeedBig = FontName.includes("Ekushey") || FontFamily.includes("Bensen");  
 ---
 
 <a
@@ -19,7 +19,7 @@ const isSmall = FontFamily.includes("Ekushey");
   >
     <span class="block w-full">
       <div class="w-full h-auto rounded-lg aspecttt-[16/9] object-cover">
-        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.7rem] leading-[2rem]" : "text-2xl"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
+        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.7rem] leading-[2rem]" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
       </div>
     </span>
     <span class="block w-full px-1 mt-5 mb-1 sm:mt-3">
