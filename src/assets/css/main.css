@@ -2,12 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add Your Custom CSS Here */
-
-/*
-a {color:#000000;text-decoration:underline;}
-.dark a{color: #ffffff;text-decoration:underline;}
-*/
+.text-2.5xl{font-size:1.7rem;line-height:2rem}
 
 .prose img {
   border-radius: 30px;
