@@ -30,7 +30,7 @@ const getWeightName = (weight) => {
   return weightNames[weight] || `Unknown (${weight})`;
 };
 
-const FontPreloads = FontWeights.map(weight => {
+const fontPreloads = FontWeights.map(weight => {
   const weightName = getWeightName(weight);
   return `<link rel="preload" as="font" type="font/woff2" href="/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
