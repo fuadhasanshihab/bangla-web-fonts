@@ -170,6 +170,16 @@
     "FontDesignerURL": "https://ekushey.org/designer/omiazad-solaimankarim/"
   },
   {
+    "FontName": "Atma",
+    "TotalStyles": "2",
+    "FontFamily": "'Atma', sans-serif",
+    "FontPath": "atma",
+    "FontWeights": [300, 400, 500, 600, 700],
+    "FontTesterWeights": [300, 400, 500, 600, 700],
+    "FontDesigner": "Black Foundry",
+    "FontDesignerURL": "https://black-foundry.com/"
+  },
+  {
     "FontName": "Ekushey Puja",
     "TotalStyles": "2",
     "FontFamily": "'Ekushey Puja', serif",
