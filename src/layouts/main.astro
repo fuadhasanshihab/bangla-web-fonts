@@ -19,7 +19,7 @@ const { title, extraStyleUrl, metaDescription, metaKeyword, fontPreloads } = Ast
   <meta name="keywords" content="Bangla Web Fonts, Free Bangla Fonts, Bangla Fonts CDN" />
 )}
 <meta name="theme-color" content="#ffffff">
-{Astro.raw(fontPreloads)}
+<Fragment set:html={fontPreloads} />
 {extraStyleUrl && <link rel="preload" href={extraStyleUrl} as="style"/>}
 {extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
 <meta name="google-site-verification" content="8w5E8Hs9xki0okFY2j_2aXhpFL1PQTEgT7cgtiw0eKc" />
