@@ -152,7 +152,7 @@
   {
     "FontName": "Bensen Handwriting",
     "TotalStyles": "2",
-    "FontFamily": "'bensen-handwriting', sans-serif",
+    "FontFamily": "'Bensen Handwriting', sans-serif",
     "FontPath": "bensen-handwriting",
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
