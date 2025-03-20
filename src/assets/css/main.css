@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-2.5xl{font-size:1.7rem;line-height:2rem}
 
 .prose img {
   border-radius: 30px;
