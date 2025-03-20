@@ -18,7 +18,8 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
   <meta name="keywords" content="Bangla Web Fonts, Free Bangla Fonts, Bangla Fonts CDN" />
 )}
 <meta name="theme-color" content="#ffffff">
-{extraStyleUrl && <link rel="preload" href={extraStyleUrl} as="style"><link rel="stylesheet" href={extraStyleUrl}>}
+{extraStyleUrl && <link rel="preload" href={extraStyleUrl} as="style"/>}
+{extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
 <meta name="google-site-verification" content="8w5E8Hs9xki0okFY2j_2aXhpFL1PQTEgT7cgtiw0eKc" />
 <meta property="og:title" content={title}>
 <meta property="og:description" content={metaDescription}>
