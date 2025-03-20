@@ -2,7 +2,7 @@
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
-const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
+const { title, extraStyleUrl, metaDescription, metaKeyword, fontPreloads } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,13 +11,15 @@ const { title, extraStyleUrl, metaDescription, metaKeyword } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <meta name="description" content={metaDescription}>
+{metaDescription && <meta name="description" content={metaDescription}/>}
+
 {metaKeyword ? (
   <meta name="keywords" content={`${metaKeyword}, ${metaKeyword} Font, ${metaKeyword} Web Font, ${metaKeyword} Font CDN, Bangla Web Font`} />
 ) : (
   <meta name="keywords" content="Bangla Web Fonts, Free Bangla Fonts, Bangla Fonts CDN" />
 )}
 <meta name="theme-color" content="#ffffff">
+{fontPreloads}
 {extraStyleUrl && <link rel="preload" href={extraStyleUrl} as="style"/>}
 {extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
 <meta name="google-site-verification" content="8w5E8Hs9xki0okFY2j_2aXhpFL1PQTEgT7cgtiw0eKc" />
