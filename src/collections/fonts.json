@@ -138,5 +138,45 @@
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Proshika Computer Systems",
     "FontDesignerURL": "https://ekushey.org/designer/poshkha/"
+  },
+  {
+    "FontName": "Bensen",
+    "TotalStyles": "2",
+    "FontFamily": "'Bensen', serif",
+    "FontPath": "bensen",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Subrata Sen",
+    "FontDesignerURL": "https://www.subratasen.com/"
+  },
+  {
+    "FontName": "Bensen Handwriting",
+    "TotalStyles": "2",
+    "FontFamily": "'bensen-handwriting', sans-serif",
+    "FontPath": "bensen-handwriting",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Subrata Sen",
+    "FontDesignerURL": "https://www.subratasen.com/"
+  },
+  {
+    "FontName": "Ekushey Saraswatii",
+    "TotalStyles": "2",
+    "FontFamily": "'Ekushey Saraswatii', serif",
+    "FontPath": "ekushey-saraswatii",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Omi Azad, Solaiman Karim",
+    "FontDesignerURL": "https://ekushey.org/designer/omiazad-solaimankarim/"
+  },
+  {
+    "FontName": "Ekushey Puja",
+    "TotalStyles": "2",
+    "FontFamily": "'Ekushey Puja', serif",
+    "FontPath": "ekushey-puja",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Omi Azad, Solaiman Karim",
+    "FontDesignerURL": "https://ekushey.org/designer/omiazad-solaimankarim/"
   }
 ]
