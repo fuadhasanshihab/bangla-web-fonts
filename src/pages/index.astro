@@ -5,15 +5,12 @@ import fonts from "../collections/fonts.json";
 
 const preloadedFonts = fonts.slice(0, 6);
 
-const FontPreloads = preloadedFonts.map((font) => (
-  <link
-    rel="preload"
-    as="font"
-    type="font/woff2"
-    href={`/fonts/${font.FontPath}/${font.FontPath}-regular.woff2`}
-    crossorigin="anonymous"
-  />
-));
+const fontPreloads = preloadedFonts
+  .map(
+    (font) =>
+      `<link rel="preload" as="font" type="font/woff2" href="/fonts/${font.FontPath}/${font.FontPath}-regular.woff2" crossorigin="anonymous" />`
+  )
+  .join("");
 ---
 
 <Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" extraStyleUrl="/css/webfonts.min.css" metaDescription="Bangla Web Fonts is a free Bangla fonts CDN with high-quality web fonts for websites. Easily use Bangla fonts on your website with fast loading and smooth rendering." fontPreloads={FontPreloads}>
