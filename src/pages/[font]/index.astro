@@ -34,9 +34,10 @@ const PageTitle = `${FontName} - Bangla Web Fonts`;
 const MetaDescription = `${FontName} is a free Bangla web font designed by ${FontDesigner}, optimized for smooth rendering and fast loading. Easily use ${FontName} on your website with Free Bangla Web Fonts CDN.`;
 const FontCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.css`;
 const FontMinifiedCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.min.css`;
+const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 ---
 
-<Layout title={PageTitle} extraStyleUrl={FontMinifiedCSS} metaDescription={MetaDescription} metaKeyword={FontName}>
+<Layout title={PageTitle} extraStyleUrl={ExtraStyleUrl} metaDescription={MetaDescription} metaKeyword={FontName}>
 
 <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 <div id="preview"/>
