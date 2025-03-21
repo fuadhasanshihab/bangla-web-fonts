@@ -2,7 +2,7 @@
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
-const { title, extraStyleUrl, metaDescription, metaKeyword, fontPreloads, metaKeywords } = Astro.props;
+const { title, extraStyleUrl, metaDescription, fontPreloads, metaKeywords } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,13 +11,9 @@ const { title, extraStyleUrl, metaDescription, metaKeyword, fontPreloads, metaKe
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-{metaDescription && <meta name="description" content={metaDescription}/>}
-
-<meta name="keywords" content={metaKeywords}/>
+{metaDescription && <meta name="description" content={metaDescription} />}
+{metaKeywords && <meta name="keywords" content={metaKeywords} />}
 <meta name="theme-color" content="#ffffff">
-<Fragment set:html={fontPreloads} />
-{extraStyleUrl && <link rel="preload" href={extraStyleUrl} as="style"/>}
-{extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
 <meta name="google-site-verification" content="8w5E8Hs9xki0okFY2j_2aXhpFL1PQTEgT7cgtiw0eKc" />
 <meta property="og:title" content={title}>
 <meta property="og:description" content={metaDescription}>
@@ -33,6 +29,8 @@ const { title, extraStyleUrl, metaDescription, metaKeyword, fontPreloads, metaKe
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://banglawebfonts.pages.dev/assets/images/bangla-web-fonts-1200x630.jpg">
 <link rel="canonical" href={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
+<Fragment set:html={fontPreloads} />
+{extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
 <link rel="manifest" href="/manifest.json">
     <script is:inline> if(typeof Storage!=="undefined"&&localStorage.getItem("dark_mode")==="true")document.documentElement.classList.add("dark"); </script>
     <style>.prose img {border-radius: 20px;}</style>
