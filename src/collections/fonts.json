@@ -180,6 +180,16 @@
     "FontDesignerURL": "https://black-foundry.com/"
   },
   {
+    "FontName": "Charu Chandan",
+    "TotalStyles": "2",
+    "FontFamily": "'Charu Chandan', sans-serif",
+    "FontPath": "charukola",
+    "FontWeights": [400, 700],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Chandan Acharja",
+    "FontDesignerURL": "https://charuchandan.wordpress.com/"
+  },
+  {
     "FontName": "Ekushey Puja",
     "TotalStyles": "2",
     "FontFamily": "'Ekushey Puja', serif",
