@@ -10,7 +10,7 @@ import Layout from "../layouts/main.astro";
       description=""
     />
 
-<section>
+<section class="mt-10">
             <h2 class="text-2xl font-semibold mb-4">বাংলা লিপির পরিচয়</h2>
             <p class="text-lg leading-relaxed text-neutral-900 dark:text-neutral-100">
                 বাংলা লিপি হল একটি গুরুত্বপূর্ণ লিখন পদ্ধতি যা বাংলা, মণিপুরি, ককবরক ও অসমীয়া ভাষায় ব্যবহৃত হয়। 
@@ -50,7 +50,7 @@ import Layout from "../layouts/main.astro";
         link.href = `/css/${fontParam}.css`;
         document.head.appendChild(link);
 
-        document.getElementById("custom-font").style.fontFamily = formattedFont;
+        document.getElementById("custom-font").style.fontFamily = `"${formattedFont}"`;
       }
     });
   </script>
