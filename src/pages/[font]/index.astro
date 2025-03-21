@@ -52,12 +52,17 @@ const FontPreloads = FontWeights.map(weight => {
 
 const PageTitle = `${FontName} - Bangla Web Fonts`;
 const MetaDescription = `${FontName} is a free Bangla web font designed by ${FontDesigner}, optimized for smooth rendering and fast loading. Easily use ${FontName} on your website with Free Bangla Web Fonts CDN.`;
+
+const fontNameL = FontName.toLowerCase();
+const MetaKeywords = `${fontNameL}, ${fontNameL} web font, ${fontNameL} font cdn, ${fontNameL} font download, ${fontNameL} free download, ${fontNameL} embed link, ${fontNameL} font`;
+
+
 const FontCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.css`;
 const FontMinifiedCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.min.css`;
 const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 ---
 
-<Layout title={PageTitle} extraStyleUrl={ExtraStyleUrl} metaDescription={MetaDescription} metaKeyword={FontName} fontPreloads={FontPreloads}>
+<Layout title={PageTitle} extraStyleUrl={ExtraStyleUrl} metaDescription={MetaDescription} metaKeywords={MetaKeywords} fontPreloads={FontPreloads}>
 
 <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 
