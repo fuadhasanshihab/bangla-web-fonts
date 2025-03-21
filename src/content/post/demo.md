@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/post.astro
-title: বাংলা বর্ণমালা ও ফন্ট
-description: বাংলা লিপি হল একটি গুরুত্বপূর্ণ লিখন পদ্ধতি যা বাংলা, মণিপুরি, ককবরক ও অসমীয়া ভাষায় ব্যবহৃত হয়।
+title: Error 404
+description:
 dateFormatted: Mar 25, 2025
 ---
