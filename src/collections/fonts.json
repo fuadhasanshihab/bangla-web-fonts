@@ -171,7 +171,7 @@
   },
   {
     "FontName": "Atma",
-    "TotalStyles": "2",
+    "TotalStyles": "5",
     "FontFamily": "'Atma', sans-serif",
     "FontPath": "atma",
     "FontWeights": [300, 400, 500, 600, 700],
@@ -198,5 +198,25 @@
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Omi Azad, Solaiman Karim",
     "FontDesignerURL": "https://ekushey.org/designer/omiazad-solaimankarim/"
+  },
+  {
+    "FontName": "Noto Sans Bengali",
+    "TotalStyles": "9",
+    "FontFamily": "'Noto Sans Bengali', serif",
+    "FontPath": "noto-sas-bengali",
+    "FontWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    "FontTesterWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    "FontDesigner": "Google",
+    "FontDesignerURL": "https://fonts.google.com/"
+  },
+  {
+    "FontName": "Anek Bangla",
+    "TotalStyles": "8",
+    "FontFamily": "'Anek Bangla', sans-serif",
+    "FontPath": "anek-bangla",
+    "FontWeights": [100, 200, 300, 400, 500, 600, 700, 800],
+    "FontTesterWeights": [100, 200, 300, 400, 500, 600, 700, 800],
+    "FontDesigner": "Ek Type",
+    "FontDesignerURL": "https://ektype.in/"
   }
 ]
