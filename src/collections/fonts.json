@@ -202,8 +202,8 @@
   {
     "FontName": "Noto Sans Bengali",
     "TotalStyles": "9",
-    "FontFamily": "'Noto Sans Bengali', serif",
-    "FontPath": "noto-sas-bengali",
+    "FontFamily": "'Noto Sans Bengali', sans-serif",
+    "FontPath": "noto-sans-bengali",
     "FontWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
     "FontTesterWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
     "FontDesigner": "Google",
