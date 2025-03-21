@@ -5,8 +5,8 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
 ---
 
 <a
-  href={newPath}
-  class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl"
+  href={newPath} id={FontPath}
+  class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-6 group h-100 rounded-2xl" aria-label={`${FontName} Font`}
 >
   <span
     class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"
@@ -18,7 +18,7 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
     class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
   >
     <span class="w-full h-auto">
-        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.75rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem] visible-animation"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
+        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem] visible-animation"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     </span>
     <span class="block w-full px-1 mt-5 mb-1 sm:mt-3">
       <span
