@@ -11,8 +11,11 @@ const FontPreloads = preloadedFonts
       `<link rel="preload" as="font" type="font/woff2" href="/fonts/${font.FontPath}/${font.FontPath}-regular.woff2" crossorigin="anonymous" />`
   )
   .join("");
+
+const FontKeywords = fonts.map(font => `${font.FontName}`).join(', ');
+
 ---
 
-<Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" extraStyleUrl="/css/webfonts.min.css" metaDescription="Bangla Web Fonts is a free Bangla fonts CDN with high-quality web fonts for websites. Easily use Bangla fonts on your website with fast loading and smooth rendering." fontPreloads={FontPreloads}>
+<Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" extraStyleUrl="/css/webfonts.min.css" metaDescription="Bangla Web Fonts is a free Bangla fonts CDN with high-quality web fonts for websites. Easily use Bangla fonts on your website with fast loading and smooth rendering." fontPreloads={FontPreloads} metaKeywords={FontKeywords}>
   <FontsList/>
 </Layout>
