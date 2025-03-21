@@ -190,14 +190,14 @@
     "FontDesignerURL": "https://charuchandan.wordpress.com/"
   },
   {
-    "FontName": "Ekushey Puja",
+    "FontName": "Ekushey Azad",
     "TotalStyles": "2",
-    "FontFamily": "'Ekushey Puja', serif",
-    "FontPath": "ekushey-puja",
+    "FontFamily": "'Ekushey Azad', sans-serif",
+    "FontPath": "ekushey-azad",
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
-    "FontDesigner": "Omi Azad, Solaiman Karim",
-    "FontDesignerURL": "https://ekushey.org/designer/omiazad-solaimankarim/"
+    "FontDesigner": "Omi Azad",
+    "FontDesignerURL": "https://ekushey.org/designer/omi-azad/"
   },
   {
     "FontName": "Noto Sans Bengali",
