@@ -50,6 +50,8 @@ const schemaData = {
     <script is:inline> if(typeof Storage!=="undefined"&&localStorage.getItem("dark_mode")==="true")document.documentElement.classList.add("dark"); </script>
     <style>.prose img {border-radius: 20px;}</style>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo/192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo/512x512.png">
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
     <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
