@@ -4,13 +4,16 @@ import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
 const { title, extraStyleUrl, metaDescription, fontPreloads, metaKeywords } = Astro.props;
 
+const pageUrl = new URL(Astro.url.pathname, Astro.site)
+const SITE_TITLE = "Bangla Web Fonts" // Define the site title
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: Bangla Web Fonts,
+  name: SITE_TITLE, // Corrected to use the defined SITE_TITLE
   url: Astro.site + pageUrl.pathname,
   title: title,
-  description: metaDescription,
+  description: description,
 }
 ---
 
