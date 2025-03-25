@@ -31,7 +31,7 @@ const schemaData = {
 <meta name="theme-color" content="#ffffff">
 <meta name="google-site-verification" content="8w5E8Hs9xki0okFY2j_2aXhpFL1PQTEgT7cgtiw0eKc" />
 <meta property="og:title" content={title}>
-<meta property="og:description" content={metaDescription}>
+{metaDescription && <meta property="og:description" content={metaDescription}>}
 <meta property="og:image" content="https://banglawebfonts.pages.dev/assets/images/bangla-web-fonts-1200x630.jpg">
 <meta property="og:url" content={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
 <meta property="og:type" content="website">
@@ -39,7 +39,7 @@ const schemaData = {
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="bn_BD">
 <meta name="twitter:title" content={title}>
-<meta name="twitter:description" content={metaDescription}>
+{metaDescription && <meta name="twitter:description" content={metaDescription}>}
 <meta name="twitter:url" content={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://banglawebfonts.pages.dev/assets/images/bangla-web-fonts-1200x630.jpg">
