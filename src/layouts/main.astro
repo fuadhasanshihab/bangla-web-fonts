@@ -3,6 +3,15 @@ import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
 const { title, extraStyleUrl, metaDescription, fontPreloads, metaKeywords } = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: Bangla Web Fonts,
+  url: Astro.site + pageUrl.pathname,
+  title: title,
+  description: metaDescription,
+}
 ---
 
 <!doctype html>
@@ -37,6 +46,7 @@ const { title, extraStyleUrl, metaDescription, fontPreloads, metaKeywords } = As
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
     <SquareLines />
