@@ -3,9 +3,8 @@ import FontsList from "../components/home/fonts-list.astro";
 import Layout from "../layouts/main.astro";
 import fonts from "../collections/fonts.json";
 import Separator from "../components/home/separator.astro";
-import Button from "../components/button.astro";
 
-const preloadedFonts = fonts.slice(0, 6);
+const preloadedFonts = fonts.slice(0, 4);
 
 const FontPreloads = preloadedFonts
   .map(
@@ -52,7 +51,7 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
         >
           Bangla Web Fonts
         </h1>
-        <p class="mb-2 text-base text-neutral-600 dark:text-neutral-400">
+        <p class="text-base text-neutral-800 dark:text-neutral-200">
           A fast Bangla fonts CDN for seamless typography on the web.
         </p>
       </div>
