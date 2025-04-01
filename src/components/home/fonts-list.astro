@@ -10,7 +10,7 @@ import FontCard from "../font-card.astro";
     {
       fonts.map((font) => {
         return (
-          <FontCard client:load
+          <FontCard
             FontName={font.FontName}
             TotalStyles={font.TotalStyles}
             FontFamily={font.FontFamily}
