@@ -3,8 +3,8 @@ name: Generate ReadMe Files for Fonts
 on:
   push:
     branches:
-      - update-020425  # Triggers when there is a push to the update-020425 branch
-  workflow_dispatch:  # Allows manual triggering of the workflow
+      - update-020425  # Change this to the desired branch name
+  workflow_dispatch:
 
 jobs:
   generate-readme:
@@ -21,7 +21,7 @@ jobs:
 
         # Loop through each font entry in the JSON
         for font in $(grep -oP '\{.*?\}' $FONT_JSON_PATH); do
-          # Extract values using grep and awk (without jq)
+          # Extract values using grep (without jq)
           FONT_NAME=$(echo "$font" | grep -oP '"FontName": *"\K([^"]+)' )
           FONT_PATH=$(echo "$font" | grep -oP '"FontPath": *"\K([^"]+)' )
           FONT_FAMILY=$(echo "$font" | grep -oP '"FontFamily": *"\K([^"]+)' )
@@ -36,26 +36,7 @@ jobs:
           mkdir -p $FONT_DIR
 
           # Create the readme.md file
-          cat <<EOF > "$FONT_DIR/readme.md"
-# $FONT_NAME
-
-## Font Family
-\`\`\`
-$FONT_FAMILY
-\`\`\`
-
-## Font Weights
-$FONT_WEIGHTS
-
-## Font Tester Weights
-$FONT_TESTER_WEIGHTS
-
-## Font Designer
-[$FONT_DESIGNER]($FONT_DESIGNER_URL)
-
-## Font License
-$FONT_LICENSE
-EOF
+          echo -e "# $FONT_NAME\n\n## Font Family\n\`\`\`\n$FONT_FAMILY\n\`\`\`\n\n## Font Weights\n$FONT_WEIGHTS\n\n## Font Tester Weights\n$FONT_TESTER_WEIGHTS\n\n## Font Designer\n[$FONT_DESIGNER]($FONT_DESIGNER_URL)\n\n## Font License\n$FONT_LICENSE" > "$FONT_DIR/readme.md"
 
           echo "Generated readme.md for $FONT_NAME"
         done
