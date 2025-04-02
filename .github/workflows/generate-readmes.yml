@@ -25,22 +25,19 @@ jobs:
           const path = require("path");
 
           const fontsDir = "./public/fonts";
-          const readmeContent = "# FontName\n\nThis directory contains FontName font files.\n\n## CSS Stylesheet:\n\`\`\`css\nhttps://banglawebfonts.pages.dev/css/FontName.css\n\`\`\`\n\n## Font Details\nVisit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.";
+          const readmeContentTemplate = "# FontName\n\nThis directory contains FontName font files.\n\n## CSS Stylesheet:\n\`\`\`css\nhttps://banglawebfonts.pages.dev/css/FontName.css\n\`\`\`\n\n## Font Details\nVisit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.";
 
           fs.readdirSync(fontsDir).forEach((fontName) => {
               const fontPath = path.join(fontsDir, fontName);
               if (fs.statSync(fontPath).isDirectory()) {
                   const readmePath = path.join(fontPath, "README.md");
-                  const content = readmeContent.replace("FontName", fontName);
+                  // Replace all occurrences of FontName dynamically
+                  const readmeContent = readmeContentTemplate
+                    .replace(/FontName/g, fontName);  // Replace all instances
 
                   // If README.md exists, update it, otherwise create it
-                  if (fs.existsSync(readmePath)) {
-                      fs.writeFileSync(readmePath, content);
-                      console.log(`Updated: ${readmePath}`);
-                  } else {
-                      fs.writeFileSync(readmePath, content);
-                      console.log(`Created: ${readmePath}`);
-                  }
+                  fs.writeFileSync(readmePath, readmeContent);
+                  console.log(`Processed: ${readmePath}`);
               }
           });
           EOF
