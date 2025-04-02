@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/main.astro";
 import fonts from '../../collections/fonts.json';
+import licenses from '../../collections/licenses.json';
 import PageHeading from "../../components/page-heading.astro";
 import CodeBox from "../../components/codebox.astro";
 import PreviewInput from "../../components/preview-input.astro";
@@ -13,7 +14,9 @@ export async function getStaticPaths() {
   }));
 }
 
-const { FontName, TotalStyles, FontFamily, FontWeights, FontTesterWeights, FontDesigner, FontPath, FontDesignerURL } = Astro.props;
+const { FontName, TotalStyles, FontFamily, FontWeights, FontTesterWeights, FontDesigner, FontPath, FontDesignerURL, FontLicense } = Astro.props;
+
+const LicenseInfo = licenses[FontLicense] || { LicenseName: "Unknown", LicenseText: "License information not available.", LicenseURL: "#" };
 
 const getWeightName = (weight) => {
   const weightNames = {
@@ -116,6 +119,13 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   </div>
 </div>
 <p class="mt-5">If you face any problems while embedding the font, please check the <a class="text-blue-600 hover:underline" href="/documentation">documentation</a>.</p>
+
+<div class="mt-12">
+  <h2>License</h2>
+  <p><strong>{LicenseInfo.LicenseName}</strong></p>
+  <p>{LicenseInfo.LicenseText} <a href={LicenseInfo.LicenseURL} target="_blank">Learn more</a></p>
+</div>
+
 
 <div class="mt-12">
   <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Glyphs</h2>
