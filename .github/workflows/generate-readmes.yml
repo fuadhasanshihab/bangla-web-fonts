@@ -2,8 +2,6 @@ name: Generate Font READMEs
 
 on:
   push:
-    branches:
-      - update-020425  # Run only when pushing to this branch
     paths:
       - "public/fonts/**"
 
@@ -14,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -45,7 +45,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git checkout update-020425
           git add .
           git commit -m "Auto-generate README.md for new fonts" || exit 0
-          git push origin update-020425
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
+
