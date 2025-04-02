@@ -1,13 +1,11 @@
-# Font Information
+# ab-shapla
 
-This directory contains the font files for this font.
+This directory contains FontName font files.
 
-## Usage
-
-Include this font in your website using:
+## CSS Stylesheet:
 ```css
-@font-face {
-    font-family: 'ab-shapla';
-    src: url('FontFile.woff2') format('woff2');
-}
+https://banglawebfonts.pages.dev/css/FontName.css
 ```
+
+## Font Details
+Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
