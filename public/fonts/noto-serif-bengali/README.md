@@ -1,11 +1,11 @@
 # noto-serif-bengali
 
-This directory contains FontName font files.
+This directory contains noto-serif-bengali font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/FontName.css
+https://banglawebfonts.pages.dev/css/noto-serif-bengali.css
 ```
 
 ## Font Details
-Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+Visit https://banglawebfonts.pages.dev/noto-serif-bengali/#about for font designer, styles, license information.

@@ -1,11 +1,11 @@
 # ekushey-lal-sabuj
 
-This directory contains FontName font files.
+This directory contains ekushey-lal-sabuj font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/FontName.css
+https://banglawebfonts.pages.dev/css/ekushey-lal-sabuj.css
 ```
 
 ## Font Details
-Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+Visit https://banglawebfonts.pages.dev/ekushey-lal-sabuj/#about for font designer, styles, license information.

@@ -1,11 +1,11 @@
 # atma
 
-This directory contains FontName font files.
+This directory contains atma font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/FontName.css
+https://banglawebfonts.pages.dev/css/atma.css
 ```
 
 ## Font Details
-Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+Visit https://banglawebfonts.pages.dev/atma/#about for font designer, styles, license information.

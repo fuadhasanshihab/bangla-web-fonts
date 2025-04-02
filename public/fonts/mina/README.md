@@ -1,11 +1,11 @@
 # mina
 
-This directory contains FontName font files.
+This directory contains mina font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/FontName.css
+https://banglawebfonts.pages.dev/css/mina.css
 ```
 
 ## Font Details
-Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+Visit https://banglawebfonts.pages.dev/mina/#about for font designer, styles, license information.

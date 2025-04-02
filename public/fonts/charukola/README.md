@@ -1,11 +1,11 @@
 # charukola
 
-This directory contains FontName font files.
+This directory contains charukola font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/FontName.css
+https://banglawebfonts.pages.dev/css/charukola.css
 ```
 
 ## Font Details
-Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+Visit https://banglawebfonts.pages.dev/charukola/#about for font designer, styles, license information.

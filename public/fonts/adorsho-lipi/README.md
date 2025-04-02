@@ -1,11 +1,11 @@
 # adorsho-lipi
 
-This directory contains FontName font files.
+This directory contains adorsho-lipi font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/FontName.css
+https://banglawebfonts.pages.dev/css/adorsho-lipi.css
 ```
 
 ## Font Details
-Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+Visit https://banglawebfonts.pages.dev/adorsho-lipi/#about for font designer, styles, license information.
