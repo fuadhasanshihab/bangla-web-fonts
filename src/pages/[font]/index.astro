@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
 const { FontName, TotalStyles, FontFamily, FontWeights, FontTesterWeights, FontDesigner, FontPath, FontDesignerURL, FontLicense } = Astro.props;
 
-const LicenseInfo = licenses[FontLicense] || { LicenseName: "Unknown", LicenseText: "License information not available.", LicenseURL: "#" };
+const LicenseInfo = licenses[FontLicense]?.LicenseText || FontLicense || "License information not available.";
 
 const getWeightName = (weight) => {
   const weightNames = {
@@ -122,8 +122,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 <div class="mt-12">
   <h2>License</h2>
-  <p><strong>{LicenseInfo.LicenseName}</strong></p>
-  <p>{LicenseInfo.LicenseText} <a href={LicenseInfo.LicenseURL} target="_blank">Learn more</a></p>
+  <p set:html="LicenseInfo"></p>
 </div>
 
 
