@@ -18,7 +18,7 @@ const { FontName, TotalStyles, FontFamily, FontWeights, FontTesterWeights, FontD
 
 const LicenseInfo = licenses[FontLicense]?.LicenseText || FontLicense || "License information not available.";
 
-const FontCategory = FontFamily.includes("serif") ? "Serif" : (FontFamily.includes("sans-serif") ? "Sans Serif" : "Unknown");
+const FontCategory = FontFamily.includes("sans-serif") ? "Sans Serif" : (FontFamily.includes("serif") ? "Serif" : "Unknown");
 
 const getWeightName = (weight) => {
   const weightNames = {
@@ -125,19 +125,19 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 <div class="mt-12">
   <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">About {FontName} Font</h2>
 <div class="mt-2 sm:grid sm:grid-cols-2 sm:gap-0">
-  <div class="py-4 border-b border-gray-300 sm:grid sm:grid-cols-3 sm:gap-0">
+  <div class="py-4 border-b border-gray-200 sm:grid sm:grid-cols-3 sm:gap-0">
     <h3 class="font-medium text-gray-900">Family</h3>
     <p class="mt-1 text-gray-700 sm:col-span-2 sm:mt-0">{FontName}</p>
   </div>
-  <div class="py-4 border-b border-gray-300 sm:grid sm:grid-cols-3 sm:gap-0">
+  <div class="py-4 border-b border-gray-200 sm:grid sm:grid-cols-3 sm:gap-0">
     <h3 class="font-medium text-gray-900">Total Styles</h3>
     <p class="mt-1 text-gray-700 sm:col-span-2 sm:mt-0">{TotalStyles}</p>
   </div>
-  <div class="py-4 border-b border-gray-300 sm:grid sm:grid-cols-3 sm:gap-0">
+  <div class="py-4 border-b border-gray-200 sm:grid sm:grid-cols-3 sm:gap-0">
     <h3 class="font-medium text-gray-900">Category</h3>
     <p class="mt-1 text-gray-700 sm:col-span-2 sm:mt-0">{FontCategory}</p>
   </div>
-  <div class="py-4 border-b border-gray-300 sm:grid sm:grid-cols-3 sm:gap-0">
+  <div class="py-4 border-b border-gray-200 sm:grid sm:grid-cols-3 sm:gap-0">
     <h3 class="font-medium text-gray-900">Designer</h3>
     <a href={FontDesignerURL} class="mt-1 text-gray-700 sm:col-span-2 sm:mt-0">{FontDesigner}</a>
   </div>
