@@ -16,11 +16,25 @@ jobs:
 
     - name: Generate Readme files
       run: |
+        # Debug: Print the current working directory and list files
+        echo "Current directory:"
+        pwd
+        echo "Listing files in the repository:"
+        ls -al
+
         # Read fonts.json and loop through each font
         FONT_JSON_PATH="./src/collections/fonts.json"
 
-        # Loop through each font entry in the JSON
-        for font in $(grep -oP '\{.*?\}' $FONT_JSON_PATH); do
+        # Check if fonts.json exists
+        if [ ! -f "$FONT_JSON_PATH" ]; then
+          echo "fonts.json not found at $FONT_JSON_PATH"
+          exit 1
+        fi
+
+        echo "Found fonts.json, proceeding with readme creation..."
+
+        # Loop through each font entry in the JSON (Using grep and sed for simplicity)
+        grep -oP '\{.*?\}' $FONT_JSON_PATH | while read font; do
           # Extract values using grep (without jq)
           FONT_NAME=$(echo "$font" | grep -oP '"FontName": *"\K([^"]+)' )
           FONT_PATH=$(echo "$font" | grep -oP '"FontPath": *"\K([^"]+)' )
@@ -31,12 +45,24 @@ jobs:
           FONT_DESIGNER_URL=$(echo "$font" | grep -oP '"FontDesignerURL": *"\K([^"]+)' )
           FONT_LICENSE=$(echo "$font" | grep -oP '"FontLicense": *"\K([^"]+)' )
 
+          # Debug: Print the extracted values
+          echo "Creating readme for $FONT_NAME at $FONT_PATH"
+
           # Create directory if it doesn't exist
-          FONT_DIR="./src/public/fonts/$FONT_PATH"
+          FONT_DIR="./public/fonts/$FONT_PATH"
           mkdir -p $FONT_DIR
+
+          # Verify that the directory exists
+          echo "Directory created: $FONT_DIR"
+          ls -al $FONT_DIR
 
           # Create the readme.md file
           echo -e "# $FONT_NAME\n\n## Font Family\n\`\`\`\n$FONT_FAMILY\n\`\`\`\n\n## Font Weights\n$FONT_WEIGHTS\n\n## Font Tester Weights\n$FONT_TESTER_WEIGHTS\n\n## Font Designer\n[$FONT_DESIGNER]($FONT_DESIGNER_URL)\n\n## Font License\n$FONT_LICENSE" > "$FONT_DIR/readme.md"
 
-          echo "Generated readme.md for $FONT_NAME"
+          # Debug: Confirm file creation
+          if [ -f "$FONT_DIR/readme.md" ]; then
+            echo "readme.md created for $FONT_NAME"
+          else
+            echo "Failed to create readme.md for $FONT_NAME"
+          fi
         done
