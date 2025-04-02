@@ -1,0 +1,17 @@
+{
+  "OFL": {
+    "LicenseName": "SIL Open Font License",
+    "LicenseText": "This Font Software is licensed under the SIL Open Font License. This license is available with a FAQ at:",
+    "LicenseURL": "https://openfontlicense.org/"
+  },
+  "GPL": {
+    "LicenseName": "GNU General Public License",
+    "LicenseText": "This Font Software is licensed under the GNU General Public License.",
+    "LicenseURL": "https://www.gnu.org/licenses/gpl-3.0.html"
+  },
+  "CC": {
+    "LicenseName": "Creative Commons License",
+    "LicenseText": "This Font Software is licensed under a Creative Commons License.",
+    "LicenseURL": "https://creativecommons.org/licenses/"
+  }
+}
