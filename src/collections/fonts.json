@@ -30,7 +30,7 @@
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Md. Tanbin Islam Siyam",
     "FontDesignerURL": "https://github.com/potasiyam",
-    "FontLicense": "OFL"
+    "FontLicense": "GPL"
   },
   {
     "FontName": "Hind Siliguri",
@@ -105,8 +105,8 @@
     "FontPath": "ekushey-lal-sabuj",
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
-    "FontDesigner": "Proshika Computer Systems",
-    "FontDesignerURL": "https://ekushey.org/designer/poshkha/",
+    "FontDesigner": "Ekushey",
+    "FontDesignerURL": "https://ekushey.org/",
     "FontLicense": "OFL"
   },
   {
@@ -116,9 +116,9 @@
     "FontPath": "adorsho-lipi",
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
-    "FontDesigner": "cgimagine",
-    "FontDesignerURL": "#",
-    "FontLicense": "OFL"
+    "FontDesigner": "Partha Sarathi Pal",
+    "FontDesignerURL": "mailto:p.s.pal.2006@gmail.com",
+    "FontLicense": "GPL"
   },
   {
     "FontName": "Charukola",
@@ -129,7 +129,7 @@
     "FontTesterWeights": [300, 400, 700],
     "FontDesigner": "Chandan Acharja",
     "FontDesignerURL": "https://charuchandan.wordpress.com/",
-    "FontLicense": "OFL"
+    "FontLicense": "This font is free for everyone to use."
   },
   {
     "FontName": "AB Shapla",
@@ -140,7 +140,7 @@
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Maksud Rahman, Muhammad Nazimuddaula, Tirana Khan",
     "FontDesignerURL": "https://web.archive.org/web/20160408060023/http://www.amarbornomala.gov.bd/fonts/details/1",
-    "FontLicense": "OFL"
+    "FontLicense": "This font is free for everyone to use, but its commercial distribution is strictly prohibited."
   },
   {
     "FontName": "Ekushey Mukto",
@@ -149,8 +149,8 @@
     "FontPath": "ekushey-mukto",
     "FontWeights": [400, 700],
     "FontTesterWeights": [400, 700],
-    "FontDesigner": "Proshika Computer Systems",
-    "FontDesignerURL": "https://ekushey.org/designer/poshkha/",
+    "FontDesigner": "Ekushey",
+    "FontDesignerURL": "https://ekushey.org/",
     "FontLicense": "OFL"
   },
   {
@@ -162,7 +162,7 @@
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Subrata Sen",
     "FontDesignerURL": "https://www.subratasen.com/",
-    "FontLicense": "OFL"
+    "FontLicense": "GPL"
   },
   {
     "FontName": "Bensen Handwriting",
@@ -173,7 +173,7 @@
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Subrata Sen",
     "FontDesignerURL": "https://www.subratasen.com/",
-    "FontLicense": "OFL"
+    "FontLicense": "GPL"
   },
   {
     "FontName": "Ekushey Saraswatii",
@@ -182,9 +182,9 @@
     "FontPath": "ekushey-saraswatii",
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
-    "FontDesigner": "Omi Azad, Solaiman Karim",
-    "FontDesignerURL": "https://ekushey.org/designer/omiazad-solaimankarim/",
-    "FontLicense": "OFL"
+    "FontDesigner": "Ekushey",
+    "FontDesignerURL": "https://ekushey.org/",
+    "FontLicense": "GPL"
   },
   {
     "FontName": "Atma",
@@ -206,7 +206,7 @@
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Chandan Acharja",
     "FontDesignerURL": "https://charuchandan.wordpress.com/",
-    "FontLicense": "OFL"
+    "FontLicense": "This font is free for everyone to use."
   },
   {
     "FontName": "Ekushey Azad",
@@ -215,9 +215,9 @@
     "FontPath": "ekushey-azad",
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
-    "FontDesigner": "Omi Azad",
-    "FontDesignerURL": "https://ekushey.org/designer/omi-azad/",
-    "FontLicense": "OFL"
+    "FontDesigner": "Ekushey",
+    "FontDesignerURL": "https://ekushey.org/",
+    "FontLicense": "GPL"
   },
   {
     "FontName": "Noto Sans Bengali",
