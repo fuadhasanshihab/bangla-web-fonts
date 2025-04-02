@@ -1,0 +1,61 @@
+name: Generate ReadMe Files for Fonts
+
+on:
+  push:
+    branches:
+      - update-020425  # Triggers when there is a push to the update-020425 branch
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Generate Readme files
+      run: |
+        # Read fonts.json and loop through each font
+        FONT_JSON_PATH="./src/collections/fonts.json"
+
+        # Loop through each font entry in the JSON
+        for font in $(grep -oP '\{.*?\}' $FONT_JSON_PATH); do
+          # Extract values using grep and awk (without jq)
+          FONT_NAME=$(echo "$font" | grep -oP '"FontName": *"\K([^"]+)' )
+          FONT_PATH=$(echo "$font" | grep -oP '"FontPath": *"\K([^"]+)' )
+          FONT_FAMILY=$(echo "$font" | grep -oP '"FontFamily": *"\K([^"]+)' )
+          FONT_WEIGHTS=$(echo "$font" | grep -oP '"FontWeights": *\[(.*?)\]' | sed 's/\[//;s/\]//')
+          FONT_TESTER_WEIGHTS=$(echo "$font" | grep -oP '"FontTesterWeights": *\[(.*?)\]' | sed 's/\[//;s/\]//')
+          FONT_DESIGNER=$(echo "$font" | grep -oP '"FontDesigner": *"\K([^"]+)' )
+          FONT_DESIGNER_URL=$(echo "$font" | grep -oP '"FontDesignerURL": *"\K([^"]+)' )
+          FONT_LICENSE=$(echo "$font" | grep -oP '"FontLicense": *"\K([^"]+)' )
+
+          # Create directory if it doesn't exist
+          FONT_DIR="./src/public/fonts/$FONT_PATH"
+          mkdir -p $FONT_DIR
+
+          # Create the readme.md file
+          cat <<EOF > "$FONT_DIR/readme.md"
+# $FONT_NAME
+
+## Font Family
+\`\`\`
+$FONT_FAMILY
+\`\`\`
+
+## Font Weights
+$FONT_WEIGHTS
+
+## Font Tester Weights
+$FONT_TESTER_WEIGHTS
+
+## Font Designer
+[$FONT_DESIGNER]($FONT_DESIGNER_URL)
+
+## Font License
+$FONT_LICENSE
+EOF
+
+          echo "Generated readme.md for $FONT_NAME"
+        done
