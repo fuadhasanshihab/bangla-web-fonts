@@ -102,7 +102,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 <p class="text-neutral-900 dark:text-neutral-100 mt-3 sm:mt-4">Use the following CSS rule to specify the {FontName} font family</p>
 <CodeBox id="FAMILYcodebox" code={`font-family: ${FontFamily};`} />
 
-<p class="text-neutral-900 dark:text-neutral-100 mt-8">Example: To apply {FontName} font to a webpage, use the following CSS</p>
+<p class="text-neutral-900 dark:text-neutral-100 mt-8"><span class="text-neutral-900 dark:text-neutral-100 font-medium mt-4">Example:</span> To apply {FontName} font to a webpage, use the following CSS</p>
 <CodeBox id="CLASScodebox" code={`body {
   font-family: ${FontFamily};
   font-weight: 400;
@@ -120,7 +120,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
     <p class="text-blue-600 dark:text-blue-300 break-words whitespace-normal">{FontMinifiedCSS}</p>
   </div>
 </div>
-<p class="mt-5">If you face any problems while embedding the font, please check the <a class="text-blue-600 hover:underline" href="/documentation">documentation</a>.</p>
+<p class="mt-5">If you face any problems while embedding the font, please check the <a class="text-blue-600 hover:underline" href="/documentation/">documentation</a>.</p>
 
 <div class="mt-12">
   <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">About {FontName} Font</h2>
@@ -139,7 +139,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   </div>
   <div class="py-4 border-b border-gray-200 sm:grid sm:grid-cols-3 sm:gap-0">
     <h3 class="font-medium text-gray-900">Designer</h3>
-    <a href={FontDesignerURL} class="mt-1 text-gray-700 sm:col-span-2 sm:mt-0">{FontDesigner}</a>
+    <a href={FontDesignerURL} class="mt-1 text-blue-600 sm:col-span-2 sm:mt-0 hover:underline">{FontDesigner}</a>
   </div>
   <div class="pt-4 sm:col-span-2 sm:grid sm:grid-cols-6 sm:gap-0">
     <h3 class="font-medium text-gray-900">License</h3>
@@ -147,7 +147,6 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   </div>
 </div>
 </div>
-
 
 <div class="mt-12">
   <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Glyphs</h2>
