@@ -66,3 +66,19 @@ jobs:
             echo "Failed to create readme.md for $FONT_NAME"
           fi
         done
+
+    - name: Commit changes
+      run: |
+        # Check if there are any changes to commit
+        git add .
+        git status
+
+        # If there are any changes (new readme files), commit them
+        if [[ $(git status --porcelain) ]]; then
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git commit -m "Generated readme.md files for fonts"
+          git push origin update-020425
+        else
+          echo "No changes to commit"
+        fi
