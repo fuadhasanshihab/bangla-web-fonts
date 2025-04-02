@@ -52,8 +52,8 @@ jobs:
           FONT_DIR="./public/fonts/$FONT_PATH"
           mkdir -p $FONT_DIR
 
-          # Verify that the directory exists
-          echo "Directory created: $FONT_DIR"
+          # Debug: Confirm directory creation
+          echo "Directory created at: $FONT_DIR"
           ls -al $FONT_DIR
 
           # Create the readme.md file
