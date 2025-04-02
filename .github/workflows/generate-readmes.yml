@@ -37,7 +37,8 @@ jobs:
                   console.log(\`Updated: \${readmePath}\`);
               }
           });
-          EOF
+          
+        shell: node
 
       - name: Commit and push changes
         run: |
