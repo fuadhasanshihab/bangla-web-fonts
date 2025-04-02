@@ -25,7 +25,17 @@ jobs:
           const path = require("path");
 
           const fontsDir = "./public/fonts";
-          const readmeContent = \`# FontName\nThis directory contains the FontName webfont files.\n\n## CSS Stylesheet\n\`\`\`css\nhttps://banglawebfonts.pages.dev/css/FontName.css\n\`\`\`\n\n## Font Details\nVisit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.\`;
+          const readmeContent = `# FontName
+This directory contains the FontName webfont files.
+
+## CSS Stylesheet
+\`\`\`css
+https://banglawebfonts.pages.dev/css/FontName.css
+\`\`\`
+
+## Font Details
+Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+`;
 
           fs.readdirSync(fontsDir).forEach((fontName) => {
               const fontPath = path.join(fontsDir, fontName);
