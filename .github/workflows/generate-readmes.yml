@@ -1,7 +1,7 @@
 name: Generate Font READMEs
 
 on:
-  workflow_dispatch:  # Allows manual trigger via GitHub UI
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions UI
 
 jobs:
   generate-readmes:
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -20,11 +20,12 @@ jobs:
 
       - name: Update README files
         run: |
+          node <<EOF
           const fs = require("fs");
           const path = require("path");
 
           const fontsDir = "./public/fonts";
-          const readmeContent = `# FontName\nThis directory contains the FontName webfont files.\n\n## CSS Stylesheet\n\`\`\`css\nhttps://banglawebfonts.pages.dev/css/FontName.css\n\`\`\`\n\n## Font Details\nVisit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.\n`;
+          const readmeContent = \`# FontName\nThis directory contains the FontName webfont files.\n\n## CSS Stylesheet\n\`\`\`css\nhttps://banglawebfonts.pages.dev/css/FontName.css\n\`\`\`\n\n## Font Details\nVisit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.\`;
 
           fs.readdirSync(fontsDir).forEach((fontName) => {
               const fontPath = path.join(fontsDir, fontName);
@@ -37,8 +38,7 @@ jobs:
                   console.log(\`Updated: \${readmePath}\`);
               }
           });
-          
-        shell: node
+          EOF
 
       - name: Commit and push changes
         run: |
@@ -46,4 +46,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add .
           git commit -m "Update README.md files with new content" || exit 0
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
