@@ -1,9 +1,7 @@
 name: Generate Font READMEs
 
 on:
-  push:
-    paths:
-      - "public/fonts/**"
+  workflow_dispatch:  # Allows manual trigger via GitHub UI
 
 jobs:
   generate-readmes:
@@ -13,30 +11,41 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
-      - name: Generate README files
+      - name: Update README files
         run: |
           node <<EOF
           const fs = require("fs");
           const path = require("path");
 
           const fontsDir = "./public/fonts";
-          const readmeContent = "# Font Information\n\nThis directory contains the font files for this font.\n\n## Usage\n\nInclude this font in your website using:\n\`\`\`css\n@font-face {\n    font-family: 'FontName';\n    src: url('FontFile.woff2') format('woff2');\n}\n\`\`\`\n";
+          const readmeContent = `# FontName
+This directory contains the FontName webfont files.
+
+## CSS Stylesheet
+\`\`\`css
+https://banglawebfonts.pages.dev/css/FontName.css
+\`\`\`
+
+## Font Details
+Visit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.
+`;
 
           fs.readdirSync(fontsDir).forEach((fontName) => {
               const fontPath = path.join(fontsDir, fontName);
               if (fs.statSync(fontPath).isDirectory()) {
                   const readmePath = path.join(fontPath, "README.md");
-                  if (!fs.existsSync(readmePath)) {
-                      fs.writeFileSync(readmePath, readmeContent.replace("FontName", fontName));
-                      console.log(\`Created: \${readmePath}\`);
-                  }
+
+                  // Create or update the README.md file
+                  const updatedReadmeContent = readmeContent.replace(/FontName/g, fontName);
+                  fs.writeFileSync(readmePath, updatedReadmeContent);
+                  console.log(\`Updated: \${readmePath}\`);
               }
           });
           EOF
@@ -46,6 +55,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add .
-          git commit -m "Auto-generate README.md for new fonts" || exit 0
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
-
+          git commit -m "Update README.md files with new content" || exit 0
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
