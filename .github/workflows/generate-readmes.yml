@@ -2,6 +2,8 @@ name: Generate Font READMEs
 
 on:
   push:
+    branches:
+      - update-020425  # Run only when pushing to this branch
     paths:
       - "public/fonts/**"
 
@@ -43,6 +45,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          git checkout update-020425
           git add .
           git commit -m "Auto-generate README.md for new fonts" || exit 0
-          git push
+          git push origin update-020425
