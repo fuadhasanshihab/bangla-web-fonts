@@ -1,0 +1,48 @@
+name: Generate Font READMEs
+
+on:
+  push:
+    paths:
+      - "public/fonts/**"
+
+jobs:
+  generate-readmes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Generate README files
+        run: |
+          node <<EOF
+          const fs = require("fs");
+          const path = require("path");
+
+          const fontsDir = "./public/fonts";
+          const readmeContent = "# Font Information\n\nThis directory contains the font files for this font.\n\n## Usage\n\nInclude this font in your website using:\n\`\`\`css\n@font-face {\n    font-family: 'FontName';\n    src: url('FontFile.woff2') format('woff2');\n}\n\`\`\`\n";
+
+          fs.readdirSync(fontsDir).forEach((fontName) => {
+              const fontPath = path.join(fontsDir, fontName);
+              if (fs.statSync(fontPath).isDirectory()) {
+                  const readmePath = path.join(fontPath, "README.md");
+                  if (!fs.existsSync(readmePath)) {
+                      fs.writeFileSync(readmePath, readmeContent.replace("FontName", fontName));
+                      console.log(\`Created: \${readmePath}\`);
+                  }
+              }
+          });
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto-generate README.md for new fonts" || exit 0
+          git push
