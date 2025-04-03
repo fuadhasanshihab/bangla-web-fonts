@@ -9,7 +9,7 @@ https://banglawebfonts.pages.dev/css/charu-chandan.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Charu Chandan', sans-serif
+- **Family:** 'Charu Chandan', sans-serif
 - **Available Weights:** 400, 700
 - **Font Designer:** [Chandan Acharja](https://charuchandan.wordpress.com/)
 - **License:** This font is free for everyone to use.

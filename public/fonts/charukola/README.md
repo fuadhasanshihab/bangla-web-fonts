@@ -9,7 +9,7 @@ https://banglawebfonts.pages.dev/css/charukola.css
 
 ## Font Details:
 - **Total Styles:** 3
-- **Font Family:** 'Charukola', sans-serif
+- **Family:** 'Charukola', sans-serif
 - **Available Weights:** 300, 400, 700
 - **Font Designer:** [Chandan Acharja](https://charuchandan.wordpress.com/)
 - **License:** This font is free for everyone to use.

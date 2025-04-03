@@ -9,7 +9,7 @@ https://banglawebfonts.pages.dev/css/hind-siliguri.css
 
 ## Font Details:
 - **Total Styles:** 5
-- **Font Family:** 'Hind Siliguri', sans-serif
+- **Family:** 'Hind Siliguri', sans-serif
 - **Available Weights:** 300, 400, 500, 600, 700
 - **Font Designer:** [Indian Type Foundry](https://www.indiantypefoundry.com/)
 - **License:** OFL

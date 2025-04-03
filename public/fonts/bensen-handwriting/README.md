@@ -9,8 +9,8 @@ https://banglawebfonts.pages.dev/css/bensen-handwriting.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Bensen Handwriting', sans-serif
-- **Available Weights:** 400
+- **Family:** 'Bensen Handwriting', sans-serif
+- **Available Weights:** 400, 700
 - **Font Designer:** [Subrata Sen](https://www.subratasen.com/)
 - **License:** GPL
 

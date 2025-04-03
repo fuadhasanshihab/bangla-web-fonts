@@ -9,7 +9,7 @@ https://banglawebfonts.pages.dev/css/mina.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Mina', sans-serif
+- **Family:** 'Mina', sans-serif
 - **Available Weights:** 400, 700
 - **Font Designer:** [Suman Bhandary, Natanael Gama, Mooniak](https://github.com/suman51284)
 - **License:** OFL

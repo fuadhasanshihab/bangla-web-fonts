@@ -9,7 +9,7 @@ https://banglawebfonts.pages.dev/css/baloo-da-2.css
 
 ## Font Details:
 - **Total Styles:** 5
-- **Font Family:** 'Baloo Da 2', sans-serif
+- **Family:** 'Baloo Da 2', sans-serif
 - **Available Weights:** 400, 500, 600, 700, 800
 - **Font Designer:** [Ek Type](https://ektype.in/)
 - **License:** OFL

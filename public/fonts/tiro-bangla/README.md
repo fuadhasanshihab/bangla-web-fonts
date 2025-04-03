@@ -9,8 +9,8 @@ https://banglawebfonts.pages.dev/css/tiro-bangla.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Tiro Bangla', serif
-- **Available Weights:** 400
+- **Family:** 'Tiro Bangla', serif
+- **Available Weights:** 400, 700
 - **Font Designer:** [Tiro Typeworks](https://www.tiro.com/)
 - **License:** OFL
 

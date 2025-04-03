@@ -9,8 +9,8 @@ https://banglawebfonts.pages.dev/css/lohit-bengali.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Lohit Bengali', sans-serif
-- **Available Weights:** 400
+- **Family:** 'Lohit Bengali', sans-serif
+- **Available Weights:** 400, 700
 - **Font Designer:** [Lohit Fonts Project](https://pagure.io/lohit)
 - **License:** OFL
 

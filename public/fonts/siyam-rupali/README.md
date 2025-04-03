@@ -9,8 +9,8 @@ https://banglawebfonts.pages.dev/css/siyam-rupali.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Siyam Rupali', sans-serif
-- **Available Weights:** 400
+- **Family:** 'Siyam Rupali', sans-serif
+- **Available Weights:** 400, 700
 - **Font Designer:** [Md. Tanbin Islam Siyam](https://github.com/potasiyam)
 - **License:** GPL
 

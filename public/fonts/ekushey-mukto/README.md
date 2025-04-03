@@ -9,7 +9,7 @@ https://banglawebfonts.pages.dev/css/ekushey-mukto.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Ekushey Mukto', serif
+- **Family:** 'Ekushey Mukto', serif
 - **Available Weights:** 400, 700
 - **Font Designer:** [Ekushey](https://ekushey.org/)
 - **License:** OFL

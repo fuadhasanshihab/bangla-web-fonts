@@ -9,8 +9,8 @@ https://banglawebfonts.pages.dev/css/kalpurush.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** Kalpurush, serif
-- **Available Weights:** 400
+- **Family:** Kalpurush, serif
+- **Available Weights:** 400, 700
 - **Font Designer:** [Md. Tanbin Islam Siyam](https://github.com/potasiyam)
 - **License:** OFL
 

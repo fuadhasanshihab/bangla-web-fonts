@@ -9,8 +9,8 @@ https://banglawebfonts.pages.dev/css/ekushey-azad.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Ekushey Azad', sans-serif
-- **Available Weights:** 400
+- **Family:** 'Ekushey Azad', sans-serif
+- **Available Weights:** 400, 700
 - **Font Designer:** [Ekushey](https://ekushey.org/)
 - **License:** GPL
 

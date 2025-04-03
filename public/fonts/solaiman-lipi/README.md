@@ -9,7 +9,7 @@ https://banglawebfonts.pages.dev/css/solaiman-lipi.css
 
 ## Font Details:
 - **Total Styles:** 4
-- **Font Family:** 'Solaiman Lipi', serif
+- **Family:** 'Solaiman Lipi', serif
 - **Available Weights:** 300, 400, 600, 700
 - **Font Designer:** [Solaiman Karim](https://ekushey.org/designer/solaiman-karim/)
 - **License:** OFL

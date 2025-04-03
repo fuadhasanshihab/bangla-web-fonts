@@ -9,8 +9,8 @@ https://banglawebfonts.pages.dev/css/adorsho-lipi.css
 
 ## Font Details:
 - **Total Styles:** 2
-- **Font Family:** 'Adorsho Lipi', sans-serif
-- **Available Weights:** 400
+- **Family:** 'Adorsho Lipi', sans-serif
+- **Available Weights:** 400, 700
 - **Font Designer:** [Partha Sarathi Pal](mailto:p.s.pal.2006@gmail.com)
 - **License:** GPL
 
