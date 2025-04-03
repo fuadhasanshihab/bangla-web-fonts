@@ -46,9 +46,7 @@ jobs:
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
                       "## CSS Stylesheet:\n" +
-                      "```css\n" +
-                      "@import url('https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css');\n" +
-                      "```\n\n" +
+                      "\n\\\css\nhttps://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css\n\\\\n\n" +
                       "## Font Details:\n" +
                       "- **Total Styles:** " + fontData.TotalStyles + "\n" +
                       "- **Font Family:** " + fontData.FontFamily + "\n" +
