@@ -7,16 +7,31 @@ jobs:
   generate-readmes:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # Required for committing changes
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
+
+      - name: Validate fonts.json
+        run: |
+          if [ ! -f "./src/collections/fonts.json" ]; then
+            echo "Error: fonts.json file not found!"
+            exit 1
+          fi
+          if ! jq empty "./src/collections/fonts.json"; then
+            echo "Error: fonts.json is not a valid JSON file!"
+            exit 1
+          fi
+        shell: bash
 
       - name: Generate or Update README files
         run: |
@@ -27,21 +42,13 @@ jobs:
           const fontsDir = "./public/fonts";
           const fontsDataPath = "./src/collections/fonts.json";
 
-          if (!fs.existsSync(fontsDataPath)) {
-              console.error("fonts.json file not found!");
-              process.exit(1);
-          }
-
           const fontsData = JSON.parse(fs.readFileSync(fontsDataPath, "utf-8"));
 
           fs.readdirSync(fontsDir).forEach((fontFolder) => {
               const fontPath = path.join(fontsDir, fontFolder);
               if (fs.statSync(fontPath).isDirectory()) {
                   const fontData = fontsData.find(f => f.FontPath === fontFolder);
-                  if (!fontData) {
-                      console.warn(\`No metadata found for font folder: \${fontFolder}\`);
-                      return;
-                  }
+                  if (!fontData) return;
 
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
@@ -49,8 +56,8 @@ jobs:
                       "\`\`\`css\nhttps://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css\n\`\`\`\n\n" +
                       "## Font Details:\n" +
                       "- **Total Styles:** " + fontData.TotalStyles + "\n" +
-                      "- **Font Family:** " + fontData.FontFamily + "\n" +
-                      "- **Available Weights:** " + fontData.FontWeights.join(", ") + "\n" +
+                      "- **Family:** " + fontData.FontFamily + "\n" +
+                      "- **Available Weights:** " + fontData.FontTesterWeights.join(", ") + "\n" +
                       "- **Font Designer:** [" + fontData.FontDesigner + "](" + fontData.FontDesignerURL + ")\n" +
                       "- **License:** " + fontData.FontLicense + "\n\n" +
                       "For more details, visit: [" + fontData.FontName + " on Bangla Web Fonts](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/#about).";
@@ -68,4 +75,6 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add .
           git commit -m "Auto-generate or update README.md for fonts" || exit 0
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
+          git push origin ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
