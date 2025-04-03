@@ -4,8 +4,9 @@ This directory contains the "Ekushey Mukto" font files.
 
 ## CSS Stylesheet:
 
+\css
+https://banglawebfonts.pages.dev/css/ekushey-mukto.css
 \n
-
 ## Font Details:
 - **Total Styles:** 2
 - **Font Family:** 'Ekushey Mukto', serif

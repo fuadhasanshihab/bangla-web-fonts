@@ -4,8 +4,9 @@ This directory contains the "Ekushey Azad" font files.
 
 ## CSS Stylesheet:
 
+\css
+https://banglawebfonts.pages.dev/css/ekushey-azad.css
 \n
-
 ## Font Details:
 - **Total Styles:** 2
 - **Font Family:** 'Ekushey Azad', sans-serif

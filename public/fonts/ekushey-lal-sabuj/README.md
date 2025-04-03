@@ -4,8 +4,9 @@ This directory contains the "Ekushey Lal Sabuj" font files.
 
 ## CSS Stylesheet:
 
+\css
+https://banglawebfonts.pages.dev/css/ekushey-lal-sabuj.css
 \n
-
 ## Font Details:
 - **Total Styles:** 2
 - **Font Family:** 'Ekushey Lal Sabuj', sans-serif

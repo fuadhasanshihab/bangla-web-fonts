@@ -4,8 +4,9 @@ This directory contains the "AB Shapla" font files.
 
 ## CSS Stylesheet:
 
+\css
+https://banglawebfonts.pages.dev/css/ab-shapla.css
 \n
-
 ## Font Details:
 - **Total Styles:** 2
 - **Font Family:** 'AB Shapla', sans-serif
