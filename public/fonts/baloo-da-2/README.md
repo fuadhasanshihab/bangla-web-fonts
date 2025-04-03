@@ -4,9 +4,7 @@ This directory contains the "Baloo Da 2" font files.
 
 ## CSS Stylesheet:
 
-\css
-https://banglawebfonts.pages.dev/css/baloo-da-2.css
-\n
+
 ## Font Details:
 - **Total Styles:** 5
 - **Font Family:** 'Baloo Da 2', sans-serif
