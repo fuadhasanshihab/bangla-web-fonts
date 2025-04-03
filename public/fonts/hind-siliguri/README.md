@@ -3,8 +3,6 @@
 This directory contains the "Hind Siliguri" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/hind-siliguri.css');
 
 
 ## Font Details:

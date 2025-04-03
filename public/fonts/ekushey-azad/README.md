@@ -3,8 +3,6 @@
 This directory contains the "Ekushey Azad" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/ekushey-azad.css');
 
 
 ## Font Details:

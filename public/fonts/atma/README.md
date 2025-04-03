@@ -3,8 +3,6 @@
 This directory contains the "Atma" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/atma.css');
 
 
 ## Font Details:

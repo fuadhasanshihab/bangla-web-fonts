@@ -3,8 +3,6 @@
 This directory contains the "Bensen Handwriting" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/bensen-handwriting.css');
 
 
 ## Font Details:

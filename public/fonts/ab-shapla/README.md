@@ -3,8 +3,6 @@
 This directory contains the "AB Shapla" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/ab-shapla.css');
 
 
 ## Font Details:

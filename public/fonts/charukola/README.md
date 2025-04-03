@@ -3,8 +3,6 @@
 This directory contains the "Charukola" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/charukola.css');
 
 
 ## Font Details:

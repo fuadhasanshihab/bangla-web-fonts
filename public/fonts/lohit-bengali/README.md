@@ -3,8 +3,6 @@
 This directory contains the "Lohit Bengali" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/lohit-bengali.css');
 
 
 ## Font Details:

@@ -3,8 +3,6 @@
 This directory contains the "Ekushey Mukto" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/ekushey-mukto.css');
 
 
 ## Font Details:

@@ -3,8 +3,6 @@
 This directory contains the "Solaiman Lipi" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/solaiman-lipi.css');
 
 
 ## Font Details:

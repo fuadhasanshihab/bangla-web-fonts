@@ -3,8 +3,6 @@
 This directory contains the "Bensen" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/bensen.css');
 
 
 ## Font Details:

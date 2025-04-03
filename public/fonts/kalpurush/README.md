@@ -3,8 +3,6 @@
 This directory contains the "Kalpurush" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/kalpurush.css');
 
 
 ## Font Details:

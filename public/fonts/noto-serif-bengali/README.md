@@ -3,8 +3,6 @@
 This directory contains the "Noto Serif Bengali" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/noto-serif-bengali.css');
 
 
 ## Font Details:

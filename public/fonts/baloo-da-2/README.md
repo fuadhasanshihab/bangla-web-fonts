@@ -3,8 +3,6 @@
 This directory contains the "Baloo Da 2" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/baloo-da-2.css');
 
 
 ## Font Details:

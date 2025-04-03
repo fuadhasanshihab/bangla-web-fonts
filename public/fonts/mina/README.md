@@ -3,8 +3,6 @@
 This directory contains the "Mina" font files.
 
 ## CSS Stylesheet:
-css
-@import url('https://banglawebfonts.pages.dev/css/mina.css');
 
 
 ## Font Details:
