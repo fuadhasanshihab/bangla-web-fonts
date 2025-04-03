@@ -4,7 +4,9 @@ This directory contains the "Solaiman Lipi" font files.
 
 ## CSS Stylesheet:
 
-
+\css
+https://banglawebfonts.pages.dev/css/solaiman-lipi.css
+\n
 ## Font Details:
 - **Total Styles:** 4
 - **Font Family:** 'Solaiman Lipi', serif

@@ -4,7 +4,9 @@ This directory contains the "Mina" font files.
 
 ## CSS Stylesheet:
 
-
+\css
+https://banglawebfonts.pages.dev/css/mina.css
+\n
 ## Font Details:
 - **Total Styles:** 2
 - **Font Family:** 'Mina', sans-serif

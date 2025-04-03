@@ -4,7 +4,9 @@ This directory contains the "Hind Siliguri" font files.
 
 ## CSS Stylesheet:
 
-
+\css
+https://banglawebfonts.pages.dev/css/hind-siliguri.css
+\n
 ## Font Details:
 - **Total Styles:** 5
 - **Font Family:** 'Hind Siliguri', sans-serif

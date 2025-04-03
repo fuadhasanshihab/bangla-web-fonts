@@ -4,7 +4,9 @@ This directory contains the "Lohit Bengali" font files.
 
 ## CSS Stylesheet:
 
-
+\css
+https://banglawebfonts.pages.dev/css/lohit-bengali.css
+\n
 ## Font Details:
 - **Total Styles:** 2
 - **Font Family:** 'Lohit Bengali', sans-serif
