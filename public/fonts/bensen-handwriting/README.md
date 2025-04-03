@@ -4,9 +4,8 @@ This directory contains the "Bensen Handwriting" font files.
 
 ## CSS Stylesheet:
 
-\css
-https://banglawebfonts.pages.dev/css/bensen-handwriting.css
 \n
+
 ## Font Details:
 - **Total Styles:** 2
 - **Font Family:** 'Bensen Handwriting', sans-serif

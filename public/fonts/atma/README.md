@@ -4,9 +4,8 @@ This directory contains the "Atma" font files.
 
 ## CSS Stylesheet:
 
-\css
-https://banglawebfonts.pages.dev/css/atma.css
 \n
+
 ## Font Details:
 - **Total Styles:** 5
 - **Font Family:** 'Atma', sans-serif
