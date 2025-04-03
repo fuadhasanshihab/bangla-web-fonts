@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -25,19 +25,46 @@ jobs:
           const path = require("path");
 
           const fontsDir = "./public/fonts";
-          const readmeContentTemplate = "# FontName\n\nThis directory contains FontName font files.\n\n## CSS Stylesheet:\n\`\`\`css\nhttps://banglawebfonts.pages.dev/css/FontName.css\n\`\`\`\n\n## Font Details\nVisit https://banglawebfonts.pages.dev/FontName/#about for font designer, styles, license information.";
+          const fontsDataPath = "./src/collections/fonts.json";
+          
+          if (!fs.existsSync(fontsDataPath)) {
+              console.error("fonts.json file not found!");
+              process.exit(1);
+          }
 
-          fs.readdirSync(fontsDir).forEach((fontName) => {
-              const fontPath = path.join(fontsDir, fontName);
+          const fontsData = JSON.parse(fs.readFileSync(fontsDataPath, "utf-8"));
+
+          fs.readdirSync(fontsDir).forEach((fontFolder) => {
+              const fontPath = path.join(fontsDir, fontFolder);
               if (fs.statSync(fontPath).isDirectory()) {
-                  const readmePath = path.join(fontPath, "README.md");
-                  // Replace all occurrences of FontName dynamically
-                  const readmeContent = readmeContentTemplate
-                    .replace(/FontName/g, fontName);  // Replace all instances
+                  const fontData = fontsData.find(f => f.FontPath === fontFolder);
+                  if (!fontData) {
+                      console.warn(\`No metadata found for font folder: \${fontFolder}\`);
+                      return;
+                  }
 
-                  // If README.md exists, update it, otherwise create it
+                  const readmeContent = \`# \${fontData.FontName}
+
+This directory contains the "\${fontData.FontName}" font files.
+
+## CSS Stylesheet:
+\`\`\`css
+@import url('https://banglawebfonts.pages.dev/css/\${fontData.FontPath}.css');
+\`\`\`
+
+## Font Details:
+- **Total Styles:** \${fontData.TotalStyles}
+- **Font Family:** \${fontData.FontFamily}
+- **Available Weights:** \${fontData.FontWeights.join(", ")}
+- **Font Designer:** [\${fontData.FontDesigner}](\${fontData.FontDesignerURL})
+- **License:** \${fontData.FontLicense}
+
+For more details, visit: [\${fontData.FontName} on Bangla Web Fonts](https://banglawebfonts.pages.dev/\${fontData.FontPath}/#about).
+\`;
+
+                  const readmePath = path.join(fontPath, "README.md");
                   fs.writeFileSync(readmePath, readmeContent);
-                  console.log(`Processed: ${readmePath}`);
+                  console.log(\`Processed: \${readmePath}\`);
               }
           });
           EOF
