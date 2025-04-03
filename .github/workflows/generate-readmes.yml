@@ -28,7 +28,7 @@ jobs:
           const fontsDataPath = "./src/collections/fonts.json";
           
           if (!fs.existsSync(fontsDataPath)) {
-              console.error("fonts.json file not found!");
+              console.error("Error: fonts.json file not found!");
               process.exit(1);
           }
 
@@ -39,7 +39,7 @@ jobs:
               if (fs.statSync(fontPath).isDirectory()) {
                   const fontData = fontsData.find(f => f.FontPath === fontFolder);
                   if (!fontData) {
-                      console.warn(\`No metadata found for font folder: \${fontFolder}\`);
+                      console.warn(\`Warning: No metadata found for font folder: \${fontFolder}\`);
                       return;
                   }
 
