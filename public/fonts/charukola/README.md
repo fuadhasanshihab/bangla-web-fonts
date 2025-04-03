@@ -1,11 +1,17 @@
-# charukola
+# Charukola
 
-This directory contains charukola font files.
+This directory contains the "Charukola" font files.
 
 ## CSS Stylesheet:
-```css
-https://banglawebfonts.pages.dev/css/charukola.css
-```
+css
+@import url('https://banglawebfonts.pages.dev/css/charukola.css');
 
-## Font Details
-Visit https://banglawebfonts.pages.dev/charukola/#about for font designer, styles, license information.
+
+## Font Details:
+- **Total Styles:** 3
+- **Font Family:** 'Charukola', sans-serif
+- **Available Weights:** 300, 400, 700
+- **Font Designer:** [Chandan Acharja](https://charuchandan.wordpress.com/)
+- **License:** This font is free for everyone to use.
+
+For more details, visit: [Charukola on Bangla Web Fonts](https://banglawebfonts.pages.dev/charukola/#about).

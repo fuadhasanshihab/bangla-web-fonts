@@ -1,11 +1,17 @@
-# charu-chandan
+# Charu Chandan
 
-This directory contains charu-chandan font files.
+This directory contains the "Charu Chandan" font files.
 
 ## CSS Stylesheet:
-```css
-https://banglawebfonts.pages.dev/css/charu-chandan.css
-```
+css
+@import url('https://banglawebfonts.pages.dev/css/charu-chandan.css');
 
-## Font Details
-Visit https://banglawebfonts.pages.dev/charu-chandan/#about for font designer, styles, license information.
+
+## Font Details:
+- **Total Styles:** 2
+- **Font Family:** 'Charu Chandan', sans-serif
+- **Available Weights:** 400, 700
+- **Font Designer:** [Chandan Acharja](https://charuchandan.wordpress.com/)
+- **License:** This font is free for everyone to use.
+
+For more details, visit: [Charu Chandan on Bangla Web Fonts](https://banglawebfonts.pages.dev/charu-chandan/#about).

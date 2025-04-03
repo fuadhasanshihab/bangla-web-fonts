@@ -1,11 +1,17 @@
-# kalpurush
+# Kalpurush
 
-This directory contains kalpurush font files.
+This directory contains the "Kalpurush" font files.
 
 ## CSS Stylesheet:
-```css
-https://banglawebfonts.pages.dev/css/kalpurush.css
-```
+css
+@import url('https://banglawebfonts.pages.dev/css/kalpurush.css');
 
-## Font Details
-Visit https://banglawebfonts.pages.dev/kalpurush/#about for font designer, styles, license information.
+
+## Font Details:
+- **Total Styles:** 2
+- **Font Family:** Kalpurush, serif
+- **Available Weights:** 400
+- **Font Designer:** [Md. Tanbin Islam Siyam](https://github.com/potasiyam)
+- **License:** OFL
+
+For more details, visit: [Kalpurush on Bangla Web Fonts](https://banglawebfonts.pages.dev/kalpurush/#about).

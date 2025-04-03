@@ -1,11 +1,17 @@
-# hind-siliguri
+# Hind Siliguri
 
-This directory contains hind-siliguri font files.
+This directory contains the "Hind Siliguri" font files.
 
 ## CSS Stylesheet:
-```css
-https://banglawebfonts.pages.dev/css/hind-siliguri.css
-```
+css
+@import url('https://banglawebfonts.pages.dev/css/hind-siliguri.css');
 
-## Font Details
-Visit https://banglawebfonts.pages.dev/hind-siliguri/#about for font designer, styles, license information.
+
+## Font Details:
+- **Total Styles:** 5
+- **Font Family:** 'Hind Siliguri', sans-serif
+- **Available Weights:** 300, 400, 500, 600, 700
+- **Font Designer:** [Indian Type Foundry](https://www.indiantypefoundry.com/)
+- **License:** OFL
+
+For more details, visit: [Hind Siliguri on Bangla Web Fonts](https://banglawebfonts.pages.dev/hind-siliguri/#about).

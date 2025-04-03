@@ -1,11 +1,17 @@
-# tiro-bangla
+# Tiro Bangla
 
-This directory contains tiro-bangla font files.
+This directory contains the "Tiro Bangla" font files.
 
 ## CSS Stylesheet:
-```css
-https://banglawebfonts.pages.dev/css/tiro-bangla.css
-```
+css
+@import url('https://banglawebfonts.pages.dev/css/tiro-bangla.css');
 
-## Font Details
-Visit https://banglawebfonts.pages.dev/tiro-bangla/#about for font designer, styles, license information.
+
+## Font Details:
+- **Total Styles:** 2
+- **Font Family:** 'Tiro Bangla', serif
+- **Available Weights:** 400
+- **Font Designer:** [Tiro Typeworks](https://www.tiro.com/)
+- **License:** OFL
+
+For more details, visit: [Tiro Bangla on Bangla Web Fonts](https://banglawebfonts.pages.dev/tiro-bangla/#about).

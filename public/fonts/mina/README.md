@@ -1,11 +1,17 @@
-# mina
+# Mina
 
-This directory contains mina font files.
+This directory contains the "Mina" font files.
 
 ## CSS Stylesheet:
-```css
-https://banglawebfonts.pages.dev/css/mina.css
-```
+css
+@import url('https://banglawebfonts.pages.dev/css/mina.css');
 
-## Font Details
-Visit https://banglawebfonts.pages.dev/mina/#about for font designer, styles, license information.
+
+## Font Details:
+- **Total Styles:** 2
+- **Font Family:** 'Mina', sans-serif
+- **Available Weights:** 400, 700
+- **Font Designer:** [Suman Bhandary, Natanael Gama, Mooniak](https://github.com/suman51284)
+- **License:** OFL
+
+For more details, visit: [Mina on Bangla Web Fonts](https://banglawebfonts.pages.dev/mina/#about).

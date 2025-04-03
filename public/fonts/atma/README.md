@@ -1,11 +1,17 @@
-# atma
+# Atma
 
-This directory contains atma font files.
+This directory contains the "Atma" font files.
 
 ## CSS Stylesheet:
-```css
-https://banglawebfonts.pages.dev/css/atma.css
-```
+css
+@import url('https://banglawebfonts.pages.dev/css/atma.css');
 
-## Font Details
-Visit https://banglawebfonts.pages.dev/atma/#about for font designer, styles, license information.
+
+## Font Details:
+- **Total Styles:** 5
+- **Font Family:** 'Atma', sans-serif
+- **Available Weights:** 300, 400, 500, 600, 700
+- **Font Designer:** [Black Foundry](https://black-foundry.com/)
+- **License:** OFL
+
+For more details, visit: [Atma on Bangla Web Fonts](https://banglawebfonts.pages.dev/atma/#about).
