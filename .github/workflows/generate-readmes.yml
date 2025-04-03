@@ -20,22 +20,49 @@ jobs:
 
       - name: Generate or Update README files
         run: |
-          node -e "const fs = require('fs'); \
-          const path = require('path'); \
-          const fontsDir = './public/fonts'; \
-          const fontsDataPath = './src/collections/fonts.json'; \
-          if (!fs.existsSync(fontsDataPath)) { console.error('fonts.json file not found!'); process.exit(1); } \
-          const fontsData = JSON.parse(fs.readFileSync(fontsDataPath, 'utf-8')); \
-          fs.readdirSync(fontsDir).forEach((fontFolder) => { \
-              const fontPath = path.join(fontsDir, fontFolder); \
-              if (fs.statSync(fontPath).isDirectory()) { \
-                  const fontData = fontsData.find(f => f.FontPath === fontFolder); \
-                  if (!fontData) { console.warn(\`No metadata found for font folder: \${fontFolder}\`); return; } \
-                  const readmeContent = "# \${fontData.FontName}\n\nThis directory contains the \'\${fontData.FontName}\' font files.\n\n## CSS Stylesheet:\n\`\`\`css\n@import url('https://banglawebfonts.pages.dev/css/\${fontData.FontPath}.css');\n\`\`\`\n\n## Font Details:\n- **Total Styles:** \${fontData.TotalStyles}\n- **Font Family:** \${fontData.FontFamily}\n- **Available Weights:** \${fontData.FontWeights.join(', ')}\n- **Font Designer:** [\${fontData.FontDesigner}](\${fontData.FontDesignerURL})\n- **License:** \${fontData.FontLicense}\n\nFor more details, visit: [\${fontData.FontName} on Bangla Web Fonts](https://banglawebfonts.pages.dev/\${fontData.FontPath}/#about).\n"; 
-                  fs.writeFileSync(path.join(fontPath, 'README.md'), readmeContent); \
-                  console.log(\`Processed: \${fontPath}/README.md\`); \
-              } \
-          });"
+          node <<EOF
+          const fs = require("fs");
+          const path = require("path");
+
+          const fontsDir = "./public/fonts";
+          const fontsDataPath = "./src/collections/fonts.json";
+
+          if (!fs.existsSync(fontsDataPath)) {
+              console.error("fonts.json file not found!");
+              process.exit(1);
+          }
+
+          const fontsData = JSON.parse(fs.readFileSync(fontsDataPath, "utf-8"));
+
+          fs.readdirSync(fontsDir).forEach((fontFolder) => {
+              const fontPath = path.join(fontsDir, fontFolder);
+              if (fs.statSync(fontPath).isDirectory()) {
+                  const fontData = fontsData.find(f => f.FontPath === fontFolder);
+                  if (!fontData) {
+                      console.warn(\`No metadata found for font folder: \${fontFolder}\`);
+                      return;
+                  }
+
+                  const readmeContent = "# " + fontData.FontName + "\n\n" +
+                      "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
+                      "## CSS Stylesheet:\n" +
+                      "```css\n" +
+                      "@import url('https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css');\n" +
+                      "```\n\n" +
+                      "## Font Details:\n" +
+                      "- **Total Styles:** " + fontData.TotalStyles + "\n" +
+                      "- **Font Family:** " + fontData.FontFamily + "\n" +
+                      "- **Available Weights:** " + fontData.FontWeights.join(", ") + "\n" +
+                      "- **Font Designer:** [" + fontData.FontDesigner + "](" + fontData.FontDesignerURL + ")\n" +
+                      "- **License:** " + fontData.FontLicense + "\n\n" +
+                      "For more details, visit: [" + fontData.FontName + " on Bangla Web Fonts](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/#about).";
+
+                  const readmePath = path.join(fontPath, "README.md");
+                  fs.writeFileSync(readmePath, readmeContent);
+                  console.log("Processed: " + readmePath);
+              }
+          });
+          EOF
 
       - name: Commit and push changes
         run: |
