@@ -3,7 +3,9 @@
 This directory contains the "Ekushey Saraswatii" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/ekushey-saraswatii.css
+```
 
 ## Font Details:
 - **Total Styles:** 2

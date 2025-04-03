@@ -3,7 +3,9 @@
 This directory contains the "Siyam Rupali" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/siyam-rupali.css
+```
 
 ## Font Details:
 - **Total Styles:** 2

@@ -3,7 +3,9 @@
 This directory contains the "Anek Bangla" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/anek-bangla.css
+```
 
 ## Font Details:
 - **Total Styles:** 8

@@ -3,7 +3,9 @@
 This directory contains the "Tiro Bangla" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/tiro-bangla.css
+```
 
 ## Font Details:
 - **Total Styles:** 2

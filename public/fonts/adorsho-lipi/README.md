@@ -3,7 +3,9 @@
 This directory contains the "Adorsho Lipi" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/adorsho-lipi.css
+```
 
 ## Font Details:
 - **Total Styles:** 2

@@ -3,7 +3,9 @@
 This directory contains the "Kalpurush" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/kalpurush.css
+```
 
 ## Font Details:
 - **Total Styles:** 2

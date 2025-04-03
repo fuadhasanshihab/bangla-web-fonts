@@ -3,7 +3,9 @@
 This directory contains the "Charu Chandan" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/charu-chandan.css
+```
 
 ## Font Details:
 - **Total Styles:** 2

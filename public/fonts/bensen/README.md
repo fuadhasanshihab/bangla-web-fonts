@@ -3,7 +3,9 @@
 This directory contains the "Bensen" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/bensen.css
+```
 
 ## Font Details:
 - **Total Styles:** 2

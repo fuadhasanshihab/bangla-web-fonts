@@ -3,7 +3,9 @@
 This directory contains the "Charukola" font files.
 
 ## CSS Stylesheet:
-
+```css
+https://banglawebfonts.pages.dev/css/charukola.css
+```
 
 ## Font Details:
 - **Total Styles:** 3
