@@ -102,21 +102,21 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 <div class="mt-2 flex flex-row flex-wrap">
   <input id="tab-one" type="radio" name="tabs" class="peer/tab-one hidden" checked />
-  <label for="tab-one" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 peer-checked/tab-one:text-white peer-checked/tab-one:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3" role="tab">
+  <label for="tab-one" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 peer-checked/tab-one:text-white peer-checked/tab-one:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
     &lt;link&gt;
   </label>
   <input id="tab-two" type="radio" name="tabs" class="peer/tab-two hidden" />
-  <label for="tab-two" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 peer-checked/tab-two:text-white peer-checked/tab-two:bg-gray-800 cursor-default px-3 py-1 rounded-lg block" role="tab">
+  <label for="tab-two" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 peer-checked/tab-two:text-white peer-checked/tab-two:bg-gray-800 cursor-default px-3 py-1 rounded-lg block">
     @import
   </label>
 
   <div class="basis-full h-0"></div>
-  <p class="mt-4">Embed code in the <span class="font-mono">&lt;head&gt;</span> of your html</p>
+  <p class="mt-4">Copy the following code and paste into the <span class="font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
-  <div class="hidden peer-checked/tab-one:block w-full rounded-xl" role="tabpanel">
+  <div class="hidden peer-checked/tab-one:block w-full rounded-xl">
     <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
   </div>
-  <div class="hidden peer-checked/tab-two:block w-full rounded-xl" role="tabpanel">
+  <div class="hidden peer-checked/tab-two:block w-full rounded-xl">
     <CodeBox id="IMPORTcodebox" code={`<style>
 @import url('${FontCSS}');
 </style>`} />
@@ -126,17 +126,19 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 
-<h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl mt-10">Specify in CSS</h2>
-<p class="text-neutral-900 dark:text-neutral-100 mt-3 sm:mt-4">Use the following CSS rule to specify the {FontName} font family</p>
-<CodeBox id="FAMILYcodebox" code={`font-family: ${FontFamily};`} />
-
-<p class="text-neutral-900 dark:text-neutral-100 mt-8"><span class="text-neutral-900 dark:text-neutral-100 font-medium mt-4">Example:</span> To apply {FontName} font to a webpage, use the following CSS</p>
+<h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl mt-10">CSS</h2>
+<p class="text-neutral-900 dark:text-neutral-100 mt-3 sm:mt-4">Use the <span class="font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">font-family: ${FontFamily};</span> CSS rule to specify the {FontName} font family. Example:</p>
 <CodeBox id="CLASScodebox" code={`body {
   font-family: ${FontFamily};
   font-weight: 400;
   font-style: normal;
 }`} />
 </div>
+<p class="mt-5">If you face any problems while embedding the font, please check the <a class="text-blue-600 hover:underline" href="/documentation/">documentation</a>.</p>
+
+
+
+
 
 <div class="mt-10 bg-blue-50 dark:bg-gray-900 border-l-4 border-blue-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-lg">
   <h3 class="font-bold text-lg">Performance Tip</h3>
@@ -148,7 +150,6 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
     <p class="text-blue-600 dark:text-blue-300 break-words whitespace-normal">{FontMinifiedCSS}</p>
   </div>
 </div>
-<p class="mt-5">If you face any problems while embedding the font, please check the <a class="text-blue-600 hover:underline" href="/documentation/">documentation</a>.</p>
 
 
 
@@ -178,6 +179,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   </div>
  </div>
 </div>
+
 
 
 
