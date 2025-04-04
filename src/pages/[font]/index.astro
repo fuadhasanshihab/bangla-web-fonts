@@ -111,7 +111,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   </label>
 
   <div class="basis-full h-0"></div>
-  <p class="mt-4 mb-2">Embed code in the <span class="font-mono">&lt;head&gt;</span> of your html</p>
+  <p class="mt-4">Embed code in the <span class="font-mono">&lt;head&gt;</span> of your html</p>
 
   <div class="hidden peer-checked/tab-one:block w-full rounded-xl" role="tabpanel">
     <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
@@ -152,28 +152,29 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 
+
 <div class="mt-12">
   <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">About {FontName} Font</h2>
 <div class="mt-2">
-  <div class="py-2 sm:py-1 sm:grid sm:grid-cols-4 sm:gap-0">
+  <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
     <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Family</h3>
-    <p class="mt-1 text-neutral-700 dark:text-neutral-300 sm:col-span-3 sm:mt-0">{FontName}</p>
+    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{FontName}</p>
   </div>
-  <div class="py-2 sm:py-1 sm:grid sm:grid-cols-4 sm:gap-0">
+  <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
     <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Total Styles</h3>
-    <p class="mt-1 text-neutral-700 dark:text-neutral-300 sm:col-span-3 sm:mt-0">{TotalStyles}</p>
+    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{TotalStyles}</p>
   </div>
-  <div class="py-2 sm:py-1 sm:grid sm:grid-cols-4 sm:gap-0">
+  <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
     <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Category</h3>
-    <p class="mt-1 text-neutral-700 dark:text-neutral-300 sm:col-span-3 sm:mt-0">{FontCategory}</p>
+    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{FontCategory}</p>
   </div>
-  <div class="py-2 sm:py-1 sm:grid sm:grid-cols-4 sm:gap-0">
+  <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
     <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Designer</h3>
-    <a href={FontDesignerURL} target="_blank" class="mt-1 text-blue-600 sm:col-span-3 sm:mt-0 hover:underline">{FontDesigner}</a>
+    <a href={FontDesignerURL} target="_blank" class="text-blue-600 sm:col-span-3 sm:mt-0 hover:underline">{FontDesigner}</a>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
     <h3 class="font-medium text-neutral-800 dark:text-neutral-200">License</h3>
-    <p class="mt-1 text-neutral-700 dark:text-neutral-300 sm:col-span-3 sm:mt-0" set:html={LicenseInfo}></p>
+    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3" set:html={LicenseInfo}></p>
   </div>
  </div>
 </div>
