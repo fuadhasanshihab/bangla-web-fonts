@@ -88,6 +88,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 <div class="mt-10 pt-10 border-t border-gray-300 dark:border-gray-800">
 
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Embed</h2>
+<!--
 <p class="mt-2 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-3 lg:mt-5 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">To embed this font into a webpage, copy the following code and paste into the <span class="font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
 <p class="text-neutral-900 dark:text-neutral-100 font-medium mt-4">Standard</p>
@@ -97,6 +98,33 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 <CodeBox id="IMPORTcodebox" code={`<style>
 @import url('${FontCSS}');
 </style>`} />
+-->
+
+<div class="mt-2 flex flex-row flex-wrap">
+  <input id="tab-one" type="radio" name="tabs" class="peer/tab-one hidden" checked />
+  <label for="tab-one" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 peer-checked/tab-one:text-white peer-checked/tab-one:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3" role="tab">
+    &lt;link&gt;
+  </label>
+  <input id="tab-two" type="radio" name="tabs" class="peer/tab-two hidden" />
+  <label for="tab-two" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 peer-checked/tab-two:text-white peer-checked/tab-two:bg-gray-800 cursor-default px-3 py-1 rounded-lg block" role="tab">
+    @import
+  </label>
+
+  <div class="basis-full h-0"></div>
+  <p class="mt-4 mb-2">Embed code in the <span class="font-mono">&lt;head&gt;</span> of your html</p>
+
+  <div class="hidden peer-checked/tab-one:block w-full rounded-xl" role="tabpanel">
+    <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
+  </div>
+  <div class="hidden peer-checked/tab-two:block w-full rounded-xl" role="tabpanel">
+    <CodeBox id="IMPORTcodebox" code={`<style>
+@import url('${FontCSS}');
+</style>`} />
+  </div>
+</div>
+
+
+
 
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl mt-10">Specify in CSS</h2>
 <p class="text-neutral-900 dark:text-neutral-100 mt-3 sm:mt-4">Use the following CSS rule to specify the {FontName} font family</p>
