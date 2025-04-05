@@ -5,7 +5,7 @@ This directory contains the "Noto Sans Bengali" font files.
 🌐 [banglawebfonts.pages.dev/noto-sans-bengali](https://banglawebfonts.pages.dev/noto-sans-bengali/)
 
 ## Embed:
-To use the Noto Sans Bengali font on your website, add the following code to your HTML &lt;head&gt; section:
+To use the Noto Sans Bengali font on your website, add the following code to your HTML `<head>` section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/noto-sans-bengali.css' rel='stylesheet'>
 ```
@@ -16,6 +16,14 @@ or,
   @import url('https://banglawebfonts.pages.dev/css/noto-sans-bengali.css');
 </style>
 ```
+
+> [!TIP]
+> You can use the `.min.css` version for better performance and faster loading times.
+> **Minified CSS Stylesheet:**  
+> ```
+>
+  https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css
+> ```
 
 ## CSS:
 Use the following CSS rule to specify the Noto Sans Bengali font:

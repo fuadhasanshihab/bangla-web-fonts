@@ -5,7 +5,7 @@ This directory contains the "Tiro Bangla" font files.
 🌐 [banglawebfonts.pages.dev/tiro-bangla](https://banglawebfonts.pages.dev/tiro-bangla/)
 
 ## Embed:
-To use the Tiro Bangla font on your website, add the following code to your HTML &lt;head&gt; section:
+To use the Tiro Bangla font on your website, add the following code to your HTML `<head>` section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/tiro-bangla.css' rel='stylesheet'>
 ```
@@ -16,6 +16,14 @@ or,
   @import url('https://banglawebfonts.pages.dev/css/tiro-bangla.css');
 </style>
 ```
+
+> [!TIP]
+> You can use the `.min.css` version for better performance and faster loading times.
+> **Minified CSS Stylesheet:**  
+> ```
+>
+  https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css
+> ```
 
 ## CSS:
 Use the following CSS rule to specify the Tiro Bangla font:

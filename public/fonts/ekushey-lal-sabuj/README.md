@@ -5,7 +5,7 @@ This directory contains the "Ekushey Lal Sabuj" font files.
 🌐 [banglawebfonts.pages.dev/ekushey-lal-sabuj](https://banglawebfonts.pages.dev/ekushey-lal-sabuj/)
 
 ## Embed:
-To use the Ekushey Lal Sabuj font on your website, add the following code to your HTML &lt;head&gt; section:
+To use the Ekushey Lal Sabuj font on your website, add the following code to your HTML `<head>` section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/ekushey-lal-sabuj.css' rel='stylesheet'>
 ```
@@ -16,6 +16,14 @@ or,
   @import url('https://banglawebfonts.pages.dev/css/ekushey-lal-sabuj.css');
 </style>
 ```
+
+> [!TIP]
+> You can use the `.min.css` version for better performance and faster loading times.
+> **Minified CSS Stylesheet:**  
+> ```
+>
+  https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css
+> ```
 
 ## CSS:
 Use the following CSS rule to specify the Ekushey Lal Sabuj font:
