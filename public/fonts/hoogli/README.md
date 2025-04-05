@@ -2,16 +2,27 @@
 
 This directory contains the "Hoogli" font files.
 
+🌐 [banglawebfonts.pages.dev/Hoogli](https://banglawebfonts.pages.dev/hoogli/#about)
+
 ## Embed:
 To use the Hoogli font on your website, add the following code to your HTML &lt;head&gt; section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/hoogli.css' rel='stylesheet'>
 ```
 
-or,```html
+or,
+```html
 <style>
 @import url('https://banglawebfonts.pages.dev/css/hoogli.css');
 </style>
+```
+
+## CSS:
+Use the following CSS rule to specify the Hoogli font:
+```css
+body {
+font-family:'Hoogli', sans-serif;
+}
 ```
 
 ## Font Details:

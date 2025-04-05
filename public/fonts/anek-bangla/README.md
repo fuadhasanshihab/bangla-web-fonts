@@ -2,16 +2,27 @@
 
 This directory contains the "Anek Bangla" font files.
 
+🌐 [banglawebfonts.pages.dev/Anek Bangla](https://banglawebfonts.pages.dev/anek-bangla/#about)
+
 ## Embed:
 To use the Anek Bangla font on your website, add the following code to your HTML &lt;head&gt; section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/anek-bangla.css' rel='stylesheet'>
 ```
 
-or,```html
+or,
+```html
 <style>
 @import url('https://banglawebfonts.pages.dev/css/anek-bangla.css');
 </style>
+```
+
+## CSS:
+Use the following CSS rule to specify the Anek Bangla font:
+```css
+body {
+font-family:'Anek Bangla', sans-serif;
+}
 ```
 
 ## Font Details:

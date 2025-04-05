@@ -2,16 +2,27 @@
 
 This directory contains the "Ekushey Azad" font files.
 
+🌐 [banglawebfonts.pages.dev/Ekushey Azad](https://banglawebfonts.pages.dev/ekushey-azad/#about)
+
 ## Embed:
 To use the Ekushey Azad font on your website, add the following code to your HTML &lt;head&gt; section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/ekushey-azad.css' rel='stylesheet'>
 ```
 
-or,```html
+or,
+```html
 <style>
 @import url('https://banglawebfonts.pages.dev/css/ekushey-azad.css');
 </style>
+```
+
+## CSS:
+Use the following CSS rule to specify the Ekushey Azad font:
+```css
+body {
+font-family:'Ekushey Azad', sans-serif;
+}
 ```
 
 ## Font Details:

@@ -2,16 +2,27 @@
 
 This directory contains the "Atma" font files.
 
+🌐 [banglawebfonts.pages.dev/Atma](https://banglawebfonts.pages.dev/atma/#about)
+
 ## Embed:
 To use the Atma font on your website, add the following code to your HTML &lt;head&gt; section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/atma.css' rel='stylesheet'>
 ```
 
-or,```html
+or,
+```html
 <style>
 @import url('https://banglawebfonts.pages.dev/css/atma.css');
 </style>
+```
+
+## CSS:
+Use the following CSS rule to specify the Atma font:
+```css
+body {
+font-family:'Atma', sans-serif;
+}
 ```
 
 ## Font Details:

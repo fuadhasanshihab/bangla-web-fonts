@@ -2,16 +2,27 @@
 
 This directory contains the "Charukola" font files.
 
+🌐 [banglawebfonts.pages.dev/Charukola](https://banglawebfonts.pages.dev/charukola/#about)
+
 ## Embed:
 To use the Charukola font on your website, add the following code to your HTML &lt;head&gt; section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/charukola.css' rel='stylesheet'>
 ```
 
-or,```html
+or,
+```html
 <style>
 @import url('https://banglawebfonts.pages.dev/css/charukola.css');
 </style>
+```
+
+## CSS:
+Use the following CSS rule to specify the Charukola font:
+```css
+body {
+font-family:'Charukola', sans-serif;
+}
 ```
 
 ## Font Details:

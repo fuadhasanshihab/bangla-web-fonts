@@ -2,16 +2,27 @@
 
 This directory contains the "Ekushey Mukto" font files.
 
+🌐 [banglawebfonts.pages.dev/Ekushey Mukto](https://banglawebfonts.pages.dev/ekushey-mukto/#about)
+
 ## Embed:
 To use the Ekushey Mukto font on your website, add the following code to your HTML &lt;head&gt; section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/ekushey-mukto.css' rel='stylesheet'>
 ```
 
-or,```html
+or,
+```html
 <style>
 @import url('https://banglawebfonts.pages.dev/css/ekushey-mukto.css');
 </style>
+```
+
+## CSS:
+Use the following CSS rule to specify the Ekushey Mukto font:
+```css
+body {
+font-family:'Ekushey Mukto', serif;
+}
 ```
 
 ## Font Details:

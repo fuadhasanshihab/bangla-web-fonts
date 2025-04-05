@@ -2,16 +2,27 @@
 
 This directory contains the "Baloo Da 2" font files.
 
+🌐 [banglawebfonts.pages.dev/Baloo Da 2](https://banglawebfonts.pages.dev/baloo-da-2/#about)
+
 ## Embed:
 To use the Baloo Da 2 font on your website, add the following code to your HTML &lt;head&gt; section:
 ```html
 <link href='https://banglawebfonts.pages.dev/css/baloo-da-2.css' rel='stylesheet'>
 ```
 
-or,```html
+or,
+```html
 <style>
 @import url('https://banglawebfonts.pages.dev/css/baloo-da-2.css');
 </style>
+```
+
+## CSS:
+Use the following CSS rule to specify the Baloo Da 2 font:
+```css
+body {
+font-family:'Baloo Da 2', sans-serif;
+}
 ```
 
 ## Font Details:
