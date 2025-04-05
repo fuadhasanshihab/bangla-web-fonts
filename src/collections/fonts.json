@@ -262,5 +262,27 @@
     "FontDesigner": "Neelakash Kshetrimayum",
     "FontDesignerURL": "https://github.com/brandnewtype",
     "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Sapa",
+    "TotalStyles": "2",
+    "FontFamily": "'Sapa', sans-serif",
+    "FontPath": "sapa",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Danh Hong",
+    "FontDesignerURL": "https://github.com/danhhong",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Kalaa",
+    "TotalStyles": "2",
+    "FontFamily": "'Kalaa', sans-serif",
+    "FontPath": "Kalaa",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Danh Hong",
+    "FontDesignerURL": "https://github.com/danhhong",
+    "FontLicense": "OFL"
   }
 ]
