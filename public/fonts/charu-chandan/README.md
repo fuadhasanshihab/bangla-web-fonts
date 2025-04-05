@@ -2,9 +2,16 @@
 
 This directory contains the "Charu Chandan" font files.
 
-## CSS Stylesheet:
-```css
+## Embed:
+To use the Charu Chandan font on your website, add the following code to your HTML &lt;head&gt; section:
+```html
 <link href='https://banglawebfonts.pages.dev/css/charu-chandan.css' rel='stylesheet'>
+```
+
+or,```html
+<style>
+@import url('https://banglawebfonts.pages.dev/css/charu-chandan.css');
+</style>
 ```
 
 ## Font Details:

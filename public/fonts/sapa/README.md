@@ -2,9 +2,16 @@
 
 This directory contains the "Sapa" font files.
 
-## CSS Stylesheet:
-```css
+## Embed:
+To use the Sapa font on your website, add the following code to your HTML &lt;head&gt; section:
+```html
 <link href='https://banglawebfonts.pages.dev/css/sapa.css' rel='stylesheet'>
+```
+
+or,```html
+<style>
+@import url('https://banglawebfonts.pages.dev/css/sapa.css');
+</style>
 ```
 
 ## Font Details:

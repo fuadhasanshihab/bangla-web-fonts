@@ -2,9 +2,16 @@
 
 This directory contains the "Hind Siliguri" font files.
 
-## CSS Stylesheet:
-```css
+## Embed:
+To use the Hind Siliguri font on your website, add the following code to your HTML &lt;head&gt; section:
+```html
 <link href='https://banglawebfonts.pages.dev/css/hind-siliguri.css' rel='stylesheet'>
+```
+
+or,```html
+<style>
+@import url('https://banglawebfonts.pages.dev/css/hind-siliguri.css');
+</style>
 ```
 
 ## Font Details:

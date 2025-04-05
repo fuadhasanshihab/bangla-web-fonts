@@ -2,9 +2,16 @@
 
 This directory contains the "Siyam Rupali" font files.
 
-## CSS Stylesheet:
-```css
+## Embed:
+To use the Siyam Rupali font on your website, add the following code to your HTML &lt;head&gt; section:
+```html
 <link href='https://banglawebfonts.pages.dev/css/siyam-rupali.css' rel='stylesheet'>
+```
+
+or,```html
+<style>
+@import url('https://banglawebfonts.pages.dev/css/siyam-rupali.css');
+</style>
 ```
 
 ## Font Details:
