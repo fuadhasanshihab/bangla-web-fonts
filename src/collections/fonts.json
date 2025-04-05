@@ -240,5 +240,27 @@
     "FontDesigner": "Ek Type",
     "FontDesignerURL": "https://ektype.in/",
     "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Hoogli",
+    "TotalStyles": "5",
+    "FontFamily": "'Hoogli', sans-serif",
+    "FontPath": "hoogli",
+    "FontWeights": [300, 400, 500, 600, 700],
+    "FontTesterWeights": [300, 400, 500, 600, 700],
+    "FontDesigner": "Anand Singh Naorem",
+    "FontDesignerURL": "https://github.com/brandnewtype",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Aikya",
+    "TotalStyles": "5",
+    "FontFamily": "'Aikya', serif",
+    "FontPath": "aikya",
+    "FontWeights": [300, 400, 500, 600, 700],
+    "FontTesterWeights": [300, 400, 500, 600, 700],
+    "FontDesigner": "Neelakash Kshetrimayum",
+    "FontDesignerURL": "https://github.com/brandnewtype",
+    "FontLicense": "OFL"
   }
 ]
