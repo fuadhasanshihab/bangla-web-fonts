@@ -58,7 +58,7 @@ jobs:
                       "\`\`\`html\n<link href='https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css' rel='stylesheet'>\n\`\`\`\n\n" +
                       "or,\n" +
                       "\`\`\`html\n<style>\n  @import url('https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css');\n</style>\n\`\`\`\n\n" +
-                      "> [!TIP]\n> You can use the \`.min.css\` version for better performance and faster loading times.\n> **Minified CSS Stylesheet:**  \n> \`\`\`\n>\n  https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css\n> \`\`\`\n\n" +
+                      "> [!TIP]\n> You can use the \`.min.css\` version for better performance and faster loading times.\n> **Minified CSS Stylesheet:**  \n> \`\`\`\n> https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css\n> \`\`\`\n\n" +
                       "## CSS:\n" +
                       "Use the following CSS rule to specify the " + fontData.FontName + " font:\n" +
                       "\`\`\`css\nbody {\n  font-family:" + fontData.FontFamily + ";\n}\n\`\`\`\n\n" +
