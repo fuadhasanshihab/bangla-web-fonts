@@ -79,7 +79,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git config --global user.name "fuadhasanshihab"
-          git config --global user.email "85599261+fuadhasanshihab@users.noreply.github.com"
+          git config --global user.email "85599261+fuadhasanshihab@users.noreply.github.comm"
           git add .
           git commit -m "Update README.md" || exit 0
           git push origin ${{ github.ref_name }}
