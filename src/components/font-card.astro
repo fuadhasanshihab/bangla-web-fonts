@@ -1,7 +1,7 @@
 ---
 const { FontName, TotalStyles, FontPath, FontFamily } = Astro.props;
 const newPath = `/${FontPath}`;
-const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Atma");  
+const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma");  
 ---
 
 <a
@@ -18,7 +18,7 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
     class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
   >
     
-        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem] visible-animation"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
+        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     
     
       <div
