@@ -2,7 +2,7 @@
 
 This directory contains the "Hoogli" font files.
 
-🌐 [banglawebfonts.pages.dev/Hoogli](https://banglawebfonts.pages.dev/hoogli/#about)
+🌐 [banglawebfonts.pages.dev/hoogli](https://banglawebfonts.pages.dev/hoogli/)
 
 ## Embed:
 To use the Hoogli font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Hoogli font on your website, add the following code to your HTML &lt;
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/hoogli.css');
+  @import url('https://banglawebfonts.pages.dev/css/hoogli.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Hoogli font:
 ```css
 body {
-font-family:'Hoogli', sans-serif;
+  font-family:'Hoogli', sans-serif;
 }
 ```
 

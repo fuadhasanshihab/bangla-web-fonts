@@ -2,7 +2,7 @@
 
 This directory contains the "AB Shapla" font files.
 
-🌐 [banglawebfonts.pages.dev/AB Shapla](https://banglawebfonts.pages.dev/ab-shapla/#about)
+🌐 [banglawebfonts.pages.dev/ab-shapla](https://banglawebfonts.pages.dev/ab-shapla/)
 
 ## Embed:
 To use the AB Shapla font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the AB Shapla font on your website, add the following code to your HTML &
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/ab-shapla.css');
+  @import url('https://banglawebfonts.pages.dev/css/ab-shapla.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the AB Shapla font:
 ```css
 body {
-font-family:'AB Shapla', sans-serif;
+  font-family:'AB Shapla', sans-serif;
 }
 ```
 

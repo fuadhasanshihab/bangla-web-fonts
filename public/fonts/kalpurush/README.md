@@ -2,7 +2,7 @@
 
 This directory contains the "Kalpurush" font files.
 
-🌐 [banglawebfonts.pages.dev/Kalpurush](https://banglawebfonts.pages.dev/kalpurush/#about)
+🌐 [banglawebfonts.pages.dev/kalpurush](https://banglawebfonts.pages.dev/kalpurush/)
 
 ## Embed:
 To use the Kalpurush font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Kalpurush font on your website, add the following code to your HTML &
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/kalpurush.css');
+  @import url('https://banglawebfonts.pages.dev/css/kalpurush.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Kalpurush font:
 ```css
 body {
-font-family:Kalpurush, serif;
+  font-family:Kalpurush, serif;
 }
 ```
 

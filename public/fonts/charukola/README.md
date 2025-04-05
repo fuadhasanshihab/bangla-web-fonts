@@ -2,7 +2,7 @@
 
 This directory contains the "Charukola" font files.
 
-🌐 [banglawebfonts.pages.dev/Charukola](https://banglawebfonts.pages.dev/charukola/#about)
+🌐 [banglawebfonts.pages.dev/charukola](https://banglawebfonts.pages.dev/charukola/)
 
 ## Embed:
 To use the Charukola font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Charukola font on your website, add the following code to your HTML &
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/charukola.css');
+  @import url('https://banglawebfonts.pages.dev/css/charukola.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Charukola font:
 ```css
 body {
-font-family:'Charukola', sans-serif;
+  font-family:'Charukola', sans-serif;
 }
 ```
 

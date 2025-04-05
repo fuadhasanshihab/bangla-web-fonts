@@ -2,7 +2,7 @@
 
 This directory contains the "Bensen" font files.
 
-🌐 [banglawebfonts.pages.dev/Bensen](https://banglawebfonts.pages.dev/bensen/#about)
+🌐 [banglawebfonts.pages.dev/bensen](https://banglawebfonts.pages.dev/bensen/)
 
 ## Embed:
 To use the Bensen font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Bensen font on your website, add the following code to your HTML &lt;
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/bensen.css');
+  @import url('https://banglawebfonts.pages.dev/css/bensen.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Bensen font:
 ```css
 body {
-font-family:'Bensen', serif;
+  font-family:'Bensen', serif;
 }
 ```
 

@@ -2,7 +2,7 @@
 
 This directory contains the "Sapa" font files.
 
-🌐 [banglawebfonts.pages.dev/Sapa](https://banglawebfonts.pages.dev/sapa/#about)
+🌐 [banglawebfonts.pages.dev/sapa](https://banglawebfonts.pages.dev/sapa/)
 
 ## Embed:
 To use the Sapa font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Sapa font on your website, add the following code to your HTML &lt;he
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/sapa.css');
+  @import url('https://banglawebfonts.pages.dev/css/sapa.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Sapa font:
 ```css
 body {
-font-family:'Sapa', sans-serif;
+  font-family:'Sapa', sans-serif;
 }
 ```
 

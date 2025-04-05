@@ -2,7 +2,7 @@
 
 This directory contains the "Tiro Bangla" font files.
 
-🌐 [banglawebfonts.pages.dev/Tiro Bangla](https://banglawebfonts.pages.dev/tiro-bangla/#about)
+🌐 [banglawebfonts.pages.dev/tiro-bangla](https://banglawebfonts.pages.dev/tiro-bangla/)
 
 ## Embed:
 To use the Tiro Bangla font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Tiro Bangla font on your website, add the following code to your HTML
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/tiro-bangla.css');
+  @import url('https://banglawebfonts.pages.dev/css/tiro-bangla.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Tiro Bangla font:
 ```css
 body {
-font-family:'Tiro Bangla', serif;
+  font-family:'Tiro Bangla', serif;
 }
 ```
 

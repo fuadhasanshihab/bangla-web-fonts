@@ -2,7 +2,7 @@
 
 This directory contains the "Charu Chandan" font files.
 
-🌐 [banglawebfonts.pages.dev/Charu Chandan](https://banglawebfonts.pages.dev/charu-chandan/#about)
+🌐 [banglawebfonts.pages.dev/charu-chandan](https://banglawebfonts.pages.dev/charu-chandan/)
 
 ## Embed:
 To use the Charu Chandan font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Charu Chandan font on your website, add the following code to your HT
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/charu-chandan.css');
+  @import url('https://banglawebfonts.pages.dev/css/charu-chandan.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Charu Chandan font:
 ```css
 body {
-font-family:'Charu Chandan', sans-serif;
+  font-family:'Charu Chandan', sans-serif;
 }
 ```
 

@@ -2,7 +2,7 @@
 
 This directory contains the "Noto Serif Bengali" font files.
 
-🌐 [banglawebfonts.pages.dev/Noto Serif Bengali](https://banglawebfonts.pages.dev/noto-serif-bengali/#about)
+🌐 [banglawebfonts.pages.dev/noto-serif-bengali](https://banglawebfonts.pages.dev/noto-serif-bengali/)
 
 ## Embed:
 To use the Noto Serif Bengali font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Noto Serif Bengali font on your website, add the following code to yo
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/noto-serif-bengali.css');
+  @import url('https://banglawebfonts.pages.dev/css/noto-serif-bengali.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Noto Serif Bengali font:
 ```css
 body {
-font-family:'Noto Serif Bengali', serif;
+  font-family:'Noto Serif Bengali', serif;
 }
 ```
 

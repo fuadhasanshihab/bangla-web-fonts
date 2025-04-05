@@ -2,7 +2,7 @@
 
 This directory contains the "Ekushey Saraswatii" font files.
 
-🌐 [banglawebfonts.pages.dev/Ekushey Saraswatii](https://banglawebfonts.pages.dev/ekushey-saraswatii/#about)
+🌐 [banglawebfonts.pages.dev/ekushey-saraswatii](https://banglawebfonts.pages.dev/ekushey-saraswatii/)
 
 ## Embed:
 To use the Ekushey Saraswatii font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Ekushey Saraswatii font on your website, add the following code to yo
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/ekushey-saraswatii.css');
+  @import url('https://banglawebfonts.pages.dev/css/ekushey-saraswatii.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Ekushey Saraswatii font:
 ```css
 body {
-font-family:'Ekushey Saraswatii', serif;
+  font-family:'Ekushey Saraswatii', serif;
 }
 ```
 

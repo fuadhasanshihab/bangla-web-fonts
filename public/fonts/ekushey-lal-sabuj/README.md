@@ -2,7 +2,7 @@
 
 This directory contains the "Ekushey Lal Sabuj" font files.
 
-🌐 [banglawebfonts.pages.dev/Ekushey Lal Sabuj](https://banglawebfonts.pages.dev/ekushey-lal-sabuj/#about)
+🌐 [banglawebfonts.pages.dev/ekushey-lal-sabuj](https://banglawebfonts.pages.dev/ekushey-lal-sabuj/)
 
 ## Embed:
 To use the Ekushey Lal Sabuj font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Ekushey Lal Sabuj font on your website, add the following code to you
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/ekushey-lal-sabuj.css');
+  @import url('https://banglawebfonts.pages.dev/css/ekushey-lal-sabuj.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Ekushey Lal Sabuj font:
 ```css
 body {
-font-family:'Ekushey Lal Sabuj', sans-serif;
+  font-family:'Ekushey Lal Sabuj', sans-serif;
 }
 ```
 

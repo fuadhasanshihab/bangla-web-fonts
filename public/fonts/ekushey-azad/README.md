@@ -2,7 +2,7 @@
 
 This directory contains the "Ekushey Azad" font files.
 
-🌐 [banglawebfonts.pages.dev/Ekushey Azad](https://banglawebfonts.pages.dev/ekushey-azad/#about)
+🌐 [banglawebfonts.pages.dev/ekushey-azad](https://banglawebfonts.pages.dev/ekushey-azad/)
 
 ## Embed:
 To use the Ekushey Azad font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Ekushey Azad font on your website, add the following code to your HTM
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/ekushey-azad.css');
+  @import url('https://banglawebfonts.pages.dev/css/ekushey-azad.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Ekushey Azad font:
 ```css
 body {
-font-family:'Ekushey Azad', sans-serif;
+  font-family:'Ekushey Azad', sans-serif;
 }
 ```
 

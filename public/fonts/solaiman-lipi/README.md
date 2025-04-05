@@ -2,7 +2,7 @@
 
 This directory contains the "Solaiman Lipi" font files.
 
-🌐 [banglawebfonts.pages.dev/Solaiman Lipi](https://banglawebfonts.pages.dev/solaiman-lipi/#about)
+🌐 [banglawebfonts.pages.dev/solaiman-lipi](https://banglawebfonts.pages.dev/solaiman-lipi/)
 
 ## Embed:
 To use the Solaiman Lipi font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Solaiman Lipi font on your website, add the following code to your HT
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/solaiman-lipi.css');
+  @import url('https://banglawebfonts.pages.dev/css/solaiman-lipi.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Solaiman Lipi font:
 ```css
 body {
-font-family:'Solaiman Lipi', serif;
+  font-family:'Solaiman Lipi', serif;
 }
 ```
 

@@ -2,7 +2,7 @@
 
 This directory contains the "Ekushey Mukto" font files.
 
-🌐 [banglawebfonts.pages.dev/Ekushey Mukto](https://banglawebfonts.pages.dev/ekushey-mukto/#about)
+🌐 [banglawebfonts.pages.dev/ekushey-mukto](https://banglawebfonts.pages.dev/ekushey-mukto/)
 
 ## Embed:
 To use the Ekushey Mukto font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Ekushey Mukto font on your website, add the following code to your HT
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/ekushey-mukto.css');
+  @import url('https://banglawebfonts.pages.dev/css/ekushey-mukto.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Ekushey Mukto font:
 ```css
 body {
-font-family:'Ekushey Mukto', serif;
+  font-family:'Ekushey Mukto', serif;
 }
 ```
 

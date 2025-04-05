@@ -2,7 +2,7 @@
 
 This directory contains the "Kalaa" font files.
 
-🌐 [banglawebfonts.pages.dev/Kalaa](https://banglawebfonts.pages.dev/kalaa/#about)
+🌐 [banglawebfonts.pages.dev/kalaa](https://banglawebfonts.pages.dev/kalaa/)
 
 ## Embed:
 To use the Kalaa font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Kalaa font on your website, add the following code to your HTML &lt;h
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/kalaa.css');
+  @import url('https://banglawebfonts.pages.dev/css/kalaa.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Kalaa font:
 ```css
 body {
-font-family:'Kalaa', sans-serif;
+  font-family:'Kalaa', sans-serif;
 }
 ```
 

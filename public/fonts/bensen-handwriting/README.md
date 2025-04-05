@@ -2,7 +2,7 @@
 
 This directory contains the "Bensen Handwriting" font files.
 
-🌐 [banglawebfonts.pages.dev/Bensen Handwriting](https://banglawebfonts.pages.dev/bensen-handwriting/#about)
+🌐 [banglawebfonts.pages.dev/bensen-handwriting](https://banglawebfonts.pages.dev/bensen-handwriting/)
 
 ## Embed:
 To use the Bensen Handwriting font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Bensen Handwriting font on your website, add the following code to yo
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/bensen-handwriting.css');
+  @import url('https://banglawebfonts.pages.dev/css/bensen-handwriting.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Bensen Handwriting font:
 ```css
 body {
-font-family:'Bensen Handwriting', sans-serif;
+  font-family:'Bensen Handwriting', sans-serif;
 }
 ```
 

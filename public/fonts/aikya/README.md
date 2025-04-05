@@ -2,7 +2,7 @@
 
 This directory contains the "Aikya" font files.
 
-🌐 [banglawebfonts.pages.dev/Aikya](https://banglawebfonts.pages.dev/aikya/#about)
+🌐 [banglawebfonts.pages.dev/aikya](https://banglawebfonts.pages.dev/aikya/)
 
 ## Embed:
 To use the Aikya font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Aikya font on your website, add the following code to your HTML &lt;h
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/aikya.css');
+  @import url('https://banglawebfonts.pages.dev/css/aikya.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Aikya font:
 ```css
 body {
-font-family:'Aikya', serif;
+  font-family:'Aikya', serif;
 }
 ```
 

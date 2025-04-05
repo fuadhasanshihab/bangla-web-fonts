@@ -2,7 +2,7 @@
 
 This directory contains the "Adorsho Lipi" font files.
 
-🌐 [banglawebfonts.pages.dev/Adorsho Lipi](https://banglawebfonts.pages.dev/adorsho-lipi/#about)
+🌐 [banglawebfonts.pages.dev/adorsho-lipi](https://banglawebfonts.pages.dev/adorsho-lipi/)
 
 ## Embed:
 To use the Adorsho Lipi font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Adorsho Lipi font on your website, add the following code to your HTM
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/adorsho-lipi.css');
+  @import url('https://banglawebfonts.pages.dev/css/adorsho-lipi.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Adorsho Lipi font:
 ```css
 body {
-font-family:'Adorsho Lipi', sans-serif;
+  font-family:'Adorsho Lipi', sans-serif;
 }
 ```
 

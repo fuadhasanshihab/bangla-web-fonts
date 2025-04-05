@@ -2,7 +2,7 @@
 
 This directory contains the "Mina" font files.
 
-🌐 [banglawebfonts.pages.dev/Mina](https://banglawebfonts.pages.dev/mina/#about)
+🌐 [banglawebfonts.pages.dev/mina](https://banglawebfonts.pages.dev/mina/)
 
 ## Embed:
 To use the Mina font on your website, add the following code to your HTML &lt;head&gt; section:
@@ -13,7 +13,7 @@ To use the Mina font on your website, add the following code to your HTML &lt;he
 or,
 ```html
 <style>
-@import url('https://banglawebfonts.pages.dev/css/mina.css');
+  @import url('https://banglawebfonts.pages.dev/css/mina.css');
 </style>
 ```
 
@@ -21,7 +21,7 @@ or,
 Use the following CSS rule to specify the Mina font:
 ```css
 body {
-font-family:'Mina', sans-serif;
+  font-family:'Mina', sans-serif;
 }
 ```
 
