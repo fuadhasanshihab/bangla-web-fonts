@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # Required for committing changes
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -53,10 +53,10 @@ jobs:
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
                       "## CSS Stylesheet:\n" +
-                      "\`\`\`css\nhttps://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css\n\`\`\`\n\n" +
+                      "\`\`\`css\n<link href='https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css' rel='stylesheet'>\n\`\`\`\n\n" +
                       "## Font Details:\n" +
+                      "- **Family:** " + fontData.FontName + "\n" +
                       "- **Total Styles:** " + fontData.TotalStyles + "\n" +
-                      "- **Family:** " + fontData.FontFamily + "\n" +
                       "- **Available Weights:** " + fontData.FontTesterWeights.join(", ") + "\n" +
                       "- **Font Designer:** [" + fontData.FontDesigner + "](" + fontData.FontDesignerURL + ")\n" +
                       "- **License:** " + fontData.FontLicense + "\n\n" +
@@ -74,7 +74,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add .
-          git commit -m "Auto-generate or update README.md for fonts" || exit 0
+          git commit -m "Update README.md" || exit 0
           git push origin ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
