@@ -52,15 +52,15 @@ jobs:
 
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
-                      "🌐 [banglawebfonts.pages.dev/" + fontData.FontName + "](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/#about)\n\n" +
+                      "🌐 [banglawebfonts.pages.dev/" + fontData.FontPath + "](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/)\n\n" +
                       "## Embed:\n" +
                       "To use the " + fontData.FontName + " font on your website, add the following code to your HTML &lt;head&gt; section:\n" +
                       "\`\`\`html\n<link href='https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css' rel='stylesheet'>\n\`\`\`\n\n" +
                       "or,\n" +
-                      "\`\`\`html\n<style>\n@import url('https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css');\n</style>\n\`\`\`\n\n" +
+                      "\`\`\`html\n<style>\n  @import url('https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css');\n</style>\n\`\`\`\n\n" +
                       "## CSS:\n" +
                       "Use the following CSS rule to specify the " + fontData.FontName + " font:\n" +
-                      "\`\`\`css\nbody {\nfont-family:" + fontData.FontFamily + ";\n}\n\`\`\`\n\n" +
+                      "\`\`\`css\nbody {\n  font-family:" + fontData.FontFamily + ";\n}\n\`\`\`\n\n" +
                       "## Font Details:\n" +
                       "- **Family:** " + fontData.FontName + "\n" +
                       "- **Total Styles:** " + fontData.TotalStyles + "\n" +
@@ -79,7 +79,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git config --global user.name "fuadhasanshihab"
-          git config --global user.email "85599261+fuadhasanshihab@users.noreply.github.comm"
+          git config --global user.email "85599261+fuadhasanshihab@users.noreply.github.com"
           git add .
           git commit -m "Update README.md" || exit 0
           git push origin ${{ github.ref_name }}
