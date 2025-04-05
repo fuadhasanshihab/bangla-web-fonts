@@ -1,15 +1,10 @@
 {
   "OFL": {
     "LicenseName": "SIL Open Font License",
-    "LicenseText": "This font is licensed under the SIL Open Font License. This license is available with a FAQ at: <a href='https://openfontlicense.org/' target='_blank' class='text-blue-600 hover:underline'>openfontlicense.org</a>"
+    "LicenseText": "This font is licensed under the SIL Open Font License. You can use and embed this font in web pages and documents. This license is available with a FAQ at: <a href='https://openfontlicense.org/' target='_blank' class='text-blue-600 hover:underline' rel='noopener noreferrer'>openfontlicense.org</a>."
   },
   "GPL": {
     "LicenseName": "GNU General Public License",
-    "LicenseText": "This font is licensed under the GNU General Public License. <a href='https://www.gnu.org/licenses/gpl-3.0.html' target='_blank' class='text-blue-600 hover:underline'>gnu.org/licenses/gpl</a>"
-  },
-  "CC": {
-    "LicenseName": "Creative Commons License",
-    "LicenseText": "This Font Software is licensed under a Creative Commons License.",
-    "LicenseURL": "https://creativecommons.org/licenses/"
+    "LicenseText": "This font is licensed under the GNU General Public License with a font exception clause. You can use and embed this font in web pages and documents. Learn more at <a href='https://www.gnu.org/licenses/gpl-3.0.html' target='_blank' class='text-blue-600 hover:underline' rel="noopener noreferrer">gnu.org/licenses/gpl</a> and <a href='https://www.gnu.org/licenses/gpl-faq.html#FontException' target='_blank' class='text-blue-600 hover:underline' rel="noopener noreferrer">font exception clause</a>."
   }
 }
