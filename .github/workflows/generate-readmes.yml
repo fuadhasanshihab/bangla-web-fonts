@@ -52,11 +52,15 @@ jobs:
 
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
+                      "🌐 [banglawebfonts.pages.dev/" + fontData.FontName + "](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/#about)\n\n" +
                       "## Embed:\n" +
                       "To use the " + fontData.FontName + " font on your website, add the following code to your HTML &lt;head&gt; section:\n" +
                       "\`\`\`html\n<link href='https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css' rel='stylesheet'>\n\`\`\`\n\n" +
-                      "or," +
+                      "or,\n" +
                       "\`\`\`html\n<style>\n@import url('https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css');\n</style>\n\`\`\`\n\n" +
+                      "## CSS:\n" +
+                      "Use the following CSS rule to specify the " + fontData.FontName + " font:\n" +
+                      "\`\`\`css\nbody {\nfont-family:" + fontData.FontFamily + ";\n}\n\`\`\`\n\n" +
                       "## Font Details:\n" +
                       "- **Family:** " + fontData.FontName + "\n" +
                       "- **Total Styles:** " + fontData.TotalStyles + "\n" +
