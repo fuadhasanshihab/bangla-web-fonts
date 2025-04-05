@@ -21,8 +21,7 @@ or,
 > You can use the `.min.css` version for better performance and faster loading times.
 > **Minified CSS Stylesheet:**  
 > ```
->
-  https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css
+> https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css
 > ```
 
 ## CSS:
