@@ -4,12 +4,12 @@ This directory contains the "Bensen" font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/bensen.css
+<link href='https://banglawebfonts.pages.dev/css/bensen.css' rel='stylesheet'>
 ```
 
 ## Font Details:
+- **Family:** Bensen
 - **Total Styles:** 2
-- **Family:** 'Bensen', serif
 - **Available Weights:** 400, 700
 - **Font Designer:** [Subrata Sen](https://www.subratasen.com/)
 - **License:** GPL

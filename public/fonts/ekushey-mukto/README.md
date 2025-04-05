@@ -4,12 +4,12 @@ This directory contains the "Ekushey Mukto" font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/ekushey-mukto.css
+<link href='https://banglawebfonts.pages.dev/css/ekushey-mukto.css' rel='stylesheet'>
 ```
 
 ## Font Details:
+- **Family:** Ekushey Mukto
 - **Total Styles:** 2
-- **Family:** 'Ekushey Mukto', serif
 - **Available Weights:** 400, 700
 - **Font Designer:** [Ekushey](https://ekushey.org/)
 - **License:** OFL

@@ -4,12 +4,12 @@ This directory contains the "Adorsho Lipi" font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/adorsho-lipi.css
+<link href='https://banglawebfonts.pages.dev/css/adorsho-lipi.css' rel='stylesheet'>
 ```
 
 ## Font Details:
+- **Family:** Adorsho Lipi
 - **Total Styles:** 2
-- **Family:** 'Adorsho Lipi', sans-serif
 - **Available Weights:** 400, 700
 - **Font Designer:** [Partha Sarathi Pal](mailto:p.s.pal.2006@gmail.com)
 - **License:** GPL

@@ -4,12 +4,12 @@ This directory contains the "Bensen Handwriting" font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/bensen-handwriting.css
+<link href='https://banglawebfonts.pages.dev/css/bensen-handwriting.css' rel='stylesheet'>
 ```
 
 ## Font Details:
+- **Family:** Bensen Handwriting
 - **Total Styles:** 2
-- **Family:** 'Bensen Handwriting', sans-serif
 - **Available Weights:** 400, 700
 - **Font Designer:** [Subrata Sen](https://www.subratasen.com/)
 - **License:** GPL

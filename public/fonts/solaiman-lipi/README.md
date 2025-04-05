@@ -4,12 +4,12 @@ This directory contains the "Solaiman Lipi" font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/solaiman-lipi.css
+<link href='https://banglawebfonts.pages.dev/css/solaiman-lipi.css' rel='stylesheet'>
 ```
 
 ## Font Details:
+- **Family:** Solaiman Lipi
 - **Total Styles:** 4
-- **Family:** 'Solaiman Lipi', serif
 - **Available Weights:** 300, 400, 600, 700
 - **Font Designer:** [Solaiman Karim](https://ekushey.org/designer/solaiman-karim/)
 - **License:** OFL

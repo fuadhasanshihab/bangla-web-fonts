@@ -4,12 +4,12 @@ This directory contains the "Anek Bangla" font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/anek-bangla.css
+<link href='https://banglawebfonts.pages.dev/css/anek-bangla.css' rel='stylesheet'>
 ```
 
 ## Font Details:
+- **Family:** Anek Bangla
 - **Total Styles:** 8
-- **Family:** 'Anek Bangla', sans-serif
 - **Available Weights:** 100, 200, 300, 400, 500, 600, 700, 800
 - **Font Designer:** [Ek Type](https://ektype.in/)
 - **License:** OFL

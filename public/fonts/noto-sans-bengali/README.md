@@ -4,12 +4,12 @@ This directory contains the "Noto Sans Bengali" font files.
 
 ## CSS Stylesheet:
 ```css
-https://banglawebfonts.pages.dev/css/noto-sans-bengali.css
+<link href='https://banglawebfonts.pages.dev/css/noto-sans-bengali.css' rel='stylesheet'>
 ```
 
 ## Font Details:
+- **Family:** Noto Sans Bengali
 - **Total Styles:** 9
-- **Family:** 'Noto Sans Bengali', sans-serif
 - **Available Weights:** 100, 200, 300, 400, 500, 600, 700, 800, 900
 - **Font Designer:** [Google](https://fonts.google.com/)
 - **License:** OFL
