@@ -73,7 +73,8 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 <div class="relative z-20 w-full mx-auto lg:mx-0">
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h1>
   <div id="type-tester"/>
-  <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Designed by <a href={FontDesignerURL} class="text-blue-600 hover:underline" target="_blank">{FontDesigner}</a></p>
+  <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Designed by <a href={FontDesignerURL} class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer"
+>{FontDesigner}</a></p>
 </div>
 
 <PreviewInput/>
@@ -171,7 +172,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
     <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Designer</h3>
-    <a href={FontDesignerURL} target="_blank" class="text-blue-600 sm:col-span-3 sm:mt-0 hover:underline">{FontDesigner}</a>
+    <a href={FontDesignerURL} target="_blank" rel="noopener noreferrer" class="text-blue-600 sm:col-span-3 sm:mt-0 hover:underline">{FontDesigner}</a>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
     <h3 class="font-medium text-neutral-800 dark:text-neutral-200">License</h3>
