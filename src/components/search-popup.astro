@@ -14,7 +14,7 @@
         <!-- Clear button (X) -->
         <button 
           id="clearBtn" 
-          class="absolute right-2 top-2.5 text-gray-400 hover:text-gray-600 focus:outline-none hidden"
+          class="absolute right-5 top-2 text-gray-400 hover:text-gray-600 focus:outline-none hidden"
         >
           ✕
         </button>
@@ -23,7 +23,7 @@
       <!-- Search Results -->
       <div 
         id="results" 
-        class="mt-2 max-h-60 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow hidden absolute w-full z-20"
+        class="mt-4 max-h-60 overflow-y-auto bg-white dark:bg-black border border-gray-200 rounded-lg shadow hidden absolute w-full z-20"
       ></div>
 
     </div>
@@ -58,7 +58,7 @@
           div.innerHTML = highlighted;
 
           div.onclick = () => {
-            window.location.href = `https://banglawebfonts.pages.dev/${font.FontPath}`;
+            window.location.href = `https://banglawebfonts.pages.dev/${font.FontPath}/`;
           };
 
           resultsContainer.appendChild(div);
