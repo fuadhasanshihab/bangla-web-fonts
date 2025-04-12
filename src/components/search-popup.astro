@@ -103,24 +103,28 @@
     });
 
     // Open modal
-    openSearch.addEventListener('click', () => {
-      searchModal.classList.remove('hidden');
-      setTimeout(() => searchInput.focus(), 100);
-    });
+openSearch.addEventListener('click', () => {
+  searchModal.classList.remove('hidden');
+  document.body.classList.add('overflow-hidden'); // prevent body scroll
+  setTimeout(() => searchInput.focus(), 100);
+});
 
-    // Close modal if clicked on background
-    searchModal.addEventListener('click', (e) => {
-      if (e.target === searchModal) {
-        searchModal.classList.add('hidden');
-        resultsContainer.classList.add('hidden');
-      }
-    });
+// Close modal if clicked on background
+searchModal.addEventListener('click', (e) => {
+  if (e.target === searchModal) {
+    searchModal.classList.add('hidden');
+    resultsContainer.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden'); // restore body scroll
+  }
+});
 
-    // Close modal on ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        searchModal.classList.add('hidden');
-        resultsContainer.classList.add('hidden');
-      }
-    });
+// Close modal on ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    searchModal.classList.add('hidden');
+    resultsContainer.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  }
+});
+
   </script>
