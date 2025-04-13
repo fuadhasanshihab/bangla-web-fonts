@@ -1,7 +1,7 @@
 ![Bangla Web Fonts](/public/assets/images/bangla-web-fonts-1200x630.jpg)
 
 # Bangla Web Fonts
-**Bangla Web Fonts** is a free Bangla web font CDN, providing fast and easy-to-use Bangla fonts for web projects. Similar to Google Fonts, it allows developers to embed Bangla fonts into websites without direct downloads.
+**Bangla Web Fonts** is a free Bangla web font CDN, providing fast and easy-to-use Bangla fonts for web projects. It allows developers to embed Bangla fonts into websites without direct downloads.
 
 🌐 Website: [banglawebfonts.pages.dev](https://banglawebfonts.pages.dev)
 
