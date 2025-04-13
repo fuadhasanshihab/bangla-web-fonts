@@ -16,7 +16,7 @@ import icons from '../collections/icons.json';
         {icons.map(icon => (
           <div class="border rounded-2xl p-4 shadow hover:shadow-md transition">
             <div class="flex justify-center items-center h-32">
-              <div class="w-20 h-20" innerHTML={icon.IconSVG}></div>
+              <div class="w-20 h-20" set:html={icon.IconSVG}></div>
             </div>
             <h2 class="text-lg font-semibold mt-4">{icon.IconName}</h2>
             <p class="text-sm text-gray-600">Color: <span class="capitalize">{icon.IconColor}</span></p>
