@@ -6,7 +6,7 @@
     "IconDesigner": "Mary Akveo",
     "IconDesignerURL": "https://www.svgrepo.com/svg/463312/taka",
     "IconLicense": "PD",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='5 2 14 20'><path fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 3h0a3 3 0 0 1 3 3v11.3a3.7 3.7 0 0 0 3.7 3.7h0a3.7 3.7 0 0 0 3.3-2.2l1.8-4A2.9 2.9 0 0 0 16 11h0M6 11h6'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='5 2 14 20'><path fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 3h0a3 3 0 0 1 3 3v11.3a3.7 3.7 0 0 0 3.7 3.7h0a3.7 3.7 0 0 0 3.3-2.2l1.8-4A2.9 2.9 0 0 0 16 11h0M6 11h6'/></svg>"
   },
   {
     "IconName": "Bangla Keyboard",
@@ -15,17 +15,16 @@
     "IconDesigner": "Donnnno",
     "IconDesignerURL": "https://www.svgrepo.com/svg/514913/bangla-keyboard",
     "IconLicense": "GPL",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='4.56 4.5 38.88 39'><defs><style>.b{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.9}</style></defs><path d='M13.17 18.57H7.64c-1.15 0-2.08.93-2.08 2.08v19.77c0 1.15.93 2.08 2.08 2.08h32.72c1.15 0 2.08-.93 2.08-2.08V20.65c0-1.15-.93-2.08-2.08-2.08h-5.28' class='b'/><rect width='20.04' height='3.33' x='14.1' y='35.76' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='10.73' y='29.78' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='16.59' y='29.78' class='b' rx='.42' ry='.42'/><path d='M25.8 30.36v2.37c0 .23-.18.42-.42.42h-2.52a.42.42 0 0 1-.42-.42h0v-2.37' class='b'/><rect width='3.37' height='3.37' x='28.29' y='29.78' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='34.14' y='29.78' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='10.73' y='23.8' class='b' rx='.42' ry='.42'/><path d='M18.28 27.16H17a.42.42 0 0 1-.42-.42v-.87m15.08 0v.87c0 .23-.2.42-.42.42h-1.27' class='b'/><rect width='3.37' height='3.37' x='34.14' y='23.8' class='b' rx='.42' ry='.42'/><path d='m34.25 23.88-10.13 7.77L14 23.88a2.1 2.1 0 0 1-.82-1.67V7.18c0-.93.75-1.68 1.68-1.68H33.4c.93 0 1.69.75 1.69 1.68h0v15.03c0 .65-.3 1.27-.83 1.67Z' class='b'/><path d='M25.1 9.99v13c-1.43-3.34-7.25-6.8-7.25-6.8s3.47-3.45 7.26-3.45' class='b'/><path d='M16.09 9.99h11.6c1.23 0 1.96.94 1.96 1.85m2.26-1.85c-1.42 0-2.26.76-2.26 1.85v11.15' class='b'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='4.56 4.5 38.88 39'><defs><style>.b{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.9}</style></defs><path d='M13.17 18.57H7.64c-1.15 0-2.08.93-2.08 2.08v19.77c0 1.15.93 2.08 2.08 2.08h32.72c1.15 0 2.08-.93 2.08-2.08V20.65c0-1.15-.93-2.08-2.08-2.08h-5.28' class='b'/><rect width='20.04' height='3.33' x='14.1' y='35.76' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='10.73' y='29.78' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='16.59' y='29.78' class='b' rx='.42' ry='.42'/><path d='M25.8 30.36v2.37c0 .23-.18.42-.42.42h-2.52a.42.42 0 0 1-.42-.42h0v-2.37' class='b'/><rect width='3.37' height='3.37' x='28.29' y='29.78' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='34.14' y='29.78' class='b' rx='.42' ry='.42'/><rect width='3.37' height='3.37' x='10.73' y='23.8' class='b' rx='.42' ry='.42'/><path d='M18.28 27.16H17a.42.42 0 0 1-.42-.42v-.87m15.08 0v.87c0 .23-.2.42-.42.42h-1.27' class='b'/><rect width='3.37' height='3.37' x='34.14' y='23.8' class='b' rx='.42' ry='.42'/><path d='m34.25 23.88-10.13 7.77L14 23.88a2.1 2.1 0 0 1-.82-1.67V7.18c0-.93.75-1.68 1.68-1.68H33.4c.93 0 1.69.75 1.69 1.68h0v15.03c0 .65-.3 1.27-.83 1.67Z' class='b'/><path d='M25.1 9.99v13c-1.43-3.34-7.25-6.8-7.25-6.8s3.47-3.45 7.26-3.45' class='b'/><path d='M16.09 9.99h11.6c1.23 0 1.96.94 1.96 1.85m2.26-1.85c-1.42 0-2.26.76-2.26 1.85v11.15' class='b'/></svg>"
   },
   {
-    "IconName": "Bangladesh
-National Martyrs Memorial",
+    "IconName": "Bangladesh National Martyrs Memorial",
     "IconPath": "bangladesh-national-martyrs-memorial",
     "IconColor": "single",
     "IconDesigner": "SVG Repo",
     "IconDesignerURL": "https://www.svgrepo.com/svg/89767/national-martyrs-memorial-jatiya-sriti-shoudho-bangladesh",
     "IconLicense": "CC0",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='3.2 0 61.9 68.3'><path d='M60.5 62.5 50.4 0l-3.1 21-5.1-18.7-1.1 21-5.8-10.9-1 17-5.5-7.4-.8 15.2-6.3-4.1-.5 13-5.8-3-1.2 13-5.9-1.8-1.6 8.2H3.2v5.8h62v-5.8h-4.7zM49.4 15.7 55 62.5h-1.5l-4.7-39.2.6-7.6zm-6.3.4 8.8 46.4h-.2L42.6 28l.5-11.9zm-5.9 5.5 11.2 40.9L36 32.2l1.2-10.6zM30 26.8l15 35.7h-.2l-15.4-23 .6-12.7zM23 35l17.6 27.4H40L22.5 46.9 23 35zm-6.5 9.7 18.7 17.7h-1.4l-18.4-6.2 1.1-11.5zM9.4 56l19.7 6.4h-20l.4-6.4z'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='3.2 0 61.9 68.3'><path d='M60.5 62.5 50.4 0l-3.1 21-5.1-18.7-1.1 21-5.8-10.9-1 17-5.5-7.4-.8 15.2-6.3-4.1-.5 13-5.8-3-1.2 13-5.9-1.8-1.6 8.2H3.2v5.8h62v-5.8h-4.7zM49.4 15.7 55 62.5h-1.5l-4.7-39.2.6-7.6zm-6.3.4 8.8 46.4h-.2L42.6 28l.5-11.9zm-5.9 5.5 11.2 40.9L36 32.2l1.2-10.6zM30 26.8l15 35.7h-.2l-15.4-23 .6-12.7zM23 35l17.6 27.4H40L22.5 46.9 23 35zm-6.5 9.7 18.7 17.7h-1.4l-18.4-6.2 1.1-11.5zM9.4 56l19.7 6.4h-20l.4-6.4z'/></svg>"
   },
   {
     "IconName": "Shaheed Minar",
@@ -34,7 +33,7 @@ National Martyrs Memorial",
     "IconDesigner": "Hugeicons",
     "IconDesignerURL": "https://iconduck.com/icons/314340/central-shaheed-minar",
     "IconLicense": "CC BY 4.0",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='1.25 1.25 21.5 21.5'><path stroke='#141b34' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M3 22V10.2a.2.2 0 0 1 .26-.2l3.1.99c.08.03.14.1.14.2V22M21 22V10.2a.2.2 0 0 0-.26-.2l-3.1.99a.2.2 0 0 0-.14.2V22M9 22V8h6v14M2 22h20M9 8 7.17 3.32C6.8 2.25 7 2 8.17 2h7.65c1.19 0 1.38.25 1 1.32L15 8'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='1.25 1.25 21.5 21.5'><path stroke='#141b34' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M3 22V10.2a.2.2 0 0 1 .26-.2l3.1.99c.08.03.14.1.14.2V22M21 22V10.2a.2.2 0 0 0-.26-.2l-3.1.99a.2.2 0 0 0-.14.2V22M9 22V8h6v14M2 22h20M9 8 7.17 3.32C6.8 2.25 7 2 8.17 2h7.65c1.19 0 1.38.25 1 1.32L15 8'/></svg>"
   },
   {
     "IconName": "Bangladesh Circle Flag",
@@ -43,7 +42,7 @@ National Martyrs Memorial",
     "IconDesigner": "SVG Repo",
     "IconDesignerURL": "https://www.svgrepo.com/svg/63372/bangladesh",
     "IconLicense": "CC0",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 512 512'><circle cx='256' cy='256' r='256' fill='#006a4e'/><circle cx='200.3' cy='256' r='111.3' fill='#f42a41'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 512 512'><circle cx='256' cy='256' r='256' fill='#006a4e'/><circle cx='200.3' cy='256' r='111.3' fill='#f42a41'/></svg>"
   },
   {
     "IconName": "Bangladesh Location",
@@ -52,7 +51,7 @@ National Martyrs Memorial",
     "IconDesigner": "SVG Repo",
     "IconDesignerURL": "https://www.svgrepo.com/svg/155405/bangladesh",
     "IconLicense": "CC0",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='57 0 398 512'><path fill='#e3e3e3' d='M434 111A201 201 0 0 0 256 0v101c55 0 101 44 101 99s-46 103-101 103v209c71-74 152-155 188-251 17-49 14-104-10-150z'/><path fill='#d9d9d9' d='M68 261c36 96 117 177 188 251V303c-55 0-101-48-101-103s46-99 101-99V0C178 0 111 46 78 111c-24 46-27 101-10 150z'/><circle cx='256' cy='198.8' r='160' fill='#006a4e'/><circle cx='221.2' cy='198.8' r='69.6' fill='#f42a41'/><path fill='#fff' d='M256 22c-74 0-142 47-167 117-25 69-3 149 54 197 58 47 141 53 204 15 64-39 97-115 83-188A179 179 0 0 0 256 22m143 241a158 158 0 0 1-178 89 158 158 0 0 1-72-267c45-43 114-55 171-29a158 158 0 0 1 79 207c-2 5 1-3 0 0'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='57 0 398 512'><path fill='#e3e3e3' d='M434 111A201 201 0 0 0 256 0v101c55 0 101 44 101 99s-46 103-101 103v209c71-74 152-155 188-251 17-49 14-104-10-150z'/><path fill='#d9d9d9' d='M68 261c36 96 117 177 188 251V303c-55 0-101-48-101-103s46-99 101-99V0C178 0 111 46 78 111c-24 46-27 101-10 150z'/><circle cx='256' cy='198.8' r='160' fill='#006a4e'/><circle cx='221.2' cy='198.8' r='69.6' fill='#f42a41'/><path fill='#fff' d='M256 22c-74 0-142 47-167 117-25 69-3 149 54 197 58 47 141 53 204 15 64-39 97-115 83-188A179 179 0 0 0 256 22m143 241a158 158 0 0 1-178 89 158 158 0 0 1-72-267c45-43 114-55 171-29a158 158 0 0 1 79 207c-2 5 1-3 0 0'/></svg>"
   },
   {
     "IconName": "Bangladesh Map",
@@ -61,7 +60,7 @@ National Martyrs Memorial",
     "IconDesigner": "SVG Repo",
     "IconDesignerURL": "https://www.svgrepo.com/svg/143227/bangladesh",
     "IconLicense": "CC0",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='2.6 0 16.6 21.9'><path fill='#121111' d='M19.3 20.2c-.3-2.4-.3-4.7-1-7-.3-.8.1-2-.9-2.2-1.1-.1-1 1.3-1.4 2v.1c-.2.6-.3.7-.9.2-1.6-1.6-1.4-3.2.7-4 1-.3 1.5-1 1.9-1.8 0-.3 0-.7.4-.8 1.4-.3.2-.7 0-.9-.5-.4-1-.4-1.6-.4h-5c-2 0-2.3-.4-2.4-2.4 0-.5 0-.8-.2-1.2-.2-.3-.4-.6-.7-.2-.8 1-1.2.4-1.6-.3C6.4.9 6.4 0 5.7 1c-.1.3-.5.1-.7-.2C4.8.4 4.5.1 4 0c-.5.3.2.8-.4 1.2-1.2.9-.8 1.6.2 2.4.5.4.9.6 1.3.7.2 0 .3.4.4.6.1.3 0 .5-.3.4-.9-.3-1 .4-1.5 1-1.4 1.3-1.5 1.5.3 2.2 1.2.4 1.2 1 .8 1.9-.2.4-.4.8 0 1.2 1 1.7 1 3.7 1.5 5.5.4 1.7 1 2 2.4.9.5-.4 1-1.2 1.4 0 .2.4.5.1.7-.1.2-.3.2-.8.8-.6 1 .3 1.2-.5 1.3-1.2 0-.3-.3-.6.3-.8 1.8-.6 3.5.5 3.2 2.3-.2 1.8 1 2.9 1.4 4.3.8-.4-1.5-2.7 1.4-1.7z'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='2.6 0 16.6 21.9'><path fill='#121111' d='M19.3 20.2c-.3-2.4-.3-4.7-1-7-.3-.8.1-2-.9-2.2-1.1-.1-1 1.3-1.4 2v.1c-.2.6-.3.7-.9.2-1.6-1.6-1.4-3.2.7-4 1-.3 1.5-1 1.9-1.8 0-.3 0-.7.4-.8 1.4-.3.2-.7 0-.9-.5-.4-1-.4-1.6-.4h-5c-2 0-2.3-.4-2.4-2.4 0-.5 0-.8-.2-1.2-.2-.3-.4-.6-.7-.2-.8 1-1.2.4-1.6-.3C6.4.9 6.4 0 5.7 1c-.1.3-.5.1-.7-.2C4.8.4 4.5.1 4 0c-.5.3.2.8-.4 1.2-1.2.9-.8 1.6.2 2.4.5.4.9.6 1.3.7.2 0 .3.4.4.6.1.3 0 .5-.3.4-.9-.3-1 .4-1.5 1-1.4 1.3-1.5 1.5.3 2.2 1.2.4 1.2 1 .8 1.9-.2.4-.4.8 0 1.2 1 1.7 1 3.7 1.5 5.5.4 1.7 1 2 2.4.9.5-.4 1-1.2 1.4 0 .2.4.5.1.7-.1.2-.3.2-.8.8-.6 1 .3 1.2-.5 1.3-1.2 0-.3-.3-.6.3-.8 1.8-.6 3.5.5 3.2 2.3-.2 1.8 1 2.9 1.4 4.3.8-.4-1.5-2.7 1.4-1.7z'/></svg>"
   },
   {
     "IconName": "Bangladeshi Cash",
@@ -70,7 +69,7 @@ National Martyrs Memorial",
     "IconDesigner": "SVG Repo",
     "IconDesignerURL": "https://www.svgrepo.com/svg/385124/bangladesh-cash-commerce-currency-rates",
     "IconLicense": "CC0",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='2 17 60 30'><path d='M61 17H3a1 1 0 0 0-1 1v28a1 1 0 0 0 1 1h58a1 1 0 0 0 1-1V18a1 1 0 0 0-1-1ZM4 19h6a7 7 0 0 1-6 6Zm0 26v-6a7 7 0 0 1 6 6Zm56 0h-6a7 7 0 0 1 6-6Zm0-8a9 9 0 0 0-8 8H12a9 9 0 0 0-8-8V27a9 9 0 0 0 8-8h40a9 9 0 0 0 8 8Zm0-12a7 7 0 0 1-6-6h6Z'/><path d='M37 33h-3a1 1 0 0 0-1 1v2h2v-1h1v3h-4v-7h5v-2h-5v-4a1 1 0 0 0-1-1h-4v2h3v3h-3v2h3v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1Z'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='2 17 60 30'><path d='M61 17H3a1 1 0 0 0-1 1v28a1 1 0 0 0 1 1h58a1 1 0 0 0 1-1V18a1 1 0 0 0-1-1ZM4 19h6a7 7 0 0 1-6 6Zm0 26v-6a7 7 0 0 1 6 6Zm56 0h-6a7 7 0 0 1 6-6Zm0-8a9 9 0 0 0-8 8H12a9 9 0 0 0-8-8V27a9 9 0 0 0 8-8h40a9 9 0 0 0 8 8Zm0-12a7 7 0 0 1-6-6h6Z'/><path d='M37 33h-3a1 1 0 0 0-1 1v2h2v-1h1v3h-4v-7h5v-2h-5v-4a1 1 0 0 0-1-1h-4v2h3v3h-3v2h3v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1Z'/></svg>"
   },
   {
     "IconName": "Bangla Translate",
@@ -79,6 +78,6 @@ National Martyrs Memorial",
     "IconDesigner": "Fuad Hasan Shihab",
     "IconDesignerURL": "https://github.com/fuadhasanshihab",
     "IconLicense": "PD",
-    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='527.03 1187 24.94 24.94'><path d='M529.95 1187h10.81q1.79 0 2.58.98 1 .94.84 3.04l.02 3.8h3.78q2.24-.2 3.14.95.86.75.85 2.37v11.06q-.2 1.22-.96 1.9-.72.81-2.25.84h-11.22q-1.3-.23-1.98-1.08-.9-.93-.75-2.9l-.02-3.8h-3.84q-2.28.15-3.17-1.08-.78-.73-.75-2.28v-11q.22-1.4 1.14-2.11.65-.58 1.78-.69z'/><path fill='#fff' d='m542.61 1203.8.05.02q.09.38.39.54l.33.24-.08.14-.77.54-.39.2-.64-.5-.37-.76q.92-.03 1.48-.42zm-12.75-15.2h10.75q1.26-.1 1.7.6.43.49.32 1.5v10.57q-.12.68-.58 1.02-.5.44-1.57.34h-10.56q-.56-.11-.89-.45-.54-.45-.44-1.53v-10.76q.12-.57.49-.88l.78-.41z'/><path fill='#fff' d='m544.17 1199.7 5.02.02-.02 1.45-.7.01.04 6.52.61.45-.17.2-1.03.79-3.06-2.25q-.78.78-2.35.78-2.15-.11-3.14-1.4-.79-.87-1.22-2.12l1.68-.01q.34.84.96 1.4.69.73 2.2.63.66-.13 1-.58.5-.52.41-1.62-.06-.58-.42-.86l-.42-.18q.44-.56.58-1.42.77.2 1.17.77.7.75.69 2.22-.02.68-.25 1.15l1.26 1.05.02-.1q-.18-1.02-.13-2.26l-.01-3.17-2.74-.05.02-1.42z'/><path d='M534.61 1191.7h1.47q.45-.13.58.08l2.8 7.69-1.76.01-.71-2-2.9.05-.67 1.95-1.7-.01 2.89-7.77z'/><path fill='#fff' d='m535.55 1193.2.08.02 1.03 3.09-2.11.05-.05-.14 1.05-3.02z'/></svg>",
+    "IconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='527.03 1187 24.94 24.94'><path d='M529.95 1187h10.81q1.79 0 2.58.98 1 .94.84 3.04l.02 3.8h3.78q2.24-.2 3.14.95.86.75.85 2.37v11.06q-.2 1.22-.96 1.9-.72.81-2.25.84h-11.22q-1.3-.23-1.98-1.08-.9-.93-.75-2.9l-.02-3.8h-3.84q-2.28.15-3.17-1.08-.78-.73-.75-2.28v-11q.22-1.4 1.14-2.11.65-.58 1.78-.69z'/><path fill='#fff' d='m542.61 1203.8.05.02q.09.38.39.54l.33.24-.08.14-.77.54-.39.2-.64-.5-.37-.76q.92-.03 1.48-.42zm-12.75-15.2h10.75q1.26-.1 1.7.6.43.49.32 1.5v10.57q-.12.68-.58 1.02-.5.44-1.57.34h-10.56q-.56-.11-.89-.45-.54-.45-.44-1.53v-10.76q.12-.57.49-.88l.78-.41z'/><path fill='#fff' d='m544.17 1199.7 5.02.02-.02 1.45-.7.01.04 6.52.61.45-.17.2-1.03.79-3.06-2.25q-.78.78-2.35.78-2.15-.11-3.14-1.4-.79-.87-1.22-2.12l1.68-.01q.34.84.96 1.4.69.73 2.2.63.66-.13 1-.58.5-.52.41-1.62-.06-.58-.42-.86l-.42-.18q.44-.56.58-1.42.77.2 1.17.77.7.75.69 2.22-.02.68-.25 1.15l1.26 1.05.02-.1q-.18-1.02-.13-2.26l-.01-3.17-2.74-.05.02-1.42z'/><path d='M534.61 1191.7h1.47q.45-.13.58.08l2.8 7.69-1.76.01-.71-2-2.9.05-.67 1.95-1.7-.01 2.89-7.77z'/><path fill='#fff' d='m535.55 1193.2.08.02 1.03 3.09-2.11.05-.05-.14 1.05-3.02z'/></svg>"
   }
 ]
