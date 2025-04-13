@@ -18,7 +18,7 @@ This repository is licensed under **Creative Commons Attribution-NonCommercial-S
 You can use these web fonts **100% free**, while complying with each font’s original license.
 
 ## Font Licenses  
-All fonts included in this project are copyrighted by their respective owners and are distributed under their original licenses. Each font's license details can be found in its respective `license.txt` file.  
+All fonts included in this project are copyrighted by their respective owners and are distributed under their original licenses. Each font's license details can be found in its respective `README.md` file.  
 
 ---
 
