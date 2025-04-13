@@ -8,13 +8,13 @@
           type="text" 
           id="searchInput" 
           placeholder="Type a font name..." 
-          class="w-full px-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
           autocomplete="off"
         />
         <!-- Clear button (X) -->
         <button 
           id="clearBtn" 
-          class="absolute right-5 top-2 text-gray-400 hover:text-gray-600 focus:outline-none hidden"
+          class="absolute right-4 top-2 text-gray-400 hover:text-gray-600 focus:outline-none hidden"
         >
           ✕
         </button>
@@ -23,7 +23,7 @@
       <!-- Search Results -->
       <div 
         id="results" 
-        class="mt-4 max-h-60 overflow-y-auto bg-white dark:bg-black border border-gray-200 rounded-lg shadow hidden absolute w-full z-20"
+        class="mt-4 max-h-[50vh] overflow-y-auto bg-white dark:bg-black border border-gray-200 rounded-lg shadow hidden absolute w-full z-20"
       ></div>
 
     </div>
@@ -31,7 +31,7 @@
 
 
 <script is:inline>
-    const openSearch = document.getElementById('openSearch');
+    const openSearch = document.querySelectorAll('.openSearch');
     const searchModal = document.getElementById('searchModal');
     const searchInput = document.getElementById('searchInput');
     const resultsContainer = document.getElementById('results');
@@ -103,11 +103,14 @@
     });
 
     // Open modal
-openSearch.addEventListener('click', () => {
-  searchModal.classList.remove('hidden');
-  document.body.classList.add('overflow-hidden'); // prevent body scroll
-  setTimeout(() => searchInput.focus(), 100);
+openSearch.forEach(el => {
+  el.addEventListener('click', () => {
+    searchModal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+    setTimeout(() => searchInput.focus(), 150);
+  });
 });
+
 
 // Close modal if clicked on background
 searchModal.addEventListener('click', (e) => {
