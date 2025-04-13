@@ -1,0 +1,35 @@
+---
+import icons from '../collections/icons.json';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangladeshi Icons Showcase</title>
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <main class="max-w-7xl mx-auto px-4 py-10">
+      <h1 class="text-3xl font-bold mb-6 text-center">🇧🇩 Bangladeshi Icons</h1>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {icons.map(icon => (
+          <div class="border rounded-2xl p-4 shadow hover:shadow-md transition">
+            <div class="flex justify-center items-center h-32">
+              <div class="w-20 h-20" innerHTML={icon.IconSVG}></div>
+            </div>
+            <h2 class="text-lg font-semibold mt-4">{icon.IconName}</h2>
+            <p class="text-sm text-gray-600">Color: <span class="capitalize">{icon.IconColor}</span></p>
+            <p class="text-sm text-gray-600">
+              Designer:
+              <a href={icon.IconDesignerURL} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+                {icon.IconDesigner}
+              </a>
+            </p>
+            <p class="text-sm text-gray-500">License: {icon.IconLicense}</p>
+          </div>
+        ))}
+      </div>
+    </main>
+  </body>
+</html>
