@@ -1,0 +1,37 @@
+---
+// /src/pages/character/[path].astro
+
+import characters from '../../collections/bengali-unicode-characters.json';
+
+export async function getStaticPaths() {
+  return characters.map(character => ({
+    params: { path: character.path },
+    props: character, // All properties will be passed as props
+  }));
+}
+
+const { symbol, unicode, html, name, path } = Astro.props;
+
+// Format unicode for CSS and JS entities
+const formattedUnicode = unicode.replace('U+', '');
+const cssEntity = `\\${formattedUnicode}`;
+const jsEntity = `\\u${formattedUnicode}`;
+---
+
+<html lang="bn">
+  <head>
+    <title>{name} – Bengali Unicode Character</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body class="p-8 font-sans">
+    <h1 class="text-4xl mb-4">{symbol}</h1>
+    <ul class="text-lg space-y-2">
+      <li><strong>Name:</strong> {name}</li>
+      <li><strong>Unicode:</strong> {unicode}</li>
+      <li><strong>CSS Entity:</strong> {cssEntity}</li>
+      <li><strong>JS Entity:</strong> {jsEntity}</li>
+      <li><strong>HTML Entity:</strong> {html}</li>
+      <li><strong>Path:</strong> {path}</li>
+    </ul>
+  </body>
+</html>
