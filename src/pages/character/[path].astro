@@ -35,21 +35,46 @@ const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fon
 <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 
 <div class="relative z-20 w-full mx-auto lg:mx-0">
+  <p class="mb-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mb-4 lg:mb-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Unicode Character</p>
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{name}</h1>
-  <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">{unicode}</p>
 </div>
 
 
     <h1 class="text-[4rem] mb-6">{symbol}</h1>
 
-    <ul class="text-lg space-y-2 mb-8">
-      <li><strong>Name:</strong> {name}</li>
-      <li><strong>Unicode:</strong> {unicode}</li>
-      <li><strong>CSS Entity:</strong> <code>{cssEntity}</code></li>
-      <li><strong>JS Entity:</strong> <code>{jsEntity}</code></li>
-      <li><strong>HTML Entity:</strong> <code>{html}</code></li>
-      <li><strong>Path:</strong> {path}</li>
+    <ul class="">
+      <li><small>Name:</small> {name}</li>
+      <li><small>Unicode:</small> {unicode}</li>
+      <li><small>CSS Entity:</small> <code>{cssEntity}</code></li>
+      <li><small>JS Entity:</small> <code>{jsEntity}</code></li>
+      <li><small>HTML Entity:</small> <code>{html}</code></li>
     </ul>
+
+
+<div class="mt-12 bg-gray-50 dark:bg-gray-900 rounded-3xl p-6 md:p-10">
+  <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+    BENGALI ANJI with your system fonts
+  </h2>
+  <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-8">
+    These previews test how your browser displays BENGALI ANJI using the fonts installed on your device.
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 text-center">
+      <div class="text-5xl font-normal font-sans text-gray-900 dark:text-white mb-2">{symbol}</div>
+      <div class="text-gray-800 dark:text-gray-200 text-lg">sans-serif</div>
+    </div>
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 text-center">
+      <div class="text-5xl font-normal font-serif text-gray-900 dark:text-white mb-2">{symbol}</div>
+      <div class="text-gray-800 dark:text-gray-200 text-lg">serif</div>
+    </div>
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 text-center">
+      <div class="text-5xl font-normal font-mono text-gray-900 dark:text-white mb-2">{symbol}</div>
+      <div class="text-gray-800 dark:text-gray-200 text-lg">monospace</div>
+    </div>
+  </div>
+</div>
+
+
 
     <nav class="flex justify-between text-blue-600 font-medium">
       {prev ? (
