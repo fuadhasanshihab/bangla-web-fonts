@@ -1,37 +1,56 @@
 ---
-// /src/pages/character/[path].astro
-
+import Layout from "../../layouts/main.astro";
+import PageHeading from "../../components/page-heading.astro";
 import characters from '../../collections/bengali-unicode-characters.json';
 
 export async function getStaticPaths() {
   return characters.map(character => ({
     params: { path: character.path },
-    props: character, // All properties will be passed as props
+    props: character,
   }));
 }
 
 const { symbol, unicode, html, name, path } = Astro.props;
 
-// Format unicode for CSS and JS entities
 const formattedUnicode = unicode.replace('U+', '');
 const cssEntity = `\\${formattedUnicode}`;
 const jsEntity = `\\u${formattedUnicode}`;
+
+const currentIndex = characters.findIndex(char => char.path === path);
+const prev = characters[currentIndex - 1];
+const next = characters[currentIndex + 1];
 ---
 
-<html lang="bn">
-  <head>
-    <title>{name} – Bengali Unicode Character</title>
-    <meta charset="UTF-8" />
-  </head>
-  <body class="p-8 font-sans">
-    <h1 class="text-4xl mb-4">{symbol}</h1>
-    <ul class="text-lg space-y-2">
+<Layout title={PageTitle} extraStyleUrl={ExtraStyleUrl} metaDescription={MetaDescription} metaKeywords={MetaKeywords} fontPreloads={FontPreloads}>
+
+<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
+
+<div class="relative z-20 w-full mx-auto lg:mx-0">
+  <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{name}</h1>
+  <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">{unicode}</p>
+</div>
+
+
+    <h1 class="text-[4rem] mb-6">{symbol}</h1>
+
+    <ul class="text-lg space-y-2 mb-8">
       <li><strong>Name:</strong> {name}</li>
       <li><strong>Unicode:</strong> {unicode}</li>
-      <li><strong>CSS Entity:</strong> {cssEntity}</li>
-      <li><strong>JS Entity:</strong> {jsEntity}</li>
-      <li><strong>HTML Entity:</strong> {html}</li>
+      <li><strong>CSS Entity:</strong> <code>{cssEntity}</code></li>
+      <li><strong>JS Entity:</strong> <code>{jsEntity}</code></li>
+      <li><strong>HTML Entity:</strong> <code>{html}</code></li>
       <li><strong>Path:</strong> {path}</li>
     </ul>
-  </body>
-</html>
+
+    <nav class="flex justify-between text-blue-600 font-medium">
+      {prev ? (
+        <a href={`/character/${prev.path}`}>&larr; {prev.symbol} {prev.name}</a>
+      ) : <span />}
+      
+      {next ? (
+        <a href={`/character/${next.path}`}>{next.symbol} {next.name} &rarr;</a>
+      ) : <span />}
+    </nav>
+  
+</section>
+</Layout>
