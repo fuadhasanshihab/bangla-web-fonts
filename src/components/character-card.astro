@@ -1,5 +1,5 @@
 ---
-const { CharacterName, CharacterSymbol, CharacterUnicode, CharacterHTML } = Astro.props;
+const { CharacterName, CharacterSymbol, CharacterUnicode, CharacterHTML, CharacterPath } = Astro.props;
 const newPath = `/character/${CharacterPath}/`;
 ---
 
@@ -17,7 +17,7 @@ const newPath = `/character/${CharacterPath}/`;
     class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
   >
 
-        <span class=""text-[1.8rem] leading-[2rem]">{CharacterSymbol}</span>
+        <span class="text-[1.8rem] leading-[2rem]">{CharacterSymbol}</span>
 
 
       <div
