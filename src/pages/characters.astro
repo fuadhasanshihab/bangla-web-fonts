@@ -6,9 +6,11 @@ import PageHeading from "../components/page-heading.astro";
 
 const CharactersKeywords = characters.map(character => character.name.toLowerCase()).join(', ');
 const MetaKeywords = `bangla unicode characters, bangla characters, free bangla symbols, ${CharactersKeywords}, bangla characters for website, bangla unicode, copy paste bangla symbol, free bangla icon, bengali web text, bengali alphabet, bangla alphabet list`;
+
+const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fonts/siyam-rupali/siyam-rupali-regular.woff2" crossorigin="anonymous">`;
 ---
 
-<Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" extraStyleUrl="/css/noto-serif-bengali.min.css" metaDescription="A list of all the Unicode characters that are in the Bengali Unicode block." fontPreloads={} metaKeywords={MetaKeywords}>
+<Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" extraStyleUrl="/css/noto-serif-bengali.min.css" metaDescription="A list of all the Unicode characters that are in the Bengali Unicode block." fontPreloads={FontPreloads} metaKeywords={MetaKeywords}>
   <section class="relative z-20 max-w-3xl mx-auto my-12">
     <PageHeading
       title="Bengali Characters"
