@@ -7,17 +7,17 @@ import PageHeading from "../components/page-heading.astro";
 const CharactersKeywords = characters.map(character => character.name.toLowerCase()).join(', ');
 const MetaKeywords = `bangla unicode characters, bangla characters, free bangla symbols, ${CharactersKeywords}, bangla characters for website, bangla unicode, copy paste bangla symbol, free bangla icon, bengali web text, bengali alphabet, bangla alphabet list`;
 
-const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fonts/siyam-rupali/siyam-rupali-regular.woff2" crossorigin="anonymous">`;
+const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fonts/noto-serif-bengali/noto-serif-bengali-regular.woff2" crossorigin="anonymous">`;
 ---
 
-<Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" extraStyleUrl="/css/noto-serif-bengali.min.css" metaDescription="A list of all the Unicode characters that are in the Bengali Unicode block." fontPreloads={FontPreloads} metaKeywords={MetaKeywords}>
-  <section class="relative z-20 max-w-3xl mx-auto my-12">
+<Layout title="Bengali Unicode Characters" extraStyleUrl="/css/noto-serif-bengali.min.css" metaDescription="A list of all the Unicode characters that are in the Bengali Unicode block." fontPreloads={FontPreloads} metaKeywords={MetaKeywords}>
+  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
-      title="Bengali Characters"
+      title="Bengali Unicode Characters"
       description="A list of all the Unicode characters that are in the Bengali Unicode block."
     />
 
-<section class="max-w-3xl my-12 mx-auto px-7 lg:px-0">
+<section class="max-w-3xl my-12 mx-auto">
   <div
     class="grid items-stretch w-full grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-7 mt-7"
   >
