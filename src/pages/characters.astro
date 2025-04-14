@@ -1,7 +1,15 @@
 ---
 import characters from "../collections/bengali-unicode-characters.json";
 import CharacterCard from "../components/character-card.astro";
+import Layout from "../layouts/main.astro";
 ---
+
+<Layout title="Bengali Characters - Bangla Web Fonts">
+  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Bengali Characters"
+      description="A list of all the Unicode characters that are in the Bengali Unicode block."
+    />
 
 <section class="max-w-3xl my-12 mx-auto px-7 lg:px-0">
   <div
@@ -22,3 +30,6 @@ import CharacterCard from "../components/character-card.astro";
     }
   </div>
 </section>
+
+</section>
+</Layout>
