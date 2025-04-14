@@ -3,10 +3,13 @@ import characters from "../collections/bengali-unicode-characters.json";
 import CharacterCard from "../components/character-card.astro";
 import Layout from "../layouts/main.astro";
 import PageHeading from "../components/page-heading.astro";
+
+const CharactersKeywords = characters.map(character => character.name.toLowerCase()).join(', ');
+const MetaKeywords = `bangla unicode characters, bangla characters, free bangla symbols, ${CharactersKeywords}, bangla characters for website, bangla unicode, copy paste bangla symbol, free bangla icon, bengali web text, bengali alphabet, bangla alphabet list`;
 ---
 
-<Layout title="Bengali Characters - Bangla Web Fonts">
-  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
+<Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" extraStyleUrl="/css/noto-serif-bengali.min.css" metaDescription="A list of all the Unicode characters that are in the Bengali Unicode block." fontPreloads={} metaKeywords={MetaKeywords}>
+  <section class="relative z-20 max-w-3xl mx-auto my-12">
     <PageHeading
       title="Bengali Characters"
       description="A list of all the Unicode characters that are in the Bengali Unicode block."
