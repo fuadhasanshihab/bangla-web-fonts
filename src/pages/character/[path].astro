@@ -42,44 +42,44 @@ const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fon
 
     <div id="symbol" style="font-family: 'Noto Serif Bengali',serif;" class="text-[6rem] my-7 bg-gray-50 dark:bg-gray-900 rounded-3xl p-6 md:p-10">{symbol}</div>
 
- <div class="text-md">   
-      <h2><small>Name:</small> {name}</h2>
-      <h3><small>Unicode:</small> {unicode}</h3>
-      <h3><small>CSS:</small> <code>{cssEntity}</code></h3>
-      <h3><small>JS, JSON:</small> <code>{jsEntity}</code></h3>
-      <h3><small>HTML:</small> <code>{html}</code></h3>
+ <div>   
+      <h2>Name: <span class="text-md font-semibold">{name}</span></h2>
+      <h3>Unicode: <span class="text-md font-semibold">{unicode}</span></h3>
+      <h3>CSS: <span class="text-md font-semibold">{cssEntity}</span></h3>
+      <h3>JS, JSON: <span class="text-md font-semibold">{jsEntity}</span></h3>
+      <h3>HTML: <span class="text-md font-semibold">{html}</span></h3>
 </div>
   
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm"><code>/* CSS Usage Example */
+<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-700 dark:text-neutral-300"><code>/* CSS Usage Example */
 .selector::before &#123;
   content: "{cssEntity}";
 &#125;
 </code></pre>
 
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm"><code>// JavaScript Usage Example
+<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-700 dark:text-neutral-300"><code>// JavaScript Usage Example
 console.log("{jsEntity}"); 
 </code></pre>
 
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm"><code>&lt;!-- HTML Usage Example --&gt;
-&lt;p&gt;ৌ&lt;/p&gt;</code></pre>
+<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-700 dark:text-neutral-300"><code>&lt;!-- HTML Usage Example --&gt;
+&lt;p&gt;{html}&lt;/p&gt;</code></pre>
 
-<div class="mt-12 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 md:p-10">
+<div class="mt-12">
   <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
     {name} with your system fonts
   </h2>
-  <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-8">
+  <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4">
     These previews test how your browser displays {name} using the fonts installed on your device.
   </p>
   <div class="grid grid-cols-3 gap-4">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm py-6 text-center">
+    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm py-6 text-center">
       <div class="text-5xl font-normal font-sans text-gray-900 dark:text-white mb-2">{symbol}</div>
       <div class="text-gray-800 dark:text-gray-200 text-sm font-sans">sans-serif</div>
     </div>
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm py-6 text-center">
+    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm py-6 text-center">
       <div class="text-5xl font-normal font-serif text-gray-900 dark:text-white mb-2">{symbol}</div>
       <div class="text-gray-800 dark:text-gray-200 text-sm font-serif">serif</div>
     </div>
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm py-6 text-center">
+    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm py-6 text-center">
       <div class="text-5xl font-normal font-mono text-gray-900 dark:text-white mb-2">{symbol}</div>
       <div class="text-gray-800 dark:text-gray-200 text-sm font-mono">monospace</div>
     </div>
