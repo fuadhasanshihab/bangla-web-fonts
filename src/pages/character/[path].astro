@@ -52,15 +52,14 @@ const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fon
   
 <pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-3xl p-4"><code>
 /* CSS Usage Example */
-.selector::before {
+.selector::before &#123;
   content: "{cssEntity}";
-}
+&#125;
 </code></pre>
 
 <pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-3xl p-4"><code>
 // JavaScript Usage Example
-const banglaChar = "{jsEntity}";
-console.log(banglaChar); 
+console.log({jsEntity}); 
 </code></pre>
 
 <pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-3xl p-4"><code>
@@ -95,11 +94,11 @@ console.log(banglaChar);
 
     <nav class="mt-12 flex justify-between">
       {prev ? (
-        <a class="max-w-[30vw]" href={`/character/${prev.path}/`}>&larr; {prev.symbol} {prev.name}</a>
+        <a class="max-w-[30vw] hover:underline" href={`/character/${prev.path}/`}>&larr; {prev.symbol} {prev.name}</a>
       ) : <span />}
       
       {next ? (
-        <a class="max-w-[30vw]" href={`/character/${next.path}/`}>{next.name} {next.symbol} &rarr;</a>
+        <a class="max-w-[30vw] text-right hover:underline" href={`/character/${next.path}/`}>{next.name} {next.symbol} &rarr;</a>
       ) : <span />}
     </nav>
   
