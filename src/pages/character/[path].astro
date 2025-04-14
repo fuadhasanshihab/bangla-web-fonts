@@ -35,39 +35,39 @@ const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fon
 <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 
 <div class="relative z-20 w-full mx-auto lg:mx-0">
-  <p class="mb-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mb-4 lg:mb-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Unicode Character</p>
+    <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"><a href="/characters/" class="text-blue-600 hover:underline">&larr; Bengali Unicode Characters</a></p>
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{name}</h1>
 </div>
 
 
     <div id="symbol" style="font-family: 'Noto Serif Bengali',serif;" class="text-[6rem] my-7 bg-gray-50 dark:bg-gray-900 rounded-3xl p-6 md:p-10">{symbol}</div>
 
- <div>   
-      <h2>Name: <span class="text-md font-semibold">{name}</span></h2>
-      <h3>Unicode: <span class="text-md font-semibold">{unicode}</span></h3>
-      <h3>CSS: <span class="text-md font-semibold">{cssEntity}</span></h3>
+  
+      <h2>Name: <span class="text-[1.5rem] font-semibold">{name}</span></h2>
+      <h3>Unicode: <span class="text-xl font-semibold">{unicode}</span></h3>
+      <h3>CSS: <span class="text-sm font-semibold">{cssEntity}</span></h3>
       <h3>JS, JSON: <span class="text-md font-semibold">{jsEntity}</span></h3>
       <h3>HTML: <span class="text-md font-semibold">{html}</span></h3>
-</div>
+
   
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-700 dark:text-neutral-300"><code>/* CSS Usage Example */
+<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-800 dark:text-neutral-200"><code>/* CSS Usage Example */
 .selector::before &#123;
   content: "{cssEntity}";
 &#125;
 </code></pre>
 
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-700 dark:text-neutral-300"><code>// JavaScript Usage Example
+<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-800 dark:text-neutral-200"><code>// JavaScript Usage Example
 console.log("{jsEntity}"); 
 </code></pre>
 
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-700 dark:text-neutral-300"><code>&lt;!-- HTML Usage Example --&gt;
+<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-800 dark:text-neutral-200"><code>&lt;!-- HTML Usage Example --&gt;
 &lt;p&gt;{html}&lt;/p&gt;</code></pre>
 
-<div class="mt-12">
-  <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+<div class="mt-14">
+  <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
     {name} with your system fonts
   </h2>
-  <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4">
+  <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-2">
     These previews test how your browser displays {name} using the fonts installed on your device.
   </p>
   <div class="grid grid-cols-3 gap-4">
@@ -88,7 +88,7 @@ console.log("{jsEntity}");
 
 
 
-    <nav class="mt-12 flex justify-between">
+    <nav class="mt-14 flex justify-between">
       {prev ? (
         <a class="max-w-[30vw] hover:underline" href={`/character/${prev.path}/`}>&larr; {prev.symbol} {prev.name}</a>
       ) : <span />}
