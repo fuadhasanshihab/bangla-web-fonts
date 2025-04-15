@@ -1,0 +1,44 @@
+[
+  {
+    "symbol": "ﷲ",
+    "unicode": "U+FDF2",
+    "html": "&#65010;",
+    "name": "Arabic Ligature Allah Isolated Form",
+    "path": "arabic-ligature-allah-isolated-form"
+  },
+  {
+    "symbol": "ﷺ",
+    "unicode": "U+FDFA",
+    "html": "&#65018;",
+    "name": "Arabic Ligature Sallallahou Alayhe Wasallam",
+    "path": "arabic-ligature-sallallahou-alayhe-wasallam"
+  },
+  {
+    "symbol": "﷽",
+    "unicode": "U+FDFD",
+    "html": "&#65021;",
+    "name": "Arabic Ligature Bismillah Ar-Rahman Ar-Raheem",
+    "path": "arabic-ligature-bismillah-ar-rahman-ar-raheem"
+  },
+  {
+    "symbol": "ॐ",
+    "unicode": "U+0950",
+    "html": "&#2384;",
+    "name": "Devanagari Om",
+    "path": "devanagari-om"
+  },
+  {
+    "symbol": "।",
+    "unicode": "U+0964",
+    "html": "&#2404;",
+    "name": "devanagari-danda",
+    "path": "devanagari-danda"
+  },
+  {
+    "symbol": "॥",
+    "unicode": "U+0965",
+    "html": "&#2405;",
+    "name": "Devanagari Double Danda",
+    "path": "devanagari-double-danda"
+  }
+]
