@@ -1,14 +1,19 @@
 ---
 import Layout from "../../layouts/main.astro";
 import PageHeading from "../../components/page-heading.astro";
-import characters from '../../collections/bengali-unicode-characters.json';
+
+import charactersBengali from '../../collections/characters/bengali.json';
+import charactersOthers from '../../collections/characters/others.json';
 
 export async function getStaticPaths() {
-  return characters.map(character => ({
-    params: { path: character.path },
+  const allCharacters = [...charactersBengali, ...charactersOthers];
+
+  return allCharacters.map(character => ({
+    params: { slug: character.path },
     props: character,
   }));
 }
+
 
 const { symbol, unicode, html, name, path } = Astro.props;
 
@@ -35,7 +40,7 @@ const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fon
 <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 
 <div class="relative z-20 w-full mx-auto lg:mx-0">
-    <p class="mb-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mb-4 lg:mb-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"><a href="/bengali-unicode-characters/" class="text-blue-600 hover:underline">&larr; Bengali Unicode Characters</a></p>
+    <p class="mb-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mb-4 lg:mb-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"><a href="/unicode/" class="text-blue-600 hover:underline">&larr; Unicode Characters</a></p>
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{name}</h1>
 </div>
 
