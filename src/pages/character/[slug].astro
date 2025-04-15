@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layouts/main.astro";
 import PageHeading from "../../components/page-heading.astro";
-
 import charactersBengali from '../../collections/characters/bengali.json';
 import charactersOthers from '../../collections/characters/others.json';
 
@@ -14,14 +13,14 @@ export async function getStaticPaths() {
   }));
 }
 
-
 const { symbol, unicode, html, name, path } = Astro.props;
 
 const formattedUnicode = unicode.replace('U+', '');
 const cssEntity = `\\${formattedUnicode}`;
 const jsEntity = `\\u${formattedUnicode}`;
 
-const currentIndex = allCharacters.findIndex(char => char.path === path);
+const characters = [...charactersBengali, ...charactersOthers];
+const currentIndex = characters.findIndex(char => char.path === path);
 const prev = characters[currentIndex - 1];
 const next = characters[currentIndex + 1];
 
