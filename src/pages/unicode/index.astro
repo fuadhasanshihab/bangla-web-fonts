@@ -1,5 +1,6 @@
 ---
 import PageHeading from "../../components/page-heading.astro";
+import UnicodeBlockCard from "../../components/unicode-block-card.astro";
 import Layout from "../../layouts/main.astro";
 ---
 
@@ -11,6 +12,24 @@ import Layout from "../../layouts/main.astro";
     />
 
 
+<div class="max-w-3xl my-12 mx-auto">
+  <div
+    class="grid items-stretch w-full grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-7 mt-7"
+  >
+    
+          <UnicodeBlockCard
+            UnicodeBlockName="Bengali"
+            UnicodeBlockPath="bengali"
+            UnicodeBlockDescription="Characters from the Bengali Unicode block (U+0980–U+09FF)."
+          /> 
+<UnicodeBlockCard
+            UnicodeBlockName="Others"
+            UnicodeBlockPath="others"
+            UnicodeBlockDescription="Includes Devanagari, Arabic and more scripts commonly used with Bangla."
+          />
+        
+  </div>
+</div>
 
 
 </section>
