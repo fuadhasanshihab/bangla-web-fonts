@@ -21,7 +21,7 @@ const formattedUnicode = unicode.replace('U+', '');
 const cssEntity = `\\${formattedUnicode}`;
 const jsEntity = `\\u${formattedUnicode}`;
 
-const currentIndex = characters.findIndex(char => char.path === path);
+const currentIndex = allCharacters.findIndex(char => char.path === path);
 const prev = characters[currentIndex - 1];
 const next = characters[currentIndex + 1];
 
