@@ -1,0 +1,674 @@
+[
+  {
+    "symbol": "ঀ",
+    "unicode": "U+0980",
+    "html": "&#2432;",
+    "name": "Bengali Anji",
+    "path": "bengali-anji"
+  },
+  {
+    "symbol": "ঁ",
+    "unicode": "U+0981",
+    "html": "&#2433;",
+    "name": "Bengali Sign Candrabindu",
+    "path": "bengali-sign-candrabindu"
+  },
+  {
+    "symbol": "ং",
+    "unicode": "U+0982",
+    "html": "&#2434;",
+    "name": "Bengali Sign Anusvara",
+    "path": "bengali-sign-anusvara"
+  },
+  {
+    "symbol": "ঃ",
+    "unicode": "U+0983",
+    "html": "&#2435;",
+    "name": "Bengali Sign Visarga",
+    "path": "bengali-sign-visarga"
+  },
+  {
+    "symbol": "অ",
+    "unicode": "U+0985",
+    "html": "&#2437;",
+    "name": "Bengali Letter A",
+    "path": "bengali-letter-a"
+  },
+  {
+    "symbol": "আ",
+    "unicode": "U+0986",
+    "html": "&#2438;",
+    "name": "Bengali Letter Aa",
+    "path": "bengali-letter-aa"
+  },
+  {
+    "symbol": "ই",
+    "unicode": "U+0987",
+    "html": "&#2439;",
+    "name": "Bengali Letter I",
+    "path": "bengali-letter-i"
+  },
+  {
+    "symbol": "ঈ",
+    "unicode": "U+0988",
+    "html": "&#2440;",
+    "name": "Bengali Letter Ii",
+    "path": "bengali-letter-ii"
+  },
+  {
+    "symbol": "উ",
+    "unicode": "U+0989",
+    "html": "&#2441;",
+    "name": "Bengali Letter U",
+    "path": "bengali-letter-u"
+  },
+  {
+    "symbol": "ঊ",
+    "unicode": "U+098A",
+    "html": "&#2442;",
+    "name": "Bengali Letter Uu",
+    "path": "bengali-letter-uu"
+  },
+  {
+    "symbol": "ঋ",
+    "unicode": "U+098B",
+    "html": "&#2443;",
+    "name": "Bengali Letter Vocalic R",
+    "path": "bengali-letter-vocalic-r"
+  },
+  {
+    "symbol": "ঌ",
+    "unicode": "U+098C",
+    "html": "&#2444;",
+    "name": "Bengali Letter Vocalic L",
+    "path": "bengali-letter-vocalic-l"
+  },
+  {
+    "symbol": "এ",
+    "unicode": "U+098F",
+    "html": "&#2447;",
+    "name": "Bengali Letter E",
+    "path": "bengali-letter-e"
+  },
+  {
+    "symbol": "ঐ",
+    "unicode": "U+0990",
+    "html": "&#2448;",
+    "name": "Bengali Letter Ai",
+    "path": "bengali-letter-ai"
+  },
+  {
+    "symbol": "ও",
+    "unicode": "U+0993",
+    "html": "&#2451;",
+    "name": "Bengali Letter O",
+    "path": "bengali-letter-o"
+  },
+  {
+    "symbol": "ঔ",
+    "unicode": "U+0994",
+    "html": "&#2452;",
+    "name": "Bengali Letter Au",
+    "path": "bengali-letter-au"
+  },
+  {
+    "symbol": "ক",
+    "unicode": "U+0995",
+    "html": "&#2453;",
+    "name": "Bengali Letter Ka",
+    "path": "bengali-letter-ka"
+  },
+  {
+    "symbol": "খ",
+    "unicode": "U+0996",
+    "html": "&#2454;",
+    "name": "Bengali Letter Kha",
+    "path": "bengali-letter-kha"
+  },
+  {
+    "symbol": "গ",
+    "unicode": "U+0997",
+    "html": "&#2455;",
+    "name": "Bengali Letter Ga",
+    "path": "bengali-letter-ga"
+  },
+  {
+    "symbol": "ঘ",
+    "unicode": "U+0998",
+    "html": "&#2456;",
+    "name": "Bengali Letter Gha",
+    "path": "bengali-letter-gha"
+  },
+  {
+    "symbol": "ঙ",
+    "unicode": "U+0999",
+    "html": "&#2457;",
+    "name": "Bengali Letter Nga",
+    "path": "bengali-letter-nga"
+  },
+  {
+    "symbol": "চ",
+    "unicode": "U+099A",
+    "html": "&#2458;",
+    "name": "Bengali Letter Ca",
+    "path": "bengali-letter-ca"
+  },
+  {
+    "symbol": "ছ",
+    "unicode": "U+099B",
+    "html": "&#2459;",
+    "name": "Bengali Letter Cha",
+    "path": "bengali-letter-cha"
+  },
+  {
+    "symbol": "জ",
+    "unicode": "U+099C",
+    "html": "&#2460;",
+    "name": "Bengali Letter Ja",
+    "path": "bengali-letter-ja"
+  },
+  {
+    "symbol": "ঝ",
+    "unicode": "U+099D",
+    "html": "&#2461;",
+    "name": "Bengali Letter Jha",
+    "path": "bengali-letter-jha"
+  },
+  {
+    "symbol": "ঞ",
+    "unicode": "U+099E",
+    "html": "&#2462;",
+    "name": "Bengali Letter Nya",
+    "path": "bengali-letter-nya"
+  },
+  {
+    "symbol": "ট",
+    "unicode": "U+099F",
+    "html": "&#2463;",
+    "name": "Bengali Letter Tta",
+    "path": "bengali-letter-tta"
+  },
+  {
+    "symbol": "ঠ",
+    "unicode": "U+09A0",
+    "html": "&#2464;",
+    "name": "Bengali Letter Ttha",
+    "path": "bengali-letter-ttha"
+  },
+  {
+    "symbol": "ড",
+    "unicode": "U+09A1",
+    "html": "&#2465;",
+    "name": "Bengali Letter Dda",
+    "path": "bengali-letter-dda"
+  },
+  {
+    "symbol": "ঢ",
+    "unicode": "U+09A2",
+    "html": "&#2466;",
+    "name": "Bengali Letter Ddha",
+    "path": "bengali-letter-ddha"
+  },
+  {
+    "symbol": "ণ",
+    "unicode": "U+09A3",
+    "html": "&#2467;",
+    "name": "Bengali Letter Nna",
+    "path": "bengali-letter-nna"
+  },
+  {
+    "symbol": "ত",
+    "unicode": "U+09A4",
+    "html": "&#2468;",
+    "name": "Bengali Letter Ta",
+    "path": "bengali-letter-ta"
+  },
+  {
+    "symbol": "থ",
+    "unicode": "U+09A5",
+    "html": "&#2469;",
+    "name": "Bengali Letter Tha",
+    "path": "bengali-letter-tha"
+  },
+  {
+    "symbol": "দ",
+    "unicode": "U+09A6",
+    "html": "&#2470;",
+    "name": "Bengali Letter Da",
+    "path": "bengali-letter-da"
+  },
+  {
+    "symbol": "ধ",
+    "unicode": "U+09A7",
+    "html": "&#2471;",
+    "name": "Bengali Letter Dha",
+    "path": "bengali-letter-dha"
+  },
+  {
+    "symbol": "ন",
+    "unicode": "U+09A8",
+    "html": "&#2472;",
+    "name": "Bengali Letter Na",
+    "path": "bengali-letter-na"
+  },
+  {
+    "symbol": "প",
+    "unicode": "U+09AA",
+    "html": "&#2474;",
+    "name": "Bengali Letter Pa",
+    "path": "bengali-letter-pa"
+  },
+  {
+    "symbol": "ফ",
+    "unicode": "U+09AB",
+    "html": "&#2475;",
+    "name": "Bengali Letter Pha",
+    "path": "bengali-letter-pha"
+  },
+  {
+    "symbol": "ব",
+    "unicode": "U+09AC",
+    "html": "&#2476;",
+    "name": "Bengali Letter Ba",
+    "path": "bengali-letter-ba"
+  },
+  {
+    "symbol": "ভ",
+    "unicode": "U+09AD",
+    "html": "&#2477;",
+    "name": "Bengali Letter Bha",
+    "path": "bengali-letter-bha"
+  },
+  {
+    "symbol": "ম",
+    "unicode": "U+09AE",
+    "html": "&#2478;",
+    "name": "Bengali Letter Ma",
+    "path": "bengali-letter-ma"
+  },
+  {
+    "symbol": "য",
+    "unicode": "U+09AF",
+    "html": "&#2479;",
+    "name": "Bengali Letter Ya",
+    "path": "bengali-letter-ya"
+  },
+  {
+    "symbol": "র",
+    "unicode": "U+09B0",
+    "html": "&#2480;",
+    "name": "Bengali Letter Ra",
+    "path": "bengali-letter-ra"
+  },
+  {
+    "symbol": "ল",
+    "unicode": "U+09B2",
+    "html": "&#2482;",
+    "name": "Bengali Letter La",
+    "path": "bengali-letter-la"
+  },
+  {
+    "symbol": "শ",
+    "unicode": "U+09B6",
+    "html": "&#2486;",
+    "name": "Bengali Letter Sha",
+    "path": "bengali-letter-sha"
+  },
+  {
+    "symbol": "ষ",
+    "unicode": "U+09B7",
+    "html": "&#2487;",
+    "name": "Bengali Letter Ssa",
+    "path": "bengali-letter-ssa"
+  },
+  {
+    "symbol": "স",
+    "unicode": "U+09B8",
+    "html": "&#2488;",
+    "name": "Bengali Letter Sa",
+    "path": "bengali-letter-sa"
+  },
+  {
+    "symbol": "হ",
+    "unicode": "U+09B9",
+    "html": "&#2489;",
+    "name": "Bengali Letter Ha",
+    "path": "bengali-letter-ha"
+  },
+  {
+    "symbol": "়",
+    "unicode": "U+09BC",
+    "html": "&#2492;",
+    "name": "Bengali Sign Nukta",
+    "path": "bengali-sign-nukta"
+  },
+  {
+    "symbol": "ঽ",
+    "unicode": "U+09BD",
+    "html": "&#2493;",
+    "name": "Bengali Sign Avagraha",
+    "path": "bengali-sign-avagraha"
+  },
+  {
+    "symbol": "া",
+    "unicode": "U+09BE",
+    "html": "&#2494;",
+    "name": "Bengali Vowel Sign Aa",
+    "path": "bengali-vowel-sign-aa"
+  },
+  {
+    "symbol": "ি",
+    "unicode": "U+09BF",
+    "html": "&#2495;",
+    "name": "Bengali Vowel Sign I",
+    "path": "bengali-vowel-sign-i"
+  },
+  {
+    "symbol": "ী",
+    "unicode": "U+09C0",
+    "html": "&#2496;",
+    "name": "Bengali Vowel Sign Ii",
+    "path": "bengali-vowel-sign-ii"
+  },
+  {
+    "symbol": "ু",
+    "unicode": "U+09C1",
+    "html": "&#2497;",
+    "name": "Bengali Vowel Sign U",
+    "path": "bengali-vowel-sign-u"
+  },
+  {
+    "symbol": "ূ",
+    "unicode": "U+09C2",
+    "html": "&#2498;",
+    "name": "Bengali Vowel Sign Uu",
+    "path": "bengali-vowel-sign-uu"
+  },
+  {
+    "symbol": "ৃ",
+    "unicode": "U+09C3",
+    "html": "&#2499;",
+    "name": "Bengali Vowel Sign Vocalic R",
+    "path": "bengali-vowel-sign-vocalic-r"
+  },
+  {
+    "symbol": "ৄ",
+    "unicode": "U+09C4",
+    "html": "&#2500;",
+    "name": "Bengali Vowel Sign Vocalic Rr",
+    "path": "bengali-vowel-sign-vocalic-rr"
+  },
+  {
+    "symbol": "ে",
+    "unicode": "U+09C7",
+    "html": "&#2503;",
+    "name": "Bengali Vowel Sign E",
+    "path": "bengali-vowel-sign-e"
+  },
+  {
+    "symbol": "ৈ",
+    "unicode": "U+09C8",
+    "html": "&#2504;",
+    "name": "Bengali Vowel Sign Ai",
+    "path": "bengali-vowel-sign-ai"
+  },
+  {
+    "symbol": "ো",
+    "unicode": "U+09CB",
+    "html": "&#2507;",
+    "name": "Bengali Vowel Sign O",
+    "path": "bengali-vowel-sign-o"
+  },
+  {
+    "symbol": "ৌ",
+    "unicode": "U+09CC",
+    "html": "&#2508;",
+    "name": "Bengali Vowel Sign Au",
+    "path": "bengali-vowel-sign-au"
+  },
+  {
+    "symbol": "্",
+    "unicode": "U+09CD",
+    "html": "&#2509;",
+    "name": "Bengali Sign Virama",
+    "path": "bengali-sign-virama"
+  },
+  {
+    "symbol": "ৎ",
+    "unicode": "U+09CE",
+    "html": "&#2510;",
+    "name": "Bengali Letter Khanda Ta",
+    "path": "bengali-letter-khanda-ta"
+  },
+  {
+    "symbol": "ৗ",
+    "unicode": "U+09D7",
+    "html": "&#2519;",
+    "name": "Bengali Au Length Mark",
+    "path": "bengali-au-length-mark"
+  },
+  {
+    "symbol": "ড়",
+    "unicode": "U+09DC",
+    "html": "&#2524;",
+    "name": "Bengali Letter Rra",
+    "path": "bengali-letter-rra"
+  },
+  {
+    "symbol": "ঢ়",
+    "unicode": "U+09DD",
+    "html": "&#2525;",
+    "name": "Bengali Letter Rha",
+    "path": "bengali-letter-rha"
+  },
+  {
+    "symbol": "য়",
+    "unicode": "U+09DF",
+    "html": "&#2527;",
+    "name": "Bengali Letter Yya",
+    "path": "bengali-letter-yya"
+  },
+  {
+    "symbol": "ৠ",
+    "unicode": "U+09E0",
+    "html": "&#2528;",
+    "name": "Bengali Letter Vocalic Rr",
+    "path": "bengali-letter-vocalic-rr"
+  },
+  {
+    "symbol": "ৡ",
+    "unicode": "U+09E1",
+    "html": "&#2529;",
+    "name": "Bengali Letter Vocalic Ll",
+    "path": "bengali-letter-vocalic-ll"
+  },
+  {
+    "symbol": "ৢ",
+    "unicode": "U+09E2",
+    "html": "&#2530;",
+    "name": "Bengali Vowel Sign Vocalic L",
+    "path": "bengali-vowel-sign-vocalic-l"
+  },
+  {
+    "symbol": "ৣ",
+    "unicode": "U+09E3",
+    "html": "&#2531;",
+    "name": "Bengali Vowel Sign Vocalic Ll",
+    "path": "bengali-vowel-sign-vocalic-ll"
+  },
+  {
+    "symbol": "০",
+    "unicode": "U+09E6",
+    "html": "&#2534;",
+    "name": "Bengali Digit Zero",
+    "path": "bengali-digit-zero"
+  },
+  {
+    "symbol": "১",
+    "unicode": "U+09E7",
+    "html": "&#2535;",
+    "name": "Bengali Digit One",
+    "path": "bengali-digit-one"
+  },
+  {
+    "symbol": "২",
+    "unicode": "U+09E8",
+    "html": "&#2536;",
+    "name": "Bengali Digit Two",
+    "path": "bengali-digit-two"
+  },
+  {
+    "symbol": "৩",
+    "unicode": "U+09E9",
+    "html": "&#2537;",
+    "name": "Bengali Digit Three",
+    "path": "bengali-digit-three"
+  },
+  {
+    "symbol": "৪",
+    "unicode": "U+09EA",
+    "html": "&#2538;",
+    "name": "Bengali Digit Four",
+    "path": "bengali-digit-four"
+  },
+  {
+    "symbol": "৫",
+    "unicode": "U+09EB",
+    "html": "&#2539;",
+    "name": "Bengali Digit Five",
+    "path": "bengali-digit-five"
+  },
+  {
+    "symbol": "৬",
+    "unicode": "U+09EC",
+    "html": "&#2540;",
+    "name": "Bengali Digit Six",
+    "path": "bengali-digit-six"
+  },
+  {
+    "symbol": "৭",
+    "unicode": "U+09ED",
+    "html": "&#2541;",
+    "name": "Bengali Digit Seven",
+    "path": "bengali-digit-seven"
+  },
+  {
+    "symbol": "৮",
+    "unicode": "U+09EE",
+    "html": "&#2542;",
+    "name": "Bengali Digit Eight",
+    "path": "bengali-digit-eight"
+  },
+  {
+    "symbol": "৯",
+    "unicode": "U+09EF",
+    "html": "&#2543;",
+    "name": "Bengali Digit Nine",
+    "path": "bengali-digit-nine"
+  },
+  {
+    "symbol": "ৰ",
+    "unicode": "U+09F0",
+    "html": "&#2544;",
+    "name": "Bengali Letter Ra with Middle Diagonal",
+    "path": "bengali-letter-ra-with-middle-diagonal"
+  },
+  {
+    "symbol": "ৱ",
+    "unicode": "U+09F1",
+    "html": "&#2545;",
+    "name": "Bengali Letter Ra with Lower Diagonal",
+    "path": "bengali-letter-ra-with-lower-diagonal"
+  },
+  {
+    "symbol": "৲",
+    "unicode": "U+09F2",
+    "html": "&#2546;",
+    "name": "Bengali Rupee Mark",
+    "path": "bengali-rupee-mark"
+  },
+  {
+    "symbol": "৳",
+    "unicode": "U+09F3",
+    "html": "&#2547;",
+    "name": "Bengali Rupee Sign",
+    "path": "bengali-rupee-sign"
+  },
+  {
+    "symbol": "৴",
+    "unicode": "U+09F4",
+    "html": "&#2548;",
+    "name": "Bengali Currency Numerator One",
+    "path": "bengali-currency-numerator-one"
+  },
+  {
+    "symbol": "৵",
+    "unicode": "U+09F5",
+    "html": "&#2549;",
+    "name": "Bengali Currency Numerator Two",
+    "path": "bengali-currency-numerator-two"
+  },
+  {
+    "symbol": "৶",
+    "unicode": "U+09F6",
+    "html": "&#2550;",
+    "name": "Bengali Currency Numerator Three",
+    "path": "bengali-currency-numerator-three"
+  },
+  {
+    "symbol": "৷",
+    "unicode": "U+09F7",
+    "html": "&#2551;",
+    "name": "Bengali Currency Numerator Four",
+    "path": "bengali-currency-numerator-four"
+  },
+  {
+    "symbol": "৸",
+    "unicode": "U+09F8",
+    "html": "&#2552;",
+    "name": "Bengali Currency Numerator One Less Than the Denominator",
+    "path": "bengali-currency-numerator-one-less-than-the-denominator"
+  },
+  {
+    "symbol": "৹",
+    "unicode": "U+09F9",
+    "html": "&#2553;",
+    "name": "Bengali Currency Denominator Sixteen",
+    "path": "bengali-currency-denominator-sixteen"
+  },
+  {
+    "symbol": "৺",
+    "unicode": "U+09FA",
+    "html": "&#2554;",
+    "name": "Bengali Isshar",
+    "path": "bengali-isshar"
+  },
+  {
+    "symbol": "৻",
+    "unicode": "U+09FB",
+    "html": "&#2555;",
+    "name": "Bengali Ganda Mark",
+    "path": "bengali-ganda-mark"
+  },
+  {
+    "symbol": "ৼ",
+    "unicode": "U+09FC",
+    "html": "&#2556;",
+    "name": "Bengali Letter Vedic Anusvara",
+    "path": "bengali-letter-vedic-anusvara"
+  },
+  {
+    "symbol": "৽",
+    "unicode": "U+09FD",
+    "html": "&#2557;",
+    "name": "Bengali Abbreviation Sign",
+    "path": "bengali-abbreviation-sign"
+  },
+  {
+    "symbol": "৾",
+    "unicode": "U+09FE",
+    "html": "&#2558;",
+    "name": "Bengali Sandhi Mark",
+    "path": "bengali-sandhi-mark"
+  }
+]
