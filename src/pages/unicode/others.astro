@@ -1,0 +1,41 @@
+---
+import characters from "../../collections/characters/others.json";
+import CharacterCard from "../../components/character-card.astro";
+import Layout from "../../layouts/main.astro";
+import PageHeading from "../../components/page-heading.astro";
+
+const CharactersKeywords = characters.map(character => character.name.toLowerCase()).join(', ');
+const MetaKeywords = `unicode characters, devangiri characters, arabic symbols, ${CharactersKeywords}, arabic characters for website, devangiri unicode, copy paste arabic symbol, free devangiri icon`;
+
+const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fonts/noto-serif-bengali/noto-serif-bengali-regular.woff2" crossorigin="anonymous">`;
+---
+
+<Layout title="Other Unicode Characters" extraStyleUrl="/css/noto-serif-bengali.min.css" metaDescription="Browse Unicode characters from scripts commonly used alongside Bengali, including Arabic, Devanagari." fontPreloads={FontPreloads} metaKeywords={MetaKeywords}>
+  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Other Unicode Characters"
+      description="This page features characters from scripts often used in Bangla typography outside the Bengali block, such as Arabic, Devanagari."
+    />
+
+<section class="max-w-3xl my-12 mx-auto">
+  <div
+    class="grid items-stretch w-full grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-7 mt-7"
+  >
+    {
+      characters.map((character) => {
+        return (
+          <CharacterCard
+            CharacterSymbol={character.symbol}
+            CharacterUnicode={character.unicode}
+            CharacterHTML={character.html}
+            CharacterName={character.name}
+            CharacterPath={character.path}
+          />
+        )
+      })
+    }
+  </div>
+</section>
+
+</section>
+</Layout>
