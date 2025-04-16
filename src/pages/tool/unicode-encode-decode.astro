@@ -83,6 +83,42 @@ import Layout from "../../layouts/main.astro";
           </button>
         </div>
       </section>
+
+
+<section class="mt-10">
+  <h2 class="text-2xl font-semibold text-gray-800 mb-4">About:</h2>
+  <p class="text-gray-700 mb-4">
+    This <strong>Unicode Decoder</strong> converts text or symbols into Unicode codes. For example, typing <span class="font-mono">৳</span> shows <span class="font-mono">\u09f3</span>. This is useful for web design, particularly with CSS pseudo-elements like <code class="bg-gray-200 p-1 rounded">::after</code> and <code class="bg-gray-200 p-1 rounded">::before</code>, where Unicode characters can be styled.
+  </p>
+  
+  <h3 class="text-xl font-medium text-gray-800 mb-2">Example</h3>
+  <p class="text-gray-700 mb-4">
+    Here's how you can use Unicode in your HTML and CSS:
+  </p>
+  
+  <div class="bg-gray-50 p-4 rounded-lg mb-4">
+    <h4 class="text-lg font-semibold text-gray-800">HTML</h4>
+    <pre class="bg-gray-200 p-4 rounded-md text-gray-700"><code>&lt;p class="content"&gt;This could be your content.&lt;/p&gt;</code></pre>
+  </div>
+  
+  <div class="bg-gray-50 p-4 rounded-lg mb-4">
+    <h4 class="text-lg font-semibold text-gray-800">CSS</h4>
+    <pre class="bg-gray-200 p-4 rounded-md text-gray-700"><code>.content::after, .content::before { content: "\09f3\09f3"; color: red; }</code></pre>
+  </div>
+
+<style>
+.content::after, .content::before {
+  content: "\09f3\09f3"; 
+  color: red;
+}
+</style>
+
+  <p class="text-gray-700 mb-4">
+    The result will display: <span class="font-mono content">This could be your content.</span>
+  </p>
+</section>
+
+
     
   <script is:inline>
     const textInput = document.getElementById('textInput');
