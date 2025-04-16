@@ -32,7 +32,7 @@ function getWeightLabel(weight) {
 
 function renderFontCard(font, text) {
   return `
-    <div class="bg-white dark:bg-gray-800 px-6 py-6 rounded-xl border border-gray-200 dark:border-gray-700">
+    <div class="bg-white dark:bg-gray-800 px-5 py-5 rounded-xl border border-gray-200 dark:border-gray-700">
       <h2 class="text-2xl font-semibold mb-1">
         <a href="https://banglawebfonts.pages.dev/${font.FontPath}" class="text-blue-600 dark:text-blue-400 hover:underline">
           ${font.FontName}
