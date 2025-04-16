@@ -3,7 +3,7 @@ const { text } = Astro.props;
 ---
 
 <div class="relative my-24">
-  <div id="fonts" class="relative w-full max-w-3xl pl-7 overflow-x-hidden md:pl-0">
+  <div class="relative w-full max-w-3xl pl-7 overflow-x-hidden md:pl-0">
     <div
       class="absolute w-full h-px bg-gradient-to-r from-transparent to-white md:from-white dark:from-transparent dark:to-neutral-950 md:dark:from-neutral-950 md:via-transparent md:dark:via-transparent md:to-white md:dark:to-neutral-950"
     >
@@ -13,7 +13,7 @@ const { text } = Astro.props;
     >
     </div>
   </div>
-  <a href="#fonts"
+  <div
     class="absolute flex items-center justify-center w-auto h-auto px-3 py-1.5 uppercase tracking-widest space-x-1 text-[0.6rem] md:-translate-x-1/2 -translate-y-1/2 border rounded-full bg-white dark:bg-neutral-900 text-neutral-500 left-0 md:ml-0 ml-7 md:left-1/2 border-neutral-100 dark:border-neutral-800 shadow-sm"
   >
     <p class="leading-none">{text}</p>
@@ -33,5 +33,5 @@ const { text } = Astro.props;
           d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"></path></svg
       >
     </div>
-  </a>
+  </div>
 </div>
