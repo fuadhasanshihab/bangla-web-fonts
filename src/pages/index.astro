@@ -3,6 +3,7 @@ import FontsList from "../components/home/fonts-list.astro";
 import Layout from "../layouts/main.astro";
 import fonts from "../collections/fonts.json";
 import Separator from "../components/home/separator.astro";
+import IndexCard from "../components/index-card.astro";
 
 const preloadedFonts = fonts.slice(0, 4);
 const FontPreloads = preloadedFonts
@@ -54,6 +55,16 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
 </div>
 
 
+<FontsList/>
 
-  <FontsList/>
+<Separator title="Other Stuff"/>
+
+<IndexCard CardName="Unicode Characters" CardDescription="Browse Unicode characters relevant to Bangla typography." CardPath="unicode"/>
+<IndexCard CardName="Icons" CardDescription="" CardPath="icons"/>
+
+<Separator title="Tools"/>
+
+<IndexCard CardName="Font Comparison Tool" CardDescription="" CardPath="tool/font-comparison"/>
+<IndexCard CardName="Unicode Encoder/Decoder Tool" CardDescription="" CardPath="tool/unicode-encode-decode"/>
+
 </Layout>
