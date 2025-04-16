@@ -11,35 +11,35 @@ import Layout from "../../layouts/main.astro";
     />
 
       <!-- Sample text input -->
-      <section class="mb-8">
-        <label for="sampleText" class="block text-lg font-medium mb-2">Sample Text</label>
+      <section class="mt-8">
+        <label for="sampleText" class="block font-medium mb-2">Sample Text</label>
         <textarea
           id="sampleText"
           rows="2"
-          class="w-full p-4 text-lg border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
-        >বাংলা ভাষার সৌন্দর্য ফুটে ওঠে এই ফন্টে।</textarea>
+          class="w-full p-4 border border-gray-300 dark:border-gray-700 rounded-xl hover:shadow-sm bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+        >মোদের গরব, মোদের আশা, আ-মরি বাংলা ভাষা!</textarea>
       </section>
 
       <!-- Font selection -->
-      <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
         <div>
-          <label for="fontA" class="block text-lg font-medium mb-2">Font A</label>
+          <label for="fontA" class="block font-medium mb-2">Font A</label>
           <select
             id="fontA"
-            class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
           ></select>
         </div>
         <div>
-          <label for="fontB" class="block text-lg font-medium mb-2">Font B</label>
+          <label for="fontB" class="block font-medium mb-2">Font B</label>
           <select
             id="fontB"
-            class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
           ></select>
         </div>
       </section>
 
       <!-- Font comparison display -->
-      <section id="comparison" class="grid grid-cols-1 md:grid-cols-2 gap-8"></section>
+      <section id="comparison" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10"></section>
 
     <!-- External JS -->
     <script src="../../assets/js/tools/font-comparison.js"></script>
