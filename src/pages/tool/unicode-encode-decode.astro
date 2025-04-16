@@ -23,7 +23,7 @@ import Layout from "../../layouts/main.astro";
 
 
       <!-- Swap Button -->
-      <div class="text-center">
+      <div class="text-center mt-8 mb-4">
         <button
           id="swapButton"
           class="inline-flex items-center justify-center gap-2 w-full bg-indigo-600 text-white font-medium py-2.5 px-4 rounded-xl hover:bg-indigo-700 transition"
@@ -33,7 +33,7 @@ import Layout from "../../layouts/main.astro";
       </div>
 
       <!-- Text to Unicode Section -->
-      <section id="textToUnicodeSection" class="space-y-4 relative">
+      <section id="textToUnicodeSection" class="space-y-3 relative">
         <label for="textInput" class="text-lg font-medium block">Text to Unicode</label>
         <textarea
           id="textInput"
@@ -45,13 +45,13 @@ import Layout from "../../layouts/main.astro";
         <div class="relative">
           <textarea
             id="unicodeOutput"
-            class="w-full auto-height rounded-xl border border-gray-200 bg-gray-100 text-gray-700 p-4 font-mono text-sm pr-16"
+            class="w-full auto-height rounded-xl border border-gray-200 bg-gray-100 text-gray-700 p-4 font-mono text-sm pr-16 focus:ring-0 focus:transparent focus:outline-none"
             readonly
             placeholder="Unicode output will appear here"
           ></textarea>
           <button
             id="copyTextToUnicode"
-            class="absolute top-2 right-2 bg-blue-600 text-white px-3 py-1.5 rounded-md hover:bg-blue-700 transition text-sm"
+            class="absolute top-2 right-2 bg-blue-600 text-white px-2 py-0.5 rounded-xl hover:bg-blue-700 transition text-sm"
           >
             Copy
           </button>
@@ -59,7 +59,7 @@ import Layout from "../../layouts/main.astro";
       </section>
 
       <!-- Unicode to Text Section (Initially hidden) -->
-      <section id="unicodeToTextSection" class="space-y-4 hidden relative">
+      <section id="unicodeToTextSection" class="space-y-3 hidden relative">
         <label for="unicodeInput" class="text-lg font-medium block">Unicode to Text</label>
         <textarea
           id="unicodeInput"
@@ -71,13 +71,13 @@ import Layout from "../../layouts/main.astro";
         <div class="relative">
           <textarea
             id="textOutput"
-            class="w-full auto-height rounded-xl border border-gray-200 bg-gray-100 text-gray-700 p-4 font-mono text-sm pr-16"
+            class="w-full auto-height rounded-xl border border-gray-200 bg-gray-100 text-gray-700 p-4 font-mono text-sm pr-16 focus:ring-0 focus:transparent focus:outline-none"
             readonly
             placeholder="Converted text will appear here"
           ></textarea>
           <button
             id="copyUnicodeToText"
-            class="absolute top-2 right-2 bg-green-600 text-white px-3 py-1.5 rounded-md hover:bg-green-700 transition text-sm"
+            class="absolute top-2 right-2 bg-green-600 text-white px-2 py-0.5 rounded-xl hover:bg-green-700 transition text-sm"
           >
             Copy
           </button>
@@ -126,13 +126,13 @@ import Layout from "../../layouts/main.astro";
       const original = button.textContent;
       button.textContent = 'Copied!';
       button.disabled = true;
-      button.classList.add('opacity-60', 'cursor-not-allowed');
+      button.classList.add('opacity-80', 'cursor-not-allowed');
 
       setTimeout(() => {
         button.textContent = original;
         button.disabled = false;
-        button.classList.remove('opacity-60', 'cursor-not-allowed');
-      }, 3000);
+        button.classList.remove('opacity-80', 'cursor-not-allowed');
+      }, 2800);
     }
 
     document.getElementById('copyTextToUnicode').addEventListener('click', () =>
