@@ -31,18 +31,18 @@ function getWeightLabel(weight) {
 
 function renderFontCard(font, text) {
   return `
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700">
+    <div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
       <h2 class="text-2xl font-semibold mb-1">
-        <a href="https://banglawebfonts.pages.dev/${font.FontPath}" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">
+        <a href="https://banglawebfonts.pages.dev/${font.FontPath}" class="text-blue-500 dark:text-blue-400 hover:underline">
           ${font.FontName}
         </a>
       </h2>
-      <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Total Styles: ${font.TotalStyles}</p>
-      <div style="font-family: ${font.FontFamily};" class="space-y-4">
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">${font.TotalStyles} Styles</p>
+      <div class="space-y-4">
         ${font.FontTesterWeights.map(weight => `
           <div class="flex flex-col gap-1">
-            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">${getWeightLabel(weight)}</span>
-            <p style="font-weight: ${weight};" class="text-lg leading-relaxed">${text}</p>
+            <span class="text-sm text-gray-600 dark:text-gray-400">${getWeightLabel(weight)}</span>
+            <p style="font-family: ${font.FontFamily};font-weight: ${weight};" class="text-lg leading-relaxed">${text}</p>
           </div>
         `).join('')}
       </div>
@@ -51,7 +51,7 @@ function renderFontCard(font, text) {
 }
 
 function updateComparison() {
-  const text = sampleTextArea.value.trim() || 'বাংলা ভাষার সৌন্দর্য ফুটে ওঠে এই ফন্টে।';
+  const text = sampleTextArea.value.trim() || 'মোদের গরব, মোদের আশা, আ-মরি বাংলা ভাষা!';
   const fontA = fonts.find(f => f.FontPath === fontASelect.value);
   const fontB = fonts.find(f => f.FontPath === fontBSelect.value);
   if (!fontA || !fontB) return;
@@ -87,6 +87,6 @@ fetch(fontJsonUrl)
     sampleTextArea.addEventListener("input", updateComparison);
   })
   .catch(err => {
-    comparisonDiv.innerHTML = `<p class="text-red-600">Error loading fonts.</p>`;
+    comparisonDiv.innerHTML = `<p class="text-red-600">Error loading fonts. Please refresh this page!</p>`;
     console.error("Error fetching fonts:", err);
   });
