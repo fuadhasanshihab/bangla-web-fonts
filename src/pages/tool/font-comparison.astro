@@ -1,88 +1,47 @@
----
-import fonts from '../../../collections/fonts.json';
----
-
 <html lang="bn">
   <head>
     <title>Font Comparison Tool</title>
-    <style>
-      body {
-        font-family: sans-serif;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="p-6 max-w-5xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6">Font Comparison Tool</h1>
+  <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans min-h-screen py-10 px-4">
+    <main class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8 text-center">Font Comparison Tool</h1>
 
-    <!-- Input for custom text -->
-    <div class="mb-6">
-      <label for="sampleText" class="block font-medium mb-1">Sample Text:</label>
-      <textarea id="sampleText" rows="2" class="w-full p-2 border rounded resize-none">
-বাংলা ভাষার সৌন্দর্য ফুটে ওঠে এই ফন্টে।
-      </textarea>
-    </div>
+      <!-- Sample text input -->
+      <section class="mb-8">
+        <label for="sampleText" class="block text-lg font-medium mb-2">Sample Text</label>
+        <textarea
+          id="sampleText"
+          rows="2"
+          class="w-full p-4 text-lg border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+        >বাংলা ভাষার সৌন্দর্য ফুটে ওঠে এই ফন্টে।</textarea>
+      </section>
 
-    <!-- Font selectors -->
-    <div class="flex flex-col md:flex-row gap-4 mb-6">
-      <div>
-        <label for="fontA" class="block font-medium mb-1">Font A:</label>
-        <select id="fontA" class="p-2 border rounded w-full">
-          {fonts.map(font => (
-            <option value={font.FontPath}>{font.FontName}</option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label for="fontB" class="block font-medium mb-1">Font B:</label>
-        <select id="fontB" class="p-2 border rounded w-full">
-          {fonts.map(font => (
-            <option value={font.FontPath} selected={font.FontPath === fonts[1].FontPath}>{font.FontName}</option>
-          ))}
-        </select>
-      </div>
-    </div>
+      <!-- Font selection -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+        <div>
+          <label for="fontA" class="block text-lg font-medium mb-2">Font A</label>
+          <select
+            id="fontA"
+            class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+          ></select>
+        </div>
+        <div>
+          <label for="fontB" class="block text-lg font-medium mb-2">Font B</label>
+          <select
+            id="fontB"
+            class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+          ></select>
+        </div>
+      </section>
 
-    <!-- Comparison container -->
-    <div id="comparison" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      <!-- Font comparison display -->
+      <section id="comparison" class="grid grid-cols-1 md:grid-cols-2 gap-8"></section>
+    </main>
 
-    <!-- Script for interactivity -->
-    <script is:inline>
-      const fonts = {JSON.stringify(fonts)};
-      const fontASelect = document.getElementById('fontA');
-      const fontBSelect = document.getElementById('fontB');
-      const sampleTextArea = document.getElementById('sampleText');
-      const comparisonDiv = document.getElementById('comparison');
-
-      function renderFontPreview(font, text) {
-        return `
-          <div class="border p-4 rounded">
-            <h2 class="text-xl font-semibold mb-2">${font.FontName}</h2>
-            <p class="text-sm text-gray-600 mb-2">
-              Designed by <a href="${font.FontDesignerURL}" target="_blank" class="underline">${font.FontDesigner}</a>
-            </p>
-            <div style="font-family: ${font.FontFamily};">
-              ${font.FontTesterWeights.map(weight => `
-                <p style="font-weight: ${weight}; margin-bottom: 0.5rem;">
-                  ওজন ${weight}: ${text}
-                </p>`).join('')}
-            </div>
-          </div>
-        `;
-      }
-
-      function updateComparison() {
-        const text = sampleTextArea.value.trim() || ' ';
-        const fontA = fonts.find(f => f.FontPath === fontASelect.value);
-        const fontB = fonts.find(f => f.FontPath === fontBSelect.value);
-        comparisonDiv.innerHTML =
-          renderFontPreview(fontA, text) + renderFontPreview(fontB, text);
-      }
-
-      fontASelect.addEventListener('change', updateComparison);
-      fontBSelect.addEventListener('change', updateComparison);
-      sampleTextArea.addEventListener('input', updateComparison);
-
-      updateComparison(); // Initial render
-    </script>
+    <!-- External JS -->
+    <script src="/assets/tools/font-comparison.js" defer></script>
   </body>
 </html>
