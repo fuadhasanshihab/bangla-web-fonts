@@ -1,13 +1,14 @@
-<html lang="bn">
-  <head>
-    <title>Font Comparison Tool</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans min-h-screen py-10 px-4">
-    <main class="max-w-6xl mx-auto">
-      <h1 class="text-4xl font-bold mb-8 text-center">Font Comparison Tool</h1>
+---
+import PageHeading from "../../components/page-heading.astro";
+import Layout from "../../layouts/main.astro";
+---
+
+<Layout title="Bangla Font Comparison Tool - Bangla Web Fonts" metaDescription="Easily compare two Bangla fonts side-by-side with different weights and styles. Test custom text and explore font design options in one place." metaKeywords="bangla font comparison, bangla web fonts, compare bangla fonts, bengali font tester, bangla typography tool, bangla font preview, বাংলা ফন্ট তুলনা, বাংলা ফন্ট, bangla fonts, bangla web fonts, bengali font tester">
+  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Font Comparison Tool"
+      description=""
+    />
 
       <!-- Sample text input -->
       <section class="mb-8">
@@ -39,9 +40,10 @@
 
       <!-- Font comparison display -->
       <section id="comparison" class="grid grid-cols-1 md:grid-cols-2 gap-8"></section>
-    </main>
 
     <!-- External JS -->
     <script src="../../assets/js/tools/font-comparison.js"></script>
-  </body>
-</html>
+
+</section>
+</Layout>
+  
