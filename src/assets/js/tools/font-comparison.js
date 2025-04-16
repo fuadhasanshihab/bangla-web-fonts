@@ -25,19 +25,20 @@ function getWeightLabel(weight) {
     600: "SemiBold 600",
     700: "Bold 700",
     800: "ExtraBold 800",
+    900: "Black 900",
   };
   return map[weight] || `Weight ${weight}`;
 }
 
 function renderFontCard(font, text) {
   return `
-    <div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+    <div class="bg-white dark:bg-gray-800 px-4 py-5 rounded-xl border border-gray-200 dark:border-gray-700">
       <h2 class="text-2xl font-semibold mb-1">
         <a href="https://banglawebfonts.pages.dev/${font.FontPath}" class="text-blue-700 dark:text-blue-400 hover:underline">
           ${font.FontName}
         </a>
       </h2>
-      <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">${font.TotalStyles} Styles</p>
+      <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">${font.TotalStyles} Styles</p>
       <div class="space-y-3">
         ${font.FontTesterWeights.map(weight => `
           <div class="flex flex-col gap-0">
