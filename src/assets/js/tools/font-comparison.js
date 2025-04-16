@@ -33,16 +33,16 @@ function renderFontCard(font, text) {
   return `
     <div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
       <h2 class="text-2xl font-semibold mb-1">
-        <a href="https://banglawebfonts.pages.dev/${font.FontPath}" class="text-blue-500 dark:text-blue-400 hover:underline">
+        <a href="https://banglawebfonts.pages.dev/${font.FontPath}" class="text-blue-700 dark:text-blue-400 hover:underline">
           ${font.FontName}
         </a>
       </h2>
       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">${font.TotalStyles} Styles</p>
-      <div class="space-y-4">
+      <div class="space-y-3">
         ${font.FontTesterWeights.map(weight => `
-          <div class="flex flex-col gap-1">
+          <div class="flex flex-col gap-0">
             <span class="text-sm text-gray-600 dark:text-gray-400">${getWeightLabel(weight)}</span>
-            <p style="font-family: ${font.FontFamily};font-weight: ${weight};" class="text-lg leading-relaxed">${text}</p>
+            <p style="font-family: ${font.FontFamily};font-weight: ${weight};" class="text-xl leading-relaxed">${text}</p>
           </div>
         `).join('')}
       </div>
