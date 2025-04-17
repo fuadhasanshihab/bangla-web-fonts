@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # 🔐 This grants push permission to GITHUB_TOKEN
+  contents: write
 
 jobs:
   generate-icons:
@@ -14,17 +14,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate SVG files from icons.json with updated width and height
+      - name: Generate cleaned SVG files from icons.json
         run: |
-          mkdir -p public/icons  # Ensure the icons directory exists
+          mkdir -p public/icons
           jq -c '.[]' src/collections/icons.json | while read -r icon; do
             name=$(echo "$icon" | jq -r '.IconPath')
             svg=$(echo "$icon" | jq -r '.IconSVG')
-
-            # Replace width and height attributes
-            updated_svg=$(echo "$svg" | sed "s/width='24'/width='500'/g" | sed "s/height='24'/height='500'/g")
-
-            echo "$updated_svg" > "public/icons/$name.svg"
+            cleaned_svg=$(echo "$svg" | sed "s/ *width='24'//g" | sed "s/ *height='24'//g")
+            echo "$cleaned_svg" > "public/icons/$name.svg"
             echo "✅ Generated: public/icons/$name.svg"
           done
 
@@ -32,6 +29,6 @@ jobs:
         run: |
           git config user.name "fuadhasanshihab"
           git config user.email "85599261+fuadhasanshihab@users.noreply.github.com"
-          git add public/icons  # Ensure we are adding the updated files
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: regenerate icons with updated width and height"
+          git add public/icons
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: regenerate icons from icons.json (cleaned SVG)"
           git push origin HEAD:${GITHUB_REF_NAME}
