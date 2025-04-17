@@ -1,0 +1,30 @@
+name: Generate SVG Icons
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-icons:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate SVG files from icons.json
+        run: |
+          mkdir -p public/icon
+          jq -c '.[]' src/collections/icons.json | while read -r icon; do
+            name=$(echo "$icon" | jq -r '.IconPath')
+            svg=$(echo "$icon" | jq -r '.IconSVG')
+            echo "$svg" > "public/icon/$name.svg"
+            echo "✅ Generated: public/icon/$name.svg"
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "fuadhasanshihab"
+          git config user.email "85599261+fuadhasanshihab@users.noreply.github.com"
+          git add public/icon
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: regenerate icons from icons.json"
+          git push origin HEAD:${GITHUB_REF_NAME}
