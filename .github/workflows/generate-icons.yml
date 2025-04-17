@@ -14,14 +14,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate cleaned SVG files from icons.json
+      - name: Generate SVG files from icons.json with custom header and updated size
         run: |
           mkdir -p public/icons
           jq -c '.[]' src/collections/icons.json | while read -r icon; do
             name=$(echo "$icon" | jq -r '.IconPath')
             svg=$(echo "$icon" | jq -r '.IconSVG')
-            cleaned_svg=$(echo "$svg" | sed "s/ *width='24'//g" | sed "s/ *height='24'//g")
-            echo "$cleaned_svg" > "public/icons/$name.svg"
+
+            # Replace width and height
+            updated_svg=$(echo "$svg" | sed "s/width='24'/width='800'/g" | sed "s/height='24'/height='800'/g")
+
+            # Add XML declaration and comment with correct icon URL
+            header="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- https://banglawebfonts.pages.dev/icon/$name/ -->"
+
+            # Combine header and SVG, then save
+            printf "%b\n%s\n" "$header" "$updated_svg" > "public/icons/$name.svg"
             echo "✅ Generated: public/icons/$name.svg"
           done
 
@@ -30,5 +37,5 @@ jobs:
           git config user.name "fuadhasanshihab"
           git config user.email "85599261+fuadhasanshihab@users.noreply.github.com"
           git add public/icons
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: regenerate icons from icons.json (cleaned SVG)"
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: regenerate icons with updated size and header"
           git push origin HEAD:${GITHUB_REF_NAME}
