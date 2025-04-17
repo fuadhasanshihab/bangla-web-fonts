@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { IconName, IconPath, IconColor, IconDesigner, IconDesignerURL, IconSourceURL, IconLicense, IconSVG } = Astro.props;
 
 const PageTitle = `${IconName} Icon`;
-const MetaDescription = `.`;
+const MetaDescription = ``;
 
 const iconNameL = IconName.toLowerCase();
 const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${iconNameL} unicode icon, ${iconNameL} html entity, ${iconNameL} css entity, ${iconNameL} js entity, ${iconNameL} code point, ${iconNameL} symbol, ${iconNameL} copy, ${iconNameL} copy paste, copy ${iconNameL}, ${iconNameL} unicode copy, ${iconNameL} symbol copy paste, ${iconNameL} text copy, bangla unicode, bengali unicode, bangla icon, bengali icon, unicode ${iconNameL}`;
@@ -53,7 +53,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
       <!--h3>Color Type: {IconColor}</h3-->
       <h3>Designer: <a class="text-blue-600 underline" href={IconDesignerURL} target="_blank" rel="noopener noreferrer nofollow">{IconDesigner}</a></h3>
       <h3>Source: <a class="text-blue-600 underline w-[70px] truncate overflow-hidden whitespace-nowrap" href={IconSourceURL} target="_blank" rel="noopener noreferrer nofollow">{IconSourceURL}</a></h3>
-      <h3>License: <a class="text-blue-600 underline" src={`/licenses/${IconLicense}.txt`}>{IconLicense} License</a></h3>
+      <h3>License: <a class="text-blue-600 underline" href={`/licenses/${IconLicense}.txt`}>{IconLicense} License</a></h3>
 
 
 
