@@ -1,34 +1,36 @@
 ---
-import icons from '../collections/icons.json';
-import PageHeading from "../components/page-heading.astro";
+import icons from "../collections/icons.json";
+import IconCard from "../components/icon-card.astro";
 import Layout from "../layouts/main.astro";
+import PageHeading from "../components/page-heading.astro";
+
+const IconsKeywords = icons.map(icon => icon.IconName.toLowerCase()).join(', ');
+const MetaKeywords = `bangla svg icons, bangla icons, free bangla logo, ${IconsKeywords}, bangla icons for website, bangla svg, copy paste bangla svg, free bangla icon, bengali web text, bengali material icon, bangla ui`;
 ---
 
-<Layout title="Icons - Bangla Web Fonts">
+<Layout title="Bangla Icons" metaDescription="A list of all the svg icons that are in the Bengali svg block." metaKeywords={MetaKeywords}>
   <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
       title="Icons"
-      description=""
+      description="A list of all the svg icons that are in the Bengali svg block."
     />
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-        {icons.map(icon => (
-          <div class="border rounded-2xl p-4 shadow hover:shadow-md transition">
-            <div class="flex justify-center items-center h-32">
-              <div class="w-20 h-20" set:html={icon.IconSVG}></div>
-            </div>
-            <h2 class="text-lg font-semibold mt-4">{icon.IconName}</h2>
-            <p class="text-sm text-gray-600">Color: <span class="capitalize">{icon.IconColor}</span></p>
-            <p class="text-sm text-gray-600">
-              Designer:
-              <a href={icon.IconDesignerURL} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
-                {icon.IconDesigner}
-              </a>
-            </p>
-            <p class="text-sm text-gray-500">License: {icon.IconLicense}</p>
-          </div>
-        ))}
-      </div>
-    
+<section class="max-w-3xl my-12 mx-auto">
+  <div
+    class="grid items-stretch w-full grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-7 mt-7"
+  >
+    {
+      icons.map((icon) => {
+        return (
+          <IconCard
+            IconName={icon.name}
+            IconPath={icon.path}
+          />
+        )
+      })
+    }
+  </div>
+</section>
+
 </section>
 </Layout>
