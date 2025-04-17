@@ -1,4 +1,6 @@
 ---
+import Layout from "../../layouts/main.astro";
+import PageHeading from "../../components/page-heading.astro";
 import icons from '../../collections/icons.json';
 
 export async function getStaticPaths() {
@@ -9,19 +11,36 @@ export async function getStaticPaths() {
 }
 
 const { IconName, IconPath, IconColor, IconDesigner, IconDesignerURL, IconSourceURL, IconLicense, IconSVG } = Astro.props;
+
+const PageTitle = `${IconNave} Icon`;
+const MetaDescription = `${name} is a Bengali unicode icon, symbolized as "${symbol}". Easily use it in HTML, CSS and JavaScript on your website.`;
+
+const iconNameL = IconName.toLowerCase();
+const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${iconNameL} unicode icon, ${iconNameL} html entity, ${iconNameL} css entity, ${iconNameL} js entity, ${iconNameL} code point, ${iconNameL} symbol, ${iconNameL} copy, ${iconNameL} copy paste, copy ${iconNameL}, ${iconNameL} unicode copy, ${iconNameL} symbol copy paste, ${iconNameL} text copy, bangla unicode, bengali unicode, bangla icon, bengali icon, unicode ${iconNameL}`;
 ---
 
 
-    <h1 class="text-2xl font-bold mb-4">{IconName}</h1>
 
-    <div class="mb-6">
-      {IconSVG}
-    </div>
+<Layout title={PageTitle}  metaDescription={MetaDescription} metaKeywords={MetaKeywords}>
 
-    <ul class="space-y-2">
-      <li><strong>Color Type:</strong> {IconColor}</li>
-      <li><strong>Designer:</strong> <a class="text-blue-600 underline" href={IconDesignerURL} target="_blank" rel="noopener">{IconDesigner}</a></li>
-      <li><strong>Source:</strong> <a class="text-blue-600 underline" href={IconSourceURL} target="_blank" rel="noopener">{IconSourceURL}</a></li>
-      <li><strong>License:</strong> {IconLicense}</li>
-    </ul>
+<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
+
+<div class="relative z-20 w-full mx-auto lg:mx-0">
+    <p class="mb-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mb-4 lg:mb-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"><a href="/icons/" class="text-blue-600 hover:underline">&larr; Icons</a></p>
+  <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{IconName} Icon</h1>
+</div>
+
+
+    <div id="preview" class="my-7 bg-gray-50 dark:bg-gray-900 rounded-3xl p-6 md:p-10"><img src={`/icon/${IconPath}.svg`} class="w-full max-w-xl" src={`${IconPath} icon svg`}/></div>
+
+
+      <h3>Color Type: {IconColor}</h3>
+      <h3>Designer: <a class="text-blue-600 underline" href={IconDesignerURL} target="_blank" rel="noopener">{IconDesigner}</a></h3>
+      <h3>Source: <a class="text-blue-600 underline" href={IconSourceURL} target="_blank" rel="noopener">{IconSourceURL}</a></h3>
+      <h3>License: {IconLicense}</h3>
+
+
+   
+<section/>
+<Layout/>
   
