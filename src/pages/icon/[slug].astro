@@ -40,7 +40,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
 
 
 
-    <div id="preview" class="my-8 bg-gray-100 dark:bg-gray-900 rounded-3xl px-7 py-12">
+    <div id="preview" class="my-8 bg-gray-50 dark:bg-gray-900 rounded-xl px-7 py-12">
 <img src={`/icons/${IconPath}.svg`} class="w-full max-w-[200px] mx-auto" width="200" height="200" loading="lazy" alt={`${IconPath} icon svg`}/>
 </div>
 
@@ -51,9 +51,9 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
 
       <h2 class="sr-only">Icon Details</h2>
       <!--h3>Color Type: {IconColor}</h3-->
-      <h3>Designer: <a class="text-blue-600 underline" href={IconDesignerURL} target="_blank" rel="noopener noreferrer nofollow">{IconDesigner}</a></h3>
-      <h3>Source: <a class="text-blue-600 underline w-[70px] truncate overflow-hidden whitespace-nowrap" href={IconSourceURL} target="_blank" rel="noopener noreferrer nofollow">{IconSourceURL}</a></h3>
-      <h3>License: <a class="text-blue-600 underline" href={`/licenses/${IconLicense}.txt`}>{IconLicense} License</a></h3>
+      <h3>Designer: <a class="text-blue-600 hover:underline" href={IconDesignerURL} target="_blank" rel="noopener noreferrer nofollow">{IconDesigner}</a></h3>
+      <h3>Source: <a class="text-blue-600 hover:underline max-w-[50px] truncate overflow-hidden whitespace-nowrap" href={IconSourceURL} target="_blank" rel="noopener noreferrer nofollow">{IconSourceURL}</a></h3>
+      <h3>License: <a class="text-blue-600 hover:underline" href={`/licenses/${IconLicense}.txt`}>{IconLicense} License</a></h3>
 
 
 
