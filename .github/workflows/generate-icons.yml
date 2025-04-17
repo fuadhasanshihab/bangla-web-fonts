@@ -3,6 +3,9 @@ name: Generate SVG Icons
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write  # 🔐 This grants push permission to GITHUB_TOKEN
+
 jobs:
   generate-icons:
     runs-on: ubuntu-latest
