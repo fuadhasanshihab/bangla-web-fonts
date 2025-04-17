@@ -2,6 +2,7 @@
 import Layout from "../../layouts/main.astro";
 import PageHeading from "../../components/page-heading.astro";
 import icons from '../../collections/icons.json';
+import CodeBox from "../../components/codebox.astro";
 
 export async function getStaticPaths() {
   return icons.map(icon => ({
@@ -12,8 +13,8 @@ export async function getStaticPaths() {
 
 const { IconName, IconPath, IconColor, IconDesigner, IconDesignerURL, IconSourceURL, IconLicense, IconSVG } = Astro.props;
 
-const PageTitle = `${IconNave} Icon`;
-const MetaDescription = `${name} is a Bengali unicode icon, symbolized as "${symbol}". Easily use it in HTML, CSS and JavaScript on your website.`;
+const PageTitle = `${IconName} Icon`;
+const MetaDescription = `.`;
 
 const iconNameL = IconName.toLowerCase();
 const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${iconNameL} unicode icon, ${iconNameL} html entity, ${iconNameL} css entity, ${iconNameL} js entity, ${iconNameL} code point, ${iconNameL} symbol, ${iconNameL} copy, ${iconNameL} copy paste, copy ${iconNameL}, ${iconNameL} unicode copy, ${iconNameL} symbol copy paste, ${iconNameL} text copy, bangla unicode, bengali unicode, bangla icon, bengali icon, unicode ${iconNameL}`;
@@ -39,6 +40,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
       <h3>Source: <a class="text-blue-600 underline" href={IconSourceURL} target="_blank" rel="noopener">{IconSourceURL}</a></h3>
       <h3>License: {IconLicense}</h3>
 
+<CodeBox id="SVGcodebox" code={IconSVG} />
 
    
 <section/>
