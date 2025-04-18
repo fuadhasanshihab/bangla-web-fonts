@@ -76,7 +76,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} svg code, ${iconNameL} icon, ${
       <!--h3>Color Type: {IconColor}</h3-->
       <h3>Designer: <a class="text-blue-600 hover:underline" href={IconDesignerURL} target="_blank" rel="noopener noreferrer nofollow">{IconDesigner}</a></h3>
       <!-- <h3 class="flex">Source: <a class="text-blue-600 hover:underline block truncate max-w-[250px] overflow-hidden whitespace-nowrap pl-1" href={IconSourceURL} target="_blank" rel="noopener noreferrer nofollow">{IconSourceURL}</a></h3> -->
-      <h3>License: <a class="text-blue-600 hover:underline" href={`/licenses/icon/#${IconLicense}`}>{IconLicense} License</a></h3>
+      <h3>License: <a class="text-blue-600 hover:underline" href={`/licenses/icons/#${IconLicense}`}>{IconLicense} License</a></h3>
 
 
 
@@ -96,7 +96,7 @@ pre {
 <h2 class="mt-10 mb-4 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">{IconName} Icon in Various Sizes</h2>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
   {sizes.map(size => (
-    <div class="text-center bg-gray-50 hover:bg-gray-200 rounded-xl border border-gray-100 p-3 flex flex-col justify-center">
+    <div class="text-center bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-100 p-3 flex flex-col justify-center">
       <div class="my-auto min-h-[140px] flex justify-center"><span class="my-auto" set:html={getSizedSVG(IconSVG, size)}></span></div>
       <p class="text-sm mt-2 text-neutral-600">{size} × {size}</p>
     </div>
