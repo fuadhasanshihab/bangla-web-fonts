@@ -1,5 +1,5 @@
  <!-- Search Modal (Top-Aligned) -->
-  <div id="searchModal" class="fixed inset-0 bg-white/10 dark:bg-black/10 backdrop-blur-sm hidden z-50 flex items-start justify-center pt-10 px-7">
+  <div id="searchModal" class="fixed top-[75x] inset-0 bg-white/90 dark:bg-black/10 hidden z-20 flex items-start justify-center pt-10 px-7">
     <div class="w-full max-w-md rounded-xl shadow-lg relative">
 
       <!-- Search Input Group -->
@@ -8,7 +8,7 @@
           type="text" 
           id="searchInput" 
           placeholder="Type a font name..." 
-          class="w-full px-4 pr-10 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 shadow-xl"
+          class="w-full px-4 pr-10 py-2 border border-dashed border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 shadow-sm"
           autocomplete="off"
         />
         <!-- Clear button (X) -->
@@ -23,7 +23,7 @@
       <!-- Search Results -->
       <div 
         id="results" 
-        class="mt-4 max-h-[500px] overflow-y-auto bg-white dark:bg-black border border-gray-200 rounded-xl shadow-xl hidden absolute w-full z-20 py-1"
+        class="mt-4 max-h-[500px] overflow-y-auto bg-white dark:bg-black border border-dashed border-neutral-300 rounded-xl shadow-sm hidden absolute w-full z-20 py-1"
       ></div>
 
     </div>
