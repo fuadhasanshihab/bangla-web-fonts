@@ -23,11 +23,13 @@ function getSizedSVG(svg: string, size: number) {
 
 function prettifySVG(svg) {
   return svg
-    .replace(/<svg([^>]*)>/, '<svg$1>\n') // Line break after <svg ...>
-    .replace(/<\/svg>/, '\n</svg>') // Line break before </svg>
-    .replace(/><(path|text|rect|circle|line|g|\/g)[^>]*>/g, '>\n  <$1') // Add newline + indent before major tags
+    .replace(/><(path|text|rect|circle|line|g)>/g, '>\n  <$1>') // indent major tags
+    .replace(/><(?!\/)/g, '>\n  <') // line break + indent for all opening tags
+    .replace(/<svg([^>]*)>/, '<svg$1>\n') // newline after opening svg
+    .replace(/<\/svg>/, '\n</svg>') // newline before closing svg
     .trim();
 }
+
 const prettySVG = prettifySVG(IconSVG);
 
 const PageTitle = `${IconName} Icon`;
@@ -95,7 +97,7 @@ pre {
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
   {sizes.map(size => (
     <div class="text-center bg-gray-50 rounded-xl border border-gray-100 p-3 flex flex-col justify-center">
-      <div class="m-auto p-auto min-h-[130px] flex justify-center" set:html={getSizedSVG(IconSVG, size)} />
+      <div class="min-h-[135px] flex justify-center"><span set:html={getSizedSVG(IconSVG, size)}></span></div>
       <p class="text-sm mt-2 text-neutral-600">{size} × {size}</p>
     </div>
   ))}
