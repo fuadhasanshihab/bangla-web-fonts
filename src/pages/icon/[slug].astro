@@ -13,6 +13,14 @@ export async function getStaticPaths() {
 
 const { IconName, IconPath, IconColor, IconDesigner, IconDesignerURL, IconSourceURL, IconLicense, IconSVG } = Astro.props;
 
+const sizes = [24, 32, 48, 64, 96, 128];
+
+function getSizedSVG(svg: string, size: number) {
+  return svg
+    .replace(/width=['"][^'"]*['"]/, `width="${size}"`)
+    .replace(/height=['"][^'"]*['"]/, `height="${size}"`);
+}
+
 const PageTitle = `${IconName} Icon`;
 const MetaDescription = ``;
 
@@ -71,6 +79,19 @@ pre {
   word-break: normal!important;
 }
 </style>
+
+
+
+<h2 class="text-xl font-semibold mt-10 mb-4">Size Previews</h2>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-4">
+  {sizes.map(size => (
+    <div class="text-center">
+      <div class="mx-auto" set:html={getSizedSVG(IconSVG, size)} />
+      <p class="text-sm mt-2">{size}px</p>
+    </div>
+  ))}
+</div>
+
 
 
 
