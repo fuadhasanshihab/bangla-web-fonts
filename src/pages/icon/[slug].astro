@@ -23,11 +23,12 @@ function getSizedSVG(svg: string, size: number) {
 
 function prettifySVG(svg) {
   return svg
-    .replace(/><(path|text|rect|circle|line|g)>/g, '>\n  <$1>') // indent major tags
+    .replace(/><(path|text|rect|circle|line|g|\/g)>/g, '>\n  <$1>') // indent major tags
     .replace(/><(?!\/)/g, '>\n  <') // line break + indent for all opening tags
     .replace(/<\/svg>/, '\n</svg>') // newline before closing svg
     .trim();
 }
+
 
 const prettySVG = prettifySVG(IconSVG);
 
@@ -58,7 +59,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
 
 
 
-    <div id="preview" class="my-8 
+    <div id="preview" class="my-10 
 
  inset-0 h-full w-full bg-white bg-[radial-gradient(#e0e0e0_1px,transparent_1px)] [background-size:16px_16px]
 
@@ -79,7 +80,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
 
 
 
-<h2 class="mt-10 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">SVG Code:</h2>
+<h2 class="mt-10 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">SVG Code</h2>
 <CodeBox id="SVGcodebox" code={prettySVG}/>
 
 <style is:inline>
@@ -95,8 +96,8 @@ pre {
 <h2 class="mt-10 mb-4 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">{IconName} Icon in Various Sizes</h2>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
   {sizes.map(size => (
-    <div class="text-center bg-gray-50 rounded-xl border border-gray-100 p-3 flex flex-col justify-center">
-      <div class="my-auto min-h-[135px] flex justify-center"><span class="my-auto" set:html={getSizedSVG(IconSVG, size)}></span></div>
+    <div class="text-center bg-gray-50 hover:bg-gray-200 rounded-xl border border-gray-100 p-3 flex flex-col justify-center">
+      <div class="my-auto min-h-[140px] flex justify-center"><span class="my-auto" set:html={getSizedSVG(IconSVG, size)}></span></div>
       <p class="text-sm mt-2 text-neutral-600">{size} × {size}</p>
     </div>
   ))}
