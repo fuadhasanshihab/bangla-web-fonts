@@ -1,8 +1,8 @@
 ---
-import characters from "../../../collections/characters/others.json";
-import CharacterCard from "../../../components/character-card.astro";
-import Layout from "../../../layouts/main.astro";
-import PageHeading from "../../../components/page-heading.astro";
+import characters from "../../collections/characters/others.json";
+import CharacterCard from "../../components/character-card.astro";
+import Layout from "../../layouts/main.astro";
+import PageHeading from "../../components/page-heading.astro";
 
 const CharactersKeywords = characters.map(character => character.name.toLowerCase()).join(', ');
 const MetaKeywords = `unicode characters, devangiri characters, arabic symbols, ${CharactersKeywords}, arabic characters for website, devangiri unicode, copy paste arabic symbol, free devangiri icon`;
