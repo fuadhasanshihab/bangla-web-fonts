@@ -1,13 +1,18 @@
 ---
 import Layout from "../../../layouts/main.astro";
 import PageHeading from "../../../components/page-heading.astro";
-import characters from '../../../collections/characters/bengali.json';
+import charactersBengali from '../../../collections/characters/bengali.json';
+import charactersOthers from '../../../collections/characters/others.json';
 
 export async function getStaticPaths() {
-  return characters.map(character => ({
-    params: { slug: character.path },
-    props: character,
-  }));
+   const allCharacters = [...charactersBengali, ...charactersOthers];
+ 
+   return allCharacters.map(character => ({
+     params: { slug: character.path },
+   return characters.map(character => ({
+     params: { path: character.path },
+     props: character,
+   }));
 }
 
 const { symbol, unicode, html, name, path } = Astro.props;
@@ -16,15 +21,16 @@ const formattedUnicode = unicode.replace('U+', '');
 const cssEntity = `\\${formattedUnicode}`;
 const jsEntity = `\\u${formattedUnicode}`;
 
+const characters = [...charactersBengali, ...charactersOthers];
 const currentIndex = characters.findIndex(char => char.path === path);
 const prev = characters[currentIndex - 1];
 const next = characters[currentIndex + 1];
 
 const PageTitle = `${symbol} ${name} (${unicode}) Unicode Character`;
-const MetaDescription = `${name} is a Bengali unicode character, symbolized as "${symbol}". Easily use it in HTML, CSS and JavaScript on your website.`;
+const MetaDescription = `${name} is a unicode character, symbolized as "${symbol}". Easily use it in HTML, CSS and JavaScript on your website.`;
 
 const charNameL = name.toLowerCase();
-const MetaKeywords = `${charNameL}, ${charNameL} unicode, ${charNameL} character, ${charNameL} unicode character, ${charNameL} html entity, ${charNameL} css entity, ${charNameL} js entity, ${charNameL} code point, ${charNameL} symbol, ${charNameL} copy, ${charNameL} copy paste, copy ${charNameL}, ${charNameL} unicode copy, ${charNameL} symbol copy paste, ${charNameL} text copy, bangla unicode, bengali unicode, bangla character, bengali character, unicode ${charNameL}`;
+const MetaKeywords = `${charNameL}, ${charNameL} unicode, ${charNameL} character, ${charNameL} unicode character, ${charNameL} html entity, ${charNameL} css entity, ${charNameL} js entity, ${charNameL} code point, ${charNameL} symbol, ${charNameL} copy, ${charNameL} copy paste, copy ${charNameL}, ${charNameL} unicode copy, ${charNameL} symbol copy paste, ${charNameL} text copy, text unicode, character unicode, unicode character, text character, unicode ${charNameL}`;
 
 const ExtraStyleUrl = `/css/noto-serif-bengali.min.css`;
 const FontPreloads = `<link rel="preload" as="font" type="font/woff2" href="/fonts/noto-serif-bengali/noto-serif-bengali-regular.woff2" crossorigin="anonymous">`;
@@ -89,11 +95,11 @@ console.log("{jsEntity}");
 
     <nav class="mt-14 flex justify-between">
       {prev ? (
-        <a class="max-w-[30vw] hover:underline" href={`/character/${prev.path}/`}>&larr; {prev.symbol} {prev.name}</a>
+        <a class="max-w-[30vw] hover:underline" href={`/unicode/character/${prev.path}/`}>&larr; {prev.symbol} {prev.name}</a>
       ) : <span />}
       
       {next ? (
-        <a class="max-w-[30vw] text-right hover:underline" href={`/character/${next.path}/`}>{next.name} {next.symbol} &rarr;</a>
+        <a class="max-w-[30vw] text-right hover:underline" href={`/unicode/character/${next.path}/`}>{next.name} {next.symbol} &rarr;</a>
       ) : <span />}
     </nav>
   
