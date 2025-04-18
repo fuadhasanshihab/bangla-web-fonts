@@ -5,14 +5,12 @@ import charactersBengali from '../../../collections/characters/bengali.json';
 import charactersOthers from '../../../collections/characters/others.json';
 
 export async function getStaticPaths() {
-   const allCharacters = [...charactersBengali, ...charactersOthers];
- 
-   return allCharacters.map(character => ({
-     params: { slug: character.path },
-   return characters.map(character => ({
-     params: { path: character.path },
-     props: character,
-   }));
+  const allCharacters = [...charactersA, ...charactersB];
+
+  return allCharacters.map(character => ({
+    params: { slug: character.path },
+    props: character,
+  }));
 }
 
 const { symbol, unicode, html, name, path } = Astro.props;
