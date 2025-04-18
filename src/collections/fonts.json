@@ -301,8 +301,8 @@
     "TotalStyles": "3",
     "FontFamily": "'UN Bangla', sans-serif",
     "FontPath": "un-bangla",
-    "FontWeights": [300, 400, 700],
-    "FontTesterWeights": [300, 400, 700],
+    "FontWeights": [100, 400, 700],
+    "FontTesterWeights": [100, 400, 700],
     "FontDesigner": "UNDP Bangladesh",
     "FontDesignerURL": "https://www.undp.org/bangladesh",
     "FontLicense": "OFL"
