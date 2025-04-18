@@ -1,7 +1,7 @@
 ---
-import Layout from "../../layouts/main.astro";
-import PageHeading from "../../components/page-heading.astro";
-import characters from '../../collections/characters/bengali.json';
+import Layout from "../../../layouts/main.astro";
+import PageHeading from "../../../components/page-heading.astro";
+import characters from '../../../collections/characters/bengali.json';
 
 export async function getStaticPaths() {
   return characters.map(character => ({
