@@ -1,14 +1,11 @@
 ---
 import Layout from "../../layouts/main.astro";
 import PageHeading from "../../components/page-heading.astro";
-import charactersBengali from '../../collections/characters/bengali.json';
-import charactersOthers from '../../collections/characters/others.json';
+import characters from '../../collections/bengali-unicode-characters.json';
 
 export async function getStaticPaths() {
-  const allCharacters = [...charactersBengali, ...charactersOthers];
-
-  return allCharacters.map(character => ({
-    params: { slug: character.path },
+  return characters.map(character => ({
+    params: { path: character.path },
     props: character,
   }));
 }
@@ -19,7 +16,6 @@ const formattedUnicode = unicode.replace('U+', '');
 const cssEntity = `\\${formattedUnicode}`;
 const jsEntity = `\\u${formattedUnicode}`;
 
-const characters = [...charactersBengali, ...charactersOthers];
 const currentIndex = characters.findIndex(char => char.path === path);
 const prev = characters[currentIndex - 1];
 const next = characters[currentIndex + 1];
