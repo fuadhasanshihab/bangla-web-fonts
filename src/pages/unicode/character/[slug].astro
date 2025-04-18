@@ -5,7 +5,7 @@ import charactersBengali from '../../../collections/characters/bengali.json';
 import charactersOthers from '../../../collections/characters/others.json';
 
 export async function getStaticPaths() {
-  const allCharacters = [...charactersA, ...charactersB];
+  const allCharacters = [...charactersBengali, ...charactersOthers];
 
   return allCharacters.map(character => ({
     params: { slug: character.path },
