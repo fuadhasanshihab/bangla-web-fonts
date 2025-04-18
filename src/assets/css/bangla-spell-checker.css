@@ -1,0 +1,207 @@
+#spellCheckDialog .normalLabel {
+  font-size: 16px;
+  margin-top: 10px
+}
+#spellCheckDialog .normalLabel input{
+  color: #000!important;
+}
+
+#spellCheckDialog .controlWindowBody {
+  position: relative;
+  font-size: 16px;
+}
+
+#spellCheckDialog .controlWindowBody .spellCheckCompleted {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#spellCheckDialog .controlTable {
+  margin: 0
+}
+
+#spellCheckDialog .readonlyInput {
+  background: #fff;
+  color: #000;
+  font-size: 17px;
+  width: 100%;
+  padding: 2px 16px;
+  border-radius: 12px;
+  border: 1px solid #999;
+  height: auto;
+  font-weight: 500;
+  margin-bottom:5px;
+}
+
+#spellCheckDialog .leftPnl {
+  width: 250px
+}
+
+#spellCheckDialog .leftPnl table {
+  width: 100%;
+  margin: 0
+}
+
+#spellCheckDialog .textDefault {
+  font-size: 16px;
+  width: 100%;
+  padding: 1px 16px;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  height: auto;
+  margin: 0;
+}
+
+#spellCheckDialog .buttonDefault {
+  width: 120px;
+  height: auto;
+  font-size: 15px;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  overflow: hidden;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border: 1px solid #aaa;
+  background-color: #000;
+  line-height: 1;
+  color: #fff;
+  border: none;
+  transition: 0.3s all ease-in-out;
+}
+
+#spellCheckDialog .buttonDefault:hover {
+  background-color: rgba(0,0,0,0.85);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.05);
+}
+
+#spellCheckDialog .suggSlct {
+  width: 100%;
+  margin: 5px 0 0;
+  font-size: 16px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid #999;
+  height: auto;
+  background: #fff;
+  color: black!important;
+}
+
+#spellCheckDialog .misspelled {
+  /* background: url(/assets/images/redline.gif) repeat-x scroll bottom left; */
+  background-color: rgba(255, 0, 0, 0.15);
+  padding: 0 2px;
+}
+
+#spellCheckDialog .currentWord {
+  background-color: rgba(255, 0, 0, 0.45);
+  font-size: 17px;
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+#spellCheckDialog .wordWindow {
+  border: 1px solid #black;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 12px 15px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: scroll;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+}
+.dark #spellCheckDialog .wordWindow {
+  background-color: #000;
+}
+
+#spellCheckDialog .loadingMessage {
+  text-align: center
+}
+
+#spellCheckDialog .wordWindow .wordWindowText {
+  /* modal textarea */
+  white-space: pre-wrap;
+  background-color: #fff;
+  font-size: 16px;
+  overflow: scroll;
+  height: 100%
+}
+.dark #spellCheckDialog .wordWindow .wordWindowText {
+  background-color: #000;
+}
+
+#spellCheckDialog .sponsor a {
+  font-size: 8px !important;
+}
+
+#spellCheckDialog .sponsor {
+  display:none;
+  margin-top: 3px;
+  text-align: right;
+  opacity: 0.2;
+  font-size: 6px !important;
+}
+
+#spellCheckDialog .right {
+  float: right
+}
+
+.ui-dialog {
+  background-color: #f9fafb;
+  border: 1px solid #fff;
+  max-width: 600px;
+  min-width: 350px;
+  width: 85% !important;
+  height: auto;
+  margin-top: 0px;
+  border-radius: 12px;
+  position: fixed;
+  top:30px!important;
+  box-shadow: 0px 15px 70px rgba(0,0,0,0.2);
+}
+.dark .ui-dialog {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.ui-dialog-titlebar {
+  background-color: #000000;
+  color: #fff!important;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  display: none;
+}
+
+.ui-dialog-content {
+  margin: 20px;
+  text-align: left
+}
+
+.ui-dialog-titlebar-close {
+  display: none
+}
+
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+
+.ui-front {
+  z-index: 100
+}
+
+@media(max-width:767px) {
+  .leftPnl {
+    width: 150px
+  }
+}
