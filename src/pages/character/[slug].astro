@@ -5,7 +5,7 @@ import characters from '../../collections/characters/bengali.json';
 
 export async function getStaticPaths() {
   return characters.map(character => ({
-    params: { path: character.path },
+    params: { slug: character.path },
     props: character,
   }));
 }
