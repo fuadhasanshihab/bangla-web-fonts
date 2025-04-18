@@ -26,7 +26,6 @@ function prettifySVG(svg) {
     .replace(/<svg([^>]*)>/, '<svg$1>\n') // Line break after <svg ...>
     .replace(/<\/svg>/, '\n</svg>') // Line break before </svg>
     .replace(/><(path|text|rect|circle|line|g|\/g)[^>]*>/g, '>\n  <$1') // Add newline + indent before major tags
-    .replace(/\n  <\/(path|text|rect|circle|line|g)>/g, match => match.replace('\n  ', '')) // Avoid splitting tags like </path>
     .trim();
 }
 const prettySVG = prettifySVG(IconSVG);
@@ -92,12 +91,12 @@ pre {
 
 
 
-<h2 class="mt-10 mb-2 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">{IconName} Icon in Various Sizes</h2>
+<h2 class="mt-10 mb-4 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">{IconName} Icon in Various Sizes</h2>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
   {sizes.map(size => (
     <div class="text-center bg-gray-50 rounded-xl border border-gray-100 p-3 flex flex-col justify-center">
-      <div class="m-auto p-auto min-h-[130px]" set:html={getSizedSVG(IconSVG, size)} />
-      <p class="text-sm mt-2 text-neutral-700">{size} × {size}</p>
+      <div class="m-auto p-auto min-h-[130px] flex justify-center" set:html={getSizedSVG(IconSVG, size)} />
+      <p class="text-sm mt-2 text-neutral-600">{size} × {size}</p>
     </div>
   ))}
 </div>
