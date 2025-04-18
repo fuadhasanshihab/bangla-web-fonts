@@ -23,10 +23,9 @@ function getSizedSVG(svg: string, size: number) {
 
 function prettifySVG(svg) {
   return svg
-    .replace(/></g, '>\n<') // line break between tags
-    .replace(/( {2})+/g, '') // remove unnecessary spaces
-    .replace(/(>)(<svg|<\/svg|<path|<\/path|<g|<\/g|<rect|<circle|<line|<text|<\/text)/g, '$1\n$2') // major tags
-    .replace(/^\s+|\s+$/g, '') // trim
+    .replace(/></g, '>\n  <') // line break + indent for all tags
+    .replace(/<svg([^>]*)>/, '<svg$1>\n') // line break after opening svg
+    .replace(/<\/svg>/, '\n</svg>') // line break before closing svg
     .trim();
 }
 const prettySVG = prettifySVG(IconSVG);
@@ -79,7 +78,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
 
 
 
-<h2 class="mt-8 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">SVG Code:</h2>
+<h2 class="mt-10 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">SVG Code:</h2>
 <CodeBox id="SVGcodebox" code={prettySVG}/>
 
 <style is:inline>
@@ -92,10 +91,10 @@ pre {
 
 
 
-<h2 class="text-xl font-semibold mt-10 mb-4">Size Previews</h2>
-<div class="grid grid-cols-3 sm:grid-cols-6 gap-4">
+<h2 class="mt-10 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">{IconName} Icon in Various Sizes</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
   {sizes.map(size => (
-    <div class="text-center">
+    <div class="text-center bg-neutral-300 p-3 flex flex-column justify-center">
       <div class="mx-auto" set:html={getSizedSVG(IconSVG, size)} />
       <p class="text-sm mt-2">{size}px</p>
     </div>
