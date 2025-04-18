@@ -21,6 +21,16 @@ function getSizedSVG(svg: string, size: number) {
     .replace(/height=['"][^'"]*['"]/, `height="${size}"`);
 }
 
+function prettifySVG(svg) {
+  return svg
+    .replace(/></g, '>\n<') // line break between tags
+    .replace(/( {2})+/g, '') // remove unnecessary spaces
+    .replace(/(>)(<svg|<\/svg|<path|<\/path|<g|<\/g|<rect|<circle|<line|<text|<\/text)/g, '$1\n$2') // major tags
+    .replace(/^\s+|\s+$/g, '') // trim
+    .trim();
+}
+const prettySVG = prettifySVG(IconSVG);
+
 const PageTitle = `${IconName} Icon`;
 const MetaDescription = ``;
 
@@ -70,7 +80,7 @@ const MetaKeywords = `${iconNameL}, ${iconNameL} unicode, ${iconNameL} icon, ${i
 
 
 <h2 class="mt-8 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">SVG Code:</h2>
-<CodeBox id="SVGcodebox" code={IconSVG}/>
+<CodeBox id="SVGcodebox" code={prettySVG}/>
 
 <style is:inline>
 pre {
