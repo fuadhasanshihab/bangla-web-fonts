@@ -284,5 +284,27 @@
     "FontDesigner": "Danh Hong",
     "FontDesignerURL": "https://github.com/danhhong",
     "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Bornoporichay",
+    "TotalStyles": "2",
+    "FontFamily": "'Bornoporichay', sans-serif",
+    "FontPath": "bornoporichay",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Subhadip Roy",
+    "FontDesignerURL": "https://www.facebook.com/subharoy7492",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "UN Bangla",
+    "TotalStyles": "3",
+    "FontFamily": "'UN Bangla', sans-serif",
+    "FontPath": "un-bangla",
+    "FontWeights": [300, 400, 700],
+    "FontTesterWeights": [300, 400, 700],
+    "FontDesigner": "UNDP Bangladesh",
+    "FontDesignerURL": "https://www.undp.org/bangladesh",
+    "FontLicense": "OFL"
   }
 ]
