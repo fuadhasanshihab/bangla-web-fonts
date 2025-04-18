@@ -50,6 +50,13 @@ import Layout from "../../layouts/main.astro";
         Clear
       </button>
     </div>
+
+<p class="mt-14 text-sm">
+  Spell Checking API powered by 
+  <a href="https://bangla.plus/" rel="noopener noreferrer" target="_blank" class="text-blue-600 hover:underline">
+    Bangla Plus
+  </a>
+</p>
   
   <script is:inline>
     function copyText() {
@@ -80,9 +87,7 @@ import Layout from "../../layouts/main.astro";
 
 <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script is:inline src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
-
 <script is:inline src="/assets/js/bangla-spell-checker.js"></script>
-
 <script is:inline>
   $("#spellCheck").click(function () {
     BanglaSpeller("#bangla-text", {
