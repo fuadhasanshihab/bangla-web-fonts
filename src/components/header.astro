@@ -123,3 +123,32 @@ import Logo from "../components/logo.astro";
   </div>
  </div>
 </header>
+
+
+<div id="searchModal" class="fixed top-[75px] inset-0 bg-white/90 dark:bg-black/10 hidden z-20 flex items-start justify-center px-7">
+    <div class="w-full max-w-md rounded-xl shadow-lg relative">
+
+      <!-- Search Input Group -->
+      <div class="relative">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Type a font name..." 
+          class="w-full px-4 pr-10 py-2 border border-dashed border-neutral-300 rounded-xl focus:outline-none focus:ring-0 focus:ring-neutral-300 focus:shadow-sm hover:shadow-sm"
+          autocomplete="off"
+        />
+        <button 
+          id="clearBtn" 
+          class="absolute right-4 top-2 text-gray-400 hover:text-gray-600 focus:outline-none hidden"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div 
+        id="results" 
+        class="mt-4 max-h-[400px] overflow-y-auto bg-white dark:bg-black border border-dashed border-neutral-300 rounded-xl shadow-sm hidden absolute w-full z-20 py-1"
+      ></div>
+
+    </div>
+  </div>
