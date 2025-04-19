@@ -1,15 +1,23 @@
 [
 	{
-		"name": "Home",
+		"name": "Fonts",
 		"url": "/"
+	},
+	{
+		"name": "Icons",
+		"url": "/icons/"
+	},
+	{
+		"name": "Tools",
+		"url": "/tools/"
+	},
+ {
+		"name": "Docs",
+		"url": "/documentation/"
 	},
 	{
 		"name": "About",
 		"url": "/about/"
-	},
-   {
-		"name": "Docs",
-		"url": "/documentation/"
 	},
 	{
 		"name": "Contact",
