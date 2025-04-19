@@ -25,77 +25,35 @@ import Layout from "../../layouts/main.astro";
     ></textarea>
 
     <div class="flex items-center gap-3 mt-4">
-      <!-- Copy Button -->
+
       <button
         id="copyButton"
         onclick="copyText()"
         class="px-4 py-2 bg-gray-200 hover:bg-gray-300  rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-600"
-      >
-        Copy
-      </button>
+      >Copy</button>
 
-      <!-- Check Spelling Button (Wider) -->
+      
       <button
         id="spellCheck"
         class="flex-1 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg transition-all duration-200 dark:bg-green-500 dark:hover:bg-green-600"
-      >
-        Check Spelling
-      </button>
+      >Check Spelling</button>
 
-      <!-- Clear Button -->
+      
       <button
         id="clearButton"
         onclick="clearText()"
         class="px-4 py-2 bg-gray-200 hover:bg-gray-300  rounded-lg transition-all duration-200 dark:bg-red-500 dark:hover:bg-red-600"
-      >
-        Clear
-      </button>
+      > Clear</button>
     </div>
 
-<p class="mt-8 text-sm">
-  Spell Checking API powered by 
-  <a href="https://bangla.plus/" rel="noopener noreferrer" target="_blank" class="text-blue-600 hover:underline">
-    Bangla Plus
-  </a>
-</p>
+<p class="mt-8 text-sm text-neutral-800">Spell Checking API powered by <a href="https://bangla.plus/" rel="noopener noreferrer" target="_blank" class="text-blue-600 hover:underline"> Bangla Plus</a></p>
   
-  <script is:inline>
-    function copyText() {
-      const textarea = document.getElementById('bangla-text');
-      const button = document.getElementById('copyButton');
-
-      textarea.select();
-      textarea.setSelectionRange(0, 99999);
-      document.execCommand('copy');
-
-      button.innerHTML = 'Copied';
-      button.disabled = true;
-      button.classList.add('opacity-50', 'cursor-not-allowed');
-
-      setTimeout(() => {
-        button.innerHTML = 'Copy';
-        button.disabled = false;
-        button.classList.remove('opacity-50', 'cursor-not-allowed');
-      }, 3000);
-    }
-
-    function clearText() {
-      const textarea = document.getElementById('bangla-text');
-      textarea.value = '';
-      textarea.focus();
-    }
-  </script>
+  <script is:inline>function copyText(){let e=document.getElementById("bangla-text"),t=document.getElementById("copyButton");e.select(),e.setSelectionRange(0,99999),document.execCommand("copy"),t.innerHTML="Copied",t.disabled=!0,t.classList.add("opacity-50","cursor-not-allowed"),setTimeout(()=>{t.innerHTML="Copy",t.disabled=!1,t.classList.remove("opacity-50","cursor-not-allowed")},3e3)}function clearText(){let e=document.getElementById("bangla-text");e.value="",e.focus()} </script>
 
 <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script is:inline src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
 <script is:inline src="/assets/js/bangla-spell-checker.js"></script>
-<script is:inline>
-  $("#spellCheck").click(function () {
-    BanglaSpeller("#bangla-text", {
-      displayLanguage: "English"
-    });
-  })
-</script>
+<script is:inline>$("#spellCheck").click(function(){BanglaSpeller("#bangla-text",{displayLanguage:"English"})});</script>
 
 
 </section>
