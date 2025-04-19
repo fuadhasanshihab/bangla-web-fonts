@@ -161,6 +161,10 @@ window.evaluateHeaderPosition = () => {
 		headerElement.classList.remove(...unstickyClasses);
 		document.getElementById("menu").classList.add("top-[56px]");
 		document.getElementById("menu").classList.remove("top-[75px]");
+
+document.getElementById("searchModal").classList.add("top-[56px]");
+		document.getElementById("searchModal").classList.remove("top-[75px]");
+
 	} else {
 		headerElement.firstElementChild.classList.remove(...stickyClassesContainer);
 		headerElement.firstElementChild.classList.add(...unstickyClassesContainer);
@@ -168,6 +172,10 @@ window.evaluateHeaderPosition = () => {
 		headerElement.classList.remove(...stickyClasses);
 		document.getElementById("menu").classList.remove("top-[56px]");
 		document.getElementById("menu").classList.add("top-[75px]");
+
+document.getElementById("searchModal").classList.remove("top-[56px]");
+		document.getElementById("searchModal").classList.add("top-[75px]");
+
 	}
 };
 
