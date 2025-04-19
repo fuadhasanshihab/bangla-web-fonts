@@ -162,8 +162,8 @@ window.evaluateHeaderPosition = () => {
 		document.getElementById("menu").classList.add("top-[56px]");
 		document.getElementById("menu").classList.remove("top-[75px]");
 
-document.getElementById("searchModal").classList.add("top-[56px]");
-		document.getElementById("searchModal").classList.remove("top-[75px]");
+document.getElementById("searchModal").classList.add("top-[55px]");
+		document.getElementById("searchModal").classList.remove("top-[74px]");
 
 	} else {
 		headerElement.firstElementChild.classList.remove(...stickyClassesContainer);
@@ -173,8 +173,8 @@ document.getElementById("searchModal").classList.add("top-[56px]");
 		document.getElementById("menu").classList.remove("top-[56px]");
 		document.getElementById("menu").classList.add("top-[75px]");
 
-document.getElementById("searchModal").classList.remove("top-[56px]");
-		document.getElementById("searchModal").classList.add("top-[75px]");
+document.getElementById("searchModal").classList.remove("top-[55px]");
+		document.getElementById("searchModal").classList.add("top-[74px]");
 
 	}
 };
