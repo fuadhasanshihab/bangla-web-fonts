@@ -1,7 +1,6 @@
 ---
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
-import SearchPopup from "../components/search-popup.astro";
 import SquareLines from "../components/square-lines.astro";
 const { title, extraStyleUrl, metaDescription, fontPreloads, metaKeywords } = Astro.props;
 
@@ -66,6 +65,5 @@ const schemaData = {
     <script src="../assets/js/main.js"></script>
     <script is:inline>if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('/sw.js')}</script>
     <Fragment set:html={import.meta.env.FOOTER_INJECT} />
-    <SearchPopup />
   </body>
 </html>
