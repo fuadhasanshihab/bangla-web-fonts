@@ -41,7 +41,10 @@ const MetaKeywords = `${iconNameL} icon, ${iconNameL} bangla icon, ${iconNameL} 
 
 
 
-<Layout title={PageTitle}  metaDescription={MetaDescription} metaKeywords={MetaKeywords}>
+<Layout title={PageTitle}  metaDescription={MetaDescription} metaKeywords={MetaKeywords}
+fontPreloads={<style>
+pre {overflow-x: auto!important;white-space: pre!important;word-break: normal!important;}</style>}
+>
 <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 
 
@@ -103,13 +106,7 @@ const MetaKeywords = `${iconNameL} icon, ${iconNameL} bangla icon, ${iconNameL} 
 
 </section>
 
-<style is:inline>
-pre {
-  overflow-x: auto!important;
-  white-space: pre!important;
-  word-break: normal!important;
-}
-</style>
+
 <script src="../../assets/js/font.js"></script>
 </Layout>
   
