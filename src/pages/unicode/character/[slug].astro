@@ -58,36 +58,39 @@ text-[6rem] my-7 rounded-xl p-7 md:p-10">{symbol}</div>
       <h3>HTML: <span class="text-xl font-semibold">{html}</span></h3>
 
   
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-800 dark:text-neutral-200"><code>/* CSS Usage Example */
+<pre class="mt-5 bg-gray-900 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-100 dark:text-neutral-200"><code>/* CSS Usage Example */
 .selector::before &#123;
   content: "{cssEntity}";
 &#125;
 </code></pre>
 
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-800 dark:text-neutral-200"><code>// JavaScript Usage Example
+<pre class="mt-5 bg-gray-900 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-100 dark:text-neutral-200"><code>// JavaScript Usage Example
 console.log("{jsEntity}"); 
 </code></pre>
 
-<pre class="mt-5 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-800 dark:text-neutral-200"><code>&lt;!-- HTML Usage Example --&gt;
+<pre class="mt-5 bg-gray-900 dark:bg-gray-900 rounded-xl p-4 text-sm text-neutral-100 dark:text-neutral-200"><code>&lt;!-- HTML Usage Example --&gt;
 &lt;p&gt;{html}&lt;/p&gt;</code></pre>
 
 <div class="mt-14">
   <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
-    {name} with your system fonts
+    {name} with system fonts
   </h2>
   <p class="text-gray-800 dark:text-gray-300 mb-3">
     These previews test how your browser displays {name} using the fonts installed on your device.
   </p>
+
   <div class="grid grid-cols-3 gap-4">
-    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm py-6 text-center">
+    <div class="border border-dashed border-neutral-300 hover:bg-gray-50 dark:bg-gray-900 rounded-xl py-6 text-center">
       <div class="text-5xl font-normal font-sans text-gray-900 dark:text-white mb-2">{symbol}</div>
       <div class="text-gray-800 dark:text-gray-200 text-sm font-sans">sans-serif</div>
     </div>
-    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm py-6 text-center">
+
+    <div class="border border-dashed border-neutral-300 hover:bg-gray-50 dark:bg-gray-900 rounded-xl py-6 text-center">
       <div class="text-5xl font-normal font-serif text-gray-900 dark:text-white mb-2">{symbol}</div>
       <div class="text-gray-800 dark:text-gray-200 text-sm font-serif">serif</div>
     </div>
-    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm py-6 text-center">
+
+    <div class="border border-dashed border-neutral-300 hover:bg-gray-50 dark:bg-gray-900 rounded-xl py-6 text-center">
       <div class="text-5xl font-normal font-mono text-gray-900 dark:text-white mb-2">{symbol}</div>
       <div class="text-gray-800 dark:text-gray-200 text-sm font-mono">monospace</div>
     </div>
