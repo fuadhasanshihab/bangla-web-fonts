@@ -26,9 +26,7 @@ import Layout from "../../layouts/main.astro";
         <button
           id="swapButton"
           class="inline-flex items-center justify-center gap-2 w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 rounded-xl transition"
-        >
-          ⇄ Swap Conversion Mode
-        </button>
+        >⇄ Swap Conversion Mode</button>
       </div>
 
       
@@ -54,9 +52,7 @@ import Layout from "../../layouts/main.astro";
           <button
             id="copyTextToUnicode"
             class="absolute top-2 right-2 bg-gray-800 text-white px-2 py-0.5 rounded-xl hover:bg-blue-700 transition text-sm"
-          >
-            Copy
-          </button>
+          >Copy</button>
         </div>
       </div>
 
@@ -84,9 +80,7 @@ import Layout from "../../layouts/main.astro";
           <button
             id="copyUnicodeToText"
             class="absolute top-2 right-2 bg-gray-800 text-white px-2 py-0.5 rounded-xl hover:bg-green-700 transition text-sm"
-          >
-            Copy
-          </button>
+          >Copy</button>
         </div>
       </div>
 
@@ -94,75 +88,7 @@ import Layout from "../../layouts/main.astro";
 
 
     
-  <script is:inline>
-    const textInput = document.getElementById('textInput');
-    const unicodeOutput = document.getElementById('unicodeOutput');
-    const unicodeInput = document.getElementById('unicodeInput');
-    const textOutput = document.getElementById('textOutput');
-
-    // Adjust height of textarea based on content
-    function autoResize(textarea) {
-      textarea.style.height = 'auto';
-      textarea.style.height = textarea.scrollHeight + 'px';
-    }
-
-    // Text → Unicode
-    textInput.addEventListener('input', () => {
-      const text = textInput.value;
-      const converted = Array.from(text)
-        .map(char => `\\u${char.charCodeAt(0).toString(16).padStart(4, '0')}`)
-        .join('');
-      unicodeOutput.value = converted;
-      autoResize(unicodeOutput);
-    });
-
-    // Unicode → Text
-    unicodeInput.addEventListener('input', () => {
-      const raw = unicodeInput.value.trim();
-      try {
-        const jsonSafe = `"${raw.replace(/"/g, '\\"')}"`;
-        textOutput.value = JSON.parse(jsonSafe);
-      } catch {
-        textOutput.value = '';
-      }
-      autoResize(textOutput);
-    });
-
-    // Copy feedback
-    function handleCopy(button, target) {
-      target.select();
-      document.execCommand('copy');
-
-      const original = button.textContent;
-      button.textContent = 'Copied!';
-      button.disabled = true;
-      button.classList.add('opacity-80', 'cursor-not-allowed');
-
-      setTimeout(() => {
-        button.textContent = original;
-        button.disabled = false;
-        button.classList.remove('opacity-80', 'cursor-not-allowed');
-      }, 2800);
-    }
-
-    document.getElementById('copyTextToUnicode').addEventListener('click', () =>
-      handleCopy(document.getElementById('copyTextToUnicode'), unicodeOutput)
-    );
-
-    document.getElementById('copyUnicodeToText').addEventListener('click', () =>
-      handleCopy(document.getElementById('copyUnicodeToText'), textOutput)
-    );
-
-    // Swap sections
-    document.getElementById('swapButton').addEventListener('click', () => {
-      document.getElementById('textToUnicodeSection').classList.toggle('hidden');
-      document.getElementById('unicodeToTextSection').classList.toggle('hidden');
-    });
-
-    // Initial auto-height adjustment
-    autoResize(unicodeOutput);
-    autoResize(textOutput);
-  </script>
+  <script is:inline>const textInput=document.getElementById("textInput"),unicodeOutput=document.getElementById("unicodeOutput"),unicodeInput=document.getElementById("unicodeInput"),textOutput=document.getElementById("textOutput");function autoResize(t){t.style.height="auto",t.style.height=t.scrollHeight+"px"}function handleCopy(t,e){e.select(),document.execCommand("copy");let n=t.textContent;t.textContent="Copied!",t.disabled=!0,t.classList.add("opacity-80","cursor-not-allowed"),setTimeout(()=>{t.textContent=n,t.disabled=!1,t.classList.remove("opacity-80","cursor-not-allowed")},2800)}textInput.addEventListener("input",()=>{let t=textInput.value,e=Array.from(t).map(t=>`\\u${t.charCodeAt(0).toString(16).padStart(4,"0")}`).join("");unicodeOutput.value=e,autoResize(unicodeOutput)}),unicodeInput.addEventListener("input",()=>{let t=unicodeInput.value.trim();try{let e=`"${t.replace(/"/g,'\\"')}"`;textOutput.value=JSON.parse(e)}catch{textOutput.value=""}autoResize(textOutput)}),document.getElementById("copyTextToUnicode").addEventListener("click",()=>handleCopy(document.getElementById("copyTextToUnicode"),unicodeOutput)),document.getElementById("copyUnicodeToText").addEventListener("click",()=>handleCopy(document.getElementById("copyUnicodeToText"),textOutput)),document.getElementById("swapButton").addEventListener("click",()=>{document.getElementById("textToUnicodeSection").classList.toggle("hidden"),document.getElementById("unicodeToTextSection").classList.toggle("hidden")}),autoResize(unicodeOutput),autoResize(textOutput); </script>
 
 
 
