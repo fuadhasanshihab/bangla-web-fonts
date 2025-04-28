@@ -39,6 +39,8 @@ jobs:
             convert -size 1280x720 xc:white -gravity center \
               -font "$FONT_FILE" -pointsize 48 \
               -annotate +0+0 "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি" \
+              -font "$FONT_FILE" -pointsize 24 -fill gray \
+              -annotate +0+200 "banglawebfonts.pages.dev" \
               "$OUTPUT_FILE"
             
             echo "Preview generated for $dir"
