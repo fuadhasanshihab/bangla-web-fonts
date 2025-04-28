@@ -1,0 +1,32 @@
+name: Generate Font Previews up
+
+on:
+  workflow_dispatch:  # manual trigger
+  
+
+jobs:
+  generate-previews:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install puppeteer
+
+      - name: Run preview generator
+        run: node scripts/generateFontPreview.js
+
+      - name: Commit and Push generated previews
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add public/fonts/**/font-preview.png
+          git commit -m "chore: Generate font preview images"
+          git push
