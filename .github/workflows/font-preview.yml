@@ -32,20 +32,13 @@ jobs:
               continue
             fi
 
-            # Extract the font name (assumes the folder name is the font name)
-            FONT_NAME=$(basename "$dir")
-
             # Set output preview file path
             OUTPUT_FILE="$dir/font-preview.png"
 
             # Generate the font preview image using ImageMagick
             convert -size 1280x720 xc:white -gravity center \
-              -font "$FONT_FILE" -pointsize 72 -fill black \
-              -annotate +0-200 "$FONT_NAME" \  # Font name at the top
-              -font "$FONT_FILE" -pointsize 48 -fill black \
-              -annotate +0+0 "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি" \  # Bengali demo text
-              -font "$FONT_FILE" -pointsize 24 -fill gray \
-              -annotate +0+200 "banglawebfonts.pages.dev" \  # Website at the bottom
+              -font "$FONT_FILE" -pointsize 48 \
+              -annotate +0+0 "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি" \
               "$OUTPUT_FILE"
             
             echo "Preview generated for $dir"
