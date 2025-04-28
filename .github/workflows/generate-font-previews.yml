@@ -1,7 +1,7 @@
-name: Generate Font Previews (No JS File)
+name: Generate Font Previews
 
 on:
-  workflow_dispatch:  # manually trigger
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -56,19 +56,20 @@ jobs:
                       justify-content: center;
                       align-items: center;
                       background: white;
-                      font-family: '\${fontFamily}', sans-serif;
-                      font-size: 48px;
+                      font-size: 56px;
                     }
                     .container {
                       text-align: center;
                     }
                     .font-link {
+                      position: absolute;
+                      bottom: 40px;
                       font-size: 24px;
-                      margin-top: 10px;
                       color: #555;
                     }
                     .bangla-text {
-                      font-size: 36px;
+                      font-family: '\${fontFamily}', sans-serif;
+                      font-size: 56px;
                       margin-top: 20px;
                     }
                   </style>
@@ -76,8 +77,8 @@ jobs:
                 <body>
                   <div class="container">
                     <div>\${fontFamily}</div>
+                    <div class="bangla-text">আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</div>
                     <div class="font-link">banglawebfonts.pages.dev/font/\${fontFolder}</div>
-                    <div class="bangla-text">আমার সোনার বাংলা, আমি তোমায় ভালোবাসি</div>
                   </div>
                 </body>
               </html>
@@ -87,7 +88,7 @@ jobs:
             await page.setContent(html, { waitUntil: 'networkidle0' });
             await page.evaluateHandle('document.fonts.ready');
 
-            const outputPath = path.join(fontDir, 'font-preview.png');
+            const outputPath = path.join(fontDir, 'preview.jpg');
             await page.screenshot({ path: outputPath });
             await browser.close();
           }
@@ -108,7 +109,7 @@ jobs:
 
       - name: Commit and Push generated previews
         run: |
-          git config --global user.name 'github-actions'
+          git config --global user.name 'fuadhasanshihab'
           git config --global user.email 'github-actions@github.com'
           git add public/fonts/**/font-preview.png
           git commit -m "chore: Generate font preview images"
