@@ -40,7 +40,7 @@ jobs:
               -font "$FONT_FILE" -pointsize 72 -fill black \
               -annotate +0-200 "$FONT_NAME Font" \
               -font "$FONT_FILE" -pointsize 48 \
-              -annotate +0+0 "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি" \
+              -annotate +0+0 "\u0986\u09AE\u09BE\u09B0 \u09B8\u09CB\u09A8\u09BE\u09B0 \u09AC\u09BE\u0992\u09B2\u09BE, \u0986\u09AE\u09BF \u09A4\u09CB\u09AE\u09BE\u098F \u09AC\u09B2\u09B2\u09BE\u099B\u09BF আমি তোমায় ভালোবাসি" \
               -font "$FONT_FILE" -pointsize 24 -fill gray \
               -annotate +0+200 "banglawebfonts.pages.dev" \
               "$OUTPUT_FILE"
