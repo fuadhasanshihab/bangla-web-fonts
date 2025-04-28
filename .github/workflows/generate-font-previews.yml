@@ -2,10 +2,10 @@ name: Generate Font Previews (No JS File)
 
 on:
   workflow_dispatch:  # manually trigger
-  
+
 permissions:
   contents: write
-  
+
 jobs:
   generate-previews:
     runs-on: ubuntu-latest
@@ -45,7 +45,8 @@ jobs:
             const html = \`
               <html>
                 <head>
-                  <link href='https://banglawebfonts.pages.dev/css/webfonts.min.css' rel='stylesheet'>
+                  <link rel="preload" href="https://banglawebfonts.pages.dev/fonts/\${fontFolder}/\${fontFolder}-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+                  <link href="https://banglawebfonts.pages.dev/css/webfonts.min.css" rel="stylesheet">
                   <style>
                     body {
                       margin: 0;
@@ -56,18 +57,36 @@ jobs:
                       align-items: center;
                       background: white;
                       font-family: '\${fontFamily}', sans-serif;
-                      font-size: 64px;
+                      font-size: 48px;
+                    }
+                    .container {
+                      text-align: center;
+                    }
+                    .font-link {
+                      font-size: 24px;
+                      margin-top: 10px;
+                      color: #555;
+                    }
+                    .bangla-text {
+                      font-size: 36px;
+                      margin-top: 20px;
                     }
                   </style>
                 </head>
                 <body>
-                  \${fontFamily}
+                  <div class="container">
+                    <div>\${fontFamily}</div>
+                    <div class="font-link">banglawebfonts.pages.dev/font/\${fontFolder}</div>
+                    <div class="bangla-text">আমার সোনার বাংলা, আমি তোমায় ভালোবাসি</div>
+                  </div>
                 </body>
               </html>
             \`;
 
             await page.setViewport({ width: 1280, height: 720 });
-            await page.setContent(html);
+            await page.setContent(html, { waitUntil: 'networkidle0' });
+            await page.evaluateHandle('document.fonts.ready');
+
             const outputPath = path.join(fontDir, 'font-preview.png');
             await page.screenshot({ path: outputPath });
             await browser.close();
