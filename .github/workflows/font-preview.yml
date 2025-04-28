@@ -1,10 +1,10 @@
 name: Generate Font Previews
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Allows for manual triggering
 
 permissions:
-  contents: write
+  contents: write  # Grant write access to repository contents
 
 jobs:
   generate-previews:
@@ -12,99 +12,51 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install canvas
-
-      - name: Generate Font Previews
+      - name: Install ImageMagick
         run: |
-          mkdir -p scripts
-          cat > scripts/generate-preview.cjs << 'EOF'
-          const fs = require('fs');
-          const path = require('path');
-          const { createCanvas, registerFont } = require('canvas');
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
 
-          const publicFontsDir = path.join(__dirname, '..', 'public', 'fonts');
-          const demoText = "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি";
-          const siteUrl = "banglawebfonts.pages.dev";
+      - name: Generate Font Preview Images
+        run: |
+          # Set the base fonts directory
+          FONT_DIR="./public/fonts"
+          
+          # Loop through each font directory
+          for dir in $(find $FONT_DIR -type d); do
+            FONT_FILE=$(find $dir -type f -name "*.woff2" | head -n 1)  # Find the .woff2 font file
+            if [ -z "$FONT_FILE" ]; then
+              echo "No .woff2 font file found in $dir"
+              continue
+            fi
 
-          const width = 1280;
-          const height = 720;
+            # Extract the font name (assumes the folder name is the font name)
+            FONT_NAME=$(basename "$dir")
 
-          function capitalizeName(name) {
-            return name
-              .split('-')
-              .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-              .join(' ');
-          }
+            # Set output preview file path
+            OUTPUT_FILE="$dir/font-preview.png"
 
-          function findWoff2File(dir) {
-            const files = fs.readdirSync(dir);
-            return files.find(file => file.endsWith('.woff2'));
-          }
+            # Generate the font preview image using ImageMagick
+            convert -size 1280x720 xc:white -gravity center \
+              -font "$FONT_FILE" -pointsize 72 -fill black \
+              -annotate +0-200 "$FONT_NAME" \  # Font name at the top
+              -font "$FONT_FILE" -pointsize 48 -fill black \
+              -annotate +0+0 "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি" \  # Bengali demo text
+              -font "$FONT_FILE" -pointsize 24 -fill gray \
+              -annotate +0+200 "banglawebfonts.pages.dev" \  # Website at the bottom
+              "$OUTPUT_FILE"
+            
+            echo "Preview generated for $dir"
+          done
 
-          const fontDirs = fs.readdirSync(publicFontsDir).filter(f => {
-            return fs.statSync(path.join(publicFontsDir, f)).isDirectory();
-          });
-
-          for (const fontDir of fontDirs) {
-            const fontPath = path.join(publicFontsDir, fontDir);
-            const woff2File = findWoff2File(fontPath);
-            if (!woff2File) {
-              console.log(`No .woff2 found in ${fontDir}`);
-              continue;
-            }
-
-            const fontFullPath = path.join(fontPath, woff2File);
-
-            // Register the font
-            registerFont(fontFullPath, { family: fontDir });
-
-            // Create canvas
-            const canvas = createCanvas(width, height);
-            const ctx = canvas.getContext('2d');
-
-            // White background
-            ctx.fillStyle = '#FFFFFF';
-            ctx.fillRect(0, 0, width, height);
-
-            // Draw font name
-            ctx.fillStyle = '#000000';
-            ctx.font = 'bold 48px sans-serif';
-            ctx.textAlign = 'center';
-            ctx.fillText(capitalizeName(fontDir), width / 2, 100);
-
-            // Draw demo text
-            ctx.font = `bold 64px "${fontDir}"`;
-            ctx.fillText(demoText, width / 2, height / 2);
-
-            // Draw site url
-            ctx.font = '24px sans-serif';
-            ctx.fillText(siteUrl, width / 2, height - 50);
-
-            // Save to file
-            const outPath = path.join(fontPath, 'font-preview.png');
-            const buffer = canvas.toBuffer('image/png');
-            fs.writeFileSync(outPath, buffer);
-
-            console.log(`Generated preview for ${fontDir}`);
-          }
-          EOF
-
-          node scripts/generate-preview.cjs
-
-      - name: Commit and push previews
+      - name: Commit and push images
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add public/fonts/**/font-preview.png
+          git add .
           git commit -m "Generate font preview images"
-          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }} 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
