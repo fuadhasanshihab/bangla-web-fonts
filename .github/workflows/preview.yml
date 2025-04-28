@@ -19,8 +19,19 @@ jobs:
       - name: Install dependencies
         run: |
           npm install canvas
+          sudo apt-get install -y woff2  # Install the woff2 conversion tool
 
-      - name: Create script file
+      - name: Convert .woff2 to .ttf
+        run: |
+          # Find all the .woff2 files in the public/fonts directory and convert them to .ttf
+          find ./public/fonts -type f -name "*.woff2" | while read woff2file; do
+            # Convert .woff2 to .ttf using the woff2 tool
+            ttf_file="${woff2file%.woff2}.ttf"
+            woff2_decompress "$woff2file" && mv "${woff2file%.woff2}.ttf" "$ttf_file"
+            echo "Converted $woff2file to $ttf_file"
+          done
+
+      - name: Create script file for generating previews
         run: |
           cat << 'EOF' > generate-previews.cjs
           const fs = require('fs');
@@ -34,10 +45,10 @@ jobs:
 
           const generatePreview = (fontDir) => {
             const fontPath = path.join(fontsDirectory, fontDir);
-            const fontFile = fs.readdirSync(fontPath).find(file => file.endsWith('.woff2'));
+            const fontFile = fs.readdirSync(fontPath).find(file => file.endsWith('.ttf'));  // Now looking for .ttf files
 
             if (!fontFile) {
-              console.log(`No .woff2 font file found in ${fontPath}`);
+              console.log(`No .ttf font file found in ${fontPath}`);
               return;
             }
 
