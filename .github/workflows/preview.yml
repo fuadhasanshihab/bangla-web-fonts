@@ -22,7 +22,7 @@ jobs:
 
       - name: Create script file
         run: |
-          cat << 'EOF' > generate-previews.js
+          cat << 'EOF' > generate-previews.cjs
           const fs = require('fs');
           const path = require('path');
           const { createCanvas, registerFont } = require('canvas');
@@ -67,7 +67,7 @@ jobs:
 
       - name: Run the script
         run: |
-          node generate-previews.js
+          node generate-previews.cjs
 
       - name: Commit and push images
         run: |
