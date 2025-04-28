@@ -1,4 +1,4 @@
-name: Generate Font Previews Image
+name: Generate Font Previews img
 
 on:
   workflow_dispatch:  # Allows for manual triggering
@@ -14,43 +14,79 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install ImageMagick
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick
+          sudo apt-get install -y curl woff2
+          pip install pillow  # Install Pillow for image manipulation
 
-      - name: Generate Font Preview Images
+      - name: Convert .woff2 to .ttf
         run: |
-          # Set the base fonts directory
+          # Set the font directory
           FONT_DIR="./public/fonts"
           
-          # Loop through each font directory
-          for dir in $(find $FONT_DIR -type d); do
-            FONT_FILE=$(find $dir -type f -name "*.woff2" | head -n 1)  # Find the .woff2 font file
-            if [ -z "$FONT_FILE" ]; then
-              echo "No .woff2 font file found in $dir"
-              continue
-            fi
+          # Create a directory to store converted fonts
+          mkdir -p ./converted_fonts
 
-            # Set output preview file path
-            OUTPUT_FILE="$dir/font-preview.png"
-
-            # Generate the font preview image using ImageMagick
-            convert -size 1280x720 xc:white -gravity center \
-              -font "$FONT_FILE" -pointsize 72 -fill black \
-              -annotate +0-200 "$FONT_NAME Font" \
-              -font "$FONT_FILE" -pointsize 48 \
-              -annotate +0+0 "\u0986\u09AE\u09BE\u09B0 \u09B8\u09CB\u09A8\u09BE\u09B0 \u09AC\u09BE\u0992\u09B2\u09BE, \u0986\u09AE\u09BF \u09A4\u09CB\u09AE\u09BE\u098F \u09AC\u09B2\u09B2\u09BE\u099B\u09BF আমি তোমায় ভালোবাসি" \
-              -font "$FONT_FILE" -pointsize 24 -fill gray \
-              -annotate +0+200 "banglawebfonts.pages.dev" \
-              "$OUTPUT_FILE"
+          # Convert each .woff2 font to .ttf
+          for font_file in $(find $FONT_DIR -type f -name "*.woff2"); do
+            # Get the base font name without extension
+            FONT_NAME=$(basename "$font_file" .woff2)
             
-            echo "Preview generated for $dir"
+            # Convert .woff2 to .ttf using the woff2 tool
+            woff2_decompress "$font_file" -o "./converted_fonts/${FONT_NAME}.ttf"
+            echo "Converted $font_file to ./converted_fonts/${FONT_NAME}.ttf"
           done
+
+      - name: Generate Font Preview Images with Pillow
+        run: |
+          FONT_DIR="./public/fonts"
+          CONVERTED_FONT_DIR="./converted_fonts"
+          
+          # Loop through each converted font file
+          for font_file in $(find $CONVERTED_FONT_DIR -type f -name "*.ttf"); do
+            FONT_NAME=$(basename "$font_file" | sed 's/\.[^.]*$//')  # Get the font name without extension
+            OUTPUT_FILE="./public/fonts/${FONT_NAME}-preview.png"  # Output file for each font
+
+            # Create the Python script to generate font previews using Pillow
+            echo '
+from PIL import Image, ImageDraw, ImageFont
+
+# Set font and text
+font_path = "'"$font_file"'"
+text = "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি"
+output_file = "'"$OUTPUT_FILE"'"
+
+# Create image
+image = Image.new("RGB", (1280, 720), (255, 255, 255))
+draw = ImageDraw.Draw(image)
+
+# Load font and set size
+font = ImageFont.truetype(font_path, 48)
+
+# Draw text on the image
+draw.text((50, 150), font_path.split("/")[-1].replace(".ttf", "") + " Font", font=font, fill="black")
+draw.text((50, 250), text, font=font, fill="black")
+draw.text((50, 350), "banglawebfonts.pages.dev", font=font, fill="gray")
+
+# Save the image
+image.save(output_file)
+' > generate_preview.py
+
+            # Run the Python script for each font
+            python generate_preview.py
+
+          # Move the generated images to the correct directory
+          mv *.png ./public/fonts/
 
       - name: Commit and push images
         run: |
-          git config --global user.name "fuadhasanshihab"
+          git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add .
           git commit -m "Generate font preview images"
