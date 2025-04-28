@@ -14,14 +14,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Or '20' for a more recent version
+          node-version: '18'
 
       - name: Install dependencies
         run: |
           npm install canvas
 
-      - name: Generate Font Preview Images
+      - name: Create script file
         run: |
+          cat << 'EOF' > generate-previews.js
           const fs = require('fs');
           const path = require('path');
           const { createCanvas, registerFont } = require('canvas');
@@ -33,10 +34,10 @@ jobs:
 
           const generatePreview = (fontDir) => {
             const fontPath = path.join(fontsDirectory, fontDir);
-            const fontFile = fs.readdirSync(fontPath).find(file => file.endsWith('.woof2'));
+            const fontFile = fs.readdirSync(fontPath).find(file => file.endsWith('.woff2'));
 
             if (!fontFile) {
-              console.log(`No .woof2 font file found in ${fontPath}`);
+              console.log(`No .woff2 font file found in ${fontPath}`);
               return;
             }
 
@@ -50,8 +51,10 @@ jobs:
             const canvas = createCanvas(width, height);
             const ctx = canvas.getContext('2d');
 
-            ctx.font = '48px ' + fontDir;
+            ctx.fillStyle = '#fff';
+            ctx.fillRect(0, 0, width, height); // white background
             ctx.fillStyle = '#000';
+            ctx.font = '48px "' + fontDir + '"';
             ctx.fillText('The quick brown fox jumps over the lazy dog', 50, 150);
 
             const buffer = canvas.toBuffer('image/png');
@@ -60,6 +63,11 @@ jobs:
           };
 
           fontDirs.forEach(fontDir => generatePreview(fontDir));
+          EOF
+
+      - name: Run the script
+        run: |
+          node generate-previews.js
 
       - name: Commit and push images
         run: |
