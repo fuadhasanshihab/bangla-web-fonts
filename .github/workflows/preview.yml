@@ -1,0 +1,70 @@
+name: Generate Font Previews
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-previews:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'  # Or '20' for a more recent version
+
+      - name: Install dependencies
+        run: |
+          npm install canvas
+
+      - name: Generate Font Preview Images
+        run: |
+          const fs = require('fs');
+          const path = require('path');
+          const { createCanvas, registerFont } = require('canvas');
+
+          const fontsDirectory = './public/fonts';
+          const fontDirs = fs.readdirSync(fontsDirectory, { withFileTypes: true })
+            .filter(dir => dir.isDirectory())
+            .map(dir => dir.name);
+
+          const generatePreview = (fontDir) => {
+            const fontPath = path.join(fontsDirectory, fontDir);
+            const fontFile = fs.readdirSync(fontPath).find(file => file.endsWith('.woof2'));
+
+            if (!fontFile) {
+              console.log(`No .woof2 font file found in ${fontPath}`);
+              return;
+            }
+
+            const fontFilePath = path.join(fontPath, fontFile);
+            const previewImagePath = path.join(fontPath, 'font-preview.png');
+
+            registerFont(fontFilePath, { family: fontDir });
+
+            const width = 1280;
+            const height = 720;
+            const canvas = createCanvas(width, height);
+            const ctx = canvas.getContext('2d');
+
+            ctx.font = '48px ' + fontDir;
+            ctx.fillStyle = '#000';
+            ctx.fillText('The quick brown fox jumps over the lazy dog', 50, 150);
+
+            const buffer = canvas.toBuffer('image/png');
+            fs.writeFileSync(previewImagePath, buffer);
+            console.log(`Generated preview for ${fontDir}`);
+          };
+
+          fontDirs.forEach(fontDir => generatePreview(fontDir));
+
+      - name: Commit and push images
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Generate font preview images"
+          git push
