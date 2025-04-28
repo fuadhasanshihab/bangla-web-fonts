@@ -23,9 +23,9 @@ jobs:
           
           # Loop through each font directory
           for dir in $(find $FONT_DIR -type d); do
-            FONT_FILE=$(find $dir -type f -name "*.woof2" | head -n 1)  # Find the .woof2 font file
+            FONT_FILE=$(find $dir -type f -name "*.woff2" | head -n 1)  # Find the .woff2 font file
             if [ -z "$FONT_FILE" ]; then
-              echo "No .woof2 font file found in $dir"
+              echo "No .woff2 font file found in $dir"
               continue
             fi
 
