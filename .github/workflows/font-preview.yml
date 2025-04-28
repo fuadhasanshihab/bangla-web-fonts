@@ -1,7 +1,7 @@
 name: Generate Font Previews
 
 on:
-  workflow_dispatch: # This allows the workflow to be manually triggered
+  workflow_dispatch:  # Allows for manual triggering
 
 jobs:
   generate-previews:
@@ -11,62 +11,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
-      - name: Install dependencies
+      - name: Install ImageMagick
         run: |
-          npm install canvas
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
 
       - name: Generate Font Preview Images
         run: |
-          const fs = require('fs');
-          const path = require('path');
-          const { createCanvas, registerFont } = require('canvas');
+          # Set the base fonts directory
+          FONT_DIR="./public/fonts"
+          
+          # Loop through each font directory
+          for dir in $(find $FONT_DIR -type d); do
+            FONT_FILE=$(find $dir -type f -name "*.woof2" | head -n 1)  # Find the .woof2 font file
+            if [ -z "$FONT_FILE" ]; then
+              echo "No .woof2 font file found in $dir"
+              continue
+            fi
 
-          // Get all font directories in the public/fonts/ directory
-          const fontsDirectory = './public/fonts';
-          const fontDirs = fs.readdirSync(fontsDirectory, { withFileTypes: true })
-            .filter(dir => dir.isDirectory())
-            .map(dir => dir.name);
+            # Set output preview file path
+            OUTPUT_FILE="$dir/font-preview.png"
 
-          // Function to generate preview for a given font directory
-          const generatePreview = (fontDir) => {
-            const fontPath = path.join(fontsDirectory, fontDir);
-            const fontFile = fs.readdirSync(fontPath).find(file => file.endsWith('.woof2'));
-
-            if (!fontFile) {
-              console.log(`No .woof2 font file found in ${fontPath}`);
-              return;
-            }
-
-            const fontFilePath = path.join(fontPath, fontFile);
-            const previewImagePath = path.join(fontPath, 'font-preview.png');
-
-            // Register font (make sure to use the correct font file path if necessary)
-            registerFont(fontFilePath, { family: fontDir });
-
-            // Set up canvas with 16:9 aspect ratio
-            const width = 1280;
-            const height = 720;
-            const canvas = createCanvas(width, height);
-            const ctx = canvas.getContext('2d');
-
-            // Set the font and draw text
-            ctx.font = '48px ' + fontDir;
-            ctx.fillStyle = '#000'; // Text color
-            ctx.fillText('The quick brown fox jumps over the lazy dog', 50, 150);
-
-            // Save the preview image to the directory
-            const buffer = canvas.toBuffer('image/png');
-            fs.writeFileSync(previewImagePath, buffer);
-            console.log(`Generated preview for ${fontDir}`);
-          };
-
-          // Loop over all font directories and generate previews
-          fontDirs.forEach(fontDir => generatePreview(fontDir));
+            # Generate the font preview image using ImageMagick
+            convert -size 1280x720 xc:white -gravity center \
+              -font "$FONT_FILE" -pointsize 48 \
+              -annotate +0+0 "The quick brown fox jumps over the lazy dog" \
+              "$OUTPUT_FILE"
+            
+            echo "Preview generated for $dir"
+          done
 
       - name: Commit and push images
         run: |
