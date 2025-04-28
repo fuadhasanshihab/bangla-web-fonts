@@ -1,4 +1,4 @@
-name: Generate Font Previews
+name: Generate Font Previews old
 
 on:
   workflow_dispatch:  # Allows for manual triggering
