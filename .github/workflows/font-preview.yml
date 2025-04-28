@@ -1,10 +1,10 @@
 name: Generate Font Previews
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Allows for manual triggering
 
 permissions:
-  contents: write
+  contents: write  # Grant write access to repository contents
 
 jobs:
   generate-previews:
@@ -14,47 +14,46 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Install ImageMagick
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick libpangocairo-1.0-0 woff2 fontconfig
+          sudo apt-get install -y imagemagick
 
-      - name: Generate font preview images
+      - name: Generate Font Preview Images
         run: |
+          # Set the base fonts directory
           FONT_DIR="./public/fonts"
-
-          for dir in $(find $FONT_DIR -mindepth 1 -maxdepth 1 -type d); do
-            FONT_WOFF2=$(find $dir -type f -name "*.woff2" | head -n 1)
-
-            if [ -z "$FONT_WOFF2" ]; then
-              echo "No .woff2 font file in $dir"
+          
+          # Loop through each font directory
+          for dir in $(find $FONT_DIR -type d); do
+            FONT_FILE=$(find $dir -type f -name "*.woff2" | head -n 1)  # Find the .woff2 font file
+            if [ -z "$FONT_FILE" ]; then
+              echo "No .woff2 font file found in $dir"
               continue
             fi
 
-            # Convert WOFF2 to TTF
-            woff2_decompress "$FONT_WOFF2"
-            FONT_TTF="${FONT_WOFF2%.woff2}.ttf"
-
-            if [ ! -f "$FONT_TTF" ]; then
-              echo "Failed to decompress $FONT_WOFF2"
-              continue
-            fi
-
-            FONT_NAME=$(basename "$dir")
+            # Set output preview file path
             OUTPUT_FILE="$dir/font-preview.png"
 
-            # Generate image with pango
-            convert -background white -size 1280x720 \
-              "pango:<markup><span font_family='$FONT_NAME' size='72000' weight='bold'>$FONT_NAME</span>\n\n<span font_family='$FONT_NAME' size='48000'>আমার সোনার বাংলা, আমি তোমায় ভালোবাসি</span>\n\n<span font_family='$FONT_NAME' size='24000' foreground='gray'>banglawebfonts.pages.dev</span></markup>" \
+            # Generate the font preview image using ImageMagick
+            convert -size 1280x720 xc:white -gravity center \
+              -font "$FONT_FILE" -pointsize 72 -fill black \
+              -annotate +0-200 "$FONT_NAME Font" \
+              -font "$FONT_FILE" -pointsize 48 \
+              -annotate +0+0 "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি" \
+              -font "$FONT_FILE" -pointsize 24 -fill gray \
+              -annotate +0+200 "banglawebfonts.pages.dev" \
               "$OUTPUT_FILE"
+            
+            echo "Preview generated for $dir"
           done
 
-      - name: Commit and push
+      - name: Commit and push images
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add .
           git commit -m "Generate font preview images"
-          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }} 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
