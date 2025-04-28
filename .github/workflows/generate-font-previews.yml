@@ -1,7 +1,7 @@
-name: Generate Font Previews up
+name: Generate Font Previews (No JS File)
 
 on:
-  workflow_dispatch:  # manual trigger
+  workflow_dispatch:  # manually trigger
   
 
 jobs:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -17,11 +17,73 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install Puppeteer
         run: npm install puppeteer
 
-      - name: Run preview generator
-        run: node scripts/generateFontPreview.js
+      - name: Generate font previews
+        run: |
+          node -e "
+          const puppeteer = require('puppeteer');
+          const fs = require('fs');
+          const path = require('path');
+
+          function toFontFamily(name) {
+            return name.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+          }
+
+          async function generateFontPreview(fontDir) {
+            const fontFolder = path.basename(fontDir);
+            const fontFamily = toFontFamily(fontFolder);
+
+            const browser = await puppeteer.launch({
+              args: ['--no-sandbox', '--disable-setuid-sandbox']
+            });
+            const page = await browser.newPage();
+
+            const html = \`
+              <html>
+                <head>
+                  <link href='https://banglawebfonts.pages.dev/css/webfonts.min.css' rel='stylesheet'>
+                  <style>
+                    body {
+                      margin: 0;
+                      width: 1280px;
+                      height: 720px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background: white;
+                      font-family: '\${fontFamily}', sans-serif;
+                      font-size: 64px;
+                    }
+                  </style>
+                </head>
+                <body>
+                  \${fontFamily}
+                </body>
+              </html>
+            \`;
+
+            await page.setViewport({ width: 1280, height: 720 });
+            await page.setContent(html);
+            const outputPath = path.join(fontDir, 'font-preview.png');
+            await page.screenshot({ path: outputPath });
+            await browser.close();
+          }
+
+          async function main() {
+            const baseDir = path.join('public', 'fonts');
+            const folders = fs.readdirSync(baseDir).filter(file => fs.statSync(path.join(baseDir, file)).isDirectory());
+
+            for (const folder of folders) {
+              const fontDir = path.join(baseDir, folder);
+              console.log('Generating preview for', folder);
+              await generateFontPreview(fontDir);
+            }
+          }
+
+          main().catch(err => { console.error(err); process.exit(1); });
+          "
 
       - name: Commit and Push generated previews
         run: |
