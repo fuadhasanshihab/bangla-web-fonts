@@ -25,7 +25,7 @@ jobs:
       - name: Generate Font Previews
         run: |
           mkdir -p scripts
-          cat > scripts/generate-preview.js << 'EOF'
+          cat > scripts/generate-preview.cjs << 'EOF'
           const fs = require('fs');
           const path = require('path');
           const { createCanvas, registerFont } = require('canvas');
@@ -97,7 +97,7 @@ jobs:
           }
           EOF
 
-          node scripts/generate-preview.js
+          node scripts/generate-preview.cjs
 
       - name: Commit and push previews
         run: |
