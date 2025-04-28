@@ -1,4 +1,4 @@
-name: Generate Font Previews img
+name: Generate Font Previews
 
 on:
   workflow_dispatch:  # Allows for manual triggering
@@ -54,29 +54,29 @@ jobs:
             OUTPUT_FILE="./public/fonts/${FONT_NAME}-preview.png"  # Output file for each font
 
             # Create the Python script to generate font previews using Pillow
-            echo '
-from PIL import Image, ImageDraw, ImageFont
+            cat > generate_preview.py <<EOF
+              from PIL import Image, ImageDraw, ImageFont
 
-# Set font and text
-font_path = "'"$font_file"'"
-text = "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি"
-output_file = "'"$OUTPUT_FILE"'"
+              # Set font and text
+              font_path = "$font_file"
+              text = "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি"
+              output_file = "$OUTPUT_FILE"
 
-# Create image
-image = Image.new("RGB", (1280, 720), (255, 255, 255))
-draw = ImageDraw.Draw(image)
+              # Create image
+              image = Image.new("RGB", (1280, 720), (255, 255, 255))
+              draw = ImageDraw.Draw(image)
 
-# Load font and set size
-font = ImageFont.truetype(font_path, 48)
+              # Load font and set size
+              font = ImageFont.truetype(font_path, 48)
 
-# Draw text on the image
-draw.text((50, 150), font_path.split("/")[-1].replace(".ttf", "") + " Font", font=font, fill="black")
-draw.text((50, 250), text, font=font, fill="black")
-draw.text((50, 350), "banglawebfonts.pages.dev", font=font, fill="gray")
+              # Draw text on the image
+              draw.text((50, 150), font_path.split("/")[-1].replace(".ttf", "") + " Font", font=font, fill="black")
+              draw.text((50, 250), text, font=font, fill="black")
+              draw.text((50, 350), "banglawebfonts.pages.dev", font=font, fill="gray")
 
-# Save the image
-image.save(output_file)
-' > generate_preview.py
+              # Save the image
+              image.save(output_file)
+            EOF
 
             # Run the Python script for each font
             python generate_preview.py
