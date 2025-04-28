@@ -19,24 +19,24 @@ jobs:
       - name: Install dependencies
         run: |
           npm install canvas
-          sudo apt-get install -y woff2  # Install the woff2 conversion tool
-
-      - name: Convert .woff2 to .ttf
-        run: |
-          # Find all the .woff2 files in the public/fonts directory and convert them to .ttf
-          find ./public/fonts -type f -name "*.woff2" | while read woff2file; do
-            # Convert .woff2 to .ttf using the woff2 tool
-            ttf_file="${woff2file%.woff2}.ttf"
-            woff2_decompress "$woff2file" && mv "${woff2file%.woff2}.ttf" "$ttf_file"
-            echo "Converted $woff2file to $ttf_file"
-          done
-
+          
       - name: Create script file for generating previews
         run: |
           cat << 'EOF' > generate-previews.cjs
           const fs = require('fs');
           const path = require('path');
-          const { createCanvas, registerFont } = require('canvas');
+          const { createCanvas, loadImage } = require('canvas');
+
+          // The CDN link where fonts are hosted
+          const cdnFontCss = "https://banglawebfonts.pages.dev/css/webfonts.min.css";  // Your CDN URL for fonts
+
+          // Function to format the font-family names (capitalized and no hyphens)
+          const formatFontFamily = (fontName) => {
+            return fontName
+              .split('-')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ');
+          };
 
           const fontsDirectory = './public/fonts';
           const fontDirs = fs.readdirSync(fontsDirectory, { withFileTypes: true })
@@ -44,19 +44,11 @@ jobs:
             .map(dir => dir.name);
 
           const generatePreview = (fontDir) => {
+            const fontFamily = formatFontFamily(fontDir);  // Format font family for the preview text
             const fontPath = path.join(fontsDirectory, fontDir);
-            const fontFile = fs.readdirSync(fontPath).find(file => file.endsWith('.ttf'));  // Now looking for .ttf files
-
-            if (!fontFile) {
-              console.log(`No .ttf font file found in ${fontPath}`);
-              return;
-            }
-
-            const fontFilePath = path.join(fontPath, fontFile);
             const previewImagePath = path.join(fontPath, 'font-preview.png');
 
-            registerFont(fontFilePath, { family: fontDir });
-
+            // Create canvas and context
             const width = 1280;
             const height = 720;
             const canvas = createCanvas(width, height);
@@ -64,13 +56,15 @@ jobs:
 
             ctx.fillStyle = '#fff';
             ctx.fillRect(0, 0, width, height); // white background
+
+            // Use the formatted font-family from the CDN CSS
             ctx.fillStyle = '#000';
-            ctx.font = '48px "' + fontDir + '"';
+            ctx.font = `48px "${fontFamily}"`;  // Use the formatted font-family
             ctx.fillText('The quick brown fox jumps over the lazy dog', 50, 150);
 
             const buffer = canvas.toBuffer('image/png');
             fs.writeFileSync(previewImagePath, buffer);
-            console.log(`Generated preview for ${fontDir}`);
+            console.log(`Generated preview for ${fontFamily}`);
           };
 
           fontDirs.forEach(fontDir => generatePreview(fontDir));
