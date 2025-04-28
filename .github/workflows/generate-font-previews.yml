@@ -3,7 +3,9 @@ name: Generate Font Previews (No JS File)
 on:
   workflow_dispatch:  # manually trigger
   
-
+permissions:
+  contents: write
+  
 jobs:
   generate-previews:
     runs-on: ubuntu-latest
