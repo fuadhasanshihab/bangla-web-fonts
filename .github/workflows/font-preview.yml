@@ -38,7 +38,7 @@ jobs:
             # Generate the font preview image using ImageMagick
             convert -size 1280x720 xc:white -gravity center \
               -font "$FONT_FILE" -pointsize 72 -fill black \
-              -annotate +0-200 "$FONT_NAME" \
+              -annotate +0-200 "$FONT_NAME Font" \
               -font "$FONT_FILE" -pointsize 48 \
               -annotate +0+0 "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি" \
               -font "$FONT_FILE" -pointsize 24 -fill gray \
