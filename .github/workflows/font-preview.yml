@@ -3,6 +3,9 @@ name: Generate Font Previews
 on:
   workflow_dispatch:  # Allows for manual triggering
 
+permissions:
+  contents: write  # Grant write access to repository contents
+
 jobs:
   generate-previews:
     runs-on: ubuntu-latest
