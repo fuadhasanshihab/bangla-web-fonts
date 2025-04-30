@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/adorsho-lipi",
+  "version": "1.0.0",
+  "description": "Adorsho Lipi web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "adorsho lipi"
+  ],
+  "author": "Partha Sarathi Pal",
+  "license": "GPL",
+  "homepage": "https://banglawebfonts.pages.dev/adorsho-lipi/"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/mukti",
+  "version": "1.0.0",
+  "description": "Mukti web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "mukti"
+  ],
+  "author": "Dr. Anirban Mitra",
+  "license": "GPL",
+  "homepage": "https://banglawebfonts.pages.dev/mukti/"
+}

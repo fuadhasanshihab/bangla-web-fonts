@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/bensen",
+  "version": "1.0.0",
+  "description": "Bensen web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "bensen"
+  ],
+  "author": "Subrata Sen",
+  "license": "GPL",
+  "homepage": "https://banglawebfonts.pages.dev/bensen/"
+}

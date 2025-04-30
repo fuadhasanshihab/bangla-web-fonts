@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/sapa",
+  "version": "1.0.0",
+  "description": "Sapa web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "sapa"
+  ],
+  "author": "Danh Hong",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/sapa/"
+}

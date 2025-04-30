@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/lohit-bengali",
+  "version": "1.0.0",
+  "description": "Lohit Bengali web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "lohit bengali"
+  ],
+  "author": "Lohit Fonts Project",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/lohit-bengali/"
+}

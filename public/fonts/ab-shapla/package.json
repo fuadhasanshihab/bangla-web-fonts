@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/ab-shapla",
+  "version": "1.0.0",
+  "description": "AB Shapla web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "ab shapla"
+  ],
+  "author": "Maksud Rahman, Muhammad Nazimuddaula, Tirana Khan",
+  "license": "This font is free for everyone to use, but its commercial distribution is strictly prohibited.",
+  "homepage": "https://banglawebfonts.pages.dev/ab-shapla/"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/aikya",
+  "version": "1.0.0",
+  "description": "Aikya web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "aikya"
+  ],
+  "author": "Neelakash Kshetrimayum",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/aikya/"
+}

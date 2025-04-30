@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/atma",
+  "version": "1.0.0",
+  "description": "Atma web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "atma"
+  ],
+  "author": "Black Foundry",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/atma/"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@bangla-webfonts/un-bangla",
+  "version": "1.0.0",
+  "description": "UN Bangla web font for Bangla Web Fonts",
+  "main": "index.css",
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "un bangla"
+  ],
+  "author": "UNDP Bangladesh",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/un-bangla/"
+}
