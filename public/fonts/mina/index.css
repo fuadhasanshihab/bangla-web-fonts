@@ -1,0 +1,17 @@
+@font-face {
+        font-family: 'Mina', sans-serif;
+        src: url('./mina-regular.woff2') format('woff2'),
+             url('./mina-regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Mina', sans-serif;
+        src: url('./mina-bold.woff2') format('woff2'),
+             url('./mina-bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
