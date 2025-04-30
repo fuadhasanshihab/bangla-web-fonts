@@ -21,7 +21,7 @@ or,
 > You can use the `.min.css` version for better performance and faster loading times.
 > **Minified CSS Stylesheet:**  
 > ```
-> https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css
+> https://banglawebfonts.pages.dev/css/un-bangla.min.css
 > ```
 
 ## CSS:
@@ -38,5 +38,8 @@ body {
 - **Available Weights:** 100, 400, 700
 - **Font Designer:** [UNDP Bangladesh](https://www.undp.org/bangladesh)
 - **License:** OFL
+
+## License Information:
+This font is licensed under the SIL Open Font License. You can use and embed this font in web pages and documents. This license is available with a FAQ at: <a href='https://openfontlicense.org/' target='_blank' class='text-blue-600 hover:underline' rel='noopener noreferrer'>openfontlicense.org</a>.
 
 For more details, visit: [UN Bangla on Bangla Web Fonts](https://banglawebfonts.pages.dev/un-bangla/#about).

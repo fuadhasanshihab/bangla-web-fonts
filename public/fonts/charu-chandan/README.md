@@ -21,7 +21,7 @@ or,
 > You can use the `.min.css` version for better performance and faster loading times.
 > **Minified CSS Stylesheet:**  
 > ```
-> https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css
+> https://banglawebfonts.pages.dev/css/charu-chandan.min.css
 > ```
 
 ## CSS:
@@ -38,5 +38,8 @@ body {
 - **Available Weights:** 400, 700
 - **Font Designer:** [Chandan Acharja](https://charuchandan.wordpress.com/)
 - **License:** This font is free for everyone to use.
+
+## License Information:
+This font is licensed under the This font is free for everyone to use. license.
 
 For more details, visit: [Charu Chandan on Bangla Web Fonts](https://banglawebfonts.pages.dev/charu-chandan/#about).

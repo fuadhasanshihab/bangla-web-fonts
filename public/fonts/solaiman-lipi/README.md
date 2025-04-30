@@ -39,4 +39,7 @@ body {
 - **Font Designer:** [Solaiman Karim](https://ekushey.org/designer/solaiman-karim/)
 - **License:** OFL
 
+## License Information:
+This font is licensed under the SIL Open Font License. You can use and embed this font in web pages and documents. This license is available with a FAQ at: <a href='https://openfontlicense.org/' target='_blank' class='text-blue-600 hover:underline' rel='noopener noreferrer'>openfontlicense.org</a>.
+
 For more details, visit: [Solaiman Lipi on Bangla Web Fonts](https://banglawebfonts.pages.dev/solaiman-lipi/#about).
