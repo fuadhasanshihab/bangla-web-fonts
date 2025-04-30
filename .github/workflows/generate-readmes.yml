@@ -1,4 +1,4 @@
-name: Generate Font READMEs
+name: Generate Font READMEs new
 
 on:
   workflow_dispatch:
@@ -55,7 +55,7 @@ jobs:
                   const licenseInfo = licenses[fontData.FontLicense];
                   const licenseText = licenseInfo
                       ? licenseInfo.LicenseText
-                      : `This font is licensed under the ${fontData.FontLicense} license.`;
+                      : \`This font is licensed under the \${fontData.FontLicense} license.\`;
 
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
@@ -85,7 +85,7 @@ jobs:
               }
           });
           EOF
-          
+
       - name: Commit and push changes
         run: |
           git config --global user.name "fuadhasanshihab"
