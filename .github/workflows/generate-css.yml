@@ -42,6 +42,18 @@ jobs:
           const fontsDir = "./public/fonts";
           const fontsDataPath = "./src/collections/fonts.json";
 
+          const weightMap = {
+            100: "thin",
+            200: "extralight",
+            300: "light",
+            400: "regular",
+            500: "medium",
+            600: "semibold",
+            700: "bold",
+            800: "extrabold",
+            900: "black"
+          };
+
           const fontsData = JSON.parse(fs.readFileSync(fontsDataPath, "utf-8"));
 
           fontsData.forEach((font) => {
@@ -51,14 +63,15 @@ jobs:
               let cssContent = "";
 
               font.FontWeights.forEach((weight) => {
+                  const suffix = weightMap[weight] || weight; // fallback if not mapped
                   cssContent += `@font-face {
-  font-family: ${font.FontFamily};
-  src: url('./${font.FontPath}-${weight}.woff2') format('woff2'),
-       url('./${font.FontPath}-${weight}.woff') format('woff');
-  font-weight: ${weight};
-  font-style: normal;
-  font-display: swap;
-}\n\n`;
+                  font-family: ${font.FontFamily};
+                  src: url('./${font.FontPath}-${suffix}.woff2') format('woff2'),
+                       url('./${font.FontPath}-${suffix}.woff') format('woff');
+                  font-weight: ${weight};
+                  font-style: normal;
+                  font-display: swap;
+                  }\n\n`;
               });
 
               fs.writeFileSync(path.join(fontFolder, "index.css"), cssContent.trim());
