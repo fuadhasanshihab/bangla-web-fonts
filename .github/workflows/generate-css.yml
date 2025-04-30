@@ -35,7 +35,7 @@ jobs:
 
       - name: Generate index.css files
         run: |
-          node <<EOF
+          node <<'EOF'
           const fs = require("fs");
           const path = require("path");
 
@@ -63,7 +63,7 @@ jobs:
               let cssContent = "";
 
               font.FontWeights.forEach((weight) => {
-                  const suffix = weightMap[weight] || weight; // fallback if not mapped
+                  const suffix = weightMap[weight] || weight;
                   cssContent += `@font-face {
                   font-family: ${font.FontFamily};
                   src: url('./${font.FontPath}-${suffix}.woff2') format('woff2'),
@@ -71,7 +71,7 @@ jobs:
                   font-weight: ${weight};
                   font-style: normal;
                   font-display: swap;
-                  }\n\n`;
+                }\n\n`;
               });
 
               fs.writeFileSync(path.join(fontFolder, "index.css"), cssContent.trim());
