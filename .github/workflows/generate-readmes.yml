@@ -1,4 +1,4 @@
-name: Generate Font READMEs
+name: Generate Font READMEs new
 
 on:
   workflow_dispatch:
@@ -41,14 +41,21 @@ jobs:
 
           const fontsDir = "./public/fonts";
           const fontsDataPath = "./src/collections/fonts.json";
+          const licensesPath = "./src/collections/licenses.json";
 
           const fontsData = JSON.parse(fs.readFileSync(fontsDataPath, "utf-8"));
+          const licenses = JSON.parse(fs.readFileSync(licensesPath, "utf-8"));
 
           fs.readdirSync(fontsDir).forEach((fontFolder) => {
               const fontPath = path.join(fontsDir, fontFolder);
               if (fs.statSync(fontPath).isDirectory()) {
                   const fontData = fontsData.find(f => f.FontPath === fontFolder);
                   if (!fontData) return;
+
+                  const licenseInfo = licenses[fontData.FontLicense];
+                  const licenseText = licenseInfo
+                      ? licenseInfo.LicenseText
+                      : \`This font is licensed under the \${fontData.FontLicense} license.\`;
 
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
@@ -58,7 +65,7 @@ jobs:
                       "\`\`\`html\n<link href='https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css' rel='stylesheet'>\n\`\`\`\n\n" +
                       "or,\n" +
                       "\`\`\`html\n<style>\n  @import url('https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".css');\n</style>\n\`\`\`\n\n" +
-                      "> [!TIP]\n> You can use the \`.min.css\` version for better performance and faster loading times.\n> **Minified CSS Stylesheet:**  \n> \`\`\`\n> https://banglawebfonts.pages.dev/css/solaiman-lipi.min.css\n> \`\`\`\n\n" +
+                      "> [!TIP]\n> You can use the \`.min.css\` version for better performance and faster loading times.\n> **Minified CSS Stylesheet:**  \n> \`\`\`\n> https://banglawebfonts.pages.dev/css/" + fontData.FontPath + ".min.css\n> \`\`\`\n\n" +
                       "## CSS:\n" +
                       "Use the following CSS rule to specify the " + fontData.FontName + " font:\n" +
                       "\`\`\`css\nbody {\n  font-family:" + fontData.FontFamily + ";\n}\n\`\`\`\n\n" +
@@ -68,6 +75,8 @@ jobs:
                       "- **Available Weights:** " + fontData.FontTesterWeights.join(", ") + "\n" +
                       "- **Font Designer:** [" + fontData.FontDesigner + "](" + fontData.FontDesignerURL + ")\n" +
                       "- **License:** " + fontData.FontLicense + "\n\n" +
+                      "## License Information:\n" +
+                      licenseText + "\n\n" +
                       "For more details, visit: [" + fontData.FontName + " on Bangla Web Fonts](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/#about).";
 
                   const readmePath = path.join(fontPath, "README.md");
