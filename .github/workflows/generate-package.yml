@@ -63,7 +63,7 @@ jobs:
                 ],
                 author: fontData.FontDesigner,
                 license: fontData.FontLicense,
-                homepage: "https://banglawebfonts.pages.dev/" + fontData.FontPath + "/"
+                homepage: "https://banglawebfonts.pages.dev/" + fontData.FontPath + "/",
                 repository: {
                   "type": "git",
                   "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
