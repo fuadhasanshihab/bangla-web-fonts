@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/solaiman-lipi",
+  "version": "1.0.0",
+  "description": "Solaiman Lipi web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "solaiman lipi"
+  ],
+  "author": "Solaiman Karim",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/solaiman-lipi/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/solaiman-lipi"
+  }
+}

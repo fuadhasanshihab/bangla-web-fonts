@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/siyam-rupali",
+  "version": "1.0.0",
+  "description": "Siyam Rupali web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "siyam rupali"
+  ],
+  "author": "Md. Tanbin Islam Siyam",
+  "license": "GPL",
+  "homepage": "https://banglawebfonts.pages.dev/siyam-rupali/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/siyam-rupali"
+  }
+}

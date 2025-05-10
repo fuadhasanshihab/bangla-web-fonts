@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/un-bangla",
+  "version": "1.0.0",
+  "description": "UN Bangla web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.ttf"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "un bangla"
+  ],
+  "author": "UNDP Bangladesh",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/un-bangla/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/un-bangla"
+  }
+}
