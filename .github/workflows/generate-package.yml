@@ -49,10 +49,11 @@ jobs:
               if (!fs.existsSync(fontPath) || !fs.statSync(fontPath).isDirectory()) return;
 
               const packageJson = {
-                name: "@bangla-webfonts/" + fontData.FontPath,
+                name: "@banglawebfonts/" + fontData.FontPath,
                 version: "1.0.0",
                 description: fontData.FontName + " web font for Bangla Web Fonts",
                 main: "index.css",
+                publishConfig: {"access": "public"},
                 files: ["*.css", "*.woff2", "*.woff", "*.ttf"],
                 keywords: [
                   "bangla",
@@ -63,6 +64,11 @@ jobs:
                 author: fontData.FontDesigner,
                 license: fontData.FontLicense,
                 homepage: "https://banglawebfonts.pages.dev/" + fontData.FontPath + "/"
+                repository: {
+                  "type": "git",
+                  "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+                  "directory": "public/fonts/" + fontData.FontPath
+                },
               };
 
               fs.writeFileSync(path.join(fontPath, "package.json"), JSON.stringify(packageJson, null, 2));
