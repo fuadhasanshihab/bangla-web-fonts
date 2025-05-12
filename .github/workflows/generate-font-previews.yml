@@ -104,10 +104,9 @@ jobs:
             await page.setViewport({ width: 1200, height: 630 });
             await page.setContent(html, { waitUntil: 'networkidle0' });
             await page.evaluateHandle('document.fonts.ready');
-            
-            const outputPath = path.join(fontDir, `${fontFolder}-font.jpg`);
-            await page.screenshot({ path: outputPath, type: 'jpeg', quality: 80 });
 
+            const outputPath = path.join(fontDir, \`\${fontFolder}-font.jpg\`);
+            await page.screenshot({ path: outputPath, type: 'jpeg', quality: 90 });
             await browser.close();
           }
 
