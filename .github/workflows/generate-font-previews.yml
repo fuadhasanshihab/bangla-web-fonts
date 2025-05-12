@@ -45,10 +45,10 @@ jobs:
             const html = \`
               <html>
                 <head>
-                  <link rel="preload" href="https://banglawebfonts.pages.dev/fonts/\${fontFolder}/\${fontFolder}-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-                  <link rel="preload" href="https://banglawebfonts.pages.dev/fonts/anek-bangla/anek-bangla-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-                  <link rel="preload" href="https://i.ibb.co.com/HfGtY5WX/20250428-203541.jpg" as="image">
-                  <link href="https://banglawebfonts.pages.dev/css/webfonts.min.css" rel="stylesheet">
+                  <link rel='preload' href='https://banglawebfonts.pages.dev/fonts/\${fontFolder}/\${fontFolder}-regular.woff2' as='font' type='font/woff2' crossorigin='anonymous'>
+                  <link rel='preload' href='https://banglawebfonts.pages.dev/fonts/anek-bangla/anek-bangla-regular.woff2' as='font' type='font/woff2' crossorigin='anonymous'>
+                  <link rel='preload' href='https://i.ibb.co.com/HfGtY5WX/20250428-203541.jpg' as='image'>
+                  <link href='https://banglawebfonts.pages.dev/css/webfonts.min.css' rel='stylesheet'>
                   <style>
                     body {
                       margin: 0;
@@ -91,23 +91,22 @@ jobs:
                   </style>
                 </head>
                 <body>
-                  <img src="https://i.ibb.co.com/HfGtY5WX/20250428-203541.jpg" alt="background">
-                  <div class="container">
+                  <img src='https://i.ibb.co.com/HfGtY5WX/20250428-203541.jpg' alt='background'>
+                  <div class='container'>
                     <div>\${fontFamily}</div>
-                    <div class="bangla-text">আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</div>
-                    <div class="font-link">banglawebfonts.pages.dev/font/\${fontFolder}</div>
+                    <div class='bangla-text'>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</div>
+                    <div class='font-link'>banglawebfonts.pages.dev/font/\${fontFolder}</div>
                   </div>
                 </body>
               </html>
             \`;
 
             await page.setViewport({ width: 1200, height: 630 });
-            await page.setContent(html, { waitUntil: 'domcontentloaded', timeout: 60000 });
+            await page.setContent(html, { waitUntil: 'networkidle0' });
             await page.evaluateHandle('document.fonts.ready');
 
-            const outputFileName = \`\${fontFolder}-font.jpg\`;
-            const outputPath = path.join(fontDir, outputFileName);
-            await page.screenshot({ path: outputPath, type: 'jpeg', quality: 90 });
+            const outputPath = path.join(fontDir, \`\${fontFolder}-font.png\`);
+            await page.screenshot({ path: outputPath });
             await browser.close();
           }
 
@@ -118,11 +117,7 @@ jobs:
             for (const folder of folders) {
               const fontDir = path.join(baseDir, folder);
               console.log('Generating preview for', folder);
-              try {
-                await generateFontPreview(fontDir);
-              } catch (err) {
-                console.error('Failed to generate preview for', folder, err.message);
-              }
+              await generateFontPreview(fontDir);
             }
           }
 
@@ -133,6 +128,6 @@ jobs:
         run: |
           git config --global user.name 'fuadhasanshihab'
           git config --global user.email '85599261+fuadhasanshihab@users.noreply.github.com'
-          git add public/fonts/**/*-font.jpg
+          git add public/fonts/**/**-font.png
           git commit -m "Update font preview images"
           git push
