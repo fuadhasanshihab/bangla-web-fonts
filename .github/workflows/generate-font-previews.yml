@@ -128,6 +128,6 @@ jobs:
         run: |
           git config --global user.name 'fuadhasanshihab'
           git config --global user.email '85599261+fuadhasanshihab@users.noreply.github.com'
-          git add public/fonts/**/*-font.jpg
+          find public/fonts -name "*-font.jpg" -exec git add {} +
           git commit -m "Update font images"
           git push
