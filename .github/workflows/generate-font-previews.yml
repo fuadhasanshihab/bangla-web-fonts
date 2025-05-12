@@ -105,8 +105,14 @@ jobs:
             await page.setContent(html, { waitUntil: 'networkidle0' });
             await page.evaluateHandle('document.fonts.ready');
 
-            const outputPath = path.join(fontDir, \`\${fontFolder}-font.png\`);
-            await page.screenshot({ path: outputPath });
+            # png format (commented)
+            # const outputPath = path.join(fontDir, \`\${fontFolder}-font.png\`);
+            # await page.screenshot({ path: outputPath });
+            
+            # jpg format (current)
+            const outputPath = path.join(fontDir, `${fontFolder}-font.jpg`);
+            await page.screenshot({ path: outputPath, type: 'jpeg', quality: 80 });
+
             await browser.close();
           }
 
