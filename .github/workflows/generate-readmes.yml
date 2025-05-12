@@ -59,6 +59,7 @@ jobs:
 
                   const readmeContent = "# " + fontData.FontName + "\n\n" +
                       "This directory contains the \"" + fontData.FontName + "\" font files.\n\n" +
+                      "[![" + fontData.FontName + " Font Preview](https://banglawebfonts.pages.dev/fonts/" + fontData.FontPath + "/" + fontData.FontPath + "-font.jpg)](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/)\n\n" +
                       "🌐 [banglawebfonts.pages.dev/" + fontData.FontPath + "](https://banglawebfonts.pages.dev/" + fontData.FontPath + "/)\n\n" +
                       "## Embed:\n" +
                       "To use the " + fontData.FontName + " font on your website, add the following code to your HTML \`<head>\` section:\n" +
