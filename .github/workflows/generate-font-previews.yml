@@ -53,8 +53,8 @@ jobs:
                     body {
                       margin: 0;
                       padding: 0;
-                      width: 1280px;
-                      height: 720px;
+                      width: 1200px;
+                      height: 630px;
                       display: flex;
                       justify-content: center;
                       align-items: center;
@@ -101,12 +101,13 @@ jobs:
               </html>
             \`;
 
-            await page.setViewport({ width: 1280, height: 720 });
+            await page.setViewport({ width: 1200, height: 630 });
             await page.setContent(html, { waitUntil: 'networkidle0' });
             await page.evaluateHandle('document.fonts.ready');
 
-            const outputPath = path.join(fontDir, `${fontFolder}-font.jpg`);
-            await page.screenshot({ path: outputPath });
+            const outputFileName = \`\${fontFolder}-font.jpg\`;
+            const outputPath = path.join(fontDir, outputFileName);
+            await page.screenshot({ path: outputPath, type: 'jpeg', quality: 90 });
             await browser.close();
           }
 
@@ -128,6 +129,6 @@ jobs:
         run: |
           git config --global user.name 'fuadhasanshihab'
           git config --global user.email '85599261+fuadhasanshihab@users.noreply.github.com'
-          find public/fonts -name "*-font.jpg" -exec git add {} +
-          git commit -m "Update font images"
+          git add public/fonts/**/*-font.jpg
+          git commit -m "Update font preview images"
           git push
