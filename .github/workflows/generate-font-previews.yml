@@ -53,8 +53,8 @@ jobs:
                     body {
                       margin: 0;
                       padding: 0;
-                      width: 1200px;
-                      height: 630px;
+                      width: 1280px;
+                      height: 720px;
                       display: flex;
                       justify-content: center;
                       align-items: center;
@@ -67,8 +67,8 @@ jobs:
                     }
                     body img {
                       position: absolute;
-                      width: 1200px;
-                      height: 630px;
+                      width: 1280px;
+                      height: 720px;
                       z-index: -1;
                     }
                     .container {
@@ -101,7 +101,7 @@ jobs:
               </html>
             \`;
 
-            await page.setViewport({ width: 1200, height: 630 });
+            await page.setViewport({ width: 1280, height: 720 });
             await page.setContent(html, { waitUntil: 'networkidle0' });
             await page.evaluateHandle('document.fonts.ready');
 
