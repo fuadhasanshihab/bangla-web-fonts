@@ -1,14 +1,7 @@
 /** @jsxImportSource preact */
 import { h } from 'preact';
-import { useState, useEffect } from 'preact/hooks';
 
-const FontsList = () => {
-  const [fonts, setFonts] = useState([]);
-
-  useEffect(() => {
-    import('../../collections/fonts.json').then((mod) => setFonts(mod.default));
-  }, []);
-
+const FontsList = ({ fonts }) => {
   const FontCard = ({ FontName, TotalStyles, FontFamily, FontPath }) => (
     <div class="p-4 border rounded shadow-sm">
       <h2 class="text-lg font-semibold">{FontName}</h2>
