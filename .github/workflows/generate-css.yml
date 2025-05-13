@@ -66,12 +66,11 @@ jobs:
                   const suffix = weightMap[weight] || weight;
                   cssContent += `@font-face {
                   font-family: ${font.FontFamily};
-                  src: url('./${font.FontPath}-${suffix}.woff2') format('woff2'),
-                       url('./${font.FontPath}-${suffix}.woff') format('woff');
+                  src: url('./${font.FontPath}-${suffix}.woff2') format('woff2');
                   font-weight: ${weight};
                   font-style: normal;
                   font-display: swap;
-                }\n\n`;
+                }\n`;
               });
 
               fs.writeFileSync(path.join(fontFolder, "index.css"), cssContent.trim());
