@@ -54,7 +54,7 @@ jobs:
                 description: fontData.FontName + " web font for Bangla Web Fonts",
                 main: "index.css",
                 publishConfig: {"access": "public"},
-                files: ["*.css", "*.woff2", "*.woff", "*.ttf"],
+                files: ["*.css", "*.woff2", "*.woff", "*.jpg"],
                 keywords: [
                   "bangla",
                   "font",
