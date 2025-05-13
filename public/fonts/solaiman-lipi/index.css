@@ -1,34 +1,27 @@
 @font-face {
         font-family: 'Solaiman Lipi', serif;
-        src: url('./solaiman-lipi-light.woff2') format('woff2'),
-             url('./solaiman-lipi-light.woff') format('woff');
+        src: url('./solaiman-lipi-light.woff2') format('woff2');
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Solaiman Lipi', serif;
-        src: url('./solaiman-lipi-regular.woff2') format('woff2'),
-             url('./solaiman-lipi-regular.woff') format('woff');
+        src: url('./solaiman-lipi-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Solaiman Lipi', serif;
-        src: url('./solaiman-lipi-semibold.woff2') format('woff2'),
-             url('./solaiman-lipi-semibold.woff') format('woff');
+        src: url('./solaiman-lipi-semibold.woff2') format('woff2');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Solaiman Lipi', serif;
-        src: url('./solaiman-lipi-bold.woff2') format('woff2'),
-             url('./solaiman-lipi-bold.woff') format('woff');
+        src: url('./solaiman-lipi-bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
         font-display: swap;

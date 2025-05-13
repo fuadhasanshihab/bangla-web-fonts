@@ -1,70 +1,55 @@
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-thin.woff2') format('woff2'),
-             url('./anek-bangla-thin.woff') format('woff');
+        src: url('./anek-bangla-thin.woff2') format('woff2');
         font-weight: 100;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-extralight.woff2') format('woff2'),
-             url('./anek-bangla-extralight.woff') format('woff');
+        src: url('./anek-bangla-extralight.woff2') format('woff2');
         font-weight: 200;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-light.woff2') format('woff2'),
-             url('./anek-bangla-light.woff') format('woff');
+        src: url('./anek-bangla-light.woff2') format('woff2');
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-regular.woff2') format('woff2'),
-             url('./anek-bangla-regular.woff') format('woff');
+        src: url('./anek-bangla-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-medium.woff2') format('woff2'),
-             url('./anek-bangla-medium.woff') format('woff');
+        src: url('./anek-bangla-medium.woff2') format('woff2');
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-semibold.woff2') format('woff2'),
-             url('./anek-bangla-semibold.woff') format('woff');
+        src: url('./anek-bangla-semibold.woff2') format('woff2');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-bold.woff2') format('woff2'),
-             url('./anek-bangla-bold.woff') format('woff');
+        src: url('./anek-bangla-bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Anek Bangla', sans-serif;
-        src: url('./anek-bangla-extrabold.woff2') format('woff2'),
-             url('./anek-bangla-extrabold.woff') format('woff');
+        src: url('./anek-bangla-extrabold.woff2') format('woff2');
         font-weight: 800;
         font-style: normal;
         font-display: swap;

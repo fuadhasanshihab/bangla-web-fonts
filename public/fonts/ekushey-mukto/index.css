@@ -1,16 +1,13 @@
 @font-face {
         font-family: 'Ekushey Mukto', serif;
-        src: url('./ekushey-mukto-regular.woff2') format('woff2'),
-             url('./ekushey-mukto-regular.woff') format('woff');
+        src: url('./ekushey-mukto-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Ekushey Mukto', serif;
-        src: url('./ekushey-mukto-bold.woff2') format('woff2'),
-             url('./ekushey-mukto-bold.woff') format('woff');
+        src: url('./ekushey-mukto-bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
         font-display: swap;

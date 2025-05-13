@@ -1,7 +1,6 @@
 @font-face {
         font-family: 'Kalaa', sans-serif;
-        src: url('./kalaa-regular.woff2') format('woff2'),
-             url('./kalaa-regular.woff') format('woff');
+        src: url('./kalaa-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;

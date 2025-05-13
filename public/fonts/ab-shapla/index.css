@@ -1,7 +1,6 @@
 @font-face {
         font-family: 'AB Shapla', sans-serif;
-        src: url('./ab-shapla-regular.woff2') format('woff2'),
-             url('./ab-shapla-regular.woff') format('woff');
+        src: url('./ab-shapla-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;

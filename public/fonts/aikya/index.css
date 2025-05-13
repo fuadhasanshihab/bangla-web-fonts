@@ -1,43 +1,34 @@
 @font-face {
         font-family: 'Aikya', serif;
-        src: url('./aikya-light.woff2') format('woff2'),
-             url('./aikya-light.woff') format('woff');
+        src: url('./aikya-light.woff2') format('woff2');
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Aikya', serif;
-        src: url('./aikya-regular.woff2') format('woff2'),
-             url('./aikya-regular.woff') format('woff');
+        src: url('./aikya-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Aikya', serif;
-        src: url('./aikya-medium.woff2') format('woff2'),
-             url('./aikya-medium.woff') format('woff');
+        src: url('./aikya-medium.woff2') format('woff2');
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Aikya', serif;
-        src: url('./aikya-semibold.woff2') format('woff2'),
-             url('./aikya-semibold.woff') format('woff');
+        src: url('./aikya-semibold.woff2') format('woff2');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Aikya', serif;
-        src: url('./aikya-bold.woff2') format('woff2'),
-             url('./aikya-bold.woff') format('woff');
+        src: url('./aikya-bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
         font-display: swap;

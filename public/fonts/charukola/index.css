@@ -1,25 +1,20 @@
 @font-face {
         font-family: 'Charukola', sans-serif;
-        src: url('./charukola-light.woff2') format('woff2'),
-             url('./charukola-light.woff') format('woff');
+        src: url('./charukola-light.woff2') format('woff2');
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Charukola', sans-serif;
-        src: url('./charukola-regular.woff2') format('woff2'),
-             url('./charukola-regular.woff') format('woff');
+        src: url('./charukola-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Charukola', sans-serif;
-        src: url('./charukola-bold.woff2') format('woff2'),
-             url('./charukola-bold.woff') format('woff');
+        src: url('./charukola-bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
         font-display: swap;

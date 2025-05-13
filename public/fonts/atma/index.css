@@ -1,43 +1,34 @@
 @font-face {
         font-family: 'Atma', sans-serif;
-        src: url('./atma-light.woff2') format('woff2'),
-             url('./atma-light.woff') format('woff');
+        src: url('./atma-light.woff2') format('woff2');
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Atma', sans-serif;
-        src: url('./atma-regular.woff2') format('woff2'),
-             url('./atma-regular.woff') format('woff');
+        src: url('./atma-regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Atma', sans-serif;
-        src: url('./atma-medium.woff2') format('woff2'),
-             url('./atma-medium.woff') format('woff');
+        src: url('./atma-medium.woff2') format('woff2');
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Atma', sans-serif;
-        src: url('./atma-semibold.woff2') format('woff2'),
-             url('./atma-semibold.woff') format('woff');
+        src: url('./atma-semibold.woff2') format('woff2');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
-
 @font-face {
         font-family: 'Atma', sans-serif;
-        src: url('./atma-bold.woff2') format('woff2'),
-             url('./atma-bold.woff') format('woff');
+        src: url('./atma-bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
