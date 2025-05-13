@@ -1,0 +1,44 @@
+@font-face {
+        font-family: 'Hind Siliguri', sans-serif;
+        src: url('./hind-siliguri-light.woff2') format('woff2'),
+             url('./hind-siliguri-light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hind Siliguri', sans-serif;
+        src: url('./hind-siliguri-regular.woff2') format('woff2'),
+             url('./hind-siliguri-regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hind Siliguri', sans-serif;
+        src: url('./hind-siliguri-medium.woff2') format('woff2'),
+             url('./hind-siliguri-medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hind Siliguri', sans-serif;
+        src: url('./hind-siliguri-semibold.woff2') format('woff2'),
+             url('./hind-siliguri-semibold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hind Siliguri', sans-serif;
+        src: url('./hind-siliguri-bold.woff2') format('woff2'),
+             url('./hind-siliguri-bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }

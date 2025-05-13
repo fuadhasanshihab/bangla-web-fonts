@@ -1,0 +1,44 @@
+@font-face {
+        font-family: 'Hoogli', sans-serif;
+        src: url('./hoogli-light.woff2') format('woff2'),
+             url('./hoogli-light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hoogli', sans-serif;
+        src: url('./hoogli-regular.woff2') format('woff2'),
+             url('./hoogli-regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hoogli', sans-serif;
+        src: url('./hoogli-medium.woff2') format('woff2'),
+             url('./hoogli-medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hoogli', sans-serif;
+        src: url('./hoogli-semibold.woff2') format('woff2'),
+             url('./hoogli-semibold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+        font-family: 'Hoogli', sans-serif;
+        src: url('./hoogli-bold.woff2') format('woff2'),
+             url('./hoogli-bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
