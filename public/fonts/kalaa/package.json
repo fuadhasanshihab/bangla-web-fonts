@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/kalaa",
+  "version": "1.0.0",
+  "description": "Kalaa web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "kalaa"
+  ],
+  "author": "Danh Hong",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/kalaa/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/kalaa"
+  }
+}

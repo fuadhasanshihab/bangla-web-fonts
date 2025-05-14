@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/baloo-da-2",
+  "version": "1.0.0",
+  "description": "Baloo Da 2 web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "baloo da 2"
+  ],
+  "author": "Ek Type",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/baloo-da-2/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/baloo-da-2"
+  }
+}

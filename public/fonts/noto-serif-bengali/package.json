@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/noto-serif-bengali",
+  "version": "1.0.0",
+  "description": "Noto Serif Bengali web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "noto serif bengali"
+  ],
+  "author": "Google",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/noto-serif-bengali/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/noto-serif-bengali"
+  }
+}

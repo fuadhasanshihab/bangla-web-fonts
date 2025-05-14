@@ -1,0 +1,89 @@
+name: Generate Font CSS Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-css:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Validate fonts.json
+        run: |
+          if [ ! -f "./src/collections/fonts.json" ]; then
+            echo "Error: fonts.json file not found!"
+            exit 1
+          fi
+          if ! jq empty "./src/collections/fonts.json"; then
+            echo "Error: fonts.json is not a valid JSON file!"
+            exit 1
+          fi
+        shell: bash
+
+      - name: Generate index.css files
+        run: |
+          node <<'EOF'
+          const fs = require("fs");
+          const path = require("path");
+
+          const fontsDir = "./public/fonts";
+          const fontsDataPath = "./src/collections/fonts.json";
+
+          const weightMap = {
+            100: "thin",
+            200: "extralight",
+            300: "light",
+            400: "regular",
+            500: "medium",
+            600: "semibold",
+            700: "bold",
+            800: "extrabold",
+            900: "black"
+          };
+
+          const fontsData = JSON.parse(fs.readFileSync(fontsDataPath, "utf-8"));
+
+          fontsData.forEach((font) => {
+              const fontFolder = path.join(fontsDir, font.FontPath);
+              if (!fs.existsSync(fontFolder) || !fs.statSync(fontFolder).isDirectory()) return;
+
+              let cssContent = "";
+
+              font.FontWeights.forEach((weight) => {
+                  const suffix = weightMap[weight] || weight;
+                  cssContent += `@font-face {
+                  font-family: ${font.FontFamily};
+                  src: url('./${font.FontPath}-${suffix}.woff2') format('woff2');
+                  font-weight: ${weight};
+                  font-style: normal;
+                  font-display: swap;
+                }\n`;
+              });
+
+              fs.writeFileSync(path.join(fontFolder, "index.css"), cssContent.trim());
+              console.log("Created index.css for:", font.FontPath);
+          });
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "fuadhasanshihab"
+          git config --global user.email "85599261+fuadhasanshihab@users.noreply.github.com"
+          git add .
+          git commit -m "Update index.css for fonts" || exit 0
+          git push origin ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

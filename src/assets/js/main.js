@@ -25,7 +25,7 @@
           div.innerHTML = highlighted;
 
           div.onclick = () => {
-            window.location.href = `https://banglawebfonts.pages.dev/${font.FontPath}/`;
+            window.location.href = `https://banglawebfonts.pages.dev/font/${font.FontPath}/`;
           };
 
           resultsContainer.appendChild(div);

@@ -1,11 +1,11 @@
 ---
-import Layout from "../../layouts/main.astro";
-import fonts from '../../collections/fonts.json';
-import licenses from '../../collections/licenses.json';
-import PageHeading from "../../components/page-heading.astro";
-import CodeBox from "../../components/codebox.astro";
-import PreviewInput from "../../components/preview-input.astro";
-import BanglaGylphs from "../../components/bangla-gylphs.astro";
+import Layout from "../../../layouts/main.astro";
+import fonts from '../../../collections/fonts.json';
+import licenses from '../../../collections/licenses.json';
+import PageHeading from "../../../components/page-heading.astro";
+import CodeBox from "../../../components/codebox.astro";
+import PreviewInput from "../../../components/preview-input.astro";
+import BanglaGylphs from "../../../components/bangla-gylphs.astro";
 
 export async function getStaticPaths() {
   return fonts.map(font => ({
@@ -180,5 +180,5 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 </div>
 
 </section>
-<script src="../../assets/js/font.js"></script>
+<script src="../../../assets/js/font.js"></script>
 </Layout>

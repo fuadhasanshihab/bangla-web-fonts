@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/tiro-bangla",
+  "version": "1.0.0",
+  "description": "Tiro Bangla web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "tiro bangla"
+  ],
+  "author": "Tiro Typeworks",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/tiro-bangla/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/tiro-bangla"
+  }
+}

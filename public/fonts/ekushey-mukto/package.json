@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/ekushey-mukto",
+  "version": "1.0.0",
+  "description": "Ekushey Mukto web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "ekushey mukto"
+  ],
+  "author": "Ekushey",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/ekushey-mukto/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/ekushey-mukto"
+  }
+}

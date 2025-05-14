@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://banglawebfonts.pages.dev/sitemap.xml
+Sitemap: https://banglawebfonts.pages.dev/sitemap-index.xml

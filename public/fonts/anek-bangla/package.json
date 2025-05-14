@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/anek-bangla",
+  "version": "1.0.0",
+  "description": "Anek Bangla web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "anek bangla"
+  ],
+  "author": "Ek Type",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/anek-bangla/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/anek-bangla"
+  }
+}

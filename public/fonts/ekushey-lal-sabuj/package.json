@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/ekushey-lal-sabuj",
+  "version": "1.0.0",
+  "description": "Ekushey Lal Sabuj web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "ekushey lal sabuj"
+  ],
+  "author": "Ekushey",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/ekushey-lal-sabuj/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/ekushey-lal-sabuj"
+  }
+}

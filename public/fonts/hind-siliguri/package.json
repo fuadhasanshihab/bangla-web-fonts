@@ -1,0 +1,29 @@
+{
+  "name": "@banglawebfonts/hind-siliguri",
+  "version": "1.0.0",
+  "description": "Hind Siliguri web font for Bangla Web Fonts",
+  "main": "index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.css",
+    "*.woff2",
+    "*.woff",
+    "*.jpg"
+  ],
+  "keywords": [
+    "bangla",
+    "font",
+    "webfont",
+    "hind siliguri"
+  ],
+  "author": "Indian Type Foundry",
+  "license": "OFL",
+  "homepage": "https://banglawebfonts.pages.dev/hind-siliguri/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadhasanshihab/bangla-web-fonts.git",
+    "directory": "public/fonts/hind-siliguri"
+  }
+}

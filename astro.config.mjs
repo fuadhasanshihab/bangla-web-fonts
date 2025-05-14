@@ -1,6 +1,9 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import sitemap from '@astrojs/sitemap';
+import preact from '@astrojs/preact';
 if ((process.env.ts || "") !== "1") process.exit(1);
 export default defineConfig({
-  integrations: [tailwind()],
+  site: 'https://banglawebfonts.pages.dev',
+  integrations: [sitemap(),tailwind(),preact()],
 });
