@@ -253,6 +253,17 @@
     "FontLicense": "OFL"
   },
   {
+    "FontName": "Bornoporichay",
+    "TotalStyles": "2",
+    "FontFamily": "'Bornoporichay', serif",
+    "FontPath": "bornoporichay",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Subhadip Roy",
+    "FontDesignerURL": "https://www.facebook.com/subharoy7492",
+    "FontLicense": "OFL"
+  },
+  {
     "FontName": "Aikya",
     "TotalStyles": "5",
     "FontFamily": "'Aikya', serif",
@@ -305,6 +316,28 @@
     "FontTesterWeights": [100, 400, 700],
     "FontDesigner": "UNDP Bangladesh",
     "FontDesignerURL": "https://www.undp.org/bangladesh",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Ekushey Aloucik",
+    "TotalStyles": "1",
+    "FontFamily": "'Ekushey Aloucik', sans-serif",
+    "FontPath": "ekushey-aloucik",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Ekushey",
+    "FontDesignerURL": "https://ekushey.org/",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Somoyer Srot",
+    "TotalStyles": "2",
+    "FontFamily": "'Somoyer Srot', sans-serif",
+    "FontPath": "somoyer-srot",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Rahman Rashid Hillol",
+    "FontDesignerURL": "https://www.behance.net/hillolvai",
     "FontLicense": "OFL"
   }
 ]
