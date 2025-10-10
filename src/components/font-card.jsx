@@ -1,13 +1,6 @@
 import { h } from "preact";
 
-interface FontCardProps {
-  FontName: string;
-  TotalStyles: number;
-  FontFamily: string;
-  FontPath: string;
-}
-
-const FontCard = ({ FontName, TotalStyles, FontFamily, FontPath }: FontCardProps) => {
+export default function FontCard({ FontName, TotalStyles, FontFamily, FontPath }) {
   return (
     <div class="border p-4 rounded-lg shadow hover:shadow-md transition">
       <h2 class="text-lg font-semibold">{FontName}</h2>
@@ -16,6 +9,4 @@ const FontCard = ({ FontName, TotalStyles, FontFamily, FontPath }: FontCardProps
       <p class="text-sm truncate">{FontPath}</p>
     </div>
   );
-};
-
-export default FontCard;
+}
