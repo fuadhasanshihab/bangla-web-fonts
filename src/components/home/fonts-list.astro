@@ -1,30 +1,9 @@
 ---
 import fonts from "../../collections/fonts.json";
-import FontCard from "../font-card.jsx";
+import FontCard from "../font-card.tsx";
 ---
 
 <section class="max-w-3xl my-12 mx-auto px-7 lg:px-0">
-  <div class="grid items-stretch w-full grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-7 mt-7">
-    {fonts.map((font) => (
-      <FontCard
-        client:visible
-        FontName={font.FontName}
-        TotalStyles={font.TotalStyles}
-        FontFamily={font.FontFamily}
-        FontPath={font.FontPath}
-      />
-    ))}
-  </div>
-</section>
-
-
-
-<!--
-import fonts from "../../collections/fonts.json";
-import FontCard from "../font-card.tsx";
--->
-
-<!--section class="max-w-3xl my-12 mx-auto px-7 lg:px-0">
   <div
     class="grid items-stretch w-full grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-7 mt-7"
   >
@@ -41,4 +20,4 @@ import FontCard from "../font-card.tsx";
       })
     }
   </div>
-</section-->
+</section>
