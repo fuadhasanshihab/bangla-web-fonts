@@ -1,6 +1,17 @@
 ---
 const { FontName, TotalStyles, FontPath, FontFamily } = Astro.props;
 const newPath = `/font/${FontPath}/`;
+
+const fontStyle = `
+@font-face {
+  font-family: "${FontName}";
+  src: url("/fonts/${FontPath}/${FontPath}-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+`;
+
 const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma")  || FontFamily.includes("Bornoporichay")  || FontFamily.includes("UN Bangla");  
 ---
 
@@ -19,15 +30,9 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
   >
 
 <style is:inline>
-@font-face {
-  font-family: "${FontName}";
-  src: url("/fonts/${FontPath}/${FontPath}-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+{fontStyle}
 </style>
-       ক <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
+       খ <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     
     
       <div
