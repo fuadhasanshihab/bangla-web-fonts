@@ -3,6 +3,7 @@ const { FontName, TotalStyles, FontPath, FontFamily } = Astro.props;
 const newPath = `/font/${FontPath}/`;
 
 const fontStyle = `
+<style>
 @font-face {
   font-family: "${FontName}";
   src: url("/fonts/${FontPath}/${FontPath}-regular.woff2") format("woff2");
@@ -10,6 +11,7 @@ const fontStyle = `
   font-style: normal;
   font-display: swap;
 }
+</style>
 `;
 
 const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma")  || FontFamily.includes("Bornoporichay")  || FontFamily.includes("UN Bangla");  
@@ -29,9 +31,9 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
     class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
   >
 
-<style is:inline>
+
 {fontStyle}
-</style>
+
        খ <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     
     
