@@ -99,6 +99,50 @@
     "FontLicense": "OFL"
   },
   {
+    "FontName": "Abu Sayed",
+    "TotalStyles": "2",
+    "FontFamily": "'Abu Sayed', sans-serif",
+    "FontPath": "abu-sayed",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Jayed Ahsan Saad",
+    "FontDesignerURL": "https://codepotro.com/",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Bornomala",
+    "TotalStyles": "2",
+    "FontFamily": "'Bornomala', serif",
+    "FontPath": "bornomala",
+    "FontWeights": [400, 700],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Jayed Ahsan Saad",
+    "FontDesignerURL": "https://codepotro.com/",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Bornomala Vintage",
+    "TotalStyles": "2",
+    "FontFamily": "'Bornomala Vintage', serif",
+    "FontPath": "bornomala-vintage",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Jayed Ahsan Saad",
+    "FontDesignerURL": "https://codepotro.com/",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Ekush",
+    "TotalStyles": "2",
+    "FontFamily": "'Ekush', serif",
+    "FontPath": "ekush",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Jayed Ahsan Saad, S M Khalid Hossain",
+    "FontDesignerURL": "https://codepotro.com/",
+    "FontLicense": "OFL"
+  },
+  {
     "FontName": "Ekushey Lal Sabuj",
     "TotalStyles": "2",
     "FontFamily": "'Ekushey Lal Sabuj', sans-serif",
