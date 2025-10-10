@@ -7,7 +7,7 @@ import FontCard from "../font-card.jsx";
   <div class="grid items-stretch w-full grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-7 mt-7">
     {fonts.map((font) => (
       <FontCard
-        client:load
+        client:visible
         FontName={font.FontName}
         TotalStyles={font.TotalStyles}
         FontFamily={font.FontFamily}
