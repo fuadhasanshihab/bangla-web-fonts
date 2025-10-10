@@ -32,9 +32,9 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
   >
 
 
-{fontStyle}
 
-       খ <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
+<span set:html={fontStyle}></span>
+        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     
     
       <div
