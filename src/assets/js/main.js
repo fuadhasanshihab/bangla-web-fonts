@@ -24,7 +24,7 @@ function loadCSS(href) {
 
 setTimeout(() => {
   document.querySelectorAll('.skeleton').forEach(el => el.classList.add('loaded'));
-}, 1000);
+}, 100);
 
     // Remove event listeners only if they were added
     if (listenersAdded) {
