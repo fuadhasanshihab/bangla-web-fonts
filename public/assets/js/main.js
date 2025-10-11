@@ -170,7 +170,7 @@ document.addEventListener('keydown', (e) => {
 
 
 
-
+/*
 
 window.darkMode = false;
 
@@ -312,6 +312,8 @@ function showNight(animate) {
 		}
 	}, timeout);
 }
+
+*/
 
 window.applyMenuItemClasses = () => {
 	const menuItems = document.querySelectorAll("#menu a");
