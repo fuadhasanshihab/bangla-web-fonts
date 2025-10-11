@@ -14,7 +14,7 @@ const fontStyle = `
 </style>
 `;
 
-const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma")  || FontFamily.includes("Bornoporichay")  || FontFamily.includes("UN Bangla");  
+const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma")  || FontFamily.includes("Bornoporichay")  || FontFamily.includes("Somoyer Srot")  || FontFamily.includes("UN Bangla");  
 ---
 
 <a
@@ -33,8 +33,9 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
 
 
 
-<span set:html={fontStyle}></span>
-        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
+<!--span set:html={fontStyle}></span-->
+
+        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation skeleton" : "text-[1.5rem] leading-[2rem] skeleton"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     
     
       <div
