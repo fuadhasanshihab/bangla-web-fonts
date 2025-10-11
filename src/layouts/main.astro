@@ -54,7 +54,7 @@ const schemaData = {
     <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo/192x192.png">
     <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo/512x512.png">
     <script src="../assets/css/main.css"></script>
-    <Fragment set:html={import.meta.env.HEADER_INJECT} />
+    <!--Fragment set:html={import.meta.env.HEADER_INJECT} /-->
     <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
@@ -64,6 +64,6 @@ const schemaData = {
     <Footer />
     <script src="../assets/js/main.js"></script>
     <script is:inline>if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('/sw.js')}</script>
-    <Fragment set:html={import.meta.env.FOOTER_INJECT} />
+    <!--Fragment set:html={import.meta.env.FOOTER_INJECT} /-->
   </body>
 </html>
