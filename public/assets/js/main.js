@@ -7,7 +7,7 @@ function loadCSS(href) {
 
 
 
-
+let fonts = [];
   var timeoutFHS;
   var listenersAdded = false;
 
@@ -25,6 +25,14 @@ function loadCSS(href) {
 setTimeout(() => {
   document.querySelectorAll('.skeleton').forEach(el => el.classList.add('loaded'));
 }, 0);
+
+	      
+
+    // Fetch font data
+    fetch('https://cdn.jsdelivr.net/gh/fuadhasanshihab/bangla-web-fonts@main/src/collections/fonts.json')
+      .then(res => res.json())
+      .then(data => fonts = data);
+
 
     // Remove event listeners only if they were added
     if (listenersAdded) {
@@ -73,12 +81,6 @@ const openSearch = document.querySelectorAll('.openSearch');
     const searchInput = document.getElementById('searchInput');
     const resultsContainer = document.getElementById('results');
     const clearBtn = document.getElementById('clearBtn');
-    let fonts = [];
-
-    // Fetch font data
-    fetch('https://cdn.jsdelivr.net/gh/fuadhasanshihab/bangla-web-fonts@main/src/collections/fonts.json')
-      .then(res => res.json())
-      .then(data => fonts = data);
 
     // Show filtered or all results
     function displayResults(fontArray, query) {
@@ -124,13 +126,14 @@ const openSearch = document.querySelectorAll('.openSearch');
       }
     });
 
+/*
     // Show results on focus
     searchInput.addEventListener('focus', () => {
       if (searchInput.value.trim() === '') {
         displayResults(fonts, '');
       }
     });
-
+*/
     // Clear input
     clearBtn.addEventListener('click', () => {
       searchInput.value = '';
@@ -143,6 +146,9 @@ const openSearch = document.querySelectorAll('.openSearch');
 openSearch.forEach(el => {
   el.addEventListener('click', () => {
     searchModal.classList.remove('hidden');
+	searchInput.value = '';
+      clearBtn.classList.add('hidden');
+      displayResults(fonts, '');
     // document.body.classList.add('overflow-hidden');
     setTimeout(() => searchInput.focus(), 150);
   });
