@@ -63,7 +63,8 @@ const schemaData = {
     <Header />
     <slot />
     <Footer />
-    <script src="../assets/js/main.js"></script>
+    <!--script src="../assets/js/main.js"></script-->
+    <script is:inline src="/assets/js/main.js"></script>
     <script is:inline>if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('/sw.js')}</script>
     <!--Fragment set:html={import.meta.env.FOOTER_INJECT} /-->
   </body>
