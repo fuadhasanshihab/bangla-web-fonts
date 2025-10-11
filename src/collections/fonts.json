@@ -100,7 +100,7 @@
   },
   {
     "FontName": "Abu Sayed",
-    "TotalStyles": "2",
+    "TotalStyles": "1",
     "FontFamily": "'Abu Sayed', sans-serif",
     "FontPath": "abu-sayed",
     "FontWeights": [700],
@@ -128,17 +128,6 @@
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Jayed Ahsan Saad",
-    "FontDesignerURL": "https://codepotro.com/",
-    "FontLicense": "OFL"
-  },
-  {
-    "FontName": "Ekush",
-    "TotalStyles": "2",
-    "FontFamily": "'Ekush', serif",
-    "FontPath": "ekush",
-    "FontWeights": [400],
-    "FontTesterWeights": [400, 700],
-    "FontDesigner": "Jayed Ahsan Saad, S M Khalid Hossain",
     "FontDesignerURL": "https://codepotro.com/",
     "FontLicense": "OFL"
   },
@@ -360,6 +349,39 @@
     "FontTesterWeights": [100, 400, 700],
     "FontDesigner": "UNDP Bangladesh",
     "FontDesignerURL": "https://www.undp.org/bangladesh",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Tuli",
+    "TotalStyles": "2",
+    "FontFamily": "'Tuli', sans-serif",
+    "FontPath": "tuli",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Risat Rajin",
+    "FontDesignerURL": "https://www.facebook.com/risatrajin",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Nilima",
+    "TotalStyles": "2",
+    "FontFamily": "'Nilima', sans-serif",
+    "FontPath": "nilima",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Niladri Shekhar Bala",
+    "FontDesignerURL": "https://lipighor.com/",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Ekush",
+    "TotalStyles": "2",
+    "FontFamily": "'Ekush', serif",
+    "FontPath": "ekush",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Jayed Ahsan Saad, S M Khalid Hossain",
+    "FontDesignerURL": "https://codepotro.com/",
     "FontLicense": "OFL"
   },
   {
