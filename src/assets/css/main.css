@@ -5,6 +5,35 @@ body{
   font-family: "Inter", sans-serif;
 }
 */
+
+.skeleton {
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Keyframes for pulse */
+@keyframes pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Loaded state */
+.skeleton.loaded {
+  animation: none;
+  background: none;
+  color: inherit;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
