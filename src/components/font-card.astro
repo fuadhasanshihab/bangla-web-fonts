@@ -19,7 +19,7 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
 
 <a
   href={newPath} id={FontPath}
-  class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-7 group h-100 rounded-2xl hover:bg-slate-50" aria-label={`${FontName} font`}
+  class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-7 group h-100 rounded-2xl" aria-label={`${FontName} font`}
 >
   <span
     class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent group-hover:bg-slate-50 border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"
@@ -33,7 +33,6 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
 
 
 
-<!--span set:html={fontStyle}></span-->
 
         <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation skeleton" : "text-[1.5rem] leading-[2rem] skeleton"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     
