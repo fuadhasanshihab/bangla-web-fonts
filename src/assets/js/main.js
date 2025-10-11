@@ -1,4 +1,74 @@
-    const openSearch = document.querySelectorAll('.openSearch');
+function loadCSS(href) {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = href;
+  document.head.appendChild(link);
+}
+
+
+
+
+  var timeoutFHS;
+  var listenersAdded = false;
+
+  function activateLazyLoading() {
+    try {
+      if (!localStorage.getItem("lazy")) {
+        localStorage.setItem("lazy", "1");
+      }
+    } catch (e) {
+      console.warn("LocalStorage not available", e);
+    }
+
+    loadCSS('/css/webfonts.min.css');
+
+setTimeout(() => {
+  document.querySelector('.skeleton').classList.add('loaded');
+}, 1000);
+
+    // Remove event listeners only if they were added
+    if (listenersAdded) {
+      document.removeEventListener("mousemove", activateLazyLoading);
+      document.removeEventListener("touchstart", activateLazyLoading);
+      document.removeEventListener("keydown", activateLazyLoading);
+      document.removeEventListener("scroll", activateLazyLoading);
+      clearTimeout(timeoutFHS);
+    }
+
+    console.log("Lazy features activated");
+  }
+
+  try {
+    if (localStorage.getItem("lazy") === "1") {
+      activateLazyLoading();
+    } else {
+      listenersAdded = true;
+      document.addEventListener("mousemove", activateLazyLoading);
+      document.addEventListener("touchstart", activateLazyLoading);
+      document.addEventListener("keydown", activateLazyLoading);
+      document.addEventListener("scroll", activateLazyLoading);
+      timeoutFHS = setTimeout(activateLazyLoading, 30000);
+    }
+  } catch (e) {
+    console.warn("Error accessing localStorage, activating lazy load as fallback.", e);
+    activateLazyLoading();
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const openSearch = document.querySelectorAll('.openSearch');
     const searchModal = document.getElementById('searchModal');
     const searchInput = document.getElementById('searchInput');
     const resultsContainer = document.getElementById('results');
