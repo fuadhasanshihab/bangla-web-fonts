@@ -23,8 +23,8 @@ function loadCSS(href) {
     loadCSS('/css/webfonts.min.css');
 
 setTimeout(() => {
-  document.querySelector('.skeleton').classList.add('loaded');
-}, 1000);
+  document.querySelectorAll('.skeleton').forEach(el => el.classList.add('loaded'));
+}, 2000);
 
     // Remove event listeners only if they were added
     if (listenersAdded) {
