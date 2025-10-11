@@ -315,7 +315,11 @@ function showNight(animate) {
 
 */
 
-window.applyMenuItemClasses = () => {
+
+
+
+
+function applyMenuItemClasses() {
 	const menuItems = document.querySelectorAll("#menu a");
 	for (let i = 0; i < menuItems.length; i++) {
 		if (menuItems[i].pathname === window.location.pathname) {
@@ -324,18 +328,10 @@ window.applyMenuItemClasses = () => {
 	}
 	//:class="{ 'text-neutral-900 dark:text-white': window.location.pathname == '{menu.url}', 'text-neutral-700 dark:text-neutral-400': window.location.pathname != '{menu.url}' }"
 };
+applyMenuItemClasses();
 
-function mobileMenuFunctionality() {
-	document.getElementById("openMenu").addEventListener("click", () => {
-		openMobileMenu();
-	});
 
-	document.getElementById("closeMenu").addEventListener("click", () => {
-		closeMobileMenu();
-	});
-}
-
-window.openMobileMenu = () => {
+function openMobileMenu() {
 	document.getElementById("openMenu").classList.add("hidden");
 	document.getElementById("closeMenu").classList.remove("hidden");
 	document.getElementById("menu").classList.remove("hidden");
@@ -349,9 +345,19 @@ window.openMobileMenu = () => {
 	}, 1);
 };
 
-window.closeMobileMenu = () => {
+function closeMobileMenu() {
 	document.getElementById("closeMenu").classList.add("hidden");
 	document.getElementById("openMenu").classList.remove("hidden");
 	document.getElementById("menu").classList.add("hidden");
 	document.getElementById("mobileMenuBackground").classList.add("hidden");
 };
+
+
+	document.getElementById("openMenu").addEventListener("click", () => {
+		openMobileMenu();
+	});
+
+	document.getElementById("closeMenu").addEventListener("click", () => {
+		closeMobileMenu();
+	});
+
