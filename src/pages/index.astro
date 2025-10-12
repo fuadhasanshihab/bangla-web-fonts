@@ -33,8 +33,7 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
 
 <Layout title="Bangla Web Fonts - Free Bangla Fonts CDN for Websites" metaDescription="Bangla Web Fonts is a free Bangla fonts CDN with high-quality web fonts. Easily use Bangla fonts on your website with fast loading and smooth rendering." fontPreloads={FontPreloads} metaKeywords={MetaKeywords}>
 <!--extraStyleUrl="/css/top-webfonts.min.css"-->
-<style is:inline>
-{preloadedFontsCSS}
+<style is:inline set:html={preloadedFontsCSS}>
 </style>
 
   <div class="relative z-20 w-full max-w-3xl mx-auto mt-12 px-7 xl:px-0">
