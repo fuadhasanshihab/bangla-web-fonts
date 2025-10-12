@@ -8,42 +8,36 @@ import Layout from "../layouts/main.astro";
     <PageHeading
       title="About"
       description="Bangla Web Fonts is a web font CDN that provides high-quality Bangla fonts for websites. Instead of downloading and hosting fonts manually, developers can integrate them via a simple CDN link, ensuring faster loading and smooth typography."
-    />
-
-
-        
-
-        <!-- Features -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Features</h2>
-            <ul class="mt-4 list-disc list-inside text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-                <li><strong>Fast CDN Delivery:</strong> Optimized for speed and performance.</li>
-                <li><strong>Easy Integration:</strong> Just include a CSS link to use fonts.</li>
-                <li><strong>No Extra Hosting Needed:</strong> Fonts are served directly from our CDN.</li>
-                <li><strong>Supports Multiple Styles:</strong> Regular, Bold, and more.</li>
-            </ul>
-        </div>
-
-        <!-- Performance -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Cloudflare-Powered Performance</h2>
-<img src="/assets/images/CloudflareNetwork.png" alt="Cloudflare Network" class="w-full">
-            <ul class="mt-4 list-disc list-inside text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-                <li><strong>Cloudflare CDN:</strong> Fonts are hosted on Cloudflare’s global network.</li>
-                <li><strong>Near-instant Loading:</strong> Cached fonts load quickly from the nearest server.</li>
-                <li><strong>Worldwide Edge Locations:</strong> Cloudflare has over 300 data centers worldwide.</li>
-                <li><strong>Optimized for PageSpeed:</strong> Fonts use modern formats like WOFF2.</li>
-            </ul>
-        </div>
-
-        <!-- How It Works -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">How to use Bangla Web Fonts?</h2>
-            <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-                Using Bangla Web Fonts is simple. Add the CSS file of your chosen font to your website’s stylesheet.
-            </p>
-            <div class="p-4 rounded-xl border border-dashed border-gray-300 text-sm overflow-auto mt-4">
-                <pre class="">
+      />
+    <!-- Features -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Features</h2>
+      <ul class="mt-4 list-disc list-inside text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+        <li><strong>Fast CDN Delivery:</strong> Optimized for speed and performance.</li>
+        <li><strong>Easy Integration:</strong> Just include a CSS link to use fonts.</li>
+        <li><strong>No Extra Hosting Needed:</strong> Fonts are served directly from our CDN.</li>
+        <li><strong>Supports Multiple Styles:</strong> Regular, Bold, and more.</li>
+      </ul>
+    </div>
+    <!-- Performance -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Cloudflare-Powered Performance</h2>
+      <img src="/assets/images/CloudflareNetwork.png" alt="Cloudflare Network" class="w-full">
+      <ul class="mt-4 list-disc list-inside text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+        <li><strong>Cloudflare CDN:</strong> Fonts are hosted on Cloudflare’s global network.</li>
+        <li><strong>Near-instant Loading:</strong> Cached fonts load quickly from the nearest server.</li>
+        <li><strong>Worldwide Edge Locations:</strong> Cloudflare has over 300 data centers worldwide.</li>
+        <li><strong>Optimized for PageSpeed:</strong> Fonts use modern formats like WOFF2.</li>
+      </ul>
+    </div>
+    <!-- How It Works -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">How to use Bangla Web Fonts?</h2>
+      <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+        Using Bangla Web Fonts is simple. Add the CSS file of your chosen font to your website’s stylesheet.
+      </p>
+      <div class="p-4 rounded-xl border border-dashed border-gray-300 text-sm overflow-auto mt-4">
+        <pre class="">
 /* Example: Using Solaiman Lipi Font */
 @import url('https://banglawebfonts.pages.dev/css/solaiman-lipi.css');
 
@@ -51,85 +45,67 @@ body &#123;
   font-family: 'Solaiman Lipi', serif;
 &#125;
 </pre>
-
-
-            </div>
-            <p class="mt-4 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-                For more details, visit <a href="/documentation/" class="text-blue-600 font-medium hover:underline">documentation</a>.
-            </p>
+      </div>
+      <p class="mt-4 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+        For more details, visit <a href="/documentation/" class="text-blue-600 font-medium hover:underline">documentation</a>.
+      </p>
+    </div>
+    <!-- Free subdomain -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Using a Free Subdomain</h2>
+      <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+        This site uses a free <span class="font-mono">.pages.dev</span> subdomain from <b>Cloudflare</b>. This ensures the site is <b>always free</b>. Since we use a free subdomain, there’s no need to renew a custom domain every year, so the CDN links will never break and everyone can always use the fonts safely and easily. Additionally, Cloudflare Pages provides <b>unlimited bandwidth</b>.
+      </p>
+    </div>
+    <!-- Tech Stack -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Built With</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6">
+        <div class="flex flex-col items-center">
+          <img src="/assets/images/AstroLogo.svg" alt="Astro" class="h-12">
+          <span class="mt-2">Astro</span>
         </div>
-
-
-<!-- Free subdomain -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Using a Free Subdomain</h2>
-            <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-                This site uses a free <span class="font-mono">.pages.dev</span> subdomain from <b>Cloudflare</b>. This ensures the site is <b>always free</b>. Since we use a free subdomain, there’s no need to renew a custom domain every year, so the CDN links will never break and everyone can always use the fonts safely and easily. Additionally, Cloudflare Pages provides <b>unlimited bandwidth</b>.
-            </p>
+        <div class="flex flex-col items-center">
+          <img src="/assets/images/TailwindLogo.svg" alt="Tailwind CSS" class="h-12">
+          <span class="mt-2">Tailwind CSS</span>
         </div>
-
-        <!-- Tech Stack -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Built With</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6">
-                <div class="flex flex-col items-center">
-                    <img src="/assets/images/AstroLogo.svg" alt="Astro" class="h-12">
-                    <span class="mt-2">Astro</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="/assets/images/TailwindLogo.svg" alt="Tailwind CSS" class="h-12">
-                    <span class="mt-2">Tailwind CSS</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="/assets/images/CloudflareLogo.png" alt="Cloudflare" class="h-12">
-                    <span class="mt-2">Cloudflare</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="/assets/images/GithubLogo.png" alt="GitHub" class="h-12">
-                    <span class="mt-2">GitHub</span>
-                </div>
-            </div>
+        <div class="flex flex-col items-center">
+          <img src="/assets/images/CloudflareLogo.png" alt="Cloudflare" class="h-12">
+          <span class="mt-2">Cloudflare</span>
         </div>
-
-
-
-<!-- Fonts Copyright & License -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Fonts Copyright & License</h2>
-            <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-                All fonts available on Bangla Web Fonts are <b>copyrighted to their respective owners</b>. 
-                We only host fonts and icons licensed for free use and web embedding. License details are mentioned on each font and icon page. See our <a href="https://banglawebfonts.pages.dev/dmca/" class="text-blue-600 hover:underline">DMCA page</a> for more details.
-            </p>
+        <div class="flex flex-col items-center">
+          <img src="/assets/images/GithubLogo.png" alt="GitHub" class="h-12">
+          <span class="mt-2">GitHub</span>
         </div>
-
-
-        <!-- wrbsite License -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Website Content License</h2>
-            <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
-
-The website content (text, code, logo etc.) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank" class="text-blue-500 hover:underline"> Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (<b>CC BY-NC-SA 4.0</b>).</a>
-
-                <span class="italic mt-1 block">Note: Fonts, icons, third-party open-source or other licensed code/APIs used on this site are not covered by this license and remain under their <b>respective owners’ licenses</b>, with <b>proper credit given</b> where applicable.</span>
-
-</p>
-        </div>
-
-
-        <!-- Maintainer Info -->
-        <div class="mt-10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Maintainer & Contributors</h2>
-            <div class="mt-4 p-6 rounded-xl border border-dashed border-neutral-300">
-                <p class="text-lg font-semibold">Fuad Hasan Shihab</p>
-                <div class="mt-1">
-                    <a href="https://github.com/fuadhasanshihab" class="text-blue-600 hover:underline">Github</a>
-                </div>
-            </div>
-        </div>
-
-        <p class="mt-12 pt-10 border-t border-dashed border-gray-300">
-Visit GitHub repository:
-<a href="https://github.com/fuadhasanshihab/bangla-web-fonts" class="text-blue-600 font-medium hover:underline">github.com/fuadhasanshihab/bangla-web-fonts</a> </p>
-
+      </div>
+    </div>
+    <!-- Fonts Copyright & License -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Fonts Copyright & License</h2>
+      <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+        All fonts available on Bangla Web Fonts are <b>copyrighted to their respective owners</b>. 
+        We only host fonts and icons licensed for free use and web embedding. License details are mentioned on each font and icon page. See our <a href="https://banglawebfonts.pages.dev/dmca/" class="text-blue-600 hover:underline">DMCA page</a> for more details.
+      </p>
+    </div>
+    <!-- website License -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Website Content License</h2>
+      <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+        The website content (text, code, logo etc.) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank" class="text-blue-500 hover:underline"> Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (<b>CC BY-NC-SA 4.0</b>).</a>
+        <span class="italic mt-1 block">Note: Fonts, icons, third-party open-source or other licensed code/APIs used on this site are not covered by this license and remain under their <b>respective owners’ licenses</b>, with <b>proper credit given</b> where applicable.</span>
+      </p>
+    </div>
+    <!-- Maintainer Info -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">Maintainer & Contributors</h2>
+      <div class="mt-4 p-6 rounded-xl border border-dashed border-neutral-300">
+        <p class="block text-lg font-semibold">Fuad Hasan Shihab</p>
+        <a href="https://github.com/fuadhasanshihab" class="text-blue-600 hover:underline">Github</a>
+      </div>
+    </div>
+    <p class="mt-12 pt-10 border-t border-dashed border-gray-300">
+      Visit 
+      <a href="https://github.com/fuadhasanshihab/bangla-web-fonts" target="_blank" class="text-blue-600 font-medium hover:underline">GitHub Repository</a> 
+    </p>
   </section>
 </Layout>
