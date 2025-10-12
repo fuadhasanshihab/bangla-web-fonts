@@ -65,8 +65,7 @@ const schemaData = {
 </div>
     <Footer />
     <!--script src="../assets/js/main.js"></script-->
-    <script is:inline src="/assets/js/main.js"></script>
+    <script is:inline defer src="/assets/js/main.js"></script>
     <script is:inline>if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('/sw.js')}</script>
-    <!--Fragment set:html={import.meta.env.FOOTER_INJECT} /-->
   </body>
 </html>
