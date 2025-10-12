@@ -118,19 +118,30 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   <div class="basis-full h-0"></div>
   <p class="mt-4">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
+
+<input id="tab-preload" type="checkbox" name="preload" class="peer/tab-preload hidden" />
+  <label for="tab-preload" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked/tab-preload:text-white peer-checked/tab-preload:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
+    &lt;link&gt;
+  </label>
+
   <div class="hidden peer-checked/tab-one:block w-full rounded-xl">
     <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
+<div class="hidden peer-checked/tab-preload:block">
     <CodeBox id="STYLESHEETcodeboxPreload" code={`${includePreload}
 <link href="${FontCSS}" rel="stylesheet">`} />
+</div>
   </div>
   <div class="hidden peer-checked/tab-two:block w-full rounded-xl">
+
     <CodeBox id="IMPORTcodebox" code={`<style>
 @import url('${FontCSS}');
 </style>`} />
+<div class="hidden peer-checked/tab-preload:block">
      <CodeBox id="IMPORTcodeboxPreload" code={`${includePreload}
 <style>
 @import url('${FontCSS}');
 </style>`} />
+</div>
   </div>
 </div>
 
