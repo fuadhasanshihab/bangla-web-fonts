@@ -255,7 +255,7 @@
   {
     "FontName": "Noto Sans Bengali (Updated)",
     "TotalStyles": "9",
-    "FontFamily": "'Noto Sans Bengali', sans-serif",
+    "FontFamily": "'Noto Sans Bengali Updated', sans-serif",
     "FontPath": "noto-sans-bengali-updated",
     "FontWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
     "FontTesterWeights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
