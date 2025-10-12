@@ -63,6 +63,14 @@ const includePreload = (Number(TotalStyles) > 1
   return `<link rel="preload" as="font" type="font/woff2" href="https://banglawebfonts.pages.dev/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
 
+const PreloadedFontName = (Number(TotalStyles) > 1
+  ? [400]
+  : FontTesterWeights
+).map(weight => {
+  const weightName = getWeightName(weight);
+  return `${FontName} ${weightName}`;
+}).join("\n");
+
 const PageTitle = `${FontName} - Bangla Web Fonts`;
 const MetaDescription = `${FontName} is a free Bangla web font, optimized for smooth rendering and fast loading. Easily use ${FontName} on your website with Free Bangla Web Fonts CDN.`;
 
@@ -97,15 +105,15 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 <div class="mt-6 pt-14 border-t border-dashed border-gray-300 dark:border-gray-800">
 
 
-<div class="flex gap-4">
+<div class="flex gap-3 items-center">
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Embed</h2>
 <input id="linkInput" type="radio" name="btns" class="hidden" checked>
-<label for="linkInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 rounded-lg block ml-2">
+<label for="linkInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 my-auto rounded-lg block ml-2">
   &lt;link&gt;
 </label>
 
 <input id="importInput" type="radio" name="btns" class="peer hidden">
-<label for="importInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 rounded-lg block">
+<label for="importInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 my-auto rounded-lg block">
   @import
 </label>
 </div>
@@ -125,10 +133,10 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
   
-  <p class="mt-4">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
+  <p class="mt-3">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
 <div class="ml-auto mr-0 mt-3">
-<input id="preloadInput" type="checkbox" class="mr-2 accent-gray-800 padding-2 border border-blue-300">
+<input id="preloadInput" type="checkbox" class="mr-2 w-6 h-6 accent-gray-800 outline-none">
 <label for="preloadInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 rounded-lg">
   Include Preload Link
 </label>
@@ -153,9 +161,9 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
   </div>
 
-<p id="preloadInfo" class="text-sm mt-2 hidden">
-  Regular font preload link added. This will prevent FOUT and improve loading speed. 
-  Learn more <a href="https://web.dev/articles/codelab-preload-web-fonts" target="_blank" class="underline text-blue-600">here</a>.
+<p id="preloadInfo" class="text-sm mt-3 hidden">
+  {PreloadedFontName} font file preload link added. This will prevent FOUT and improve loading speed. 
+  Learn more <a href="https://web.dev/articles/codelab-preload-web-fonts" target="_blank" class="hover:underline text-blue-600">here</a>.
 </p>
 
 </div>
