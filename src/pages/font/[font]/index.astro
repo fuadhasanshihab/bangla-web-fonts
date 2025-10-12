@@ -106,12 +106,12 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 <div class="mt-2 flex flex-row flex-wrap">
-  <input id="tab-one" type="radio" name="tabs" class="peer/tab-one hidden" checked />
-  <label for="tab-one" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked/tab-one:text-white peer-checked/tab-one:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
+  <input id="linkBtn" type="radio" name="btns" class="hidden" checked />
+  <label for="linkBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent checked:text-white checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
     &lt;link&gt;
   </label>
-  <input id="tab-two" type="radio" name="tabs" class="peer/tab-two hidden" />
-  <label for="tab-two" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked/tab-two:text-white peer-checked/tab-two:bg-gray-800 cursor-default px-3 py-1 rounded-lg block">
+  <input id="importBtn" type="radio" name="btns" class="hidden" />
+  <label for="importBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent checked:text-white checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block">
     @import
   </label>
 
@@ -119,36 +119,78 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   <p class="mt-4">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
 
-<input id="tab-preload" type="checkbox" name="preload" class="peer/tab-preload hidden" />
-  <label for="tab-preload" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked/tab-preload:text-white peer-checked/tab-preload:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
+<input id="preloadBtn" type="checkbox" class="hidden" />
+  <label for="preloadBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent checked:text-white checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
     Include Preload Link
   </label>
 
-  <div class="hidden peer-checked/tab-one:block w-full rounded-xl">
-<div class="hidden peer-not-checked/tab-preload:block">
-    <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
-</div>
-<div class="hidden peer-checked/tab-preload:block">
-    <CodeBox id="STYLESHEETcodeboxPreload" code={`${includePreload}
+  <div class="w-full rounded-xl">
+   <CodeBox id="linkCodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
+
+    <CodeBox id="linkPreloadCodebox" code={`${includePreload}
 <link href="${FontCSS}" rel="stylesheet">`} />
-</div>
+
   </div>
-  <div class="hidden peer-checked/tab-two:block w-full rounded-xl">
-<div class="hidden peer-not-checked/tab-preload:block">
-    <CodeBox id="IMPORTcodebox" code={`<style>
+  <div class="w-full rounded-xl">
+   <CodeBox id="importCodebox" code={`<style>
 @import url('${FontCSS}');
 </style>`} />
-</div>
-<div class="hidden peer-checked/tab-preload:block">
-     <CodeBox id="IMPORTcodeboxPreload" code={`${includePreload}
+
+<CodeBox id="inportPreloadCodebox" code={`${includePreload}
 <style>
 @import url('${FontCSS}');
 </style>`} />
-</div>
+
   </div>
 </div>
 
 
+<script is:inline>
+  // get all buttons
+  var linkBtn = document.getElementById("linkBtn");
+  var importBtn = document.getElementById("importBtn");
+  var preloadBtn = document.getElementById("preloadBtn");
+
+  // get all code boxes
+  var linkCodebox = document.getElementById("linkCodebox");
+  var linkPreloadCodebox = document.getElementById("linkPreloadCodebox");
+  var importCodebox = document.getElementById("importCodebox");
+  var importPreloadCodebox = document.getElementById("importPreloadCodebox");
+
+  // function to update view
+  function updateView() {
+    // hide all first
+    linkCodebox.style.display = "none";
+    linkPreloadCodebox.style.display = "none";
+    importCodebox.style.display = "none";
+    importPreloadCodebox.style.display = "none";
+
+    // now show the right one
+    if (linkBtn.checked) {
+      if (preloadBtn.checked) {
+        linkPreloadCodebox.style.display = "block";
+      } else {
+        linkCodebox.style.display = "block";
+      }
+    }
+
+    if (importBtn.checked) {
+      if (preloadBtn.checked) {
+        importPreloadCodebox.style.display = "block";
+      } else {
+        importCodebox.style.display = "block";
+      }
+    }
+  }
+
+  // attach event listeners
+  linkBtn.addEventListener("change", updateView);
+  importBtn.addEventListener("change", updateView);
+  preloadBtn.addEventListener("change", updateView);
+
+  // run once at start
+  updateView();
+</script>
 
 
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl mt-14">CSS</h2>
