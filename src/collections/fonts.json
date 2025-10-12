@@ -353,11 +353,11 @@
   },
   {
     "FontName": "Alkatra",
-    "TotalStyles": "4",
+    "TotalStyles": "1",
     "FontFamily": "'Alkatra', sans-serif",
     "FontPath": "alkatra",
-    "FontWeights": [400, 500, 600, 700],
-    "FontTesterWeights": [400, 500, 600, 700],
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
     "FontDesigner": "Suman Bhandary",
     "FontDesignerURL": "https://github.com/suman51284",
     "FontLicense": "OFL"
