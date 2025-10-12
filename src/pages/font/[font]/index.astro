@@ -95,8 +95,20 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
       ))}
 
 <div class="mt-6 pt-14 border-t border-dashed border-gray-300 dark:border-gray-800">
-<h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Embed</h2>
 
+
+<div class="flex gap-2">
+<h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Embed</h2>
+<input id="linkInput" type="radio" name="btns" class="hidden" checked>
+<label for="linkInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 rounded-lg block mr-3">
+  &lt;link&gt;
+</label>
+
+<input id="importInput" type="radio" name="btns" class="peer hidden">
+<label for="importInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 rounded-lg block">
+  @import
+</label>
+</h2>
 
 
 
@@ -108,26 +120,19 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 <div class="mt-2 flex flex-row flex-wrap">
 
 
-<input id="linkInput" type="radio" name="btns" class="hidden" checked>
-<label for="linkInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 rounded-lg block mr-3">
-  &lt;link&gt;
-</label>
-
-<input id="importInput" type="radio" name="btns" class="peer hidden">
-<label for="importInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-default px-3 py-1 rounded-lg block">
-  @import
-</label>
 
 
 
-  <div class="basis-full h-0"></div>
+
+  
   <p class="mt-4">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
-
-<input id="preloadInput" type="checkbox" class="peer mr-2 accent-gray-800">
+<div class="ml-auto mr-0 mt-3">
+<input id="preloadInput" type="checkbox" class="mr-2 accent-gray-800 padding-2 border border-blue-300">
 <label for="preloadInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 rounded-lg">
   Include Preload Link
 </label>
+</div>
 
   <div class="w-full rounded-xl">
    <CodeBox id="linkCodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
@@ -147,13 +152,19 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 </style>`} />
 
   </div>
+
+<p id="preloadInfo" class="text-sm mt-2 hidden">
+  Regular font preload link added. This will prevent FOUT and improve loading speed. 
+  Learn more <a href="https://web.dev/articles/codelab-preload-web-fonts" target="_blank" class="underline text-blue-600">here</a>.
+</p>
+
 </div>
 
 
 <style is:inline>
 .active {
- color: #fff;
-background: #1f2937;
+ color: #fff!important;
+background: #1f2937!important;
 }
 </style>
 
@@ -173,6 +184,9 @@ background: #1f2937;
   var linkPreloadCodebox = document.querySelector(".linkPreloadCodebox");
   var importCodebox = document.querySelector(".importCodebox");
   var importPreloadCodebox = document.querySelector(".importPreloadCodebox");
+
+  // get preload info paragraph
+  var preloadInfo = document.getElementById("preloadInfo");
 
   // function to update view
   function updateView() {
@@ -209,6 +223,9 @@ background: #1f2937;
     // add active class to preload input if checked
     if (preloadInput.checked) {
       preloadLabel.classList.add("active");
+      preloadInfo.style.display = "block"; // show paragraph
+    } else {
+      preloadInfo.style.display = "none"; // hide paragraph
     }
   }
 
