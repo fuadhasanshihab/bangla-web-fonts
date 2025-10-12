@@ -55,6 +55,14 @@ const FontPreloads = FontWeights.map(weight => {
   return `<link rel="preload" as="font" type="font/woff2" href="/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
 
+const includePreload = (TotalStyles > 1
+  ? [400] // preload only 400 if multiple styles exist
+  : FontTesterWeights // preload all available if single style
+).map(weight => {
+  const weightName = getLowercaseWeightName(weight);
+  return `<link rel="preload" as="font" type="font/woff2" href="https://banglawebfonts.pages.dev/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
+}).join("\n");
+
 const PageTitle = `${FontName} - Bangla Web Fonts`;
 const MetaDescription = `${FontName} is a free Bangla web font, optimized for smooth rendering and fast loading. Easily use ${FontName} on your website with Free Bangla Web Fonts CDN.`;
 
@@ -112,14 +120,14 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
   <div class="hidden peer-checked/tab-one:block w-full rounded-xl">
     <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
-    <CodeBox id="STYLESHEETcodeboxPreload" code={`${FontPreloads}
+    <CodeBox id="STYLESHEETcodeboxPreload" code={`${includePreload}
 <link href="${FontCSS}" rel="stylesheet">`} />
   </div>
   <div class="hidden peer-checked/tab-two:block w-full rounded-xl">
     <CodeBox id="IMPORTcodebox" code={`<style>
 @import url('${FontCSS}');
 </style>`} />
-     <CodeBox id="IMPORTcodeboxPreload" code={`${FontPreloads}
+     <CodeBox id="IMPORTcodeboxPreload" code={`${includePreload}
 <style>
 @import url('${FontCSS}');
 </style>`} />
