@@ -55,12 +55,12 @@ const FontPreloads = FontWeights.map(weight => {
   return `<link rel="preload" as="font" type="font/woff2" href="/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
 
-const includePreload = (TotalStyles > 1
-  ? [400] // preload only 400 if multiple styles exist
-  : FontTesterWeights // preload all available if single style
+const includePreload = (Number(TotalStyles) > 1
+  ? [400]
+  : FontTesterWeights
 ).map(weight => {
   const weightName = getLowercaseWeightName(weight);
-  return `<link rel="preload" as="font" type="font/woff2" href="https://banglawebfonts.pages.dev/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
+  return `<link rel="preload" as="font" type="font/woff2" href="/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
 
 const PageTitle = `${FontName} - Bangla Web Fonts`;
