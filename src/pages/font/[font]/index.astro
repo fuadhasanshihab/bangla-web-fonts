@@ -106,23 +106,28 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 <div class="mt-2 flex flex-row flex-wrap">
-  <input id="linkBtn" type="radio" name="btns" class="hidden" checked />
-  <label for="linkBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent checked:text-white checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
-    &lt;link&gt;
-  </label>
-  <input id="importBtn" type="radio" name="btns" class="hidden" />
-  <label for="importBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent checked:text-white checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block">
-    @import
-  </label>
+
+
+<input id="linkBtn" type="radio" name="btns" class="peer hidden" checked>
+<label for="linkBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked:text-white peer-checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
+  &lt;link&gt;
+</label>
+
+<input id="importBtn" type="radio" name="btns" class="peer hidden">
+<label for="importBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked:text-white peer-checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block">
+  @import
+</label>
+
+
 
   <div class="basis-full h-0"></div>
   <p class="mt-4">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
 
-<input id="preloadBtn" type="checkbox" class="hidden" />
-  <label for="preloadBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent checked:text-white checked:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
-    Include Preload Link
-  </label>
+<input id="preloadBtn" type="checkbox" class="peer mr-2 accent-gray-800">
+<label for="preloadBtn" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked:text-white peer-checked:bg-gray-800 cursor-pointer px-3 py-1 rounded-lg">
+  Include Preload Link
+</label>
 
   <div class="w-full rounded-xl">
    <CodeBox id="linkCodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
