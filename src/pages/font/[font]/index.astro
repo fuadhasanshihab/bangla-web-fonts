@@ -156,11 +156,11 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   var importBtn = document.getElementById("importBtn");
   var preloadBtn = document.getElementById("preloadBtn");
 
-  // get all code boxes
-  var linkCodebox = document.getElementById("linkCodebox");
-  var linkPreloadCodebox = document.getElementById("linkPreloadCodebox");
-  var importCodebox = document.getElementById("importCodebox");
-  var importPreloadCodebox = document.getElementById("importPreloadCodebox");
+  // code boxes by class
+  var linkCodebox = document.querySelector(".linkCodebox");
+  var linkPreloadCodebox = document.querySelector(".linkPreloadCodebox");
+  var importCodebox = document.querySelector(".importCodebox");
+  var importPreloadCodebox = document.querySelector(".importPreloadCodebox");
 
   // function to update view
   function updateView() {
