@@ -17,7 +17,7 @@ let fonts = [];
         localStorage.setItem("lazy", "1");
       }
     } catch (e) {
-      console.warn("LocalStorage not available", e);
+      console.warn("error", e);
     }
 
     loadCSS('/css/webfonts.min.css');
@@ -29,7 +29,7 @@ setTimeout(() => {
 	      
 
     // Fetch font data
-    fetch('https://cdn.jsdelivr.net/gh/fuadhasanshihab/bangla-web-fonts@main/src/collections/fonts.json')
+    fetch('/api/fonts.json')
       .then(res => res.json())
       .then(data => fonts = data);
 
@@ -42,8 +42,6 @@ setTimeout(() => {
       document.removeEventListener("scroll", activateLazyLoading);
       clearTimeout(timeoutFHS);
     }
-
-    console.log("Lazy features activated");
   }
 
   try {
@@ -58,7 +56,6 @@ setTimeout(() => {
       timeoutFHS = setTimeout(activateLazyLoading, 30000);
     }
   } catch (e) {
-    console.warn("Error accessing localStorage, activating lazy load as fallback.", e);
     activateLazyLoading();
   }
 
@@ -172,155 +169,6 @@ document.addEventListener('keydown', (e) => {
     // document.body.classList.remove('overflow-hidden');
   }
 });
-
-
-
-
-/*
-
-window.darkMode = false;
-
-const stickyClasses = ["fixed", "h-14"];
-const unstickyClasses = ["absolute", "h-20"];
-const stickyClassesContainer = [
-	"border-neutral-300/50",
-	"bg-white/80",
-	"dark:border-neutral-600/40",
-	"dark:bg-neutral-900/60",
-	"backdrop-blur-2xl",
-];
-const unstickyClassesContainer = ["border-transparent"];
-let headerElement = null;
-
-document.addEventListener("DOMContentLoaded", () => {
-	headerElement = document.getElementById("header");
-
-	if (
-		localStorage.getItem("dark_mode") &&
-		localStorage.getItem("dark_mode") === "true"
-	) {
-		window.darkMode = true;
-		showNight();
-	} else {
-		showDay();
-	}
-	stickyHeaderFuncionality();
-	applyMenuItemClasses();
-	evaluateHeaderPosition();
-	mobileMenuFunctionality();
-});
-
-// window.toggleDarkMode = function(){
-//     document.documentElement.classList.toggle('dark');
-//     if(document.documentElement.classList.contains('dark')){
-//         localStorage.setItem('dark_mode', true);
-//         window.darkMode = true;
-//     } else {
-//         window.darkMode = false;
-//         localStorage.setItem('dark_mode', false);
-//     }
-// }
-
-window.stickyHeaderFuncionality = () => {
-	window.addEventListener("scroll", () => {
-		evaluateHeaderPosition();
-	});
-};
-
-window.evaluateHeaderPosition = () => {
-	if (window.scrollY > 16) {
-		headerElement.firstElementChild.classList.add(...stickyClassesContainer);
-		headerElement.firstElementChild.classList.remove(
-			...unstickyClassesContainer,
-		);
-		headerElement.classList.add(...stickyClasses);
-		headerElement.classList.remove(...unstickyClasses);
-		document.getElementById("menu").classList.add("top-[56px]");
-		document.getElementById("menu").classList.remove("top-[75px]");
-
-document.getElementById("searchModal").classList.add("top-[55px]");
-		document.getElementById("searchModal").classList.remove("top-[74px]");
-
-	} else {
-		headerElement.firstElementChild.classList.remove(...stickyClassesContainer);
-		headerElement.firstElementChild.classList.add(...unstickyClassesContainer);
-		headerElement.classList.add(...unstickyClasses);
-		headerElement.classList.remove(...stickyClasses);
-		document.getElementById("menu").classList.remove("top-[56px]");
-		document.getElementById("menu").classList.add("top-[75px]");
-
-document.getElementById("searchModal").classList.remove("top-[55px]");
-		document.getElementById("searchModal").classList.add("top-[74px]");
-
-	}
-};
-
-document.getElementById("darkToggle").addEventListener("click", () => {
-	document.documentElement.classList.add("duration-300");
-
-	if (document.documentElement.classList.contains("dark")) {
-		localStorage.removeItem("dark_mode");
-		showDay(true);
-	} else {
-		localStorage.setItem("dark_mode", true);
-		showNight(true);
-	}
-});
-
-function showDay(animate) {
-	document.getElementById("sun").classList.remove("setting");
-	document.getElementById("moon").classList.remove("rising");
-
-	let timeout = 0;
-
-	if (animate) {
-		timeout = 500;
-
-		document.getElementById("moon").classList.add("setting");
-	}
-
-	setTimeout(() => {
-		document.getElementById("dayText").classList.remove("hidden");
-		document.getElementById("nightText").classList.add("hidden");
-
-		document.getElementById("moon").classList.add("hidden");
-		document.getElementById("sun").classList.remove("hidden");
-
-		if (animate) {
-			document.documentElement.classList.remove("dark");
-			document.getElementById("sun").classList.add("rising");
-		}
-	}, timeout);
-}
-
-function showNight(animate) {
-	document.getElementById("moon").classList.remove("setting");
-	document.getElementById("sun").classList.remove("rising");
-
-	let timeout = 0;
-
-	if (animate) {
-		timeout = 500;
-
-		document.getElementById("sun").classList.add("setting");
-	}
-
-	setTimeout(() => {
-		document.getElementById("nightText").classList.remove("hidden");
-		document.getElementById("dayText").classList.add("hidden");
-
-		document.getElementById("sun").classList.add("hidden");
-		document.getElementById("moon").classList.remove("hidden");
-
-		if (animate) {
-			document.documentElement.classList.add("dark");
-			document.getElementById("moon").classList.add("rising");
-		}
-	}, timeout);
-}
-
-*/
-
 
 
 
