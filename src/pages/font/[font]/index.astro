@@ -98,7 +98,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
      {FontTesterWeights.map(weight => (
         <div class="mt-6">
           <p class="mb-2 leading-6 text-neutral-700 dark:text-neutral-300 sm:leading-7 lg:leading-8">{getWeightName(weight)} {weight}</p>
-          <p class="fhs-font-preview leading-tight" style={`font-family: ${FontFamily}; font-weight: ${weight}; font-size: 32px;`}>আমার সোনার বাংলা</p>
+          <p class="fhs-font-preview leading-tight" style={`font-family: ${FontFamily}; font-weight: ${weight}; font-size: 40px;`}>আমার সোনার বাংলা</p>
         </div>
       ))}
 
@@ -133,17 +133,18 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
   
-  <p class="mt-2">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
+  <p class="mt-2 mb-1">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
 
 
+<div class="w-full rounded-xl">
 
    <CodeBox id="linkCodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
 
     <CodeBox id="linkPreloadCodebox" code={`${includePreload}
 <link href="${FontCSS}" rel="stylesheet">`} />
 
-<div class="w-full rounded-xl">  
+  
   
    <CodeBox id="importCodebox" code={`<style>
 @import url('${FontCSS}');
@@ -267,7 +268,7 @@ background: #1f2937!important;
 <div class="mt-14 bg-blue-50 dark:bg-gray-900 border-l-4 border-blue-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-xl">
   <h3 class="font-bold text-lg">Performance Tip</h3>
   <p class="text-sm mt-1">You can use the <span class="font-mono bg-blue-100 dark:bg-blue-700 px-1 py-0.5 rounded">.min.css</span> version for better performance and faster loading times.</p>
-  <div class="bg-white dark:bg-black p-4 mt-3 rounded border border-blue-300 border-dashed dark:border-gray-600 text-sm">
+  <div class="bg-white dark:bg-black p-4 mt-3 rounded-lg border border-blue-300 border-dashed dark:border-gray-600 text-sm">
     <span class="text-neutral-700 dark:text-neutral-300">Standard CSS:</span>  
     <p class="text-blue-600 dark:text-blue-300 break-words whitespace-normal">{FontCSS}</p>
     <span class="text-neutral-700 dark:text-neutral-300 mt-2 block">Minified CSS:</span>  
