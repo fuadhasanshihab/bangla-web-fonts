@@ -253,7 +253,7 @@
     "FontLicense": "OFL"
   },
   {
-    "FontName": "Noto Sans Bengali (Updated)",
+    "FontName": "Noto Sans Bengali Updated",
     "TotalStyles": "9",
     "FontFamily": "'Noto Sans Bengali Updated', sans-serif",
     "FontPath": "noto-sans-bengali-updated",
@@ -357,7 +357,7 @@
     "FontFamily": "'Alkatra', sans-serif",
     "FontPath": "alkatra",
     "FontWeights": [400],
-    "FontTesterWeights": [400, 700],
+    "FontTesterWeights": [400],
     "FontDesigner": "Suman Bhandary",
     "FontDesignerURL": "https://github.com/suman51284",
     "FontLicense": "OFL"
