@@ -99,17 +99,6 @@
     "FontLicense": "OFL"
   },
   {
-    "FontName": "Abu Sayed",
-    "TotalStyles": "1",
-    "FontFamily": "'Abu Sayed', sans-serif",
-    "FontPath": "abu-sayed",
-    "FontWeights": [700],
-    "FontTesterWeights": [700],
-    "FontDesigner": "Jayed Ahsan Saad",
-    "FontDesignerURL": "https://codepotro.com/",
-    "FontLicense": "OFL"
-  },
-  {
     "FontName": "Bornomala",
     "TotalStyles": "2",
     "FontFamily": "'Bornomala', serif",
@@ -308,17 +297,6 @@
     "FontLicense": "OFL"
   },
   {
-    "FontName": "Sapa",
-    "TotalStyles": "2",
-    "FontFamily": "'Sapa', sans-serif",
-    "FontPath": "sapa",
-    "FontWeights": [400],
-    "FontTesterWeights": [400, 700],
-    "FontDesigner": "Danh Hong",
-    "FontDesignerURL": "https://github.com/danhhong",
-    "FontLicense": "OFL"
-  },
-  {
     "FontName": "Kalaa",
     "TotalStyles": "2",
     "FontFamily": "'Kalaa', sans-serif",
@@ -353,22 +331,55 @@
   },
   {
     "FontName": "Tuli",
-    "TotalStyles": "2",
+    "TotalStyles": "1",
     "FontFamily": "'Tuli', sans-serif",
     "FontPath": "tuli",
     "FontWeights": [400],
-    "FontTesterWeights": [400, 700],
+    "FontTesterWeights": [400],
     "FontDesigner": "Risat Rajin",
     "FontDesignerURL": "https://www.facebook.com/risatrajin",
     "FontLicense": "OFL"
   },
   {
-    "FontName": "Nilima",
+    "FontName": "Sapa",
     "TotalStyles": "2",
+    "FontFamily": "'Sapa', sans-serif",
+    "FontPath": "sapa",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Danh Hong",
+    "FontDesignerURL": "https://github.com/danhhong",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Somoyer Srot",
+    "TotalStyles": "1",
+    "FontFamily": "'Somoyer Srot', sans-serif",
+    "FontPath": "somoyer-srot",
+    "FontWeights": [400],
+    "FontTesterWeights": [400],
+    "FontDesigner": "Rahman Rashid Hillol",
+    "FontDesignerURL": "https://www.behance.net/hillolvai",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Abu Sayed",
+    "TotalStyles": "1",
+    "FontFamily": "'Abu Sayed', sans-serif",
+    "FontPath": "abu-sayed",
+    "FontWeights": [700],
+    "FontTesterWeights": [700],
+    "FontDesigner": "Jayed Ahsan Saad",
+    "FontDesignerURL": "https://codepotro.com/",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Nilima",
+    "TotalStyles": "1",
     "FontFamily": "'Nilima', sans-serif",
     "FontPath": "nilima",
     "FontWeights": [400],
-    "FontTesterWeights": [400, 700],
+    "FontTesterWeights": [400],
     "FontDesigner": "Niladri Shekhar Bala",
     "FontDesignerURL": "https://lipighor.com/",
     "FontLicense": "OFL"
@@ -386,24 +397,13 @@
   },
   {
     "FontName": "Ekushey Aloucik",
-    "TotalStyles": "1",
+    "TotalStyles": "2",
     "FontFamily": "'Ekushey Aloucik', sans-serif",
     "FontPath": "ekushey-aloucik",
     "FontWeights": [400],
     "FontTesterWeights": [400, 700],
     "FontDesigner": "Ekushey",
     "FontDesignerURL": "https://ekushey.org/",
-    "FontLicense": "OFL"
-  },
-  {
-    "FontName": "Somoyer Srot",
-    "TotalStyles": "2",
-    "FontFamily": "'Somoyer Srot', sans-serif",
-    "FontPath": "somoyer-srot",
-    "FontWeights": [400],
-    "FontTesterWeights": [400, 700],
-    "FontDesigner": "Rahman Rashid Hillol",
-    "FontDesignerURL": "https://www.behance.net/hillolvai",
     "FontLicense": "OFL"
   }
 ]
