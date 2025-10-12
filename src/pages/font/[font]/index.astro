@@ -135,21 +135,16 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   
   <p class="mt-2">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
-<div class="ml-auto mr-0 mt-3 mb-1 flex items-center justify-end">
-<input id="preloadInput" type="checkbox" class="mr-2 w-6 h-6 bg-neutral-100 rounded-lg border-0 focus:outline-none checked:bg-gray-800">
-<label for="preloadInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 rounded-lg">
-  Include Preload Link?
-</label>
-</div>
 
-  <div class="w-full rounded-xl">
+
+
    <CodeBox id="linkCodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
 
     <CodeBox id="linkPreloadCodebox" code={`${includePreload}
 <link href="${FontCSS}" rel="stylesheet">`} />
 
-  </div>
-  <div class="w-full rounded-xl">
+  
+  
    <CodeBox id="importCodebox" code={`<style>
 @import url('${FontCSS}');
 </style>`} />
@@ -159,9 +154,16 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 @import url('${FontCSS}');
 </style>`} />
 
-  </div>
+  
 
-<p id="preloadInfo" class="text-sm mt-3 hidden">
+<div class="ml-auto mr-0 mt-3 flex items-center justify-start">
+<input id="preloadInput" type="checkbox" class="mr-3 w-6 h-6 !bg-neutral-100 !rounded-lg !border-0 !outline-none accent-gray-800">
+<label for="preloadInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 rounded-lg">
+  Include Preload Link
+</label>
+</div>
+
+<p id="preloadInfo" class="text-sm mt-2 hidden">
   Preload link for {PreloadedFontName} font has been added to the code. This helps prevent FOUT and improves page loading performance.
   Learn more <a href="https://web.dev/articles/codelab-preload-web-fonts" target="_blank" class="hover:underline text-blue-600">here</a>.
 </p>
