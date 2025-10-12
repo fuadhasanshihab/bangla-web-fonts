@@ -60,7 +60,7 @@ const includePreload = (Number(TotalStyles) > 1
   : FontTesterWeights
 ).map(weight => {
   const weightName = getLowercaseWeightName(weight);
-  return `<link rel="preload" as="font" type="font/woff2" href="/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
+  return `<link rel="preload" as="font" type="font/woff2" href="https://banglawebfonts.pages.dev/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
 
 const PageTitle = `${FontName} - Bangla Web Fonts`;
@@ -121,21 +121,24 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 <input id="tab-preload" type="checkbox" name="preload" class="peer/tab-preload hidden" />
   <label for="tab-preload" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked/tab-preload:text-white peer-checked/tab-preload:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
-    &lt;link&gt;
+    Include Preload Link
   </label>
 
   <div class="hidden peer-checked/tab-one:block w-full rounded-xl">
+<div class="hidden peer-not-checked/tab-preload:block">
     <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
+</div>
 <div class="hidden peer-checked/tab-preload:block">
     <CodeBox id="STYLESHEETcodeboxPreload" code={`${includePreload}
 <link href="${FontCSS}" rel="stylesheet">`} />
 </div>
   </div>
   <div class="hidden peer-checked/tab-two:block w-full rounded-xl">
-
+<div class="hidden peer-not-checked/tab-preload:block">
     <CodeBox id="IMPORTcodebox" code={`<style>
 @import url('${FontCSS}');
 </style>`} />
+</div>
 <div class="hidden peer-checked/tab-preload:block">
      <CodeBox id="IMPORTcodeboxPreload" code={`${includePreload}
 <style>
