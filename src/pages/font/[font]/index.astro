@@ -97,13 +97,23 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 <hr class="mt-8 border-dashed border-gray-300 dark:border-gray-800">
 
-     {FontTesterWeights.map(weight => (
-        const isGenerated = !FontWeights.includes(weight);
-        <div class="mt-8">
-          <p class="mb-2 leading-6 text-neutral-700 dark:text-neutral-300 sm:leading-7 lg:leading-8">{getWeightName(weight)} {weight} <span class="text-sm">{isGenerated && ' (Generated)'}</span></p>
-          <p class="fhs-font-preview leading-tight" style={`font-family: ${FontFamily}; font-weight: ${weight}; font-size: 40px;`}>আমার সোনার বাংলা</p>
-        </div>
-      ))}
+     {FontTesterWeights.map(weight => {
+  const isGenerated = !FontWeights.includes(weight);
+  return (
+    <div class="mt-8">
+      <p class="mb-2 leading-6 text-neutral-700 dark:text-neutral-300 sm:leading-7 lg:leading-8">
+        {getWeightName(weight)} {weight}
+        <span class="text-sm">{isGenerated && ' (Generated)'}</span>
+      </p>
+      <p
+        class="fhs-font-preview leading-tight"
+        style={`font-family: ${FontFamily}; font-weight: ${weight}; font-size: 40px;`}
+      >
+        আমার সোনার বাংলা
+      </p>
+    </div>
+  );
+})}
 
 <div class="mt-8 mb-2 pt-14 border-t border-dashed border-gray-300 dark:border-gray-800">
 
