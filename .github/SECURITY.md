@@ -5,7 +5,7 @@
 If you discover a security vulnerability in **Bangla Web Fonts**, please follow these steps:
 
 1. **Do not disclose publicly**: Avoid sharing details in public issues or discussions.  
-2. **Report privately**: Email the details to [contact.shihab1246@gmail.com](mailto:contact.shihab1246@gmail.com) or open a private security advisory on GitHub.  
+2. **Report privately**: Please [contact us](https://update-130825.banglawebfonts.pages.dev/contact/) or open a private security advisory on GitHub.  
 3. **Include details**: Provide steps to reproduce, affected areas, and potential impact.  
 
 ## Security Best Practices
@@ -16,8 +16,4 @@ To ensure the security of this project:
 
 ## Acknowledgments
 
-We appreciate responsible disclosure and contributions that help improve security. Thank you for keeping **Bangla Web Fonts** safe!  
-
----
-
-_Last updated: March 2025_
+We appreciate responsible disclosure and contributions that help improve security. Thank you for keeping **Bangla Web Fonts** safe!
