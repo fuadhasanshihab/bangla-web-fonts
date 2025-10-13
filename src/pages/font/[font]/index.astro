@@ -148,7 +148,7 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   
   <p class="mt-2">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
-<div class="mt-3 ml-auto mr-0 mb-1 flex items-center justify-end bg-neutral-100 hover:bg-slate-200 cursor-pointer px-3 py-1 rounded-lg">
+<div class="preloadBtn" class="mt-3 ml-auto mr-0 mb-1 flex items-center justify-end bg-neutral-100 hover:bg-slate-200 cursor-pointer px-3 py-1 rounded-lg">
 <input id="preloadInput" type="checkbox" class="mr-2 w-3 h-3 !bg-neutral-100 !rounded-lg !border-neutral-200 !ring-neutral-200 !outline-none accent-gray-800">
 <label for="preloadInput" class="text-sm">
   Include Preload Link
@@ -175,8 +175,8 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 <p id="preloadInfo" class="text-sm mt-3 hidden">
-  Preload link for {PreloadedFontName} font has been added to the code. This helps prevent FOUT and improves page loading performance.
-  Learn more <a href="https://web.dev/articles/codelab-preload-web-fonts" target="_blank" class="hover:underline text-blue-600">here</a>.
+  Preload link for <span class="font-medium">{PreloadedFontName}</span> has been added to the code. This helps prevent FOUT and improves page loading performance.
+  <a href="https://web.dev/articles/codelab-preload-web-fonts" rel="noopener noreferrer" target="_blank" class="hover:underline text-blue-600">Learn more here</a>.
 </p>
 </div>
 
@@ -199,7 +199,7 @@ background: #1f2937!important;
   // get all labels
   var linkLabel = document.querySelector("label[for='linkInput']");
   var importLabel = document.querySelector("label[for='importInput']");
-  var preloadLabel = document.querySelector("label[for='preloadInput']");
+  var preloadLabel = document.querySelector(".preloadBtn");
 
   // get all code boxes via class
   var linkCodebox = document.querySelector(".linkCodebox");
@@ -297,20 +297,20 @@ background: #1f2937!important;
     <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{FontName}</p>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Total Styles</h3>
+    <h3 class="font-medium text-neutral-900 dark:text-neutral-200">Total Styles</h3>
     <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{TotalStyles}</p>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Category</h3>
+    <h3 class="font-medium text-neutral-900 dark:text-neutral-200">Category</h3>
     <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{FontCategory}</p>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Designer</h3>
+    <h3 class="font-medium text-neutral-900 dark:text-neutral-200">Designer</h3>
     <a href={FontDesignerURL} target="_blank" rel="noopener noreferrer" class="text-blue-600 sm:col-span-3 sm:mt-0 hover:underline">{FontDesigner}</a>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">License</h3>
-    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3" set:html={LicenseInfo}></p>
+    <h3 class="font-medium text-neutral-900 dark:text-neutral-200">License</h3>
+    <p class="text-neutral-800 dark:text-neutral-300 sm:col-span-3" set:html={LicenseInfo}></p>
   </div>
  </div>
 </div>
