@@ -55,6 +55,22 @@ const FontPreloads = FontWeights.map(weight => {
   return `<link rel="preload" as="font" type="font/woff2" href="/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
 }).join("\n");
 
+const includePreload = (Number(TotalStyles) > 1
+  ? [400]
+  : FontTesterWeights
+).map(weight => {
+  const weightName = getLowercaseWeightName(weight);
+  return `<link rel="preload" as="font" type="font/woff2" href="https://banglawebfonts.pages.dev/fonts/${FontPath}/${FontPath}-${weightName}.woff2" crossorigin="anonymous">`;
+}).join("\n");
+
+const PreloadedFontName = (Number(TotalStyles) > 1
+  ? [400]
+  : FontTesterWeights
+).map(weight => {
+  const weightName = getWeightName(weight);
+  return `${FontName} ${weightName}`;
+}).join("\n");
+
 const PageTitle = `${FontName} - Bangla Web Fonts`;
 const MetaDescription = `${FontName} is a free Bangla web font, optimized for smooth rendering and fast loading. Easily use ${FontName} on your website with Free Bangla Web Fonts CDN.`;
 
@@ -79,40 +95,170 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 <PreviewInput/>
 
-     {FontTesterWeights.map(weight => (
-        <div class="mt-6">
-          <p class="mb-2 leading-6 text-neutral-700 dark:text-neutral-300 sm:leading-7 lg:leading-8">{getWeightName(weight)} {weight}</p>
-          <p class="fhs-font-preview leading-tight" style={`font-family: ${FontFamily}; font-weight: ${weight}; font-size: 32px;`}>আমার সোনার বাংলা</p>
-        </div>
-      ))}
+<hr class="mt-8 border-dashed border-gray-300 dark:border-gray-800">
 
-<div class="mt-6 pt-14 border-t border-gray-300 dark:border-gray-800">
+     {FontTesterWeights.map(weight => {
+  const isGenerated = !FontWeights.includes(weight);
+  return (
+    <div class="mt-8">
+      <p class="mb-2 leading-6 text-neutral-700 dark:text-neutral-300 sm:leading-7 lg:leading-8">
+        {getWeightName(weight)} {weight}
+        <span class="text-sm">{isGenerated && ' (Generated)'}</span>
+      </p>
+      <p
+        class="fhs-font-preview leading-tight"
+        style={`font-family: ${FontFamily}; font-weight: ${weight}; font-size: 40px;`}
+      >
+        আমার সোনার বাংলা
+      </p>
+    </div>
+  );
+})}
+
+<div class="mt-8 mb-2 pt-14 border-t border-dashed border-gray-300 dark:border-gray-800">
+
+
+<div class="flex gap-3 items-center">
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Embed</h2>
+<input id="linkInput" type="radio" name="btns" class="hidden" checked>
+<label for="linkInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 my-auto rounded-lg block ml-2">
+  &lt;link&gt;
+</label>
 
-<div class="mt-2 flex flex-row flex-wrap">
-  <input id="tab-one" type="radio" name="tabs" class="peer/tab-one hidden" checked />
-  <label for="tab-one" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked/tab-one:text-white peer-checked/tab-one:bg-gray-800 cursor-default px-3 py-1 rounded-lg block mr-3">
-    &lt;link&gt;
-  </label>
-  <input id="tab-two" type="radio" name="tabs" class="peer/tab-two hidden" />
-  <label for="tab-two" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent peer-checked/tab-two:text-white peer-checked/tab-two:bg-gray-800 cursor-default px-3 py-1 rounded-lg block">
-    @import
-  </label>
-
-  <div class="basis-full h-0"></div>
-  <p class="mt-4">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
-
-  <div class="hidden peer-checked/tab-one:block w-full rounded-xl">
-    <CodeBox id="STYLESHEETcodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
-  </div>
-  <div class="hidden peer-checked/tab-two:block w-full rounded-xl">
-    <CodeBox id="IMPORTcodebox" code={`<style>
-@import url('${FontCSS}');
-</style>`} />
-  </div>
+<input id="importInput" type="radio" name="btns" class="peer hidden">
+<label for="importInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 my-auto rounded-lg block">
+  @import
+</label>
 </div>
 
 
+
+
+
+
+
+
+<div class="mt-2 flex flex-row flex-wrap w-full">
+
+
+
+
+
+
+  
+  <p class="mt-2">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
+
+<div class="preloadBtn mt-3 ml-auto mr-0 mb-1 flex items-center justify-end bg-neutral-100 hover:bg-slate-200 cursor-pointer px-3 py-1 rounded-lg">
+<input id="preloadInput" type="checkbox" class="mr-2 w-3 h-3 !bg-neutral-100 !rounded-lg !border-neutral-200 !ring-neutral-200 !outline-none accent-gray-900">
+<label for="preloadInput" class="text-sm">
+  Include Preload Link
+</label>
+</div>
+
+<div class="w-full rounded-xl">
+
+   <CodeBox id="linkCodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
+
+    <CodeBox id="linkPreloadCodebox" code={`${includePreload}
+<link href="${FontCSS}" rel="stylesheet">`} />
+
+  
+  
+   <CodeBox id="importCodebox" code={`<style>
+@import url('${FontCSS}');
+</style>`} />
+
+<CodeBox id="importPreloadCodebox" code={`${includePreload}
+<style>
+@import url('${FontCSS}');
+</style>`} />
+
+
+<p id="preloadInfo" class="text-sm mt-3 hidden">
+  Preload link for <span class="font-medium">{PreloadedFontName}</span> has been added to the code. This helps prevent FOUT and improves page loading performance.
+  <a href="https://web.dev/articles/codelab-preload-web-fonts" rel="noopener noreferrer" target="_blank" class="hover:underline text-blue-600">Learn more here</a>.
+</p>
+</div>
+
+</div>
+
+
+<style is:inline>
+.active {
+ color: #fff!important;
+background: #1f2937!important;
+}
+</style>
+
+<script is:inline>
+  // get all inputs
+  var linkInput = document.getElementById("linkInput");
+  var importInput = document.getElementById("importInput");
+  var preloadInput = document.getElementById("preloadInput");
+
+  // get all labels
+  var linkLabel = document.querySelector("label[for='linkInput']");
+  var importLabel = document.querySelector("label[for='importInput']");
+  var preloadLabel = document.querySelector(".preloadBtn");
+
+  // get all code boxes via class
+  var linkCodebox = document.querySelector(".linkCodebox");
+  var linkPreloadCodebox = document.querySelector(".linkPreloadCodebox");
+  var importCodebox = document.querySelector(".importCodebox");
+  var importPreloadCodebox = document.querySelector(".importPreloadCodebox");
+
+  // get preload info paragraph
+  var preloadInfo = document.getElementById("preloadInfo");
+
+  // function to update view
+  function updateView() {
+    // hide all code boxes first
+    linkCodebox.style.display = "none";
+    linkPreloadCodebox.style.display = "none";
+    importCodebox.style.display = "none";
+    importPreloadCodebox.style.display = "none";
+
+    // remove active class from all labels
+    linkLabel.classList.remove("active");
+    importLabel.classList.remove("active");
+    preloadLabel.classList.remove("active");
+
+    // add active class to selected tab input
+    if (linkInput.checked) {
+      linkLabel.classList.add("active");
+      if (preloadInput.checked) {
+        linkPreloadCodebox.style.display = "block";
+      } else {
+        linkCodebox.style.display = "block";
+      }
+    }
+
+    if (importInput.checked) {
+      importLabel.classList.add("active");
+      if (preloadInput.checked) {
+        importPreloadCodebox.style.display = "block";
+      } else {
+        importCodebox.style.display = "block";
+      }
+    }
+
+    // add active class to preload input if checked
+    if (preloadInput.checked) {
+      preloadLabel.classList.add("active");
+      preloadInfo.style.display = "block"; // show paragraph
+    } else {
+      preloadInfo.style.display = "none"; // hide paragraph
+    }
+  }
+
+  // attach event listeners
+  linkInput.addEventListener("change", updateView);
+  importInput.addEventListener("change", updateView);
+  preloadInput.addEventListener("change", updateView);
+
+  // run once at start
+  updateView();
+</script>
 
 
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl mt-14">CSS</h2>
@@ -129,10 +275,10 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 
-<div class="mt-14 bg-blue-50 dark:bg-gray-900 border-l-4 border-blue-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-lg">
+<div class="mt-14 bg-blue-50 dark:bg-gray-900 border-l-4 border-blue-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-xl">
   <h3 class="font-bold text-lg">Performance Tip</h3>
   <p class="text-sm mt-1">You can use the <span class="font-mono bg-blue-100 dark:bg-blue-700 px-1 py-0.5 rounded">.min.css</span> version for better performance and faster loading times.</p>
-  <div class="bg-white dark:bg-black p-4 mt-3 rounded border border-blue-300 dark:border-gray-600 text-sm">
+  <div class="bg-white dark:bg-black p-4 mt-3 rounded-lg border border-blue-300 border-dashed dark:border-gray-600 text-sm">
     <span class="text-neutral-700 dark:text-neutral-300">Standard CSS:</span>  
     <p class="text-blue-600 dark:text-blue-300 break-words whitespace-normal">{FontCSS}</p>
     <span class="text-neutral-700 dark:text-neutral-300 mt-2 block">Minified CSS:</span>  
@@ -147,24 +293,24 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">About {FontName} Font</h2>
 <div class="mt-2">
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Family</h3>
-    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{FontName}</p>
+    <h3 class="font-semibold text-neutral-900 dark:text-neutral-200">Family</h3>
+    <p class="text-neutral-800 dark:text-neutral-300 sm:col-span-3">{FontName}</p>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Total Styles</h3>
-    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{TotalStyles}</p>
+    <h3 class="font-semibold text-neutral-900 dark:text-neutral-200">Total Styles</h3>
+    <p class="text-neutral-800 dark:text-neutral-300 sm:col-span-3">{TotalStyles}</p>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Category</h3>
-    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3">{FontCategory}</p>
+    <h3 class="font-semibold text-neutral-900 dark:text-neutral-200">Category</h3>
+    <p class="text-neutral-800 dark:text-neutral-300 sm:col-span-3">{FontCategory}</p>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">Designer</h3>
-    <a href={FontDesignerURL} target="_blank" rel="noopener noreferrer" class="text-blue-600 sm:col-span-3 sm:mt-0 hover:underline">{FontDesigner}</a>
+    <h3 class="font-semibold text-neutral-900 dark:text-neutral-200">Designer</h3>
+    <a href={FontDesignerURL} target="_blank" rel="noopener noreferrer" class="text-blue-700 sm:col-span-3 sm:mt-0 hover:underline">{FontDesigner}</a>
   </div>
   <div class="pt-2 sm:pt-1 sm:grid sm:grid-cols-4 sm:gap-0">
-    <h3 class="font-medium text-neutral-800 dark:text-neutral-200">License</h3>
-    <p class="text-neutral-700 dark:text-neutral-300 sm:col-span-3" set:html={LicenseInfo}></p>
+    <h3 class="font-semibold text-neutral-900 dark:text-neutral-200">License</h3>
+    <p class="text-neutral-800 dark:text-neutral-300 sm:col-span-3" set:html={LicenseInfo}></p>
   </div>
  </div>
 </div>

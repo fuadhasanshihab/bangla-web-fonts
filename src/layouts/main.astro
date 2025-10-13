@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
@@ -44,6 +45,7 @@ const schemaData = {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://banglawebfonts.pages.dev/assets/images/bangla-web-fonts-1200x630.jpg">
 <link rel="canonical" href={`https://banglawebfonts.pages.dev${Astro.url.pathname}`}>
+<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2" crossorigin="anonymous">
 <Fragment set:html={fontPreloads} />
 {extraStyleUrl && <link rel="stylesheet" href={extraStyleUrl}/>}
 <link rel="manifest" href="/manifest.json">
@@ -53,17 +55,17 @@ const schemaData = {
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo/192x192.png">
     <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo/512x512.png">
-    <script src="../assets/css/main.css"></script>
-    <Fragment set:html={import.meta.env.HEADER_INJECT} />
     <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
     <SquareLines />
     <Header />
+<div class="py-10">
     <slot />
+</div>
     <Footer />
-    <script src="../assets/js/main.js"></script>
+    <!--script src="../assets/js/main.js"></script-->
+    <script is:inline defer src="/assets/js/main.js"></script>
     <script is:inline>if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('/sw.js')}</script>
-    <Fragment set:html={import.meta.env.FOOTER_INJECT} />
   </body>
 </html>

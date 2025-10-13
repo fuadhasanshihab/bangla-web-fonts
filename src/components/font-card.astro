@@ -1,7 +1,20 @@
 ---
 const { FontName, TotalStyles, FontPath, FontFamily } = Astro.props;
 const newPath = `/font/${FontPath}/`;
-const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma")  || FontFamily.includes("Bornoporichay")  || FontFamily.includes("UN Bangla");  
+
+const fontStyle = `
+<style>
+@font-face {
+  font-family: "${FontName}";
+  src: url("/fonts/${FontPath}/${FontPath}-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
+`;
+
+const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma")  || FontFamily.includes("Bornoporichay")  || FontFamily.includes("Somoyer Srot")  || FontFamily.includes("Abu Sayed")  || FontFamily.includes("Tuli")  || FontFamily.includes("Nilima")  || FontFamily.includes("UN Bangla");  
 ---
 
 <a
@@ -9,7 +22,7 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
   class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-7 group h-100 rounded-2xl" aria-label={`${FontName} font`}
 >
   <span
-    class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"
+    class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent group-hover:bg-slate-50 border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"
   ></span>
   <span
     class="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"
@@ -17,8 +30,11 @@ const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") ||
   <div
     class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
   >
-    
-        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] visible-animation" : "text-[1.5rem] leading-[2rem]"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
+
+
+
+
+        <span style={`font-family: ${FontFamily}!important;`} class={isSmall ? "text-[1.8rem] leading-[2rem] notranslate skeleton" : "text-[1.5rem] leading-[2rem] notranslate skeleton"}>আমার সোনার বাংলা<br/>আমি তোমায় ভালোবাসি</span>
     
     
       <div

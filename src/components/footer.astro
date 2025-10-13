@@ -3,27 +3,27 @@ import Logo from "../components/logo.astro";
 ---
 
 <footer
-  class="text-gray-700 bg-white border-t sm:mt-20 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800 mt-24"
+  class="text-gray-700 bg-white py-16 border-t border-dashed sm:mt-2 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800 mt-2"
 >
   <div
-    class="container flex flex-col items-center py-8 mx-auto px-7 lg:px-0 max-w-3xl sm:flex-row"
+    class="container flex flex-col items-center pb-6 sm:pb-0 mx-auto px-7 lg:px-0 max-w-3xl sm:flex-row"
   >
     <Logo />
     <p
-      class="mt-0 text-sm text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0"
+      class="mt-1 felx gap-4 text-sm text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0"
     >
-      <!-- © {new Date().getFullYear()} -->
+      
       <a href="/dmca/">DMCA</a> • <a href="/privacy-policy/">Privacy Policy</a> • <a href="/cookie-policy/">Cookie Policy</a> • <a href="/contact/">Contact</a>
     </p>
 
     <span
-      class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"
+      class="inline-flex justify-center mt-6 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"
     >
 
       <a
         href="https://github.com/fuadhasanshihab/bangla-web-fonts"
         target="_blank"
-        class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+        class="text-neutral-800 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
       >
         <span class="sr-only">GitHub</span>
         <svg
@@ -40,4 +40,11 @@ import Logo from "../components/logo.astro";
 
     </span>
   </div>
+
+<div class="mt-2 text-neutral-700 container relative text-sm flex justify-center sm:justify-start items-center mx-auto px-7 lg:px-0 max-w-3xl">
+  Hosted on
+<img class="w-10 pl-2 pr-1"
+ src="/assets/images/cloudflare-brand-logo.svg" loading="lazy" alt="Hosted on Cloudflare"/>
+<span class="font-semibold">CLOUDFLARE</span>
+</div>
 </footer>

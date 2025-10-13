@@ -1,0 +1,90 @@
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body, font {
+  font-family: "Open Sans","Hind Siliguri", sans-serif;
+}
+
+
+.skeleton {
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(90deg, #f0f0f0 20%, #f8f8f8 50%, #f0f0f0 80%);
+  background-size: 200% 100%;
+  border-radius: 10px;
+  min-width: 100%;
+  animation: pulse 2.0s infinite;
+}
+
+/* Keyframes for pulse */
+@keyframes pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Loaded state */
+.skeleton.loaded {
+  animation: none;
+  background: none;
+  color: inherit;
+  min-width: 0px;
+  transition: background 1.0s ease, color 1.0s ease;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Hide in IE/Edge */
+  scrollbar-width: none;  /* Hide in Firefox */
+}
+
+.gylph-container li {
+  text-align: center;
+  padding: 20px 20px;
+  border: 0.5px dashed rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.dark .gylph-container li {
+  border: 0.5px dashed rgba(255, 255, 255, 0.1);
+}
+
+.gylph-container li:hover {
+  border:-1px inset;
+  background-color:#000000;
+  color:#ffffff;
+}
+
+.dark .gylph-container li:hover {
+  border:-1px inset;
+  background-color:#ffffff;
+  color:#000000;
+}
+
+.prose img {
+  border-radius: 30px;
+}
+
+html.dark {
+    color-scheme: dark;
+}
