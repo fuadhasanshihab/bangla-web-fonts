@@ -98,7 +98,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     </svg>
   </label>
   <div class="bookmark-wrapper">
-<div class="fixed top-[64px] inset-0 bg-white/90" onclick="document.getElementById('bm-noto-sans-bengali').checked = false;"></div>
+<div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
 <div class="bookmark-wrapper-inside">
     <div class="bookmark-title">Bookmark</div>
     <div class="bookmark-inner">
@@ -193,7 +193,6 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   width: 100%;
   max-width: 448px;
   overflow: auto;
-  top: 70px;
   transform: translateY(1rem);
   -webkit-transform: translateY(1rem);
   width: 100%;
