@@ -98,7 +98,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     </svg>
   </label>
   <div class="bookmark-wrapper">
-<div class="fixed top-[63px] inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white opacity-25" onclick="document.getElementById('fontBookmark').checked = false;"></div>
+<div class="fixed top-[64px] inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/25" onclick="document.getElementById('fontBookmark').checked = false;"></div>
 <div class="bookmark-wrapper-inside z-50">
     <div class="bookmark-title">Bookmark</div>
     <div class="bookmark-inner">
@@ -171,7 +171,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   opacity: 0;
   position: fixed;
   right: 0px;
-  top: 63px;
+  top: 64px;
   left: 0;
   bottom: 0;
   transform: translateY(1rem);
@@ -215,11 +215,13 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 }
 .bm-thumb {
   flex: 0 0 85px;
-  line-height: 2;
-  background: red;
+  line-height: 1;
+  background: #f1f1f1;
   font-size: 45px;
   padding: 20px;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
 }
 .bm-thumbb div {
   background: red;
@@ -263,6 +265,9 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+.bookmark-inner li {
+  align-items: center;
 }
 li.bm-more {
   border-top: 1px solid #ededed;
@@ -423,7 +428,7 @@ const bookmarks = {
         }
       }
       fontbookmark.slice(0, max).forEach((e) => {
-        bmBuild += '<li data-id="' + e.id + '"><div class="bm-thumb"><a href="' + e.url + '" title="' + e.title + '"><div style="font-family: ' + e.img + ';">অ</div></a></div><div class="bm-title"><a href="' + e.url + '" title="' + e.title + '">' + e.title + '</a></div><div class="bm-delete" role="button">' + bookmarks.deleteText + "</div>";
+        bmBuild += '<li data-id="' + e.id + '"><div class="bm-thumb"><a href="' + e.url + '" title="' + e.title + '" style="font-family: ' + e.img + ';">অ</a></div><div class="bm-title"><a href="' + e.url + '" title="' + e.title + '">' + e.title + '</a></div><div class="bm-delete" role="button">' + bookmarks.deleteText + "</div>";
       });
       bmContainer.innerHTML += "</ul>";
       if (d.location.pathname == bookmarks.morePage) {
