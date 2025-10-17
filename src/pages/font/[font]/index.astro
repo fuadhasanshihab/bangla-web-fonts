@@ -98,8 +98,8 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     </svg>
   </label>
   <div class="bookmark-wrapper">
-<div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
-<div class="bookmark-wrapper-inside">
+<div class="fixed top-[63px] inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white opacity-25" onclick="document.getElementById('fontBookmark').checked = false;"></div>
+<div class="bookmark-wrapper-inside z-50">
     <div class="bookmark-title">Bookmark</div>
     <div class="bookmark-inner">
       <div class="bookmark-loading">
@@ -130,7 +130,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   --bm-bg: #fff;
   --bm-post-bg: #fff;
   --bm-icon: #333;
-  --bm-icon-active: #6495ed;
+  --bm-icon-active: #000;
   --bm-icon-del: #777;
 }
 .snippet-thumbnail {
@@ -171,7 +171,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   opacity: 0;
   position: fixed;
   right: 0px;
-  top: 64px;
+  top: 63px;
   left: 0;
   bottom: 0;
   transform: translateY(1rem);
@@ -215,9 +215,13 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 }
 .bm-thumb {
   flex: 0 0 85px;
-  line-height: 0;
+  line-height: 2;
+  background: red;
+  font-size: 45px;
+  padding: 20px;
+  border-radius: 8px;
 }
-.bm-thumb div {
+.bm-thumbb div {
   background: red;
   border-radius: 7px;
   padding: auto;
