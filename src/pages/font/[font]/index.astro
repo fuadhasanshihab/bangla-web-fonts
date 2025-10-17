@@ -98,6 +98,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     </svg>
   </label>
   <div class="bookmark-wrapper">
+<div class="bookmark-wrapper-inside">
     <div class="bookmark-title">Bookmark</div>
     <div class="bookmark-inner">
       <div class="bookmark-loading">
@@ -108,6 +109,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
         </svg>
       </div>
     </div>
+</div>
   </div>
 </div>
 
@@ -118,18 +120,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 
 
 
-<!-- title -->
 
-<div class="fontBookmarkPost">
-  <input id={`bm-${FontPath}`} type="checkbox"/>
-  <label aria-label="Bookmark" data-img={FontFamily} data-title={FontName} data-url={bookmarkURL} for={`bm-${FontPath}`}>
-    <svg viewBox="0 0 24 24">
-      <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
-      <path d="M12 8.20996V13.21"/>
-      <path d="M14.5 10.6499H9.5"/>
-    </svg>
-  </label>
-  </div>
 
 
 
@@ -175,12 +166,31 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   stroke-width: 1.5px;
 }
 .bookmark-wrapper {
-  border: 1px dashed #dfdfdf;
-  border-radius: 7px;
-  max-height: 80vh;
-  min-width: 320px;
-  max-width: 480px;
+  z-index: 50;
   opacity: 0;
+  right: 0px;
+  top: 64px;
+  left: 0;
+  bottom: 0;
+  transform: translateY(1rem);
+  -webkit-transform: translateY(1rem);
+  visibility: hidden;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;               /* flex */
+  align-items: center;         /* items-center */
+  justify-content: center;     /* justify-center */
+  padding-left: 1.75rem;       /* px-7 → 7 * 0.25rem = 1.75rem */
+  padding-right: 1.75rem;      /* same as above */
+}
+.bookmark-wrapper-inside {
+  border: 1px dashed #dfdfdf;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  width: 100%;
+  max-width: 48rem;
   overflow: auto;
   right: 30px;
   top: 70px;
@@ -190,8 +200,8 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   width: max-content;
 }
 .bookmark-title {
-  border-bottom: 1px solid #ededed;
-  font-weight: 800;
+  border-bottom: 1px dashed #ededed;
+  font-weight: 600;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -457,7 +467,26 @@ const bookmarks = {
 <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 
 <div class="relative z-20 w-full mx-auto lg:mx-0">
+
+
+
+<div class="flex gap-4">
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h1>
+
+<div class="fontBookmarkPost">
+  <input id={`bm-${FontPath}`} type="checkbox"/>
+  <label aria-label="Bookmark" data-img={FontFamily} data-title={FontName} data-url={bookmarkURL} for={`bm-${FontPath}`}>
+    <svg viewBox="0 0 24 24">
+      <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
+      <path d="M12 8.20996V13.21"/>
+      <path d="M14.5 10.6499H9.5"/>
+    </svg>
+  </label>
+  </div>
+</div>
+
+
+
   <div id="type-tester"/>
   <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Designed by <a href={FontDesignerURL} class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer"
 >{FontDesigner}</a></p>
