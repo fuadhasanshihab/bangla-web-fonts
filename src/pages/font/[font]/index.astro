@@ -337,6 +337,48 @@ li.bm-more {
 
 </style>
 
+
+
+
+
+
+
+
+<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
+
+<div class="relative z-20 w-full mx-auto lg:mx-0">
+
+
+
+<div class="flex gap-4">
+  <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h1>
+
+<div class="fontBookmarkPost">
+  <input id={`bm-${FontPath}`} type="checkbox"/>
+  <label aria-label="Bookmark" data-img={FontFamily} data-title={FontName} data-url={bookmarkURL} for={`bm-${FontPath}`}>
+    <svg viewBox="0 0 24 24">
+      <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
+      <path d="M12 8.20996V13.21"/>
+      <path d="M14.5 10.6499H9.5"/>
+    </svg>
+  </label>
+  </div>
+</div>
+
+
+
+  <div id="type-tester"/>
+  <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Designed by <a href={FontDesignerURL} class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer"
+>{FontDesigner}</a></p>
+</div>
+
+
+
+
+
+
+
+
 <script is:inline>
 const bookmarks = {
   maxWidget: 5,
@@ -344,7 +386,7 @@ const bookmarks = {
   emptyText: 'no mookmark',
   moreText: 'see more',
   currentText: 'you are currently viewing abookmark page',
-  morePage: '/p/bookmark.html',
+  morePage: '/bookmark/',
   deleteText: '<svg viewBox="0 0 24 24"><path d="M18.8892 9.5542C18.8892 17.5732 20.0435 21.198 12.2797 21.198C4.5149 21.198 5.693 17.5732 5.693 9.5542"/><path d="M20.3651 6.47985H4.2146"/><path d="M15.7148 6.47983C15.7148 6.47983 16.2434 2.71411 12.2891 2.71411C8.33578 2.71411 8.86435 6.47983 8.86435 6.47983"/></svg>'
 };
 /* EDIT */
@@ -378,7 +420,7 @@ const bookmarks = {
         }
       }
       fontbookmark.slice(0, max).forEach((e) => {
-        bmBuild += '<li data-id="' + e.id + '"><div class="bm-thumb"><a href="' + e.url + '" title="' + e.title + '"><img alt="' + e.title + '" src="' + e.img + '" title="' + e.title + '"></a></div><div class="bm-title"><a href="' + e.url + '" title="' + e.title + '">' + e.title + '</a></div><div class="bm-delete" role="button">' + bookmarks.deleteText + "</div>";
+        bmBuild += '<li data-id="' + e.id + '"><div class="bm-thumb"><a href="' + e.url + '" title="' + e.title + '"><div style="font-family: ' + e.img + '; font-size: 32px; padding: 10px; background: #f1f1f1;">অ</div></a></div><div class="bm-title"><a href="' + e.url + '" title="' + e.title + '">' + e.title + '</a></div><div class="bm-delete" role="button">' + bookmarks.deleteText + "</div>";
       });
       bmContainer.innerHTML += "</ul>";
       if (d.location.pathname == bookmarks.morePage) {
@@ -464,33 +506,11 @@ const bookmarks = {
 
 
 
-<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
-
-<div class="relative z-20 w-full mx-auto lg:mx-0">
 
 
 
-<div class="flex gap-4">
-  <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h1>
-
-<div class="fontBookmarkPost">
-  <input id={`bm-${FontPath}`} type="checkbox"/>
-  <label aria-label="Bookmark" data-img={FontFamily} data-title={FontName} data-url={bookmarkURL} for={`bm-${FontPath}`}>
-    <svg viewBox="0 0 24 24">
-      <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
-      <path d="M12 8.20996V13.21"/>
-      <path d="M14.5 10.6499H9.5"/>
-    </svg>
-  </label>
-  </div>
-</div>
 
 
-
-  <div id="type-tester"/>
-  <p class="mt-3 text-base leading-6 text-neutral-800 dark:text-neutral-200 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">Designed by <a href={FontDesignerURL} class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer"
->{FontDesigner}</a></p>
-</div>
 
 <PreviewInput/>
 
