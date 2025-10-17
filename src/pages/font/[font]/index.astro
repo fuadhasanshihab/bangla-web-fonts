@@ -96,7 +96,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     <!--svg viewBox="0 0 24 24">
       <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
     </svg-->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"/></svg>
   </label>
   <div class="bookmark-wrapper">
 <div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
@@ -131,7 +131,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   --bm-bg: #fff;
   --bm-post-bg: #fff;
   --bm-icon: #333;
-  --bm-icon-active: #000;
+  --bm-icon-active: red;
   --bm-icon-del: #777;
 }
 .snippet-thumbnail {
@@ -299,8 +299,8 @@ li.bm-more {
   justify-content: center;
 }
 .fontBookmarkPost svg {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 .fontBookmark label, .fontBookmarkPost label, .bm-delete {
   cursor: pointer;
@@ -357,7 +357,7 @@ li.bm-more {
 
 
 
-<div class="flex items-center gap-4">
+<div class="flex items-center justify-between gap-4">
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h1>
 
 <div class="fontBookmarkPost">
@@ -368,7 +368,7 @@ li.bm-more {
       <path d="M12 8.20996V13.21"/>
       <path d="M14.5 10.6499H9.5"/>
     </svg-->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"/></svg>
   </label>
   </div>
 </div>
