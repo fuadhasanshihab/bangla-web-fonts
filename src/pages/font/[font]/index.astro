@@ -80,6 +80,7 @@ const MetaKeywords = `${fontNameL}, ${fontNameL} web font, ${fontNameL} font cdn
 const FontCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.css`;
 const FontMinifiedCSS = `https://banglawebfonts.pages.dev/css/${FontPath}.min.css`;
 const ExtraStyleUrl = `/css/${FontPath}.min.css`;
+const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 ---
 
 <Layout title={PageTitle} extraStyleUrl={ExtraStyleUrl} metaDescription={MetaDescription} metaKeywords={MetaKeywords} fontPreloads={FontPreloads}>
@@ -87,6 +88,28 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 
+<!-- menu hebader -->
+<div class="fontBookmark">
+  <input id="fontBookmark" type="checkbox"/>
+  <label aria-label="View Bookmark" for="fontBookmark">
+    <i>0</i>
+    <svg viewBox="0 0 24 24">
+      <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
+    </svg>
+  </label>
+  <div class="bookmark-wrapper">
+    <div class="bookmark-title">Bookmark</div>
+    <div class="bookmark-inner">
+      <div class="bookmark-loading">
+        <svg viewBox="0 0 24 24">
+          <path d="M2.45001 14.97C3.52001 18.41 6.40002 21.06 9.98002 21.79"/>
+          <path d="M2.04999 10.98C2.55999 5.93 6.81998 2 12 2C17.18 2 21.44 5.94 21.95 10.98"/>
+          <path d="M14.01 21.8C17.58 21.07 20.45 18.45 21.54 15.02"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -95,13 +118,338 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
 
 
 
+<!-- title -->
+
+<div class="fontBookmarkPost">
+  <input id={`bm-${FontName}`} type="checkbox"/>
+  <label aria-label="Bookmark" data-img={FontFamily} data-title={FontName} data-url={bookmarkURL} for={`bm-${FontName}`}>
+    <svg viewBox="0 0 24 24">
+      <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
+      <path d="M12 8.20996V13.21"/>
+      <path d="M14.5 10.6499H9.5"/>
+    </svg>
+  </label>
+  </div>
 
 
 
+<style is:inline>
+.fontBookmark, .fontBookmarks, .fontBookmarkPost {
+  --bm-bg: #fff;
+  --bm-post-bg: #fff;
+  --bm-icon: #333;
+  --bm-icon-active: #6495ed;
+  --bm-icon-del: #777;
+}
+.snippet-thumbnail {
+  position: relative;
+}
+#fontBookmark, .fontBookmarkPost input {
+  display: none;
+}
+.fontBookmark {
+  position: relative;
+}
+.fontBookmark i {
+  background-color: var(--bm-bg);
+  border-radius: 7px;
+  font-size: .75rem;
+  font-style: normal;
+  line-height: normal;
+  padding: .1rem;
+  right: 55%;
+  top: -2px;
+}
+.fontBookmark svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.fontBookmark path, .fontBookmarkPost path {
+  stroke: var(--bm-icon);
+  clip-rule: evenodd;
+  fill: transparent;
+  fill-rule: evenodd;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-width: 1.5px;
+}
+.bookmark-wrapper {
+  border: 1px solid #dfdfdf;
+  border-radius: 7px;
+  max-height: 80vh;
+  min-width: 320px;
+  max-width: 480px;
+  opacity: 0;
+  overflow: auto;
+  right: 0;
+  top: 2rem;
+  transform: translateY(1rem);
+  -webkit-transform: translateY(1rem);
+  visibility: hidden;
+  width: max-content;
+}
+.bookmark-title {
+  border-bottom: 1px solid #ededed;
+  font-weight: 800;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+.bm-title {
+  line-height: 1.5em;
+}
+.bm-title a {
+  color: inherit;
+}
+.bm-title a:hover {
+  text-decoration: none;
+}
+.bm-thumb {
+  flex: 0 0 85px;
+  line-height: 0;
+}
+.bm-thumb img {
+  background-color: #efefef;
+  border-radius: 7px;
+  object-fit: cover;
+  height: auto;
+  max-height: 100% !important;
+  width: 100%;
+  max-width: 100% !important;
+}
+.bm-delete {
+  margin-left: auto;
+  white-space: nowrap;
+}
+.bm-delete svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.bm-delete path {
+  fill: none;
+  stroke: var(--bm-icon-del);
+}
+.bm-delete:hover path {
+  fill: var(--bm-icon-del);
+}
+.bookmark-inner ul {
+  flex-direction: column;
+}
+.bookmark-wrapper, .bookmark-title {
+  background-color: var(--bm-bg);
+}
+.bookmark-inner, .bookmark-title {
+  padding: .75rem 1.25rem;
+}
+.bookmark-inner ul, .bookmark-inner li, .fontBookmarks li, .fontBookmarkPost, .fontBookmarkPost label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li.bm-more {
+  border-top: 1px solid #ededed;
+  justify-content: center;
+  padding: .75rem .75rem 0;
+  margin-top: 1rem;
+}
+.fontBookmarks ul {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+.fontBookmarks li {
+  border: 1px solid #dfdfdf;
+  border-radius: 7px;
+  padding: .75rem;
+}
+.fontBookmarkPost {
+  background-color: var(--bm-post-bg);
+  border-radius: 100px;
+  height: 2rem;
+  position: absolute;
+  right: .75rem;
+  top: .75rem;
+  width: 2rem;
+  z-index: 2;
+}
+.fontBookmarkPost, .fontBookmarkPost label {
+  align-items: center;
+  justify-content: center;
+}
+.fontBookmarkPost svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.fontBookmark label, .fontBookmarkPost label, .bm-delete {
+  cursor: pointer;
+}
+.fontBookmark i, .bookmark-wrapper {
+  position: absolute;
+}
+.fontBookmark path, .bookmark-wrapper {
+  transition: all .2s ease;
+}
+.fontBookmark label:hover path, .fontBookmarkPost label:hover path {
+  stroke: var(--bm-icon-active);
+}
+#fontBookmark:checked ~ label path, .fontBookmarkPost input:checked ~ label path {
+  fill: var(--bm-icon-active);
+  stroke: var(--bm-icon-active);
+}
+.fontBookmarkPost input:checked ~ label path:last-child {
+  fill: none;
+  stroke: #fff;
+}
+#fontBookmark:checked ~ .bookmark-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  visibility: visible;
+}
+.bookmark-loading {
+  padding: .5rem;
+  text-align: center;
+}
+.bookmark-loading svg {
+  animation: fontSpin .75s linear infinite normal;
+  -webkit-animation: fontSpin .75s linear infinite normal;
+}
+@media screen and (max-width: 568px) {
+  .fontBookmarks ul {
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+ }
+}
 
+</style>
 
-
-
+<script is:inline>
+const bookmarks = {
+  maxWidget: 5,
+  maxAll: 100,
+  emptyText: 'no mookmark',
+  moreText: 'see more',
+  currentText: 'you are currently viewing abookmark page',
+  morePage: '/p/bookmark.html',
+  deleteText: '<svg viewBox="0 0 24 24"><path d="M18.8892 9.5542C18.8892 17.5732 20.0435 21.198 12.2797 21.198C4.5149 21.198 5.693 17.5732 5.693 9.5542"/><path d="M20.3651 6.47985H4.2146"/><path d="M15.7148 6.47983C15.7148 6.47983 16.2434 2.71411 12.2891 2.71411C8.33578 2.71411 8.86435 6.47983 8.86435 6.47983"/></svg>'
+};
+/* EDIT */
+! function (d) {
+  let fontbookmark = JSON.parse(localStorage.getItem("fontBookmark")) || [];
+  d.querySelector(".fontBookmark").querySelector("i").innerHTML = fontbookmark.length;
+  const bmCek = () => {
+    if (fontbookmark.length > 0) {
+      fontbookmark.forEach((e) => {
+        if (d.getElementById("bm-" + e.id)) {
+          d.getElementById("bm-" + e.id).checked = true;
+        }
+      });
+    }
+  };
+  const bmRender = () => {
+    localStorage.setItem("fontBookmark", JSON.stringify(fontbookmark));
+    d.querySelector(".fontBookmark").querySelector("i").innerHTML = fontbookmark.length;
+    let bmContainer = d.querySelector(".bookmark-inner"),
+      bmContainerAll = d.querySelector(".fontBookmarks"),
+      bmBuild = "";
+    if (fontbookmark.length > 0) {
+      let max = bookmarks.maxWidget,
+        more = false;
+      if (d.location.pathname == bookmarks.morePage) {
+        max = bookmarks.maxAll;
+      } else {
+        max = bookmarks.maxWidget;
+        if (fontbookmark.length > max) {
+          more = true;
+        }
+      }
+      fontbookmark.slice(0, max).forEach((e) => {
+        bmBuild += '<li data-id="' + e.id + '"><div class="bm-thumb"><a href="' + e.url + '" title="' + e.title + '"><img alt="' + e.title + '" src="' + e.img + '" title="' + e.title + '"></a></div><div class="bm-title"><a href="' + e.url + '" title="' + e.title + '">' + e.title + '</a></div><div class="bm-delete" role="button">' + bookmarks.deleteText + "</div>";
+      });
+      bmContainer.innerHTML += "</ul>";
+      if (d.location.pathname == bookmarks.morePage) {
+        bmContainer.innerHTML = bookmarks.currentText;
+        if (bmContainerAll) bmContainerAll.innerHTML = "<ul>" + bmBuild + "</ul>";
+      } else {
+        bmContainer.innerHTML = "<ul>" + bmBuild;
+        if (more) {
+          bmContainer.innerHTML += '<li class="bm-more"><a href="' + bookmarks.morePage + '" title="' + bookmarks.moreText + '">' + bookmarks.moreText + " (+" + (fontbookmark.length - max) + ")</a></li>";
+        }
+      }
+    } else {
+      bmContainer && (bmContainer.innerHTML = bookmarks.emptyText);
+      bmContainerAll && (bmContainerAll.innerHTML = bookmarks.emptyText);
+    }
+    bmDel();
+  };
+  const bmAdd = (a) => {
+    fontbookmark.push(a);
+    bmRender();
+  };
+  const bmRem = (id) => {
+    fontbookmark = fontbookmark.filter((obj) => obj.id !== id);
+    bmRender();
+    if (d.getElementById("bm-" + id)) {
+      d.getElementById("bm-" + id).checked = false;
+    }
+  };
+  const bmDel = () => {
+    const a = d.querySelectorAll(".bm-delete");
+    if (a.length > 0) {
+      a.forEach((e) => {
+        const dId = e.parentNode.getAttribute("data-id");
+        e.addEventListener("click", () => {
+          bmRem(dId);
+        });
+      });
+    }
+  };
+  const fontBookmark = () => {
+    const a = d.querySelectorAll(".fontBookmarkPost input");
+    if (a.length > 0) {
+      a.forEach((e) => {
+        e.addEventListener("change", () => {
+          const bmId = e.id.split("-")[1],
+            bmParent = e.parentNode,
+            bookmarkItem = {
+              id: bmId,
+              img: bmParent.querySelector("label").getAttribute("data-img"),
+              title: bmParent.querySelector("label").getAttribute("data-title"),
+              url: bmParent.querySelector("label").getAttribute("data-url"),
+            };
+          if (fontbookmark) {
+            const findId = fontbookmark.find((obj) => obj.id === bmId);
+            if (findId) {
+              bmRem(bmId);
+            } else {
+              bmAdd(bookmarkItem);
+            }
+          } else {
+            bmAdd(bookmarkItem);
+          }
+        });
+      });
+    }
+  };
+  d.location.pathname == bookmarks.morePage && bmRender();
+  d.querySelector(".fontBookmark").addEventListener("click", () => {
+    bmRender();
+  });
+  d.addEventListener("scroll", () => {
+    bmCek;
+    fontBookmark
+  });
+  fontBookmark();
+  bmCek();
+}(document);
+</script>
 
 
 
@@ -174,8 +522,8 @@ const ExtraStyleUrl = `/css/${FontPath}.min.css`;
   <p class="mt-2">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
 <div class="preloadBtn mt-3 ml-auto mr-0 mb-1 flex items-center justify-end bg-neutral-100 hover:bg-slate-200 cursor-pointer px-3 py-1 rounded-lg">
-<input id="preloadInput" type="checkbox" class="mr-2 w-3 h-3 !bg-neutral-100 !rounded-lg !border-neutral-200 !ring-neutral-200 !outline-none accent-gray-900">
-<label for="preloadInput" class="text-sm">
+<input id="preloadInput" type="checkbox" class="mr-2 w-3 h-3 cursor-pointer !bg-neutral-100 !rounded-lg !border-neutral-200 !ring-neutral-200 !outline-none accent-gray-900">
+<label for="preloadInput" class="text-sm cursor-pointer">
   Include Preload Link
 </label>
 </div>
