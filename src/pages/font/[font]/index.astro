@@ -93,9 +93,10 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   <input id="fontBookmark" type="checkbox"/>
   <label aria-label="View Bookmark" for="fontBookmark">
     <i>0</i>
-    <svg viewBox="0 0 24 24">
+    <!--svg viewBox="0 0 24 24">
       <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z"/>
-    </svg>
+    </svg-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
   </label>
   <div class="bookmark-wrapper">
 <div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
@@ -103,12 +104,11 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     <div class="bookmark-title">Favourite fonts</div>
     <div class="bookmark-inner">
       <div class="bookmark-loading">
-        <!--svg viewBox="0 0 24 24">
+        <svg viewBox="0 0 24 24">
           <path d="M2.45001 14.97C3.52001 18.41 6.40002 21.06 9.98002 21.79"/>
           <path d="M2.04999 10.98C2.55999 5.93 6.81998 2 12 2C17.18 2 21.44 5.94 21.95 10.98"/>
           <path d="M14.01 21.8C17.58 21.07 20.45 18.45 21.54 15.02"/>
-        </svg-->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </svg>
       </div>
     </div>
 </div>
@@ -150,9 +150,9 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   font-style: normal;
   line-height: normal;
   padding: .1rem;
-  right: 55%;
+  left: 55%;
   top: -2px;
-  position: relative;
+  position: absolute;
 }
 .fontBookmark svg {
   height: 1.5rem;
@@ -315,10 +315,12 @@ li.bm-more {
   fill: var(--bm-icon-active);
   stroke: var(--bm-icon-active);
 }
+/*
 .fontBookmarkPost input:checked ~ label path:last-child {
   fill: none;
   stroke: #fff;
 }
+*/
 #fontBookmark:checked ~ .bookmark-wrapper {
   opacity: 1;
   transform: translateY(0);
