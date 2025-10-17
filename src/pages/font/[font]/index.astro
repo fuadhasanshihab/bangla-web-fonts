@@ -98,7 +98,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     </svg>
   </label>
   <div class="bookmark-wrapper">
-<div class="fixed top-[64px] inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/25" onclick="document.getElementById('fontBookmark').checked = false;"></div>
+<div class="fixed top-[64px] inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
 <div class="bookmark-wrapper-inside z-50">
     <div class="bookmark-title">Bookmark</div>
     <div class="bookmark-inner">
@@ -151,6 +151,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   padding: .1rem;
   right: 55%;
   top: -2px;
+  position: relative;
 }
 .fontBookmark svg {
   height: 1.5rem;
@@ -203,6 +204,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  background-color: var(--bm-bg);
 }
 .bm-title {
   line-height: 1.5em;
@@ -216,7 +218,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 .bm-thumb {
   flex: 0 0 85px;
   line-height: 1;
-  background: #f1f1f1;
+  background: #f3f3f3;
   font-size: 45px;
   padding: 20px;
   border-radius: 8px;
@@ -250,9 +252,6 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 }
 .bookmark-inner ul {
   flex-direction: column;
-}
-.bookmark-wrapper, .bookmark-title {
-  background-color: var(--bm-bg);
 }
 .bookmark-inner, .bookmark-title {
   padding: .75rem 1.25rem;
@@ -304,9 +303,6 @@ li.bm-more {
 }
 .fontBookmark label, .fontBookmarkPost label, .bm-delete {
   cursor: pointer;
-}
-.fontBookmark i {
-  position: absolute;
 }
 .fontBookmark path, .bookmark-wrapper {
   transition: all .2s ease;
@@ -389,12 +385,12 @@ li.bm-more {
 
 <script is:inline>
 const bookmarks = {
-  maxWidget: 5,
-  maxAll: 100,
-  emptyText: 'no mookmark',
+  maxWidget: 200,
+  maxAll: 200,
+  emptyText: 'No favourite fonts yet. <a href="/" class="font-semibold text-blue-600 hover:underline">Explore all fonts.</a>',
   moreText: 'see more',
-  currentText: 'you are currently viewing abookmark page',
-  morePage: '/bookmark/',
+  currentText: 'You are currently viewing favourite fonts page',
+  morePage: '/favourite/',
   deleteText: '<svg viewBox="0 0 24 24"><path d="M18.8892 9.5542C18.8892 17.5732 20.0435 21.198 12.2797 21.198C4.5149 21.198 5.693 17.5732 5.693 9.5542"/><path d="M20.3651 6.47985H4.2146"/><path d="M15.7148 6.47983C15.7148 6.47983 16.2434 2.71411 12.2891 2.71411C8.33578 2.71411 8.86435 6.47983 8.86435 6.47983"/></svg>'
 };
 /* EDIT */
