@@ -52,7 +52,7 @@ body, font {
   --bm-icon-active: red;
   --bm-icon-del: #777;
 }
-/*
+/**
 .snippet-thumbnail {
   position: relative;
 }
@@ -137,6 +137,30 @@ body, font {
   animation: fontSpin .75s linear infinite normal;
   -webkit-animation: fontSpin .75s linear infinite normal;
 }
+.fontBookmarkPost {
+  background-color: var(--bm-post-bg);
+  border-radius: 100px;
+  height: 2rem;
+  width: 2rem;
+  z-index: 2;
+}
+.fontBookmarkPost, .fontBookmarkPost label {
+  align-items: center;
+  justify-content: center;
+}
+.fontBookmarkPost svg {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.fontBookmark label, .fontBookmarkPost label, .bm-delete {
+  cursor: pointer;
+}
+.fontBookmark path, .bookmark-wrapper {
+  transition: all .2s ease;
+}
+.fontBookmark label:hover path, .fontBookmarkPost label:hover path {
+  stroke: #000;
+}
 
 */
 .bm-title {
@@ -194,63 +218,15 @@ li.bm-more {
   padding: .75rem .75rem 0;
   margin-top: 1rem;
 }
-.fontBookmarks ul {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0;
-  padding: 0;
-}
-.fontBookmarks li {
-  border: 1px solid #dfdfdf;
-  border-radius: 7px;
-  padding: .75rem;
-}
-.fontBookmarkPost {
-  background-color: var(--bm-post-bg);
-  border-radius: 100px;
-  height: 2rem;
-  width: 2rem;
-  z-index: 2;
-}
-.fontBookmarkPost, .fontBookmarkPost label {
-  align-items: center;
-  justify-content: center;
-}
-.fontBookmarkPost svg {
-  height: 1.8rem;
-  width: 1.8rem;
-}
-.fontBookmark label, .fontBookmarkPost label, .bm-delete {
-  cursor: pointer;
-}
-.fontBookmark path, .bookmark-wrapper {
-  transition: all .2s ease;
-}
-.fontBookmark label:hover path, .fontBookmarkPost label:hover path {
-  stroke: #000;
-}
 #fontBookmark:checked ~ label path, .fontBookmarkPost input:checked ~ label path {
   fill: var(--bm-icon-active);
   stroke: #000;
 }
-/*
-.fontBookmarkPost input:checked ~ label path:last-child {
-  fill: none;
-  stroke: #fff;
-}
-*/
 #fontBookmark:checked ~ .bookmark-wrapper {
   opacity: 1;
   transform: translateY(0);
   -webkit-transform: translateY(0);
   visibility: visible;
-}
-@media screen and (max-width: 568px) {
-  .fontBookmarks ul {
-    gap: 1rem;
-    grid-template-columns: repeat(1, 1fr);
- }
 }
 
 
