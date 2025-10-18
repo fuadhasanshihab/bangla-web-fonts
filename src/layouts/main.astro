@@ -51,15 +51,33 @@ const schemaData = {
 <link rel="manifest" href="/manifest.json">
 <link rel="sitemap" href="/sitemap-index.xml">
     <script is:inline> if(typeof Storage!=="undefined"&&localStorage.getItem("dark_mode")==="true")document.documentElement.classList.add("dark"); </script>
-    <style>.prose img {border-radius: 20px;}</style>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo/192x192.png">
     <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo/512x512.png">
-    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} /> 
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
-    <SquareLines />
+    <!--SquareLines /-->
     <Header />
+<noscript>
+<link rel="stylesheet" href="/css/webfonts.min.css">
+<style>
+.skeleton {
+  animation: none;
+  background: none;
+  color: inherit;
+  min-width: 0px;
+  transition: background 1.0s ease, color 1.0s ease;
+}
+.ns-hidden {
+display:none!important;
+}
+</style>
+<div class="pt-10 p-4 border-dashed bg-white rounded-lg">
+<b>JavaScript Required</b><br/>
+Some features on this site need JavaScript to work properly. Please enable JavaScript in your browser settings to experience the full functionality of Bangla Web Fonts.
+</div>
+</noscript>
 <div class="py-10">
     <slot />
 </div>
