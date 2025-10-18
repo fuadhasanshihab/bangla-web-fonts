@@ -93,26 +93,31 @@ import Logo from "../components/logo.astro";
 
 
 
-<div class="fontBookmark ml-4">
-  <input id="fontBookmark" type="checkbox"/>
-  <label aria-label="View Bookmark" for="fontBookmark">
-    <i></i>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"/></svg>
+<div class="fontBookmark ml-4 relative">
+  <input id="fontBookmark" type="checkbox" class="hidden"/>
+  <label aria-label="View Bookmark" for="fontBookmark" class="cursor-pointer relative">
+    <i class="absolute left-[55%] bottom-[-2px] bg-white rounded-md text-xs not-italic leading-none px-[0.1rem]"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6">
+      <path class="stroke-[#000000] fill-transparent stroke-[2px] stroke-linecap-round stroke-linejoin-round transition-all duration-200 ease-in-out" d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"/>
+    </svg>
   </label>
-  <div class="bookmark-wrapper">
-<div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
-<div class="text-neutral-900 bookmark-wrapper-inside z-50 bg-white">
-    <div class="bookmark-title">Favourite fonts</div>
-    <div class="bookmark-inner">
-      <div class="bookmark-loading">
-        <svg viewBox="0 0 24 24">
-          <path d="M2.45001 14.97C3.52001 18.41 6.40002 21.06 9.98002 21.79"/>
-          <path d="M2.04999 10.98C2.55999 5.93 6.81998 2 12 2C17.18 2 21.44 5.94 21.95 10.98"/>
-          <path d="M14.01 21.8C17.58 21.07 20.45 18.45 21.54 15.02"/>
-        </svg>
+
+  <div class="bookmark-wrapper fixed inset-0 z-50 flex justify-center opacity-0 invisible translate-y-4 w-full h-full px-7 transition-all duration-200 ease-in-out">
+    <div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
+
+    <div class="bookmark-wrapper-inside relative z-50 bg-white text-neutral-900 border border-dashed border-neutral-300 rounded-lg max-h-[400px] w-full max-w-md overflow-auto translate-y-4 transition-all duration-200 ease-in-out">
+      <div class="bookmark-title sticky top-0 border-b border-dashed border-gray-300 font-semibold bg-white px-5 py-3">Favourite fonts</div>
+
+      <div class="bookmark-inner px-5 py-3">
+        <div class="bookmark-loading p-2 text-center">
+          <svg viewBox="0 0 24 24" class="animate-spin h-6 w-6 mx-auto">
+            <path d="M2.45001 14.97C3.52001 18.41 6.40002 21.06 9.98002 21.79"/>
+            <path d="M2.04999 10.98C2.55999 5.93 6.81998 2 12 2C17.18 2 21.44 5.94 21.95 10.98"/>
+            <path d="M14.01 21.8C17.58 21.07 20.45 18.45 21.54 15.02"/>
+          </svg>
+        </div>
       </div>
     </div>
-</div>
   </div>
 </div>
 
