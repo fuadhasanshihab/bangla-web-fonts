@@ -114,12 +114,24 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 <div class="flex items-center justify-between gap-4">
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h1>
 
-<div class="fontBookmarkPost">
-  <input id={`bm-${FontPath}`} type="checkbox"/>
-  <label aria-label="Bookmark" data-img={FontFamily} data-title={FontName} data-url={bookmarkURL} for={`bm-${FontPath}`}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"/></svg>
+
+<div class="fontBookmarkPost relative bg-white rounded-full h-8 w-8 z-2 flex items-center justify-center">
+  <input id={`bm-${FontPath}`} type="checkbox" class="hidden"/>
+  <label 
+    aria-label="Bookmark" 
+    data-img={FontFamily} 
+    data-title={FontName} 
+    data-url={bookmarkURL} 
+    for={`bm-${FontPath}`} 
+    class="flex items-center justify-center cursor-pointer"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7">
+      <path 
+        class="stroke-[#000000] fill-transparent stroke-[2px] stroke-linecap-round stroke-linejoin-round transition-all duration-200 ease-in-out" 
+        d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"
+      />
+    </svg>
   </label>
-  </div>
 </div>
 
 
