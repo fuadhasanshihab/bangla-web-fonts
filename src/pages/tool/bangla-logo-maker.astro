@@ -7,7 +7,7 @@ const fontsList = [...fonts].reverse();
 ---
 
 <Layout 
-  title="Bangla Text Logo Maker - Bangla Web Fonts" 
+  title="Bangla Text Logo Maker - Create Bangla Text Logo Online Free" 
   metaDescription="Create stylish Bangla logos instantly using all Bangla Web Fonts. Choose fonts, background, and colors, then download as an image." 
   metaKeywords="bangla logo maker, bangla text logo generator, বাংলা লোগো তৈরি, bangla web fonts, bangla design tool, bangla image logo, bangla text to image"
 >
@@ -120,10 +120,11 @@ const fontsList = [...fonts].reverse();
       // Background image exclusive
       bgImageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
-        if(file && file.type.startsWith('image/')) {
+        if (file && file.type.startsWith('image/')) {
           const reader = new FileReader();
           reader.onload = (event) => {
-            logoPreview.style.backgroundImage = \`url('\${event.target.result}')\`;
+            // ✅ Fixed string concatenation instead of backticks
+            logoPreview.style.backgroundImage = "url('" + event.target.result + "')";
             logoPreview.style.backgroundSize = 'cover';
             logoPreview.style.backgroundPosition = 'center';
             logoPreview.style.backgroundColor = '';
