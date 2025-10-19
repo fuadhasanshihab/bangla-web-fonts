@@ -1,0 +1,147 @@
+---
+import PageHeading from "../../components/page-heading.astro";
+import Layout from "../../layouts/main.astro";
+import fonts from "../../collections/fonts.json";
+
+const fontsList = [...fonts].reverse();
+---
+
+<Layout 
+  title="Bangla Text Logo Maker - Bangla Web Fonts" 
+  metaDescription="Create stylish Bangla logos instantly using all Bangla Web Fonts. Choose fonts, background, and colors, then download as an image." 
+  metaKeywords="bangla logo maker, bangla text logo generator, বাংলা লোগো তৈরি, bangla web fonts, bangla design tool, bangla image logo, bangla text to image"
+>
+  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Bangla Text Logo Maker"
+      description=""
+    />
+
+    <!-- Options -->
+    <div class="flex flex-wrap gap-4 mb-5 mt-6">
+      <div class="flex flex-col">
+        <label class="text-sm font-medium">Background Color</label>
+        <input id="bgColor" type="color" value="#ffffff" class="border border-dashed border-gray-300 rounded-lg px-2 py-1 w-24">
+      </div>
+      <div class="flex flex-col">
+        <label class="text-sm font-medium">Background Image</label>
+        <input id="bgImage" type="file" accept="image/*" class="border border-dashed border-gray-300 rounded-lg px-2 py-1 w-48">
+      </div>
+    </div>
+
+    <!-- Editor Toolbar -->
+    <div class="flex flex-wrap items-center gap-2 mb-3 border border-dashed border-gray-300 rounded-lg p-2">
+      <span onclick="document.execCommand('undo')" class="material-symbols-rounded cursor-pointer select-none">undo</span>
+      <span onclick="document.execCommand('redo')" class="material-symbols-rounded cursor-pointer select-none">redo</span>
+      <span onclick="document.execCommand('bold', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_bold</span>
+      <span onclick="document.execCommand('italic', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_italic</span>
+      <span onclick="document.execCommand('underline', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_underlined</span>
+      <span onclick="let eSize = prompt('Enter font size between 1 - 7', '4');if(eSize){document.execCommand('styleWithCSS',0, true);document.execCommand('fontSize', 0, eSize+'px')}" class="material-symbols-rounded cursor-pointer select-none">format_size</span>
+      <span onclick="document.execCommand('strikethrough', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_strikethrough</span>
+      <label class="cursor-pointer"><span class="material-symbols-rounded">format_color_fill</span><input onclick="this.value='#00000a'" class="hidden" onchange="document.execCommand('backColor', false, this.value)" type="color"></label>
+      <label class="cursor-pointer"><span class="material-symbols-rounded">format_color_text</span><input onclick="this.value='#00000a'" onchange="document.execCommand('styleWithCSS', false, true);document.execCommand('foreColor', false, this.value);" class="hidden" type="color"></label>
+      <span onclick="document.execCommand('justifyLeft', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_align_left</span>
+      <span onclick="document.execCommand('justifyCenter', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_align_center</span>
+      <span onclick="document.execCommand('justifyRight', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_align_right</span>
+      <span onclick="document.execCommand('justifyFull', false, '' )" class="material-symbols-rounded cursor-pointer select-none">format_align_justify</span>
+      <span onclick="document.execCommand('formatBlock', false, '&lt;h1&gt;')" class="material-symbols-rounded cursor-pointer select-none">format_h1</span>
+      <span onclick="document.execCommand('formatBlock', false, '&lt;h2&gt;')" class="material-symbols-rounded cursor-pointer select-none">format_h2</span>
+      <span onclick="document.execCommand('formatBlock', false, '&lt;h3&gt;')" class="material-symbols-rounded cursor-pointer select-none">format_h3</span>
+      <span onclick="document.execCommand('formatBlock', false, '&lt;h4&gt;')" class="material-symbols-rounded cursor-pointer select-none">format_h4</span>
+      <span onclick="document.execCommand('formatBlock', false, '&lt;p&gt;')" class="material-symbols-rounded cursor-pointer select-none">local_parking</span>
+      <span onclick="document.execCommand('subscript', false, '' )" class="material-symbols-rounded cursor-pointer select-none">subscript</span>
+      <span onclick="document.execCommand('superscript', false, '' )" class="material-symbols-rounded cursor-pointer select-none">superscript</span>
+      <span onclick="document.execCommand('insertHorizontalRule', false, '' )" class="material-symbols-rounded cursor-pointer select-none">remove</span>
+    </div>
+
+    <!-- Logo Preview -->
+    <div 
+      id="logoPreview"
+      contenteditable="true"
+      class="w-full aspect-square flex items-center justify-center border-2 border-dashed border-gray-300 overflow-hidden text-[10vw] text-black text-center outline-none bg-white"
+    >বাংলা</div>
+
+    <!-- Download Button -->
+    <button 
+      id="downloadBtn" 
+      class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 mb-6 mt-4"
+    >
+      Download Logo
+    </button>
+
+    <!-- Fonts Grid -->
+    <p class="mb-2 text-sm font-medium">Select the font for your logo (descending order as in fonts.json):</p>
+    <div id="fontsContainer" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {fontsList.map(font => (
+        <div 
+          class="p-4 border border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer transition transform hover:scale-105 bg-white font-option"
+          style={`font-family:${font.FontFamily}`}
+          data-fontfamily={font.FontFamily}
+        >
+          <div class="text-center text-3xl">বাংলা</div>
+          <p class="mt-2 text-sm text-center">{font.FontName}</p>
+        </div>
+      ))}
+    </div>
+
+    <style is:inline>
+      @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded');
+      @import url('https://banglawebfonts.pages.dev/css/webfonts.min.css');
+      .font-option.selected {
+        border-width: 2px;
+        border-color: #2563eb;
+      }
+    </style>
+
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script is:inline>
+      const logoPreview = document.getElementById('logoPreview');
+      const bgColorInput = document.getElementById('bgColor');
+      const bgImageInput = document.getElementById('bgImage');
+      const downloadBtn = document.getElementById('downloadBtn');
+
+      // Font selection
+      document.querySelectorAll('.font-option').forEach(opt => {
+        opt.addEventListener('click', () => {
+          document.querySelectorAll('.font-option').forEach(o => o.classList.remove('selected'));
+          opt.classList.add('selected');
+          logoPreview.style.fontFamily = opt.dataset.fontfamily;
+        });
+      });
+
+      // Background color exclusive
+      bgColorInput.addEventListener('input', () => {
+        logoPreview.style.backgroundColor = bgColorInput.value;
+        logoPreview.style.backgroundImage = '';
+        bgImageInput.value = '';
+      });
+
+      // Background image exclusive
+      bgImageInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if(file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            logoPreview.style.backgroundImage = \`url('\${event.target.result}')\`;
+            logoPreview.style.backgroundSize = 'cover';
+            logoPreview.style.backgroundPosition = 'center';
+            logoPreview.style.backgroundColor = '';
+            bgColorInput.value = '#ffffff';
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Download logo as image
+      downloadBtn.addEventListener('click', () => {
+        html2canvas(logoPreview).then(canvas => {
+          const link = document.createElement('a');
+          link.download = 'logo.jpeg';
+          link.href = canvas.toDataURL('image/jpeg', 1.0);
+          link.click();
+        });
+      });
+    </script>
+  </section>
+</Layout>
