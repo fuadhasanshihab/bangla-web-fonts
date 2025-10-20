@@ -12,7 +12,6 @@ export async function onRequestGet(context) {
     return new Response(html, {
       headers: {
         "Content-Type": "text/html; charset=utf-8",
-        // Allow any site to fetch (for testing only)
         "Access-Control-Allow-Origin": "*",
       },
     });
