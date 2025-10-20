@@ -1,11 +1,5 @@
 export async function onRequestGet(context) {
   const { request } = context;
-  const allowedOrigin = "https://banglawebfonts.pages.dev";
-  const origin = request.headers.get("Origin") || request.headers.get("Referer") || "";
-
-  if (!origin.startsWith(allowedOrigin)) {
-    return new Response("Forbidden", { status: 403 });
-  }
 
   const { searchParams } = new URL(request.url);
   const target = searchParams.get("url");
@@ -18,7 +12,8 @@ export async function onRequestGet(context) {
     return new Response(html, {
       headers: {
         "Content-Type": "text/html; charset=utf-8",
-        "Access-Control-Allow-Origin": allowedOrigin,
+        // Allow any site to fetch (for testing only)
+        "Access-Control-Allow-Origin": "*",
       },
     });
   } catch (err) {
