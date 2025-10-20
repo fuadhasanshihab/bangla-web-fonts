@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Viewer Tool</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+
+  <h1 class="text-3xl font-bold mb-6">Page Viewer Tool</h1>
+
+  <div class="w-full max-w-xl flex gap-2 mb-4">
+    <input id="urlInput" type="text" placeholder="Enter site URL" 
+           class="flex-1 p-2 border rounded shadow" />
+    <button id="loadBtn" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">
+      Load Page
+    </button>
+  </div>
+
+  <div class="w-full max-w-4xl h-[600px] border rounded overflow-hidden shadow bg-white">
+    <iframe id="previewFrame" class="w-full h-full" frameborder="0"></iframe>
+  </div>
+
+  <script>
+    const btn = document.getElementById('loadBtn');
+    const input = document.getElementById('urlInput');
+    const iframe = document.getElementById('previewFrame');
+
+    btn.addEventListener('click', async () => {
+      const url = input.value.trim();
+      if (!url) return alert('Please enter a URL');
+
+      try {
+        const res = await fetch(`/api/fetch?url=${encodeURIComponent(url)}`);
+        if (!res.ok) throw new Error('Failed to fetch');
+        const html = await res.text();
+
+        // Write fetched HTML into iframe
+        iframe.srcdoc = html;
+      } catch (err) {
+        alert('Error loading page: ' + err.message);
+      }
+    });
+  </script>
+
+</body>
+</html>
