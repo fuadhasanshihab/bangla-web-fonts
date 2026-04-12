@@ -43,6 +43,76 @@ body, font {
   transition: background 1.0s ease, color 1.0s ease;
 }
 
+/*bookmark*/
+<style is:inline>
+.bm-title {
+  line-height: 1.5em;
+}
+.bm-title a {
+  color: inherit;
+}
+.bm-title a:hover {
+  text-decoration: none;
+}
+.bm-thumb {
+  flex: 0 0 85px;
+  line-height: 1;
+  background: #f3f3f3;
+  font-size: 45px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+.bm-delete {
+  margin-left: auto;
+  white-space: nowrap;
+}
+.bm-delete svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.bm-delete path {
+  fill: none;
+  stroke: #777;
+}
+.bm-delete:hover path {
+  fill: #777;
+}
+.bookmark-inner ul {
+  flex-direction: column;
+}
+.bookmark-inner ul, .bookmark-inner li, .fontBookmarks li, .fontBookmarkPost, .fontBookmarkPost label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.bookmark-inner li {
+  align-items: center;
+}
+li.bm-more {
+  border-top: 1px solid #ededed;
+  justify-content: center;
+  padding: .75rem .75rem 0;
+  margin-top: 1rem;
+}
+#fontBookmark:checked ~ label path, .fontBookmarkPost input:checked ~ label path {
+  fill: #555555;
+  stroke: #000;
+}
+#fontBookmark:checked ~ .bookmark-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  visibility: visible;
+}
+
+
+
 
 @tailwind base;
 @tailwind components;

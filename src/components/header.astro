@@ -3,7 +3,7 @@ import menus from "../collections/menu.json";
 import Logo from "../components/logo.astro";
 ---
 
-<!--div class="relative w-full h-20 opacity-0 pointer-events-none"></div-->
+
 <header id="header" class="sticky top-0 z-50 w-full h-16 border-b border-neutral-300 border-dashed">
  <div class="h-full bg-white select-none">
   <div
@@ -75,7 +75,40 @@ import Logo from "../components/logo.astro";
 
 
 
-  <div class="openSearch relative flex items-center ml-4 font-medium tracking-wide cursor-pointer text-neutral-600 group dark:text-neutral-400">
+
+<div class="fontBookmark ml-4 relative">
+  <input id="fontBookmark" type="checkbox" class="hidden"/>
+  <label aria-label="View Bookmark" for="fontBookmark" class="cursor-pointer relative">
+    <i class="absolute left-[55%] bottom-[-2px] bg-white rounded-md text-xs not-italic leading-none px-[0.1rem]"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6">
+      <path class="stroke-[#000000] fill-transparent stroke-[2px] stroke-linecap-round stroke-linejoin-round transition-all duration-200 ease-in-out" d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"/>
+    </svg>
+  </label>
+
+  <div class="bookmark-wrapper fixed top-[64px] inset-0 z-50 flex justify-center opacity-0 invisible translate-y-4 w-full h-full px-7 transition-all duration-200 ease-in-out">
+    <div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
+
+    <div class="bookmark-wrapper-inside relative z-50 bg-white text-neutral-900 border border-dashed border-neutral-300 rounded-lg max-h-[400px] w-full max-w-md overflow-auto translate-y-4 transition-all duration-200 ease-in-out">
+      <div class="bookmark-title sticky top-0 border-b border-dashed border-gray-300 font-semibold bg-white px-5 py-3">Favourite fonts</div>
+
+      <div class="bookmark-inner px-5 py-3">
+        <div class="bookmark-loading p-2 text-center">
+          <svg viewBox="0 0 24 24" class="animate-spin h-6 w-6 mx-auto">
+            <path d="M2.45001 14.97C3.52001 18.41 6.40002 21.06 9.98002 21.79"/>
+            <path d="M2.04999 10.98C2.55999 5.93 6.81998 2 12 2C17.18 2 21.44 5.94 21.95 10.98"/>
+            <path d="M14.01 21.8C17.58 21.07 20.45 18.45 21.54 15.02"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+ <div class="openSearch relative flex items-center ml-4 font-medium tracking-wide cursor-pointer text-neutral-600 group dark:text-neutral-400">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/>
     </svg>
@@ -83,7 +116,11 @@ import Logo from "../components/logo.astro";
 
 
 
-      <div
+
+
+
+
+      <!--div
         id="darkToggle"
         class="hidden relative flexX items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white"
       >
@@ -117,20 +154,19 @@ import Logo from "../components/logo.astro";
             ></path></svg
           >
         </div>
-        <span class="hidden">
-          <span id="dayText" class="ml-2"></span>
-          <span id="nightText" class="hidden ml-2"></span>
-        </span>
-      </div>
+      </div-->
+
+
+
     </nav>
   </div>
  </div>
 </header>
 
 
-<div id="searchModal" class="fixed top-[74px] inset-0 bg-white/90 dark:bg-black/10 hidden z-50 flex items-start justify-center px-7">
+<div id="searchModal" class="fixed top-[64px] inset-0 bg-white/90 dark:bg-black/10 hidden z-50 flex items-start justify-center px-7">
 
-    <div class="w-full max-w-md rounded-xl shadow-lg relative">
+    <div class="mt-4 w-full max-w-md rounded-xl relative">
 
       <div class="relative">
         <input 

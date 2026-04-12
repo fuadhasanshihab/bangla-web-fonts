@@ -1,0 +1,140 @@
+---
+import PageHeading from "../../components/page-heading.astro";
+import Layout from "../../layouts/main.astro";
+---
+
+<Layout 
+  title="Bangla Typing Test Tool - Check Bangla Typing Speed" 
+  metaDescription="Test your Bangla typing speed and accuracy with this free Bangla typing tool. Improve your typing skills in Bengali with real-time feedback and word-by-word highlighting." 
+  metaKeywords="bangla typing speed, bangla typing test, বাংলা টাইপ পরীক্ষা, bengali typing tool, bangla typing practice, banglawebfonts, bengali typing test"
+>  
+  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">  
+    <PageHeading  
+      title="Bangla Typing Speed Test"  
+      description=""  
+    />  
+
+    <div class="w-full max-w-3xl border-2 border-dashed border-gray-300 rounded-lg p-6 mt-6">
+      <div id="quoteContainer" class="text-lg text-gray-800 leading-relaxed h-36 overflow-y-auto mb-4 select-none"></div>
+
+      <textarea id="input" rows="3" placeholder="Start typing here..."
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400 text-base"></textarea>
+
+      <div class="mt-5 flex justify-between text-gray-700 text-base">
+        <div>Time: <span id="time">60</span>s</div>
+        <div>Speed: <span id="speed">0</span> WPM</div>
+        <div>Accuracy: <span id="accuracy">0</span>%</div>
+      </div>
+
+      <button id="refreshBtn"
+        class="mt-5 w-full bg-gray-800 hover:bg-gray-900 text-white font-medium py-2 rounded-lg transition hidden">
+        Refresh Test
+      </button>
+
+      <p id="message" class="text-center text-base font-semibold text-red-600 mt-4 hidden">
+        Time’s up! Click “Refresh Test” to try again.
+      </p>
+    </div>
+
+    <style is:inline>
+      .wrong-word { background-color: rgba(255, 0, 0, 0.15); border-radius: 4px; padding: 1px 2px; }
+      .correct-word { color: #16a34a; }
+    </style>
+
+    <script is:inline>
+      const paragraphs = [
+        "বাংলা ভাষা বিশ্বের অন্যতম প্রাচীন ও সমৃদ্ধ ভাষা। এর ইতিহাস হাজার বছরের পুরনো। আধুনিক প্রযুক্তির যুগে বাংলা টাইপ শেখা এখন খুব সহজ এবং উপভোগ্য। নিয়মিত অনুশীলনের মাধ্যমে টাইপের গতি ও নির্ভুলতা বাড়ানো সম্ভব। প্রতিদিন অল্প সময় টাইপ অনুশীলন করলে দক্ষতা অর্জন করা যায়।",
+        "বাংলা কীবোর্ডের বিন্যাস শেখা এবং আঙুলের সঠিক ব্যবহার জানা খুবই গুরুত্বপূর্ণ। টাইপের সময় মনোযোগ ধরে রাখা গতি বাড়ানোর সবচেয়ে কার্যকর উপায়। ভুল কমানোর জন্য প্রথমে ধীরে ধীরে অনুশীলন শুরু করা উচিত।",
+        "প্রতিদিন মাত্র দশ থেকে পনেরো মিনিট টাইপ প্র্যাকটিস করলে দ্রুত উন্নতি হয়। সঠিকভাবে টাইপ শেখা ভবিষ্যতে যেকোনো কাজে সময় বাঁচায় এবং উৎপাদনশীলতা বাড়ায়।",
+        "বাংলা ভাষার সৌন্দর্য ঠিকভাবে প্রকাশ করতে হলে শুদ্ধভাবে লেখা প্রয়োজন। টাইপ শেখার মাধ্যমে লেখার অভ্যাস আরও উন্নত হয় এবং ভাব প্রকাশে দক্ষতা আসে।"
+      ];
+
+      const quoteContainer = document.getElementById('quoteContainer');
+      const input = document.getElementById('input');
+      const timeEl = document.getElementById('time');
+      const speedEl = document.getElementById('speed');
+      const accuracyEl = document.getElementById('accuracy');
+      const message = document.getElementById('message');
+      const refreshBtn = document.getElementById('refreshBtn');
+
+      let totalTime = 60;
+      let timeLeft = totalTime;
+      let timer = null;
+      let started = false;
+      let currentParagraph = "";
+      let typedWords = [];
+
+      function newTest() {
+        clearInterval(timer);
+        timeLeft = totalTime;
+        started = false;
+        input.value = "";
+        input.disabled = false;
+        message.classList.add('hidden');
+        refreshBtn.classList.add('hidden');
+        timeEl.textContent = totalTime;
+        speedEl.textContent = 0;
+        accuracyEl.textContent = 0;
+        typedWords = [];
+
+        currentParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+        renderQuote();
+      }
+
+      function renderQuote() {
+        const words = currentParagraph.split(" ");
+        quoteContainer.innerHTML = words.map((word, i) => {
+          if (typedWords[i] === undefined) return `<span>${word}</span>`;
+          if (typedWords[i] === word) return `<span class='correct-word'>${word}</span>`;
+          return `<span class='wrong-word'>${word}</span>`;
+        }).join(" ");
+      }
+
+      function startTimer() {
+        started = true;
+        timer = setInterval(() => {
+          timeLeft--;
+          timeEl.textContent = timeLeft;
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            input.disabled = true;
+            message.classList.remove('hidden');
+            refreshBtn.classList.remove('hidden');
+          }
+          updateStats();
+        }, 1000);
+      }
+
+      function updateStats() {
+        const allWords = input.value.trim().split(/\s+/).filter(w => w);
+        const elapsed = totalTime - timeLeft;
+        const minutes = elapsed / 60;
+        const wpm = elapsed > 0 ? Math.round(allWords.length / minutes) : 0;
+        speedEl.textContent = isNaN(wpm) ? 0 : wpm;
+
+        let correct = 0;
+        const currentWords = currentParagraph.split(" ");
+        for (let i = 0; i < typedWords.length; i++) {
+          if (typedWords[i] === currentWords[i]) correct++;
+        }
+        const accuracy = typedWords.length > 0 ? Math.round((correct / typedWords.length) * 100) : 0;
+        accuracyEl.textContent = accuracy;
+      }
+
+      input.addEventListener('input', () => {
+        if (!started && input.value.length > 0) startTimer();
+
+        // Evaluate word-by-word on space
+        if (input.value.endsWith(" ") || input.value.endsWith("\n")) {
+          typedWords = input.value.trim().split(/\s+/);
+          renderQuote();
+        }
+        updateStats();
+      });
+
+      refreshBtn.addEventListener('click', newTest);
+      newTest();
+    </script>
+
+  </section>
+</Layout>

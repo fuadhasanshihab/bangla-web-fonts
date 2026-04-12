@@ -253,6 +253,17 @@
     "FontLicense": "OFL"
   },
   {
+    "FontName": "Google Sans",
+    "TotalStyles": "4",
+    "FontFamily": "'Google Sans', sans-serif",
+    "FontPath": "google-sans",
+    "FontWeights": [400, 500, 600, 700],
+    "FontTesterWeights": [400, 500, 600, 700],
+    "FontDesigner": "Google",
+    "FontDesignerURL": "https://fonts.google.com/",
+    "FontLicense": "OFL"
+  },
+  {
     "FontName": "Anek Bangla",
     "TotalStyles": "8",
     "FontFamily": "'Anek Bangla', sans-serif",
