@@ -101,8 +101,8 @@ li.bm-more {
   margin-top: 1rem;
 }
 #fontBookmark:checked ~ label path, .fontBookmarkPost input:checked ~ label path {
-  fill: #555555;
-  stroke: #000;
+  fill: #ef4444;
+  stroke: #ef4444;
 }
 #fontBookmark:checked ~ .bookmark-wrapper {
   opacity: 1;
