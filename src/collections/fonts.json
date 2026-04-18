@@ -400,8 +400,8 @@
     "TotalStyles": "1",
     "FontFamily": "'Abu Sayed', sans-serif",
     "FontPath": "abu-sayed",
-    "FontWeights": [700],
-    "FontTesterWeights": [700],
+    "FontWeights": [400,700],
+    "FontTesterWeights": [400,700],
     "FontDesigner": "Jayed Ahsan Saad",
     "FontDesignerURL": "https://codepotro.com/",
     "FontLicense": "OFL"
