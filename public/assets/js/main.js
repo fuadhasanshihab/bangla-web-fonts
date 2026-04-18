@@ -284,6 +284,7 @@ const openSearch = document.querySelectorAll('.openSearch');
       searchInput.focus();
     });
 
+/*
     // Open modal
 openSearch.forEach(el => {
   el.addEventListener('click', () => {
@@ -296,7 +297,27 @@ openSearch.forEach(el => {
     setTimeout(() => searchInput.focus(), 150);
   });
 });
+*/
 
+openSearch.forEach(el => {
+  el.addEventListener('click', () => {
+    const isOpen = !searchModal.classList.contains('hidden');
+
+    if (isOpen) {
+      // CLOSE
+      searchModal.classList.add('hidden');
+      resultsContainer.classList.add('hidden');
+    } else {
+      // OPEN
+		closeAllOverlaysExcept('search');
+      searchModal.classList.remove('hidden');
+      searchInput.value = '';
+      clearBtn.classList.add('hidden');
+      displayResults(fonts, '');
+      setTimeout(() => searchInput.focus(), 300);
+    }
+  });
+});
 
 // Close modal if clicked on background
 searchModal.addEventListener('click', (e) => {
