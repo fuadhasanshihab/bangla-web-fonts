@@ -6,7 +6,20 @@ function loadCSS(href) {
 }
 
 
+function closeAllOverlays() {
+  document.getElementById('searchModal')?.classList.add('hidden');
+  document.getElementById('results')?.classList.add('hidden');
 
+  document.getElementById('menu')?.classList.add('hidden');
+  document.getElementById('mobileMenuBackground')?.classList.add('hidden');
+
+  document.getElementById('closeMenu')?.classList.add('hidden');
+  document.getElementById('openMenu')?.classList.remove('hidden');
+
+  // document.querySelector('.bookmark-inner')?.classList.add('hidden');
+
+  document.getElementById('fontBookmark').checked = false;
+}
 
 
 
@@ -118,6 +131,7 @@ const bookmarks = {
   };
   d.location.pathname == bookmarks.morePage && bmRender();
   d.querySelector(".fontBookmark").addEventListener("click", () => {
+	  closeAllOverlays();
     bmRender();
   });
   d.addEventListener("scroll", () => {
@@ -269,6 +283,7 @@ const openSearch = document.querySelectorAll('.openSearch');
     // Open modal
 openSearch.forEach(el => {
   el.addEventListener('click', () => {
+	  closeAllOverlays();
     searchModal.classList.remove('hidden');
 	searchInput.value = '';
       clearBtn.classList.add('hidden');
@@ -335,6 +350,7 @@ function closeMobileMenu() {
 
 
 	document.getElementById("openMenu").addEventListener("click", () => {
+		closeAllOverlays();
 		openMobileMenu();
 	});
 
