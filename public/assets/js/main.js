@@ -132,6 +132,7 @@ const bookmarks = {
   d.location.pathname == bookmarks.morePage && bmRender();
   d.querySelector(".fontBookmark").addEventListener("click", () => {
 	  closeAllOverlays();
+	  document.getElementById('fontBookmark').checked = true;
     bmRender();
   });
   d.addEventListener("scroll", () => {
