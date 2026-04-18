@@ -15,9 +15,9 @@ body, font {
 body {
   background: linear-gradient(
     to bottom,
-    #ff7a18 0px,
-    #af002d 200px,
-    #1e1e1e 600px
+    #e0e7ff 0px,
+    #eef2ff 400px,
+    #ffffff 600px
   );
 }
 
