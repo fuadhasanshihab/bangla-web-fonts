@@ -12,7 +12,14 @@
 body, font {
   font-family: "Open Sans","Hind Siliguri", sans-serif;
 }
-
+body {
+  background: linear-gradient(
+    to bottom,
+    #ff7a18 0px,
+    #af002d 200px,
+    #1e1e1e 600px
+  );
+}
 
 .skeleton {
   display: inline-block;
@@ -44,7 +51,6 @@ body, font {
 }
 
 /*bookmark*/
-<style is:inline>
 .bm-title {
   line-height: 1.5em;
 }
