@@ -71,6 +71,11 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
   </div>
 </div>
 
+<select id="fontSort">
+  <option value="default">Default</option>
+  <option value="name">Font name (A–Z)</option>
+  <option value="styles">Font styles (number)</option>
+</select>
 
 <FontsList/>
 
@@ -78,6 +83,37 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
   document.querySelectorAll('.skeleton').forEach((el, index) => {
     if (index < 4) el.classList.add('loaded');
   });
+</script>
+
+<script is:inline>
+const fontGrid = document.querySelector('.all-bangla-fonts');
+const fontCards = Array.from(fontGrid.children);
+
+const defaultFontOrder = [...fontCards];
+
+document.getElementById('fontSort').addEventListener('change', (e) => {
+  let sortedFonts;
+
+  if (e.target.value === 'default') {
+    sortedFonts = defaultFontOrder;
+  }
+
+  if (e.target.value === 'name') {
+    sortedFonts = [...fontCards].sort((a, b) => {
+      return a.dataset.name.localeCompare(b.dataset.name);
+    });
+  }
+
+  if (e.target.value === 'styles') {
+    sortedFonts = [...fontCards].sort((a, b) => {
+      return Number(a.dataset.styles) - Number(b.dataset.styles);
+    });
+  }
+
+  // render new
+  fontGrid.innerHTML = '';
+  sortedFonts.forEach(card => fontGrid.appendChild(card));
+});
 </script>
 
 <Separator text="Other Stuff"/>
