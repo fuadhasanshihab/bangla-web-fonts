@@ -14,10 +14,12 @@ const fontStyle = `
 </style>
 `;
 
+const fontNameLower = FontName.toLowerCase();
 const isSmall = FontName.includes("Ekushey") || FontFamily.includes("Bensen") || FontFamily.includes("Hoogli") || FontFamily.includes("Aikya") || FontFamily.includes("Atma")  || FontFamily.includes("Bornoporichay")  || FontFamily.includes("Somoyer Srot")  || FontFamily.includes("Abu Sayed")  || FontFamily.includes("Tuli")  || FontFamily.includes("Nilima")  || FontFamily.includes("UN Bangla");  
 ---
 
 <a
+  data-name={fontNameLower} data-styles={TotalStyles}
   href={newPath} id={FontPath}
   class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-7 group h-100 rounded-2xl" aria-label={`${FontName} font`}
 >
