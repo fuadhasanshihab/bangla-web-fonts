@@ -71,11 +71,26 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
   </div>
 </div>
 
-<select id="fontSort">
-  <option value="default">Default</option>
-  <option value="name">Font name (A–Z)</option>
-  <option value="styles">Font styles (number)</option>
-</select>
+<div class="relative w-56">
+  <select id="fontSort"
+    class="w-full appearance-none bg-white border border-dashed border-neutral-400 rounded-xl px-4 py-2 pr-10 text-sm text-neutral-800 focus:outline-none focus:ring-0">
+
+    <option value="" selected disabled>Sort by</option>
+    <option value="default">Default</option>
+    <option value="name">Font name (A–Z)</option>
+    <option value="styles">Font styles (number)</option>
+
+  </select>
+
+  <!-- custom dropdown icon -->
+  <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-neutral-500">
+    <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd"
+        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+        clip-rule="evenodd" />
+    </svg>
+  </div>
+</div>
 
 <FontsList/>
 
