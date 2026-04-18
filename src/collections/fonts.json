@@ -407,6 +407,28 @@
     "FontLicense": "OFL"
   },
   {
+    "FontName": "Hadi",
+    "TotalStyles": "1",
+    "FontFamily": "'Hadi', sans-serif",
+    "FontPath": "hadi",
+    "FontWeights": [400],
+    "FontTesterWeights": [400, 700],
+    "FontDesigner": "Codepotro Fonts",
+    "FontDesignerURL": "https://codepotro.com/",
+    "FontLicense": "OFL"
+  },
+  {
+    "FontName": "Hadi Rounded",
+    "TotalStyles": "1",
+    "FontFamily": "'Hadi Rounded', sans-serif",
+    "FontPath": "hadi-rounded",
+    "FontWeights": [700],
+    "FontTesterWeights": [700],
+    "FontDesigner": "Codepotro Fonts",
+    "FontDesignerURL": "https://codepotro.com/",
+    "FontLicense": "OFL"
+  },
+  {
     "FontName": "Nilima",
     "TotalStyles": "1",
     "FontFamily": "'Nilima', sans-serif",
