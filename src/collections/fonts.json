@@ -401,7 +401,7 @@
     "FontFamily": "'Abu Sayed', sans-serif",
     "FontPath": "abu-sayed",
     "FontWeights": [400,700],
-    "FontTesterWeights": [400,700],
+    "FontTesterWeights": [400],
     "FontDesigner": "Jayed Ahsan Saad",
     "FontDesignerURL": "https://codepotro.com/",
     "FontLicense": "OFL"
@@ -412,7 +412,7 @@
     "FontFamily": "'Hadi', sans-serif",
     "FontPath": "hadi",
     "FontWeights": [400,700],
-    "FontTesterWeights": [400, 700],
+    "FontTesterWeights": [400],
     "FontDesigner": "Codepotro Fonts",
     "FontDesignerURL": "https://codepotro.com/",
     "FontLicense": "OFL"
@@ -423,7 +423,7 @@
     "FontFamily": "'Hadi Rounded', sans-serif",
     "FontPath": "hadi-rounded",
     "FontWeights": [400,700],
-    "FontTesterWeights": [400,700],
+    "FontTesterWeights": [400],
     "FontDesigner": "Codepotro Fonts",
     "FontDesignerURL": "https://codepotro.com/",
     "FontLicense": "OFL"
