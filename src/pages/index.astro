@@ -71,28 +71,7 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
   </div>
 </div>
 
-<div class="w-full max-w-3xl mx-auto mt-12 px-7 xl:px-0 flex items-center justify-between">
-<p class="text-sm text-neutral-700">{fonts.length} Fonts</p>
-<div class="inline-block relative max-w-36">
-  <select id="fontSort"
-    class="w-auto appearance-none bg-white border border-dashed border-neutral-300 rounded-xl px-4 py-2 pr-10 text-sm text-neutral-700 focus:outline-none focus:ring-0">
 
-    <option value="" selected disabled>Sort by</option>
-    <option value="default">Default</option>
-    <option value="name">Font name (A–Z)</option>
-    <option value="styles">Font styles (number)</option>
-
-  </select>
-
-  <!-- custom dropdown icon -->
-  <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-neutral-500">
-    <svg class="w-4 h-4" viewBox="2 5 20 14" fill="currentColor">
-      <path fill-rule="evenodd" d="M7 5a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L6 15.586V6a1 1 0 0 1 1-1m9.293.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414L18 8.414V18a1 1 0 1 1-2 0V8.414l-2.293 2.293a1 1 0 0 1-1.414-1.414z" clip-rule="evenodd"/>
-    </svg>
-  </div>
-</div>
-
-</div>
 
 <FontsList/>
 
@@ -102,36 +81,7 @@ const MetaKeywords = `bangla web fonts, bangla fonts, free bangla fonts, ${Fonts
   });
 </script>
 
-<script is:inline>
-const fontGrid = document.querySelector('.all-bangla-fonts');
-const fontCards = Array.from(fontGrid.children);
 
-const defaultFontOrder = [...fontCards];
-
-document.getElementById('fontSort').addEventListener('change', (e) => {
-  let sortedFonts;
-
-  if (e.target.value === 'default') {
-    sortedFonts = defaultFontOrder;
-  }
-
-  if (e.target.value === 'name') {
-    sortedFonts = [...fontCards].sort((a, b) => {
-      return a.dataset.name.localeCompare(b.dataset.name);
-    });
-  }
-
-  if (e.target.value === 'styles') {
-    sortedFonts = [...fontCards].sort((a, b) => {
-      return Number(a.dataset.styles) - Number(b.dataset.styles);
-    });
-  }
-
-  // render new
-  fontGrid.innerHTML = '';
-  sortedFonts.forEach(card => fontGrid.appendChild(card));
-});
-</script>
 
 <Separator text="Other Stuff"/>
 
