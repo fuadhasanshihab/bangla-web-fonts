@@ -193,7 +193,13 @@ const bookmarks = {
 }(document);
 
 
-
+document.getElementById("fontBookmark").addEventListener("change", () => {
+  if (document.getElementById("fontBookmark").checked) {
+    openMobileMenuBG();
+  } else {
+    closeMobileMenuBG();
+  }
+});
 
 
 
