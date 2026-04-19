@@ -12,7 +12,7 @@ import Logo from "../components/logo.astro";
     <Logo />
     <div
       id="mobileMenuBackground"
-      class="fixed inset-0 z-20 hidden backdrop-blur-sm w-screen h-screen duration-100 ease-in-out bg-gradient-to-b from-indigo-50/75 to-white/50"
+      class="fixed inset-0 z-20 hidden backdrop-blur-sm w-screen h-screen duration-100 ease-in-out bg-gradient-to-b from-indigo-50/50 to-white/50"
     >
     </div>
     <nav
@@ -75,7 +75,7 @@ import Logo from "../components/logo.astro";
 
 
 
-<div class="fontBookmark ml-4 relative">
+<div class="ns-hidden fontBookmark ml-4 relative">
   <input id="fontBookmark" type="checkbox" class="hidden"/>
   <label aria-label="View Bookmark" for="fontBookmark" class="cursor-pointer relative">
     <i class="absolute z-50 left-[55%] bottom-[-2px] bg-white rounded-md text-xs not-italic leading-none px-[0.1rem]"></i>
@@ -84,8 +84,7 @@ import Logo from "../components/logo.astro";
     </svg>
   </label>
 
-  <div class="bookmark-wrapper fixed top-[75px] left-0 z-50 flex items-start justify-center opacity-0 invisible w-full max-w-md h-full px-7 transition-all duration-0 ease-in-out
-">
+  <div class="bookmark-wrapper fixed top-[75px] left-0 z-50 flex items-start justify-center opacity-0 invisible px-7 transition-all duration-0 ease-in-out">
     <!--div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div-->
 
     <div class="bookmark-wrapper-inside relative z-50 bg-white text-neutral-900 border border-dashed border-neutral-300 rounded-lg max-h-[400px] w-full max-w-md overflow-auto translate-y-4 transition-all duration-200 ease-in-out">
@@ -108,7 +107,7 @@ import Logo from "../components/logo.astro";
 
 
 
- <div class="openSearch relative flex items-center ml-4 font-medium tracking-wide cursor-pointer text-neutral-600 group dark:text-neutral-400">
+ <div class="ns-hidden openSearch relative flex items-center ml-4 font-medium tracking-wide cursor-pointer text-neutral-600 group dark:text-neutral-400">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/>
     </svg>
