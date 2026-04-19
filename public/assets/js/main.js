@@ -65,7 +65,7 @@ document.getElementById("mobileMenuBackground").addEventListener("click", () => 
     document.getElementById('closeMenu')?.classList.add('hidden');
     document.getElementById('openMenu')?.classList.remove('hidden');
   document.getElementById('fontBookmark').checked = false;
-    
+    closeMobileMenuBG();
 	});
 
 
