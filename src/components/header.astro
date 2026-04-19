@@ -12,7 +12,7 @@ import Logo from "../components/logo.astro";
     <Logo />
     <div
       id="mobileMenuBackground"
-      class="fixed inset-0 z-20 hidden backdrop-blur-md w-screen h-screen duration-300 ease-in-out bg-white/50 dark:bg-neutral-950/90"
+      class="fixed inset-0 z-20 hidden backdrop-blur-sm w-screen h-screen duration-100 ease-in-out bg-white/50 dark:bg-neutral-950/90"
     >
     </div>
     <nav
@@ -84,8 +84,8 @@ import Logo from "../components/logo.astro";
     </svg>
   </label>
 
-  <div class="bookmark-wrapper fixed top-[64px] inset-0 z-50 flex justify-center opacity-0 invisible translate-y-4 w-full h-full px-7 transition-all duration-200 ease-in-out">
-    <div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div>
+  <div class="bookmark-wrapper fixed top-[64px] inset-0 z-50 flex justify-center opacity-0 invisible translate-y-4 w-full h-full px-7 transition-all duration-0 ease-in-out">
+    <!--div class="fixed inset-0 z-20 w-screen h-screen duration-300 ease-out bg-white/90" onclick="document.getElementById('fontBookmark').checked = false;"></div-->
 
     <div class="bookmark-wrapper-inside relative z-50 bg-white text-neutral-900 border border-dashed border-neutral-300 rounded-lg max-h-[400px] w-full max-w-md overflow-auto translate-y-4 transition-all duration-200 ease-in-out">
       <div class="bookmark-title sticky top-0 border-b border-dashed border-gray-300 font-semibold bg-white px-5 py-3">Favourite fonts</div>
@@ -163,7 +163,7 @@ import Logo from "../components/logo.astro";
 </header>
 
 
-<div id="searchModal" class="fixed top-[75px] inset-0 hidden z-50 flex items-start justify-center px-7">
+<div id="searchModal" class="fixed top-[75px] hidden z-50 flex items-start justify-center px-7">
 
     <div class="w-full max-w-md rounded-xl relative">
 
