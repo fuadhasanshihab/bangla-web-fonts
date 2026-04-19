@@ -6,18 +6,49 @@ function loadCSS(href) {
 }
 
 
+
+function openMobileMenuBG() {
+	document.getElementById("mobileMenuBackground").classList.add("opacity-0");
+	document.getElementById("mobileMenuBackground").classList.remove("hidden");
+
+
+	setTimeout(() => {
+		document
+			.getElementById("mobileMenuBackground")
+			.classList.remove("opacity-0");
+	}, 300);
+};
+
+
+
+
+function closeMobileMenuBG() {
+	document.getElementById("mobileMenuBackground").classList.add("opacity-0");
+	// document.getElementById("mobileMenuBackground").classList.remove("hidden");
+
+
+	setTimeout(() => {
+		document
+			.getElementById("mobileMenuBackground")
+			.classList.add("hidden");
+	}, 300);
+};
+
 function closeAllOverlaysExcept(except) {
+	closeMobileMenuBG();
   if (except !== 'search') {
     document.getElementById('searchModal')?.classList.add('hidden');
     document.getElementById('results')?.classList.add('hidden');
   }
 
+
   if (except !== 'menu') {
     document.getElementById('menu')?.classList.add('hidden');
-    document.getElementById('mobileMenuBackground')?.classList.add('hidden');
+    // document.getElementById('mobileMenuBackground')?.classList.add('hidden');
     document.getElementById('closeMenu')?.classList.add('hidden');
     document.getElementById('openMenu')?.classList.remove('hidden');
   }
+
 
   if (except !== 'bookmark') {
     document.getElementById('fontBookmark').checked = false;
@@ -25,6 +56,17 @@ function closeAllOverlaysExcept(except) {
   }
 }
 
+
+document.getElementById("mobileMenuBackground").addEventListener("click", () => {
+		document.getElementById('searchModal')?.classList.add('hidden');
+    document.getElementById('results')?.classList.add('hidden');
+  document.getElementById('menu')?.classList.add('hidden');
+    // document.getElementById('mobileMenuBackground')?.classList.add('hidden');
+    document.getElementById('closeMenu')?.classList.add('hidden');
+    document.getElementById('openMenu')?.classList.remove('hidden');
+  document.getElementById('fontBookmark').checked = false;
+    
+	});
 
 
 const bookmarks = {
@@ -299,25 +341,35 @@ openSearch.forEach(el => {
 });
 */
 
+function openSearchModal() {
+	closeAllOverlaysExcept('search');
+	openMobileMenuBG();
+  searchModal.classList.remove('hidden');
+  searchInput.value = '';
+  clearBtn.classList.add('hidden');
+  displayResults(fonts, '');
+  setTimeout(() => searchInput.focus(), 150);
+}
+
+function closeSearchModal() {
+	closeMobileMenuBG();
+  searchModal.classList.add('hidden');
+  resultsContainer.classList.add('hidden');
+}
+
 openSearch.forEach(el => {
   el.addEventListener('click', () => {
-    const isOpen = !searchModal.classList.contains('hidden');
-
-    if (isOpen) {
-      // CLOSE
-      searchModal.classList.add('hidden');
-      resultsContainer.classList.add('hidden');
+    // Check if modal is hidden
+    if (searchModal.classList.contains('hidden')) {
+      // If hidden → OPEN it
+      openSearchModal();
     } else {
-      // OPEN
-		closeAllOverlaysExcept('search');
-      searchModal.classList.remove('hidden');
-      searchInput.value = '';
-      clearBtn.classList.add('hidden');
-      displayResults(fonts, '');
-      setTimeout(() => searchInput.focus(), 300);
+      // If already open → CLOSE it
+      closeSearchModal();
     }
   });
 });
+
 
 // Close modal if clicked on background
 searchModal.addEventListener('click', (e) => {
@@ -356,21 +408,14 @@ function openMobileMenu() {
 	document.getElementById("openMenu").classList.add("hidden");
 	document.getElementById("closeMenu").classList.remove("hidden");
 	document.getElementById("menu").classList.remove("hidden");
-	document.getElementById("mobileMenuBackground").classList.add("opacity-0");
-	document.getElementById("mobileMenuBackground").classList.remove("hidden");
-
-	setTimeout(() => {
-		document
-			.getElementById("mobileMenuBackground")
-			.classList.remove("opacity-0");
-	}, 1);
+	openMobileMenuBG ();
 };
 
 function closeMobileMenu() {
 	document.getElementById("closeMenu").classList.add("hidden");
 	document.getElementById("openMenu").classList.remove("hidden");
 	document.getElementById("menu").classList.add("hidden");
-	document.getElementById("mobileMenuBackground").classList.add("hidden");
+	closeMobileMenuBG ();
 };
 
 
