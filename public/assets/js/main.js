@@ -178,6 +178,7 @@ const bookmarks = {
   d.location.pathname == bookmarks.morePage && bmRender();
   d.querySelector(".fontBookmark").addEventListener("click", () => {
 	  closeAllOverlaysExcept('bookmark');
+	  openMobileMenuBG();
     bmRender();
   });
   d.addEventListener("scroll", () => {
