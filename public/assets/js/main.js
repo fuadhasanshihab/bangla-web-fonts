@@ -16,7 +16,7 @@ function openMobileMenuBG() {
 		document
 			.getElementById("mobileMenuBackground")
 			.classList.remove("opacity-0");
-	}, 300);
+	}, 100);
 };
 
 
@@ -31,7 +31,7 @@ function closeMobileMenuBG() {
 		document
 			.getElementById("mobileMenuBackground")
 			.classList.add("hidden");
-	}, 300);
+	}, 100);
 };
 
 function closeAllOverlaysExcept(except) {
@@ -371,7 +371,7 @@ openSearch.forEach(el => {
   });
 });
 
-
+/*
 // Close modal if clicked on background
 searchModal.addEventListener('click', (e) => {
   if (e.target === searchModal) {
@@ -389,7 +389,7 @@ document.addEventListener('keydown', (e) => {
     // document.body.classList.remove('overflow-hidden');
   }
 });
-
+*/
 
 
 
