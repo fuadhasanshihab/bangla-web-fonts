@@ -16,8 +16,8 @@ body {
   background: linear-gradient(
     to bottom,
     #eff3ff 0px,
-    #ffffff 700px,
-    #ffffff 800px
+    #ffffff 600px,
+    #ffffff 600px
   );
 }
 
@@ -63,7 +63,7 @@ body {
 .bm-thumb {
   flex: 0 0 85px;
   line-height: 1;
-  background: #eff3ff;
+  background: #f3f3f3;
   font-size: 45px;
   padding: 20px;
   border-radius: 8px;
