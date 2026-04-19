@@ -69,6 +69,9 @@ document.getElementById("mobileMenuBackground").addEventListener("click", () => 
 	});
 
 
+/*hide it onload, if previously checked*/
+document.getElementById('fontBookmark').checked = false;
+    
 const bookmarks = {
   maxWidget: 200,
   maxAll: 200,
@@ -178,7 +181,7 @@ const bookmarks = {
   d.location.pathname == bookmarks.morePage && bmRender();
   d.querySelector(".fontBookmark").addEventListener("click", () => {
 	  closeAllOverlaysExcept('bookmark');
-	  openMobileMenuBG();
+	  // openMobileMenuBG();
     bmRender();
   });
   d.addEventListener("scroll", () => {
