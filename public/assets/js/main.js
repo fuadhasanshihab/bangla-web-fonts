@@ -35,7 +35,7 @@ function closeMobileMenuBG() {
 };
 
 function closeAllOverlaysExcept(except) {
-	closeMobileMenuBG();
+	// closeMobileMenuBG();
   if (except !== 'search') {
     document.getElementById('searchModal')?.classList.add('hidden');
     document.getElementById('results')?.classList.add('hidden');
