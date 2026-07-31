@@ -61,7 +61,7 @@ if (document.querySelector("#previewText")) {
       isItalic = !isItalic;
       italicToggle.classList.toggle("bg-gray-900");
       italicToggle.classList.toggle("text-white");
-      italicToggle.classList.toggle("bg-transparent");
+      italicToggle.classList.toggle("bg-white");
       italicToggle.classList.toggle("text-black");
       updateFontPreview();
     });

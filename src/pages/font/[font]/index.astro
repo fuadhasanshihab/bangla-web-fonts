@@ -87,25 +87,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
+<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-hidden">
 
 <div class="relative z-20 w-full mx-auto lg:mx-0">
 
@@ -115,7 +97,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   <h1 class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl lg:text-6xl">{FontName}</h1>
 
 
-<div class="fontBookmarkPost relative bg-white rounded-full h-8 w-8 z-2 flex items-center justify-center">
+<div class="fontBookmarkPost ns-hidden relative bg-whiteX rounded-full h-8 w-8 z-2 flex items-center justify-center">
   <input id={`bm-${FontPath}`} type="checkbox" class="hidden"/>
   <label 
     aria-label="Bookmark" 
@@ -125,9 +107,9 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     for={`bm-${FontPath}`} 
     class="flex items-center justify-center cursor-pointer"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7 group">
       <path 
-        class="stroke-[#000000] fill-transparent stroke-[2px] stroke-linecap-round stroke-linejoin-round transition-all duration-200 ease-in-out" 
+        class="stroke-[#000000] group-hover:stroke-red-500 fill-white stroke-[2px] group-hover:stroke-[2.5px] stroke-linecap-round stroke-linejoin-round transition-all duration-200 ease-in-out" 
         d="M21 9c0 8.18-9 12-9 12S3 17.22 3 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 12 9a4.8 4.8 0 0 1 4.5-5A4.8 4.8 0 0 1 21 9"
       />
     </svg>
@@ -155,7 +137,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
     <div class="mt-8">
       <p class="mb-2 leading-6 text-neutral-700 dark:text-neutral-300 sm:leading-7 lg:leading-8">
         {getWeightName(weight)} {weight}
-        <span class="text-sm">{isGenerated && ' (Generated)'}</span>
+        <i class="text-xs opacity-75 ml-1">{isGenerated && ' (Generated)'}</i>
       </p>
       <p
         class="fhs-font-preview leading-tight"
@@ -167,18 +149,22 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
   );
 })}
 
-<div class="mt-8 mb-2 pt-14 border-t border-dashed border-gray-300 dark:border-gray-800">
+
+</section>
+
+<section class="relative z-20 bg-gradient-to-b from-indigo-50/75 via-indigo-50/10 to-indigo-50/50 mt-4">
+<div class="max-w-3xl mx-auto py-16 px-7 lg:px-0 overflow-x-hidden     mt-8x mb-2x pt-14x xborder-t border-dashedx border-gray-300x">
 
 
 <div class="flex gap-3 items-center">
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl">Embed</h2>
 <input id="linkInput" type="radio" name="btns" class="hidden" checked>
-<label for="linkInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 my-auto rounded-lg block ml-2">
+<label for="linkInput" class="text-sm ns-hidden font-mono bg-white hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 my-auto rounded-lg block transition duration-200 ml-2">
   &lt;link&gt;
 </label>
 
 <input id="importInput" type="radio" name="btns" class="peer hidden">
-<label for="importInput" class="text-sm font-mono bg-neutral-100 hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 my-auto rounded-lg block">
+<label for="importInput" class="text-sm ns-hidden font-mono bg-white hover:bg-slate-200 dark:bg-transparent cursor-pointer px-3 py-1 my-auto rounded-lg transition duration-200 block">
   @import
 </label>
 </div>
@@ -198,11 +184,11 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 
 
   
-  <p class="mt-2">Copy the following code and paste into the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
+  <p class="mt-2">Copy the following code and paste into the <span class="text-sm font-mono bg-white dark:bg-gray-900 px-1 py-0.5 rounded">&lt;head&gt;</span> of your HTML document.</p>
 
-<div class="preloadBtn mt-3 ml-auto mr-0 mb-1 flex items-center justify-end bg-neutral-100 hover:bg-slate-200 cursor-pointer px-3 py-1 rounded-lg">
+<div class="preloadBtn ns-hidden mt-3 ml-auto mr-0 mb-1 flex items-center justify-end bg-white hover:bg-slate-200 px-3 py-1xx rounded-lg transition duration-200">
 <input id="preloadInput" type="checkbox" class="mr-2 w-3 h-3 cursor-pointer !bg-neutral-100 !rounded-lg !border-neutral-200 !ring-neutral-200 !outline-none accent-gray-900">
-<label for="preloadInput" class="text-sm cursor-pointer">
+<label for="preloadInput" class="text-sm cursor-pointer py-1">
   Include Preload Link
 </label>
 </div>
@@ -211,6 +197,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 
    <CodeBox id="linkCodebox" code={`<link href="${FontCSS}" rel="stylesheet">`} />
 
+<div class="ns-hidden">
     <CodeBox id="linkPreloadCodebox" code={`${includePreload}
 <link href="${FontCSS}" rel="stylesheet">`} />
 
@@ -225,6 +212,7 @@ const bookmarkURL = `https://banglawebfonts.pages.dev/font/${FontPath}/`;
 @import url('${FontCSS}');
 </style>`} />
 
+</div>
 
 <p id="preloadInfo" class="text-sm mt-3 hidden">
   Preload link for <span class="font-medium">{PreloadedFontName}</span> has been added to the code. This helps prevent FOUT and improves page loading performance.
@@ -314,20 +302,23 @@ background: #1f2937!important;
 
 
 <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl mt-14">CSS</h2>
-<p class="text-neutral-900 dark:text-neutral-100 mt-3 sm:mt-4">Use the <span class="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-1 py-0.5 rounded notranslate">font-family: {FontFamily};</span> CSS declaration to specify the {FontName} font. Example:</p>
+<p class="text-neutral-900 dark:text-neutral-100 mt-3 sm:mt-4">Use the <span class="text-sm font-mono bg-indigo-50/75 dark:bg-gray-900 px-1 py-0.5 rounded notranslate">font-family: {FontFamily};</span> CSS declaration to specify the {FontName} font. Example:</p>
 <CodeBox id="CLASScodebox" code={`body {
   font-family: ${FontFamily};
   font-weight: 400;
   font-style: normal;
 }`} />
-</div>
+
+
 <p class="mt-5">If you face any problems while embedding the font, please check the <a class="text-blue-600 hover:underline" href="/documentation/">documentation</a>.</p>
+</div>
+</section>
+
+<section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0 overflow-x-hidden">
 
 
 
-
-
-<div class="mt-14 bg-blue-50 dark:bg-gray-900 border-l-4 border-blue-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-xl">
+<div class="mt-4 bg-indigo-50/75 dark:bg-gray-900 border-l-4 border-indigo-500 dark:border-blue-400 text-blue-900 dark:text-blue-100 p-4 rounded-xl">
   <h3 class="font-bold text-lg">Performance Tip</h3>
   <p class="text-sm mt-1">You can use the <span class="font-mono bg-blue-100 dark:bg-blue-700 px-1 py-0.5 rounded">.min.css</span> version for better performance and faster loading times.</p>
   <div class="bg-white dark:bg-black p-4 mt-3 rounded-lg border border-blue-300 border-dashed dark:border-gray-600 text-sm">

@@ -12,7 +12,14 @@
 body, font {
   font-family: "Open Sans","Hind Siliguri", sans-serif;
 }
-
+body {
+  background: linear-gradient(
+    to bottom,
+    #eff3ff 0px,
+    #ffffff 600px,
+    #ffffff 600px
+  );
+}
 
 .skeleton {
   display: inline-block;
@@ -44,7 +51,6 @@ body, font {
 }
 
 /*bookmark*/
-<style is:inline>
 .bm-title {
   line-height: 1.5em;
 }
@@ -100,9 +106,10 @@ li.bm-more {
   padding: .75rem .75rem 0;
   margin-top: 1rem;
 }
-#fontBookmark:checked ~ label path, .fontBookmarkPost input:checked ~ label path {
-  fill: #555555;
-  stroke: #000;
+/* #fontBookmark:checked ~ label path, */
+.fontBookmarkPost input:checked ~ label path {
+  fill: #ef4444;
+  stroke: #ef4444;
 }
 #fontBookmark:checked ~ .bookmark-wrapper {
   opacity: 1;

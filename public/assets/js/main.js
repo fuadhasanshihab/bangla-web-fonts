@@ -7,9 +7,71 @@ function loadCSS(href) {
 
 
 
+function openMobileMenuBG() {
+	document.getElementById("mobileMenuBackground").classList.add("opacity-0");
+	document.getElementById("mobileMenuBackground").classList.remove("hidden");
+
+
+	setTimeout(() => {
+		document
+			.getElementById("mobileMenuBackground")
+			.classList.remove("opacity-0");
+	}, 100);
+};
 
 
 
+
+function closeMobileMenuBG() {
+	document.getElementById("mobileMenuBackground").classList.add("opacity-0");
+	// document.getElementById("mobileMenuBackground").classList.remove("hidden");
+
+
+	setTimeout(() => {
+		document
+			.getElementById("mobileMenuBackground")
+			.classList.add("hidden");
+	}, 100);
+};
+
+function closeAllOverlaysExcept(except) {
+	// closeMobileMenuBG();
+  if (except !== 'search') {
+    document.getElementById('searchModal')?.classList.add('hidden');
+    document.getElementById('results')?.classList.add('hidden');
+  }
+
+
+  if (except !== 'menu') {
+    document.getElementById('menu')?.classList.add('hidden');
+    // document.getElementById('mobileMenuBackground')?.classList.add('hidden');
+    document.getElementById('closeMenu')?.classList.add('hidden');
+    document.getElementById('openMenu')?.classList.remove('hidden');
+  }
+
+
+  if (except !== 'bookmark') {
+    document.getElementById('fontBookmark').checked = false;
+    // document.querySelector('.bookmark-inner')?.classList.add('hidden');
+  }
+}
+
+
+document.getElementById("mobileMenuBackground").addEventListener("click", () => {
+		document.getElementById('searchModal')?.classList.add('hidden');
+    document.getElementById('results')?.classList.add('hidden');
+  document.getElementById('menu')?.classList.add('hidden');
+    // document.getElementById('mobileMenuBackground')?.classList.add('hidden');
+    document.getElementById('closeMenu')?.classList.add('hidden');
+    document.getElementById('openMenu')?.classList.remove('hidden');
+  document.getElementById('fontBookmark').checked = false;
+    closeMobileMenuBG();
+	});
+
+
+/*hide it onload, if previously checked*/
+document.getElementById('fontBookmark').checked = false;
+    
 const bookmarks = {
   maxWidget: 200,
   maxAll: 200,
@@ -118,6 +180,8 @@ const bookmarks = {
   };
   d.location.pathname == bookmarks.morePage && bmRender();
   d.querySelector(".fontBookmark").addEventListener("click", () => {
+	  closeAllOverlaysExcept('bookmark');
+	  // openMobileMenuBG();
     bmRender();
   });
   d.addEventListener("scroll", () => {
@@ -129,7 +193,13 @@ const bookmarks = {
 }(document);
 
 
-
+document.getElementById("fontBookmark").addEventListener("change", () => {
+  if (document.getElementById("fontBookmark").checked) {
+    openMobileMenuBG();
+  } else {
+    closeMobileMenuBG();
+  }
+});
 
 
 
@@ -266,9 +336,11 @@ const openSearch = document.querySelectorAll('.openSearch');
       searchInput.focus();
     });
 
+/*
     // Open modal
 openSearch.forEach(el => {
   el.addEventListener('click', () => {
+	  closeAllOverlaysExcept('search');
     searchModal.classList.remove('hidden');
 	searchInput.value = '';
       clearBtn.classList.add('hidden');
@@ -277,8 +349,38 @@ openSearch.forEach(el => {
     setTimeout(() => searchInput.focus(), 150);
   });
 });
+*/
 
+function openSearchModal() {
+	closeAllOverlaysExcept('search');
+	openMobileMenuBG();
+  searchModal.classList.remove('hidden');
+  searchInput.value = '';
+  clearBtn.classList.add('hidden');
+  displayResults(fonts, '');
+  setTimeout(() => searchInput.focus(), 150);
+}
 
+function closeSearchModal() {
+	closeMobileMenuBG();
+  searchModal.classList.add('hidden');
+  resultsContainer.classList.add('hidden');
+}
+
+openSearch.forEach(el => {
+  el.addEventListener('click', () => {
+    // Check if modal is hidden
+    if (searchModal.classList.contains('hidden')) {
+      // If hidden → OPEN it
+      openSearchModal();
+    } else {
+      // If already open → CLOSE it
+      closeSearchModal();
+    }
+  });
+});
+
+/*
 // Close modal if clicked on background
 searchModal.addEventListener('click', (e) => {
   if (e.target === searchModal) {
@@ -296,7 +398,7 @@ document.addEventListener('keydown', (e) => {
     // document.body.classList.remove('overflow-hidden');
   }
 });
-
+*/
 
 
 
@@ -316,25 +418,19 @@ function openMobileMenu() {
 	document.getElementById("openMenu").classList.add("hidden");
 	document.getElementById("closeMenu").classList.remove("hidden");
 	document.getElementById("menu").classList.remove("hidden");
-	document.getElementById("mobileMenuBackground").classList.add("opacity-0");
-	document.getElementById("mobileMenuBackground").classList.remove("hidden");
-
-	setTimeout(() => {
-		document
-			.getElementById("mobileMenuBackground")
-			.classList.remove("opacity-0");
-	}, 1);
+	openMobileMenuBG ();
 };
 
 function closeMobileMenu() {
 	document.getElementById("closeMenu").classList.add("hidden");
 	document.getElementById("openMenu").classList.remove("hidden");
 	document.getElementById("menu").classList.add("hidden");
-	document.getElementById("mobileMenuBackground").classList.add("hidden");
+	closeMobileMenuBG ();
 };
 
 
 	document.getElementById("openMenu").addEventListener("click", () => {
+		closeAllOverlaysExcept('menu');
 		openMobileMenu();
 	});
 
